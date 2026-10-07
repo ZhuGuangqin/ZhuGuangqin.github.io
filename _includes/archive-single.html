@@ -27,10 +27,11 @@
     {% endif %}
 
     <h2 class="archive__item-title" itemprop="headline">
+      {% assign title_en = post.title_en | default: title %}
       {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        <a href="{{ post.link }}"><span data-i18n="zh">{{ title }}</span><span data-i18n="en">{{ title_en }}</span></a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink"><span data-i18n="zh">{{ title }}</span><span data-i18n="en">{{ title_en }}</span></a>
       {% endif %}
     </h2>
     
@@ -38,12 +39,14 @@
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
+    {% assign venue_en = post.venue_en | default: post.venue %}
+    {% assign type_en = post.type_en | default: post.type %}
         {% if post.collection == 'teaching' %}
-          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          <p><span data-i18n="zh">{{ post.type }}</span><span data-i18n="en">{{ type_en }}</span>, <i><span data-i18n="zh">{{ post.venue }}</span><span data-i18n="en">{{ venue_en }}</span></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' and post.category == 'patents' %}
-          <p><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+          <p><i><span data-i18n="zh">{{ post.venue }}</span><span data-i18n="en">{{ venue_en }}</span></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
         {% elsif post.collection == 'publications' %}
-          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          <p><span data-i18n="zh">刊于</span><span data-i18n="en">Published in</span> <i><span data-i18n="zh">{{ post.venue }}</span><span data-i18n="en">{{ venue_en }}</span></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.date %}
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}

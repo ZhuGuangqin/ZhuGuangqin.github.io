@@ -1,17 +1,23 @@
 # 顶部导航。顺序即显示顺序；删掉某一项即从导航移除（页面本身仍可访问）。
+# title    = 中文；title_en = 英文（切到 EN 时显示）
 
 main:
   - title: "论文"
+    title_en: "Publications"
     url: /publications/
 
   - title: "学术会议"
+    title_en: "Talks"
     url: /talks/
 
   - title: "教学"
+    title_en: "Teaching"
     url: /teaching/
 
   - title: "科研项目"
+    title_en: "Projects"
     url: /portfolio/
 
   - title: "简历"
+    title_en: "CV"
     url: /cv/

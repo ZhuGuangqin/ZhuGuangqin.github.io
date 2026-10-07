@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "论文"
+title_en: "Publications"
 permalink: /publications/
 author_profile: true
 ---
@@ -20,7 +21,7 @@ author_profile: true
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
+        <h2><span data-i18n="zh">{{ category[1].title }}</span><span data-i18n="en">{{ category[1].title_en | default: category[1].title }}</span></h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
       {% include archive-single.html %}

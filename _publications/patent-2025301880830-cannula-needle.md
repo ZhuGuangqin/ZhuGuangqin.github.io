@@ -7,6 +7,8 @@ date: 2025-12-09
 venue: 外观设计专利
 citation: '马淑然. 套管针（小浮针）: 202530188083.0[P]. 2025.12.09.（外观设计专利）'
 published: false
+title_en: Cannula needle (mini Fu's needle)
+venue_en: Design patent
 ---
 
 外观设计专利，申请号 202530188083.0，申请日 2025.12.09，专利权人马淑然。

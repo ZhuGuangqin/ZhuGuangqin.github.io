@@ -7,6 +7,8 @@ date: 2024-09-01
 venue: 北京第一〇一中学
 location: ''
 published: false
+title_en: Elective Course on Chinese Medicine Culture
+type_en: Volunteer teaching (18 hours)
 ---
 
 参与中医药文化特色选修课的教学与活动组织；社会实践时长累计满 24h。

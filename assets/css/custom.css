@@ -1,0 +1,227 @@
+/* ==========================================================================
+   学术主页 · 自定义样式
+   动效原则：快（≤500ms）、幅度小（≤12px）、可被 prefers-reduced-motion 关闭
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. 顶部阅读进度条
+   -------------------------------------------------------------------------- */
+#read-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  z-index: 12000;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(90deg,
+              var(--global-base-color),
+              var(--global-link-color));
+  box-shadow: 0 0 6px rgba(47, 127, 147, .55);
+  transition: width .08s linear, opacity .35s ease;
+}
+#read-progress.active { opacity: 1; }
+
+/* --------------------------------------------------------------------------
+   2. 滚动进场：淡入 + 轻微上浮
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .5s cubic-bezier(.22, .61, .36, 1),
+              transform .5s cubic-bezier(.22, .61, .36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* --------------------------------------------------------------------------
+   3. 顶部导航：悬停时下划线从左向右生长
+   -------------------------------------------------------------------------- */
+.masthead__menu-item > a {
+  position: relative;
+}
+.masthead__menu-item > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -3px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--global-base-color);
+  transition: right .26s cubic-bezier(.22, .61, .36, 1);
+}
+.masthead__menu-item > a:hover::after,
+.masthead__menu-item.selected > a::after { right: 0; }
+
+/* 顶栏底部一条极细的渐变线，增加"流线感" */
+.masthead {
+  border-bottom: 1px solid var(--global-border-color);
+  background-image: linear-gradient(90deg,
+      rgba(47, 127, 147, .10), rgba(47, 127, 147, 0) 42%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* --------------------------------------------------------------------------
+   4. 列表卡片：悬停轻微抬起 + 左侧强调色细线
+   -------------------------------------------------------------------------- */
+.archive__item {
+  position: relative;
+  padding-left: 0;
+  transition: transform .22s cubic-bezier(.22, .61, .36, 1),
+              box-shadow .22s ease;
+}
+.archive__item::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--global-base-color);
+  opacity: 0;
+  transform: scaleY(.35);
+  transform-origin: top;
+  transition: opacity .22s ease, transform .22s cubic-bezier(.22, .61, .36, 1);
+}
+.archive__item:hover::before { opacity: 1; transform: scaleY(1); }
+.archive__item:hover { transform: translateX(3px); }
+
+/* 标题链接：下划线由左至右展开，替代默认的整条下划线 */
+.archive__item-title a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 1px;
+  transition: background-size .28s cubic-bezier(.22, .61, .36, 1);
+}
+.archive__item-title a:hover { background-size: 100% 1px; }
+
+/* --------------------------------------------------------------------------
+   5. 章节标题：左侧强调色短竖线（进场时轻微展开）
+   -------------------------------------------------------------------------- */
+.page__content > h2 {
+  position: relative;
+  padding-left: 0;
+}
+.page__content > h2::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: .82em;
+  margin-right: .5em;
+  vertical-align: -.06em;
+  border-radius: 2px;
+  background: var(--global-base-color);
+  transform: scaleY(.2);
+  transform-origin: center;
+  transition: transform .45s cubic-bezier(.22, .61, .36, 1);
+}
+.page__content > h2.is-in::before { transform: scaleY(1); }
+
+/* --------------------------------------------------------------------------
+   6. 回到顶部
+   -------------------------------------------------------------------------- */
+#to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 26px;
+  z-index: 9000;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 50%;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .10);
+  transition: opacity .25s ease, transform .25s cubic-bezier(.22, .61, .36, 1),
+              border-color .2s ease;
+}
+#to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+#to-top:hover { border-color: var(--global-base-color); }
+#to-top svg { width: 15px; height: 15px; }
+
+/* 阅读进度条铺在顶栏之下时，避免遮住锚点 */
+:target { scroll-margin-top: 80px; }
+
+/* --------------------------------------------------------------------------
+   7. 英文模式（i18n）
+   -------------------------------------------------------------------------- */
+/* 未选中的语言整体隐藏 */
+[data-i18n-block] { display: none; }
+html[data-lang="zh"] [data-i18n-block="zh"],
+html[data-lang="en"] [data-i18n-block="en"] { display: block; }
+
+/* 行内文本用不同方式切换，避免 display 造成的块级断裂 */
+html[data-lang="zh"] [data-i18n="en"],
+html[data-lang="en"] [data-i18n="zh"] { display: none !important; }
+
+/* 首页正文：中文在页面里，英文在 #home-en 里，二选一显示 */
+#home-en { display: none; }
+html[data-lang="en"] #home-en { display: block; }
+html[data-lang="en"] .page__content--home > *:not(#home-en) { display: none !important; }
+
+/* 侧栏 / 页面里夹在中文句子中的英文（如姓名拼音）始终显示 */
+html[data-lang="en"] .i18n-always { display: inline !important; }
+
+/* 语言切换按钮 */
+#lang-toggle a {
+  display: inline-flex;
+  align-items: center;
+  gap: .3em;
+  font-size: .78em;
+  letter-spacing: .02em;
+}
+#lang-toggle .lang-code {
+  padding: 1px 6px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  line-height: 1.5;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+#lang-toggle a:hover .lang-code { border-color: var(--global-base-color); }
+#lang-toggle .lang-on {
+  background: var(--global-base-color);
+  border-color: var(--global-base-color);
+  color: #fff;
+}
+
+/* 英文模式下中文标题的字号兜底（避免行高突变） */
+html[data-lang="en"] .archive__item-title { line-height: 1.4; }
+
+/* --------------------------------------------------------------------------
+   8. 尊重系统的"减少动效"设置
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .archive__item,
+  .archive__item::before,
+  .archive__item-title a,
+  .page__content > h2::before,
+  .masthead__menu-item > a::after,
+  #to-top,
+  #read-progress { transition: none !important; }
+  .archive__item:hover { transform: none !important; }
+  .page__content > h2::before { transform: scaleY(1) !important; }
+}
+
+/* 打印时不要这些装饰 */
+@media print {
+  #read-progress, #to-top { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}

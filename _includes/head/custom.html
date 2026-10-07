@@ -10,6 +10,24 @@
      直接引入更稳，代价只是多一个 75KB 的请求。 -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/fontawesome.css">
 
+<!-- 本站自定义样式：动效 + 中英切换。放在 main.css 之后以便覆盖 -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/custom.css">
+
+<!-- 语言状态尽早写入 <html>，避免 ?lang=en 打开时先闪一下中文 -->
+<script>
+  (function () {
+    try {
+      var m = new URLSearchParams(location.search).get("lang");
+      var saved = null;
+      try { saved = localStorage.getItem("site-lang"); } catch (e) {}
+      var lang = (m === "en" || m === "zh") ? m : (saved === "en" || saved === "zh" ? saved : "zh");
+      document.documentElement.setAttribute("data-lang", lang);
+    } catch (e) {
+      document.documentElement.setAttribute("data-lang", "zh");
+    }
+  })();
+</script>
+
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
 <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>

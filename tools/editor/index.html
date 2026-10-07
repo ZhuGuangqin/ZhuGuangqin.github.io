@@ -55,6 +55,9 @@
   .tag{font-size:11px;border-radius:5px;padding:1px 7px;background:#eef4f6;color:#31667a;white-space:nowrap}
   .tag.pdf{background:#eaf6ee;color:#1c6b3a}
   .tag.lock{background:#f3eefb;color:#5b3fa8}
+  .tag.en{background:#eef4ff;color:#3355aa}
+  input.t.en{font-weight:400;font-size:13px;color:var(--muted)}
+  input.v.en{width:220px;color:var(--muted)}
   .empty{color:var(--muted);padding:14px 15px}
   .block{border-top:1px solid #f0f2f4;padding:12px 15px}
   .block:first-of-type{border-top:none}
@@ -286,17 +289,34 @@ function renderList(){
       }
       f.appendChild(r1);
 
+      // 英文标题（切到 EN 时显示；留空则回退成中文原标题）
+      const r1e = document.createElement("div");
+      r1e.className = "row";
+      const tagEn = document.createElement("span");
+      tagEn.className = "tag en"; tagEn.textContent = "EN";
+      const inTitleEn = document.createElement("input");
+      inTitleEn.type = "text"; inTitleEn.className = "t en";
+      inTitleEn.placeholder = "English title（留空则沿用中文标题）";
+      inTitleEn.value = "title_en" in d ? d.title_en : (it.title_en || "");
+      inTitleEn.oninput = () => markDirty(it.path, { title_en: inTitleEn.value });
+      r1e.append(tagEn, inTitleEn);
+      f.appendChild(r1e);
+
       const r2 = document.createElement("div");
       r2.className = "row m";
       const inVenue = document.createElement("input");
       inVenue.type = "text"; inVenue.className = "v"; inVenue.placeholder = "期刊 / 来源";
       inVenue.value = "venue" in d ? d.venue : it.venue;
       inVenue.oninput = () => markDirty(it.path, { venue: inVenue.value });
+      const inVenueEn = document.createElement("input");
+      inVenueEn.type = "text"; inVenueEn.className = "v en"; inVenueEn.placeholder = "English venue";
+      inVenueEn.value = "venue_en" in d ? d.venue_en : (it.venue_en || "");
+      inVenueEn.oninput = () => markDirty(it.path, { venue_en: inVenueEn.value });
       const inDate = document.createElement("input");
       inDate.type = "text"; inDate.className = "d"; inDate.placeholder = "YYYY-MM-DD";
       inDate.value = "date" in d ? d.date : it.date;
       inDate.oninput = () => markDirty(it.path, { date: inDate.value });
-      r2.append(inVenue, inDate);
+      r2.append(inVenue, inVenueEn, inDate);
       if (it.type) {
         const t = document.createElement("span"); t.className = "tag"; t.textContent = it.type;
         r2.appendChild(t);

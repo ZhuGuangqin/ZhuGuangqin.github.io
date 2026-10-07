@@ -10,6 +10,7 @@
 locale                   : "zh-CN"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "祝广钦 · 学术主页"
+title_en                 : "Zhu Guangqin · Academic Site"
 title_separator          : "-"
 name                     : &name "祝广钦"
 description              : &description "北京中医药大学中医学院中医基础理论博士研究生，研究方向为中医天人相应与五脏应时、系统中医学。"
@@ -25,10 +26,14 @@ author:
   # Biographic information
   avatar           : "profile.jpg"
   name             : "祝广钦"
+  name_en          : "Zhu Guangqin"
   pronouns         : # example: "she/her"  
   bio              : "北京中医药大学中医学院中医基础理论博士研究生。研究方向：中医天人相应与五脏应时、系统中医学。"
+  bio_en           : "PhD student in Basic Theory of Chinese Medicine, School of Chinese Medicine, Beijing University of Chinese Medicine. Research: correspondence between nature and human, the five zang organs responding to the seasons, and Systems TCM."
   location         : "北京"
+  location_en      : "Beijing"
   employer         : "北京中医药大学"
+  employer_en      : "Beijing University of Chinese Medicine"
   uri              : # URL
   email            : "tongtongxing@126.com"
 
@@ -86,12 +91,16 @@ author:
 publication_category:
   books:
     title: '著作与教材'
+    title_en: 'Books & Chapters'
   manuscripts:
-    title: '期刊论文'    
+    title: '期刊论文'
+    title_en: 'Journal Articles'    
   conferences:
     title: '会议论文'
+    title_en: 'Conference Papers'
   patents:
     title: '专利'
+    title_en: 'Patents'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

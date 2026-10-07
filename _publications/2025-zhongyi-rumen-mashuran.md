@@ -1,9 +1,12 @@
 ---
-title: '中医入门——跟马淑然教授学中医基础'
-collection: 'publications'
-category: 'books'
-permalink: '/publication/2025-zhongyi-rumen-mashuran'
+title: 中医入门——跟马淑然教授学中医基础
+collection: publications
+category: books
+permalink: /publication/2025-zhongyi-rumen-mashuran
 date: 2025-06-01
-venue: '江苏凤凰科学技术出版社'
-citation: '《中医入门——跟马淑然教授学中医基础》（副主编），江苏凤凰科学技术出版社，ISBN 978-7-5713-5818-1。'
+venue: 江苏凤凰科学技术出版社
+citation: 《中医入门——跟马淑然教授学中医基础》（副主编），江苏凤凰科学技术出版社，ISBN 978-7-5713-5818-1。
+title_en: 'Introduction to Chinese Medicine: Learning the Fundamentals with Professor Ma Shuran'
+venue_en: Jiangsu Phoenix Science and Technology Press
 ---
+

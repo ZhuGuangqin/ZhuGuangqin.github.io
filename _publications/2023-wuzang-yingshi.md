@@ -1,12 +1,14 @@
 ---
-title: '从自组织原理看中医“五脏应时”的内涵及机制'
-collection: 'publications'
-category: 'manuscripts'
-permalink: '/publication/2023-wuzang-yingshi'
+title: 从自组织原理看中医“五脏应时”的内涵及机制
+collection: publications
+category: manuscripts
+permalink: /publication/2023-wuzang-yingshi
 date: 2023-11-02
-venue: '环球中医药'
-paperurl: '/files/2023-wuzang-yingshi.pdf'
+venue: 环球中医药
+paperurl: /files/2023-wuzang-yingshi.pdf
 citation: '张海蓉, 孙一珂, 孙霄, 等. 从自组织原理看中医“五脏应时”的内涵及机制[J]. <i>环球中医药</i>, 2023, 16(11): 2253-2256.'
+title_en: The connotation and mechanisms of “the five zang organs responding to the seasons” from the self-organisation principle
+venue_en: Global Traditional Chinese Medicine
 ---
 
 刊于《环球中医药》，2023, 16(11): 2253-2256。

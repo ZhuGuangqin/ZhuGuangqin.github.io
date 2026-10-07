@@ -54,11 +54,16 @@ PAGE_PATHS = {p for p, _ in PAGES}
 CONFIG = "_config.yml"
 CONFIG_FIELDS = [
     ("title",          "站点标题（浏览器标签与左上角）", "站点"),
+    ("title_en",       "站点标题 · 英文",               "站点"),
     ("description",    "站点描述（搜索结果摘要）",       "站点"),
     ("author.name",    "侧栏姓名",                      "侧栏"),
+    ("author.name_en", "侧栏姓名 · 英文",               "侧栏"),
     ("author.bio",     "侧栏简介",                      "侧栏"),
+    ("author.bio_en",  "侧栏简介 · 英文",               "侧栏"),
     ("author.location", "所在地",                       "侧栏"),
+    ("author.location_en", "所在地 · 英文",             "侧栏"),
     ("author.employer", "单位",                         "侧栏"),
+    ("author.employer_en", "单位 · 英文",               "侧栏"),
     ("author.email",   "邮箱",                          "侧栏"),
     ("author.github",  "GitHub 用户名",                 "侧栏"),
 ]
@@ -106,7 +111,9 @@ def item_of(rel, meta):
     return {
         "path": rel,
         "title": str(meta.get("title", "")),
+        "title_en": str(meta.get("title_en", "")),
         "venue": str(meta.get("venue", "")),
+        "venue_en": str(meta.get("venue_en", "")),
         "type": str(meta.get("type", "")),
         "date": str(meta.get("date", ""))[:10],
         "hidden": meta.get("published") is False,
@@ -368,7 +375,7 @@ class Handler(BaseHTTPRequestHandler):
         for ch in body.get("changes") or []:
             full = safe_path(ch["path"])
             meta, text = read_doc(full)
-            for key in ("title", "venue", "date"):
+            for key in ("title", "title_en", "venue", "venue_en", "date"):
                 if key in ch and ch[key] is not None:
                     v = str(ch[key]).strip()
                     if v:
