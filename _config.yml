@@ -23,7 +23,7 @@ repository               : "ZhuGuangqin/ZhuGuangqin.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "祝广钦"
   pronouns         : # example: "she/her"  
   bio              : "北京中医药大学中医学院中医基础理论博士研究生。研究方向：中医天人相应与五脏应时、系统中医学。"
@@ -90,6 +90,8 @@ publication_category:
     title: '期刊论文'    
   conferences:
     title: '会议论文'
+  patents:
+    title: '专利'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

@@ -44,7 +44,7 @@
 
 | 项目 | 位置 | 说明 |
 | --- | --- | --- |
-| **头像** | `images/profile.png` | 现在还是模板自带的占位图，请换成你的照片（正方形，建议 ≥ 400×400） |
+| **头像** | `images/profile.jpg` | 现在还是模板自带的占位图，请换成你的照片（正方形，建议 ≥ 400×400） |
 | 会议日期 | `_talks/jiujie-*.md` 等 3 个文件 | 第九届系统科学大会、北京中医协会年会的**日期我没有**，front matter 里没写 `date`，页面上就不显示日期。知道后补一行 `date: 2025-11-01` 即可 |
 | 学术主页链接 | `_config.yml` 的 `author:` 段 | Google Scholar / ORCID / ResearchGate 我留空了。有账号就填上 URL，图标会自动出现在左侧栏 |
 | 论文全文 | `files/` | 目前是空目录。把 PDF 放进去，然后在对应论文里加 `paperurl: '/files/xxx.pdf'`，列表里就会出现「Download Paper」 |
