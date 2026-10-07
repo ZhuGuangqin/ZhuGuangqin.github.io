@@ -1,0 +1,20 @@
+# 顶部导航。顺序即显示顺序；删掉某一项即从导航移除（页面本身仍可访问）。
+
+main:
+  - title: "论文"
+    url: /publications/
+
+  - title: "学术会议"
+    url: /talks/
+
+  - title: "教学"
+    url: /teaching/
+
+  - title: "科研项目"
+    url: /portfolio/
+
+  - title: "博客"
+    url: /year-archive/
+
+  - title: "简历"
+    url: /cv/

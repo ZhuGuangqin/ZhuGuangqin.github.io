@@ -1,0 +1,11 @@
+# 作者信息（多作者站点用）。
+# 本站为单作者，页面默认使用 _config.yml 里的 site.author。
+# 若某篇文章需要覆盖作者，在 front matter 里写 author: 祝广钦 即可。
+
+祝广钦:
+  name        : "祝广钦"
+  uri         : "https://zhuguangqin.github.io"
+  email       : "tongtongxing@126.com"
+  bio         : "北京中医药大学中医学院中医基础理论博士研究生。研究方向：中医天人相应与五脏应时、系统中医学。"
+  avatar      : "profile.png"
+  github      : "ZhuGuangqin"
