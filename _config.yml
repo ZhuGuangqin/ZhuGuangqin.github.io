@@ -180,6 +180,7 @@ exclude:
   - Capfile
   - config
   - Dockerfile
+  - docs              # 维护手册（docs/如何更新内容.md），只放仓库不发布
   - Gemfile
   - Gruntfile.js
   - gulpfile.js
