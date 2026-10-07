@@ -194,6 +194,7 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - tools             # 本地内容编辑器，不发布到网站
   - vendor
 keep_files:
   - .git

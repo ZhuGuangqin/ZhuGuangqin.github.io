@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>学术主页 · 内容编辑器</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --line:#e3e6ea; --txt:#1f2328; --muted:#656d76;
+    --accent:#2f7f93; --warn:#b45309; --danger:#b91c1c; --ok:#15803d;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+       font:14px/1.6 -apple-system,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif}
+  header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);
+         padding:12px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  h1{font-size:16px;margin:0;font-weight:600}
+  .sub{color:var(--muted);font-size:12px}
+  .grow{flex:1}
+  button{font:inherit;border:1px solid var(--line);background:#fff;color:var(--txt);
+         border-radius:7px;padding:6px 13px;cursor:pointer}
+  button:hover{background:#f2f4f6}
+  button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  button.primary:hover{filter:brightness(1.08)}
+  button.primary:disabled,button:disabled{opacity:.45;cursor:not-allowed}
+  button.small{padding:3px 9px;font-size:12px;border-radius:6px}
+  button.danger{color:var(--danger);border-color:#f0c8c8}
+  button.danger:hover{background:#fdf2f2}
+  .pill{background:#eef1f4;border-radius:999px;padding:3px 10px;font-size:12px;color:var(--muted)}
+  .pill.dirty{background:#fff3e0;color:var(--warn)}
+  main{padding:18px 20px 80px;max-width:1180px;margin:0 auto}
+  section{background:var(--card);border:1px solid var(--line);border-radius:11px;margin-bottom:16px;overflow:hidden}
+  .sechead{display:flex;align-items:center;gap:10px;padding:11px 15px;border-bottom:1px solid var(--line);background:#fbfcfd}
+  .sechead h2{font-size:14px;margin:0;font-weight:600}
+  .items{divide-y:1px}
+  .item{display:flex;gap:12px;align-items:flex-start;padding:11px 15px;border-top:1px solid #f0f2f4}
+  .item:first-child{border-top:none}
+  .item.hidden{background:#fafafa;opacity:.62}
+  .toggle{flex:0 0 auto;margin-top:2px;width:42px;height:23px;border-radius:12px;background:#cfd6dd;
+          position:relative;cursor:pointer;transition:background .15s;border:none;padding:0}
+  .toggle::after{content:"";position:absolute;top:2.5px;left:2.5px;width:18px;height:18px;border-radius:50%;
+                 background:#fff;transition:left .15s;box-shadow:0 1px 2px rgba(0,0,0,.25)}
+  .toggle.on{background:var(--accent)}
+  .toggle.on::after{left:21.5px}
+  .fields{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px}
+  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  input[type=text]{font:inherit;border:1px solid transparent;background:transparent;border-radius:6px;
+                   padding:3px 6px;min-width:0;color:inherit}
+  input[type=text]:hover{background:#f4f6f8}
+  input[type=text]:focus{background:#fff;border-color:var(--accent);outline:none}
+  .t{font-weight:600;flex:1;min-width:260px}
+  .m{color:var(--muted);font-size:13px}
+  input.v{width:190px}
+  input.d{width:112px;color:var(--muted)}
+  .acts{flex:0 0 auto;display:flex;gap:6px;align-items:center;margin-top:1px}
+  .tag{font-size:11px;border-radius:5px;padding:1px 7px;background:#eef4f6;color:#31667a}
+  .tag.pdf{background:#eaf6ee;color:#1c6b3a}
+  .empty{color:var(--muted);padding:14px 15px}
+  #toast{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;flex-direction:column;gap:8px;max-width:520px}
+  .toast{background:#1f2328;color:#fff;padding:11px 15px;border-radius:9px;white-space:pre-wrap;
+         font-size:13px;box-shadow:0 6px 22px rgba(0,0,0,.22)}
+  .toast.err{background:#7f1d1d}
+  .toast.ok{background:#14532d}
+  .filter{margin-bottom:14px}
+  .filter input{width:100%;padding:8px 12px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+  code{background:#eef1f4;padding:1px 5px;border-radius:4px;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <h1>学术主页 · 内容编辑器</h1>
+  <span class="pill" id="stat">载入中…</span>
+  <span class="pill" id="dirtyPill" style="display:none">有未保存修改</span>
+  <span class="grow"></span>
+  <button id="saveBtn">保存修改</button>
+  <button id="publishBtn" class="primary">发布到网站</button>
+</header>
+
+<main>
+  <div class="filter"><input type="text" id="q" placeholder="搜索标题 / 期刊 / 来源…"></div>
+  <div id="list"></div>
+</main>
+<div id="toast"></div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const state = { sections: [], dirty: new Map(), deleted: 0 };
+
+function toast(msg, kind){
+  const d = document.createElement("div");
+  d.className = "toast" + (kind ? " " + kind : "");
+  d.textContent = msg;
+  $("#toast").appendChild(d);
+  setTimeout(() => d.remove(), kind === "err" ? 12000 : 6000);
+}
+
+function markDirty(path, patch){
+  const cur = state.dirty.get(path) || { path };
+  Object.assign(cur, patch);
+  state.dirty.set(path, cur);
+  updateStats();
+}
+
+function updateStats(){
+  let total = 0, shown = 0;
+  state.sections.forEach(s => s.items.forEach(it => {
+    total++;
+    const d = state.dirty.get(it.path);
+    const hidden = d && "hidden" in d ? d.hidden : it.hidden;
+    if (!hidden) shown++;
+  }));
+  $("#stat").textContent = `共 ${total} 条 · 显示 ${shown} · 隐藏 ${total - shown}`
+    + (state.deleted ? ` · 已删除 ${state.deleted}` : "");
+  const n = state.dirty.size;
+  $("#dirtyPill").style.display = n ? "" : "none";
+  $("#dirtyPill").textContent = `有 ${n} 处未保存修改`;
+  $("#saveBtn").disabled = n === 0;
+}
+
+function visible(item, section, needle){
+  if (!needle) return true;
+  const hay = (item.title + " " + item.venue + " " + item.type + " " + item.date).toLowerCase();
+  return hay.includes(needle);
+}
+
+function render(){
+  const needle = $("#q").value.trim().toLowerCase();
+  const list = $("#list");
+  list.innerHTML = "";
+  let any = false;
+
+  state.sections.forEach((section, si) => {
+    const items = section.items.filter(it => visible(it, section, needle));
+    if (!items.length) return;
+    any = true;
+
+    const sec = document.createElement("section");
+    const shown = section.items.filter(it => !(state.dirty.get(it.path)?.hidden ?? it.hidden)).length;
+
+    const head = document.createElement("div");
+    head.className = "sechead";
+    head.innerHTML = `<h2>${section.label}</h2>
+      <span class="pill">显示 ${shown} / ${section.items.length}</span>
+      <span class="grow"></span>`;
+    const bShow = document.createElement("button");
+    bShow.className = "small"; bShow.textContent = "本栏目全部显示";
+    bShow.onclick = () => { section.items.forEach(it => markDirty(it.path, { hidden:false })); render(); };
+    const bHide = document.createElement("button");
+    bHide.className = "small"; bHide.textContent = "全部隐藏";
+    bHide.onclick = () => { section.items.forEach(it => markDirty(it.path, { hidden:true })); render(); };
+    head.append(bShow, bHide);
+    sec.appendChild(head);
+
+    const box = document.createElement("div");
+    items.forEach(it => {
+      const d = state.dirty.get(it.path) || {};
+      const hidden = "hidden" in d ? d.hidden : it.hidden;
+
+      const row = document.createElement("div");
+      row.className = "item" + (hidden ? " hidden" : "");
+
+      const tg = document.createElement("button");
+      tg.className = "toggle" + (hidden ? "" : " on");
+      tg.title = hidden ? "已隐藏，点击恢复" : "显示中，点击隐藏";
+      tg.onclick = () => { markDirty(it.path, { hidden: !hidden }); render(); };
+
+      const f = document.createElement("div");
+      f.className = "fields";
+
+      const r1 = document.createElement("div");
+      r1.className = "row";
+      const inTitle = document.createElement("input");
+      inTitle.type = "text"; inTitle.className = "t";
+      inTitle.value = "title" in d ? d.title : it.title;
+      inTitle.oninput = () => markDirty(it.path, { title: inTitle.value });
+      r1.appendChild(inTitle);
+      if (it.has_pdf) {
+        const t = document.createElement("span");
+        t.className = "tag pdf"; t.textContent = "有全文";
+        r1.appendChild(t);
+      }
+      f.appendChild(r1);
+
+      const r2 = document.createElement("div");
+      r2.className = "row m";
+      const inVenue = document.createElement("input");
+      inVenue.type = "text"; inVenue.className = "v";
+      inVenue.value = "venue" in d ? d.venue : it.venue;
+      inVenue.placeholder = "期刊 / 来源";
+      inVenue.oninput = () => markDirty(it.path, { venue: inVenue.value });
+
+      const inDate = document.createElement("input");
+      inDate.type = "text"; inDate.className = "d";
+      inDate.value = "date" in d ? d.date : it.date;
+      inDate.placeholder = "YYYY-MM-DD";
+      inDate.oninput = () => markDirty(it.path, { date: inDate.value });
+
+      r2.append(inVenue, inDate);
+      if (it.type) {
+        const t = document.createElement("span");
+        t.className = "tag"; t.textContent = it.type;
+        r2.appendChild(t);
+      }
+      f.appendChild(r2);
+
+      const acts = document.createElement("div");
+      acts.className = "acts";
+      const del = document.createElement("button");
+      del.className = "small danger"; del.textContent = "删除";
+      del.onclick = async () => {
+        if (!confirm(`确定删除这条吗？\n\n${it.title}\n\n（文件会从电脑上删掉，但 Git 里有历史，可以恢复）`)) return;
+        const r = await fetch("/api/delete", {
+          method: "POST", headers: {"Content-Type":"application/json"},
+          body: JSON.stringify({ path: it.path })
+        });
+        const j = await r.json();
+        if (j.error) return toast(j.error, "err");
+        section.items = section.items.filter(x => x.path !== it.path);
+        state.dirty.delete(it.path);
+        state.deleted++;
+        toast("已删除：" + it.title, "ok");
+        render();
+      };
+      acts.appendChild(del);
+
+      row.append(tg, f, acts);
+      box.appendChild(row);
+    });
+    sec.appendChild(box);
+    list.appendChild(sec);
+  });
+
+  if (!any) list.innerHTML = '<section><div class="empty">没有匹配的条目。</div></section>';
+  updateStats();
+}
+
+async function load(){
+  try {
+    const r = await fetch("/api/items");
+    const j = await r.json();
+    if (j.error) throw new Error(j.error);
+    state.sections = j.sections;
+    state.dirty.clear(); state.deleted = 0;
+    render();
+  } catch (e) {
+    toast("载入失败：" + e.message, "err");
+  }
+}
+
+$("#q").oninput = render;
+
+$("#saveBtn").onclick = async () => {
+  const changes = [...state.dirty.values()];
+  if (!changes.length) return;
+  const r = await fetch("/api/save", {
+    method: "POST", headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({ changes })
+  });
+  const j = await r.json();
+  if (j.error) return toast(j.error, "err");
+  toast(`已保存 ${j.saved} 处修改（本地）`, "ok");
+  await load();
+};
+
+$("#publishBtn").onclick = async () => {
+  if (state.dirty.size) {
+    const r = await fetch("/api/save", {
+      method: "POST", headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({ changes: [...state.dirty.values()] })
+    });
+    const j = await r.json();
+    if (j.error) return toast(j.error, "err");
+    state.dirty.clear();
+  }
+  $("#publishBtn").disabled = true;
+  toast("正在提交并推送到 GitHub…");
+  try {
+    const r = await fetch("/api/publish", {
+      method: "POST", headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({ message: "通过网页编辑器更新内容" })
+    });
+    const j = await r.json();
+    if (j.error) toast(j.error, "err");
+    else toast(j.message, "ok");
+  } finally {
+    $("#publishBtn").disabled = false;
+    await load();
+  }
+};
+
+load();
+</script>
+</body>
+</html>
