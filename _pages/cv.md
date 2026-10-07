@@ -65,7 +65,7 @@ redirect_from:
 * 北京中医药大学第六届“杏林杯”创新创业大赛金奖；北京市“京彩大创”高教主赛道三等奖
 * 星舞台外文歌曲大赛一等奖（校级）
 
-论文
+论文、著作与专利
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
