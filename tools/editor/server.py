@@ -238,8 +238,13 @@ class Handler(BaseHTTPRequestHandler):
         code, out = git("push", timeout=300)
         if code != 0:
             return self.send_json({
-                "error": "已提交到本地，但推送到 GitHub 失败：\n" + out +
-                         "\n\n（网络问题可以稍后再点一次「发布」）"
+                "error": "已保存并提交到本地，但**推送到 GitHub 失败**：\n\n" + out +
+                         "\n\n常见原因与处理：\n"
+                         "· 网络问题 —— 稍后再点一次「发布到网站」即可。\n"
+                         "· 凭据未配置 —— 在终端运行一次  gh auth login  或  gh auth setup-git。\n"
+                         "· 编辑器是被别的受限程序启动的 —— 关掉它，"
+                         "改为双击 tools/editor/启动编辑器.command 重新启动后再发布。\n\n"
+                         "你的修改已经存在电脑上，不会丢。"
             }, 500)
         return self.send_json({
             "ok": True,

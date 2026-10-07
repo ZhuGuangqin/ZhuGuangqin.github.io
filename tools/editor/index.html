@@ -85,6 +85,7 @@
 <script>
 const $ = (s) => document.querySelector(s);
 const state = { sections: [], dirty: new Map(), deleted: 0 };
+let SITE_PATH = "";
 
 function toast(msg, kind){
   const d = document.createElement("div");
@@ -128,6 +129,19 @@ function render(){
   const list = $("#list");
   list.innerHTML = "";
   let any = false;
+
+  const help = document.createElement("div");
+  help.style.cssText = "background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 16px;margin-bottom:14px;color:var(--muted);font-size:13px;line-height:1.9";
+  help.innerHTML =
+    "<b style='color:var(--txt)'>怎么用</b>：" +
+    "左边的开关控制<b>显示 / 隐藏</b>（隐藏是<b>可逆</b>的，文件不会被删）；" +
+    "标题、期刊、日期可以直接在框里改。" +
+    "<br><b style='color:var(--txt)'>保存修改</b> 只写到本地；" +
+    "<b style='color:var(--txt)'>发布到网站</b> 会保存 + 提交 + 推送到 GitHub，约 1–2 分钟后生效。" +
+    "「删除」会真的删掉文件（Git 里有历史，仍可恢复）。" +
+    `<br>线上地址：<a href="https://zhuguangqin.github.io" target="_blank" style="color:var(--accent)">https://zhuguangqin.github.io</a>` +
+    `　·　本地仓库：<code>${SITE_PATH}</code>`;
+  list.appendChild(help);
 
   state.sections.forEach((section, si) => {
     const items = section.items.filter(it => visible(it, section, needle));
@@ -240,6 +254,7 @@ async function load(){
     const j = await r.json();
     if (j.error) throw new Error(j.error);
     state.sections = j.sections;
+    SITE_PATH = j.site || "";
     state.dirty.clear(); state.deleted = 0;
     render();
   } catch (e) {
