@@ -15,26 +15,24 @@
   header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);
          padding:12px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
   h1{font-size:16px;margin:0;font-weight:600}
-  .sub{color:var(--muted);font-size:12px}
   .grow{flex:1}
   button{font:inherit;border:1px solid var(--line);background:#fff;color:var(--txt);
          border-radius:7px;padding:6px 13px;cursor:pointer}
   button:hover{background:#f2f4f6}
   button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
   button.primary:hover{filter:brightness(1.08)}
-  button.primary:disabled,button:disabled{opacity:.45;cursor:not-allowed}
+  button:disabled{opacity:.45;cursor:not-allowed}
   button.small{padding:3px 9px;font-size:12px;border-radius:6px}
   button.danger{color:var(--danger);border-color:#f0c8c8}
   button.danger:hover{background:#fdf2f2}
   .pill{background:#eef1f4;border-radius:999px;padding:3px 10px;font-size:12px;color:var(--muted)}
   .pill.dirty{background:#fff3e0;color:var(--warn)}
-  main{padding:18px 20px 80px;max-width:1180px;margin:0 auto}
+  main{padding:18px 20px 90px;max-width:1180px;margin:0 auto}
   section{background:var(--card);border:1px solid var(--line);border-radius:11px;margin-bottom:16px;overflow:hidden}
-  .sechead{display:flex;align-items:center;gap:10px;padding:11px 15px;border-bottom:1px solid var(--line);background:#fbfcfd}
+  .sechead{display:flex;align-items:center;gap:10px;padding:11px 15px;border-bottom:1px solid var(--line);background:#fbfcfd;flex-wrap:wrap}
   .sechead h2{font-size:14px;margin:0;font-weight:600}
-  .items{divide-y:1px}
   .item{display:flex;gap:12px;align-items:flex-start;padding:11px 15px;border-top:1px solid #f0f2f4}
-  .item:first-child{border-top:none}
+  .item:first-of-type{border-top:none}
   .item.hidden{background:#fafafa;opacity:.62}
   .toggle{flex:0 0 auto;margin-top:2px;width:42px;height:23px;border-radius:12px;background:#cfd6dd;
           position:relative;cursor:pointer;transition:background .15s;border:none;padding:0}
@@ -44,47 +42,60 @@
   .toggle.on::after{left:21.5px}
   .fields{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px}
   .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-  input[type=text]{font:inherit;border:1px solid transparent;background:transparent;border-radius:6px;
-                   padding:3px 6px;min-width:0;color:inherit}
-  input[type=text]:hover{background:#f4f6f8}
-  input[type=text]:focus{background:#fff;border-color:var(--accent);outline:none}
-  .t{font-weight:600;flex:1;min-width:260px}
+  input[type=text],textarea{font:inherit;border:1px solid transparent;background:transparent;border-radius:7px;
+                   padding:5px 7px;min-width:0;color:inherit;width:100%}
+  input[type=text]:hover,textarea:hover{background:#f4f6f8}
+  input[type=text]:focus,textarea:focus{background:#fff;border-color:var(--accent);outline:none}
+  textarea{resize:vertical;line-height:1.75;border-color:#eef1f4;background:#fcfdfe}
+  .t{font-weight:600;flex:1;min-width:240px}
   .m{color:var(--muted);font-size:13px}
-  input.v{width:190px}
-  input.d{width:112px;color:var(--muted)}
+  input.v{width:200px}
+  input.d{width:118px;color:var(--muted)}
   .acts{flex:0 0 auto;display:flex;gap:6px;align-items:center;margin-top:1px}
-  .tag{font-size:11px;border-radius:5px;padding:1px 7px;background:#eef4f6;color:#31667a}
+  .tag{font-size:11px;border-radius:5px;padding:1px 7px;background:#eef4f6;color:#31667a;white-space:nowrap}
   .tag.pdf{background:#eaf6ee;color:#1c6b3a}
+  .tag.lock{background:#f3eefb;color:#5b3fa8}
   .empty{color:var(--muted);padding:14px 15px}
-  #toast{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;flex-direction:column;gap:8px;max-width:520px}
+  .block{border-top:1px solid #f0f2f4;padding:12px 15px}
+  .block:first-of-type{border-top:none}
+  .blockhead{display:flex;gap:10px;align-items:center;margin-bottom:6px}
+  .blockhead input.h{font-weight:600;flex:1;border-color:#eef1f4;background:#fcfdfe}
+  .cfg{display:grid;grid-template-columns:150px 1fr;gap:9px 14px;padding:13px 15px;align-items:start}
+  .cfg label{color:var(--muted);padding-top:6px;font-size:13px}
+  .cfg .wide{grid-column:1 / -1;border-top:1px dashed var(--line);padding-top:10px;color:var(--txt);font-weight:600}
+  #toast{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;flex-direction:column;gap:8px;max-width:540px}
   .toast{background:#1f2328;color:#fff;padding:11px 15px;border-radius:9px;white-space:pre-wrap;
          font-size:13px;box-shadow:0 6px 22px rgba(0,0,0,.22)}
   .toast.err{background:#7f1d1d}
   .toast.ok{background:#14532d}
-  .filter{margin-bottom:14px}
   .filter input{width:100%;padding:8px 12px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
   code{background:#eef1f4;padding:1px 5px;border-radius:4px;font-size:12px}
+  .hint{color:var(--muted);font-size:12.5px;line-height:1.9}
 </style>
 </head>
 <body>
 <header>
   <h1>学术主页 · 内容编辑器</h1>
   <span class="pill" id="stat">载入中…</span>
-  <span class="pill" id="dirtyPill" style="display:none">有未保存修改</span>
+  <span class="pill dirty" id="dirtyPill" style="display:none">有未保存修改</span>
   <span class="grow"></span>
   <button id="saveBtn">保存修改</button>
   <button id="publishBtn" class="primary">发布到网站</button>
 </header>
 
 <main>
-  <div class="filter"><input type="text" id="q" placeholder="搜索标题 / 期刊 / 来源…"></div>
+  <div id="pages"></div>
+  <div id="config"></div>
+  <div class="filter" style="margin:6px 0 14px">
+    <input type="text" id="q" placeholder="搜索论文 / 会议 / 项目…（标题、期刊、来源）">
+  </div>
   <div id="list"></div>
 </main>
 <div id="toast"></div>
 
 <script>
 const $ = (s) => document.querySelector(s);
-const state = { sections: [], dirty: new Map(), deleted: 0 };
+const state = { sections: [], pages: [], config: [], dirty: new Map(), dirtyPages: new Map(), dirtyConfig: new Map(), deleted: 0 };
 let SITE_PATH = "";
 
 function toast(msg, kind){
@@ -92,15 +103,9 @@ function toast(msg, kind){
   d.className = "toast" + (kind ? " " + kind : "");
   d.textContent = msg;
   $("#toast").appendChild(d);
-  setTimeout(() => d.remove(), kind === "err" ? 12000 : 6000);
+  setTimeout(() => d.remove(), kind === "err" ? 14000 : 6000);
 }
-
-function markDirty(path, patch){
-  const cur = state.dirty.get(path) || { path };
-  Object.assign(cur, patch);
-  state.dirty.set(path, cur);
-  updateStats();
-}
+const dirtyCount = () => state.dirty.size + state.dirtyPages.size + state.dirtyConfig.size;
 
 function updateStats(){
   let total = 0, shown = 0;
@@ -110,77 +115,164 @@ function updateStats(){
     const hidden = d && "hidden" in d ? d.hidden : it.hidden;
     if (!hidden) shown++;
   }));
-  $("#stat").textContent = `共 ${total} 条 · 显示 ${shown} · 隐藏 ${total - shown}`
+  $("#stat").textContent = `条目 ${total}（显示 ${shown} · 隐藏 ${total - shown}）`
+    + ` · 页面 ${state.pages.length}`
     + (state.deleted ? ` · 已删除 ${state.deleted}` : "");
-  const n = state.dirty.size;
+  const n = dirtyCount();
   $("#dirtyPill").style.display = n ? "" : "none";
   $("#dirtyPill").textContent = `有 ${n} 处未保存修改`;
   $("#saveBtn").disabled = n === 0;
 }
 
-function visible(item, section, needle){
-  if (!needle) return true;
-  const hay = (item.title + " " + item.venue + " " + item.type + " " + item.date).toLowerCase();
-  return hay.includes(needle);
+// ---------------- 首页 / 简历页 ----------------
+function renderPages(){
+  const box = $("#pages");
+  box.innerHTML = "";
+  state.pages.forEach(pg => {
+    const sec = document.createElement("section");
+    const head = document.createElement("div");
+    head.className = "sechead";
+    head.innerHTML = `<h2>${pg.label}</h2><span class="tag">${pg.path}</span>
+      <span class="grow"></span><span class="hint">改完记得点右上角「保存修改」</span>`;
+    sec.appendChild(head);
+
+    const blkBox = document.createElement("div");
+    pg.blocks.forEach((b, i) => {
+      const wrap = document.createElement("div");
+      wrap.className = "block";
+
+      const bh = document.createElement("div");
+      bh.className = "blockhead";
+      const inH = document.createElement("input");
+      inH.type = "text"; inH.className = "h";
+      inH.placeholder = "（导语，无标题）";
+      inH.value = b.heading || "";
+      inH.disabled = b.locked;
+      inH.oninput = () => { b.heading = inH.value; markPage(pg.path); };
+      bh.appendChild(inH);
+
+      if (b.locked) {
+        const t = document.createElement("span");
+        t.className = "tag lock";
+        t.textContent = "自动生成，只读";
+        bh.appendChild(t);
+      } else {
+        const del = document.createElement("button");
+        del.className = "small danger"; del.textContent = "删除板块";
+        del.onclick = () => {
+          if (!confirm(`删除「${b.heading || "导语"}」整个板块？\n\n（Git 里有历史，可以恢复）`)) return;
+          pg.blocks.splice(i, 1);
+          markPage(pg.path); renderPages();
+        };
+        bh.appendChild(del);
+      }
+      wrap.appendChild(bh);
+
+      const ta = document.createElement("textarea");
+      ta.rows = Math.min(18, Math.max(2, (b.text || "").split("\n").length + 1));
+      ta.value = b.text || "";
+      ta.disabled = b.locked;
+      if (b.locked) ta.style.background = "#f7f7f9";
+      ta.oninput = () => { b.text = ta.value; markPage(pg.path); };
+      wrap.appendChild(ta);
+      blkBox.appendChild(wrap);
+    });
+    sec.appendChild(blkBox);
+
+    const foot = document.createElement("div");
+    foot.className = "block";
+    const add = document.createElement("button");
+    add.className = "small"; add.textContent = "＋ 添加板块";
+    add.onclick = () => {
+      pg.blocks.push({ heading: "新板块", text: "", locked: false });
+      markPage(pg.path); renderPages();
+    };
+    foot.appendChild(add);
+    sec.appendChild(foot);
+    box.appendChild(sec);
+  });
 }
 
-function render(){
+function markPage(path){ state.dirtyPages.set(path, true); updateStats(); }
+
+// ---------------- 侧栏与站点信息 ----------------
+function renderConfig(){
+  const box = $("#config");
+  box.innerHTML = "";
+  if (!state.config.length) return;
+  const sec = document.createElement("section");
+  const head = document.createElement("div");
+  head.className = "sechead";
+  head.innerHTML = `<h2>侧栏与站点信息</h2><span class="tag">_config.yml</span>
+    <span class="grow"></span><span class="hint">改动会保留文件里的注释</span>`;
+  sec.appendChild(head);
+
+  const grid = document.createElement("div");
+  grid.className = "cfg";
+  let lastGroup = null;
+  state.config.forEach(f => {
+    if (f.group !== lastGroup) {
+      const g = document.createElement("div");
+      g.className = "wide"; g.textContent = f.group;
+      grid.appendChild(g); grid.appendChild(document.createElement("div"));
+      lastGroup = f.group;
+    }
+    const lab = document.createElement("label");
+    lab.textContent = f.label;
+    const inp = document.createElement("input");
+    inp.type = "text";
+    inp.value = f.value || "";
+    inp.oninput = () => { f.value = inp.value; state.dirtyConfig.set(f.key, inp.value); updateStats(); };
+    grid.append(lab, inp);
+  });
+  sec.appendChild(grid);
+  box.appendChild(sec);
+}
+
+// ---------------- 集合条目 ----------------
+function visible(item, needle){
+  if (!needle) return true;
+  return (item.title + " " + item.venue + " " + item.type + " " + item.date).toLowerCase().includes(needle);
+}
+
+function renderList(){
   const needle = $("#q").value.trim().toLowerCase();
   const list = $("#list");
   list.innerHTML = "";
   let any = false;
 
-  const help = document.createElement("div");
-  help.style.cssText = "background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 16px;margin-bottom:14px;color:var(--muted);font-size:13px;line-height:1.9";
-  help.innerHTML =
-    "<b style='color:var(--txt)'>怎么用</b>：" +
-    "左边的开关控制<b>显示 / 隐藏</b>（隐藏是<b>可逆</b>的，文件不会被删）；" +
-    "标题、期刊、日期可以直接在框里改。" +
-    "<br><b style='color:var(--txt)'>保存修改</b> 只写到本地；" +
-    "<b style='color:var(--txt)'>发布到网站</b> 会保存 + 提交 + 推送到 GitHub，约 1–2 分钟后生效。" +
-    "「删除」会真的删掉文件（Git 里有历史，仍可恢复）。" +
-    `<br>线上地址：<a href="https://zhuguangqin.github.io" target="_blank" style="color:var(--accent)">https://zhuguangqin.github.io</a>` +
-    `　·　本地仓库：<code>${SITE_PATH}</code>`;
-  list.appendChild(help);
-
-  state.sections.forEach((section, si) => {
-    const items = section.items.filter(it => visible(it, section, needle));
+  state.sections.forEach(section => {
+    const items = section.items.filter(it => visible(it, needle));
     if (!items.length) return;
     any = true;
 
     const sec = document.createElement("section");
     const shown = section.items.filter(it => !(state.dirty.get(it.path)?.hidden ?? it.hidden)).length;
-
     const head = document.createElement("div");
     head.className = "sechead";
-    head.innerHTML = `<h2>${section.label}</h2>
-      <span class="pill">显示 ${shown} / ${section.items.length}</span>
-      <span class="grow"></span>`;
+    head.innerHTML = `<h2>${section.label}</h2><span class="pill">显示 ${shown} / ${section.items.length}</span><span class="grow"></span>`;
     const bShow = document.createElement("button");
     bShow.className = "small"; bShow.textContent = "本栏目全部显示";
-    bShow.onclick = () => { section.items.forEach(it => markDirty(it.path, { hidden:false })); render(); };
+    bShow.onclick = () => { section.items.forEach(it => markDirty(it.path, { hidden:false })); renderList(); };
     const bHide = document.createElement("button");
     bHide.className = "small"; bHide.textContent = "全部隐藏";
-    bHide.onclick = () => { section.items.forEach(it => markDirty(it.path, { hidden:true })); render(); };
+    bHide.onclick = () => { section.items.forEach(it => markDirty(it.path, { hidden:true })); renderList(); };
     head.append(bShow, bHide);
     sec.appendChild(head);
 
-    const box = document.createElement("div");
     items.forEach(it => {
       const d = state.dirty.get(it.path) || {};
       const hidden = "hidden" in d ? d.hidden : it.hidden;
-
       const row = document.createElement("div");
       row.className = "item" + (hidden ? " hidden" : "");
 
       const tg = document.createElement("button");
       tg.className = "toggle" + (hidden ? "" : " on");
       tg.title = hidden ? "已隐藏，点击恢复" : "显示中，点击隐藏";
-      tg.onclick = () => { markDirty(it.path, { hidden: !hidden }); render(); };
+      tg.onclick = () => { markDirty(it.path, { hidden: !hidden }); renderList(); };
 
       const f = document.createElement("div");
       f.className = "fields";
-
       const r1 = document.createElement("div");
       r1.className = "row";
       const inTitle = document.createElement("input");
@@ -189,8 +281,7 @@ function render(){
       inTitle.oninput = () => markDirty(it.path, { title: inTitle.value });
       r1.appendChild(inTitle);
       if (it.has_pdf) {
-        const t = document.createElement("span");
-        t.className = "tag pdf"; t.textContent = "有全文";
+        const t = document.createElement("span"); t.className = "tag pdf"; t.textContent = "有全文";
         r1.appendChild(t);
       }
       f.appendChild(r1);
@@ -198,21 +289,16 @@ function render(){
       const r2 = document.createElement("div");
       r2.className = "row m";
       const inVenue = document.createElement("input");
-      inVenue.type = "text"; inVenue.className = "v";
+      inVenue.type = "text"; inVenue.className = "v"; inVenue.placeholder = "期刊 / 来源";
       inVenue.value = "venue" in d ? d.venue : it.venue;
-      inVenue.placeholder = "期刊 / 来源";
       inVenue.oninput = () => markDirty(it.path, { venue: inVenue.value });
-
       const inDate = document.createElement("input");
-      inDate.type = "text"; inDate.className = "d";
+      inDate.type = "text"; inDate.className = "d"; inDate.placeholder = "YYYY-MM-DD";
       inDate.value = "date" in d ? d.date : it.date;
-      inDate.placeholder = "YYYY-MM-DD";
       inDate.oninput = () => markDirty(it.path, { date: inDate.value });
-
       r2.append(inVenue, inDate);
       if (it.type) {
-        const t = document.createElement("span");
-        t.className = "tag"; t.textContent = it.type;
+        const t = document.createElement("span"); t.className = "tag"; t.textContent = it.type;
         r2.appendChild(t);
       }
       f.appendChild(r2);
@@ -222,81 +308,97 @@ function render(){
       const del = document.createElement("button");
       del.className = "small danger"; del.textContent = "删除";
       del.onclick = async () => {
-        if (!confirm(`确定删除这条吗？\n\n${it.title}\n\n（文件会从电脑上删掉，但 Git 里有历史，可以恢复）`)) return;
-        const r = await fetch("/api/delete", {
-          method: "POST", headers: {"Content-Type":"application/json"},
-          body: JSON.stringify({ path: it.path })
-        });
+        if (!confirm(`确定删除这条吗？\n\n${it.title}\n\n（文件会从电脑上删掉，Git 里有历史，可以恢复）`)) return;
+        const r = await fetch("/api/delete", { method:"POST", headers:{"Content-Type":"application/json"},
+                                               body: JSON.stringify({ path: it.path }) });
         const j = await r.json();
         if (j.error) return toast(j.error, "err");
         section.items = section.items.filter(x => x.path !== it.path);
-        state.dirty.delete(it.path);
-        state.deleted++;
-        toast("已删除：" + it.title, "ok");
-        render();
+        state.dirty.delete(it.path); state.deleted++;
+        toast("已删除：" + it.title, "ok"); renderList();
       };
       acts.appendChild(del);
-
       row.append(tg, f, acts);
-      box.appendChild(row);
+      sec.appendChild(row);
     });
-    sec.appendChild(box);
     list.appendChild(sec);
   });
 
-  if (!any) list.innerHTML = '<section><div class="empty">没有匹配的条目。</div></section>';
+  if (!any && needle) list.innerHTML = '<section><div class="empty">没有匹配的条目。</div></section>';
   updateStats();
 }
 
+function markDirty(path, patch){
+  const cur = state.dirty.get(path) || { path };
+  Object.assign(cur, patch);
+  state.dirty.set(path, cur);
+  updateStats();
+}
+
+// ---------------- 载入 / 保存 / 发布 ----------------
 async function load(){
   try {
-    const r = await fetch("/api/items");
-    const j = await r.json();
+    const j = await (await fetch("/api/items")).json();
     if (j.error) throw new Error(j.error);
     state.sections = j.sections;
+    state.pages = j.pages || [];
+    state.config = j.config || [];
     SITE_PATH = j.site || "";
-    state.dirty.clear(); state.deleted = 0;
-    render();
+    state.dirty.clear(); state.dirtyPages.clear(); state.dirtyConfig.clear(); state.deleted = 0;
+    renderPages(); renderConfig(); renderList();
   } catch (e) {
     toast("载入失败：" + e.message, "err");
   }
 }
 
-$("#q").oninput = render;
+async function saveAll(){
+  let n = 0;
+  if (state.dirty.size) {
+    const j = await (await fetch("/api/save", { method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ changes: [...state.dirty.values()] }) })).json();
+    if (j.error) throw new Error(j.error);
+    n += j.saved || 0;
+  }
+  for (const path of state.dirtyPages.keys()) {
+    const pg = state.pages.find(p => p.path === path);
+    if (!pg) continue;
+    const j = await (await fetch("/api/page", { method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ path, blocks: pg.blocks }) })).json();
+    if (j.error) throw new Error(j.error);
+    n++;
+  }
+  if (state.dirtyConfig.size) {
+    const j = await (await fetch("/api/config", { method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ values: Object.fromEntries(state.dirtyConfig) }) })).json();
+    if (j.error) throw new Error(j.error);
+    n += j.changed || 0;
+  }
+  state.dirty.clear(); state.dirtyPages.clear(); state.dirtyConfig.clear();
+  return n;
+}
+
+$("#q").oninput = renderList;
 
 $("#saveBtn").onclick = async () => {
-  const changes = [...state.dirty.values()];
-  if (!changes.length) return;
-  const r = await fetch("/api/save", {
-    method: "POST", headers: {"Content-Type":"application/json"},
-    body: JSON.stringify({ changes })
-  });
-  const j = await r.json();
-  if (j.error) return toast(j.error, "err");
-  toast(`已保存 ${j.saved} 处修改（本地）`, "ok");
-  await load();
+  try {
+    const n = await saveAll();
+    toast(`已保存 ${n} 处修改（仅本地，点「发布到网站」才会上线）`, "ok");
+    await load();
+  } catch (e) { toast(e.message, "err"); }
 };
 
 $("#publishBtn").onclick = async () => {
-  if (state.dirty.size) {
-    const r = await fetch("/api/save", {
-      method: "POST", headers: {"Content-Type":"application/json"},
-      body: JSON.stringify({ changes: [...state.dirty.values()] })
-    });
-    const j = await r.json();
-    if (j.error) return toast(j.error, "err");
-    state.dirty.clear();
-  }
   $("#publishBtn").disabled = true;
-  toast("正在提交并推送到 GitHub…");
   try {
-    const r = await fetch("/api/publish", {
-      method: "POST", headers: {"Content-Type":"application/json"},
-      body: JSON.stringify({ message: "通过网页编辑器更新内容" })
-    });
-    const j = await r.json();
-    if (j.error) toast(j.error, "err");
-    else toast(j.message, "ok");
+    if (dirtyCount()) {
+      const n = await saveAll();
+      toast(`已保存 ${n} 处修改，正在推送…`);
+    }
+    const j = await (await fetch("/api/publish", { method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ message: "通过网页编辑器更新内容" }) })).json();
+    if (j.error) toast(j.error, "err"); else toast(j.message, "ok");
+  } catch (e) {
+    toast(e.message, "err");
   } finally {
     $("#publishBtn").disabled = false;
     await load();
