@@ -955,7 +955,8 @@
         "lifetime": "Current document memory only; season,language,theme changes retain; refresh/new document hides and restores latest ordinary stored season.",
         "storage": "Never write late summer or unlock; ordinary site-season preference retained.",
         "cancellation": "Pointer drift>12px,pointerleave,pointercancel,blur,document hidden stop hold.",
-        "keyboard": "Enter/Space hold; short release activates ordinary Summer; sequential button activation also works."
+        "keyboard": "Enter/Space hold; short release activates ordinary Summer; sequential button activation also works.",
+        "heroHeading": "Unlock synchronizes the Chinese hero to 在五季变化中， and English to five seasons.; retained through ordinary season/language/theme changes; source four-season heading restored on refresh."
       },
       "controls": {
         "seasonButtons": "min-height44px;five-column layout only after unlock;English five-season options11px/1.25,padding-inline1px.",

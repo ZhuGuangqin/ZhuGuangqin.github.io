@@ -101,6 +101,8 @@
     if (!hero || fiveSeasons) return;
     fiveSeasons = true;
     root.dataset.fiveSeasons = "on";
+    hero.querySelector('[data-season-heading="zh"]').textContent = "在五季变化中，";
+    hero.querySelector('[data-season-heading="en"]').textContent = "five seasons.";
     document.querySelectorAll('[data-season-choice="late-summer"], [data-season-discovery]').forEach(function (node) { node.hidden = false; });
     season("late-summer");
     toast(t("四时之外，你发现了长夏。刷新后重新隐藏。", "Beyond four seasons: late summer. Refresh to hide it again."));
