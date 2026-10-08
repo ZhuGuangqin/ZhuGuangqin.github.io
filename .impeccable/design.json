@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-08T10:36:14.589605+00:00",
+  "generatedAt": "2026-10-08T16:34:28.917952+00:00",
   "title": "Design System: 祝广钦 / Guangqin Zhu",
   "extensions": {
     "colorMeta": {
@@ -696,6 +696,16 @@
         "name": "exhibition-discovery-hold",
         "value": "1500ms; sky-hold1.5s linear",
         "purpose": "Summer hold independently unlocks late summer; the visual progress cue is removed under reduced/manual-off motion."
+      },
+      {
+        "name": "wuxing-gather",
+        "value": "460ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Two selected SVGs converge once on successful combination; cancel/omit in static or unavailable states."
+      },
+      {
+        "name": "wuxing-result-reveal",
+        "value": "550ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Result SVG appears once; no idle loop. Same cancellation paths as gathering."
       }
     ],
     "breakpoints": [
@@ -755,6 +765,21 @@
       {
         "name": "exhibition-hero-narrow",
         "value": "max-width:350px"
+      },
+      {
+        "name": "wuxing-compact",
+        "value": "max-width:900px",
+        "purpose": "Equal bench columns, three-column inventory, six-column atlas."
+      },
+      {
+        "name": "wuxing-stacked",
+        "value": "max-width:650px",
+        "purpose": "Natural stacked bench/inventory, four-column collections, one-column formulas."
+      },
+      {
+        "name": "wuxing-narrow-collection",
+        "value": "max-width:360px",
+        "purpose": "Three-column inventory and atlas."
       }
     ],
     "stateMappings": {
@@ -1077,7 +1102,7 @@
     },
     "scholarlyPlay": {
       "brief": ".impeccable/briefs/scholarly-play.md",
-      "scope": "Concept doors and collaboration drafts remain. The user removed the line field; a five-phase combination game is under discussion, not implemented.",
+      "scope": "Concept doors and collaboration drafts remain. The user removed the line field; the subsequent two-origin combination interaction ships as Wuxing Lab under its own brief, with 100 elements and 101 recipes.",
       "conceptDoor": {
         "source": "assets/js/concept-door.js",
         "rules": "_data/concept_keys.yml",
@@ -1096,7 +1121,26 @@
         "tests": "tests/scholarly-play.test.cjs",
         "notes": "docs/设计验收简报.md",
         "scope": "Parent implementation and targeted browser checks. No new independent whole-site verdict."
-      }
+      },
+      "wuxingLabBrief": ".impeccable/briefs/wuxing-lab.md"
+    },
+    "wuxingLab": {
+      "brief": ".impeccable/briefs/wuxing-lab.md",
+      "sources": [
+        "_includes/wuxing-lab.html",
+        "_includes/wuxing-symbols.svg",
+        "_data/wuxing_lab.json",
+        "assets/css/wuxing-lab.css",
+        "assets/js/wuxing-lab.js",
+        "assets/js/wuxing-engine.js"
+      ],
+      "scope": "Optional homepage Experience / Operate extension; inherits the seasonal exhibition world. 100 elements, 101 recipes; yin and yang open taiji, the five phases, air and light.",
+      "material": "100 original per-element SVG symbols, 64-unit view boxes, 2-unit current-color strokes with round caps and joins, explicit fills where needed. Existing display/body faces and seasonal variables; no new palette or shadows.",
+      "layout": "1200px maximum; 1.1fr / 1fr bench with 36px gap and 40px side insets. Inventory 4 columns; atlas 8; formulas 2. At 900px: equal bench columns, 22px gap, inventory 3 and atlas 6. At 650px: stacked flow, 18px side insets, inventory/atlas 4 and formulas 1. At 360px: inventory/atlas 3.",
+      "controls": "Native disclosure and pressed-state view buttons. Bilingual name search, five families, optional hints, same-item pairs, keyboard/button and desktop drag paths. Atlas details and bench returns scroll with an 85px allowance and receive destination focus. Explicit reveal exposes undiscovered formulas; missing ingredients disable loading.",
+      "state": "Only discovered recipe IDs persist under wuxing-lab-progress-v1. Versioned restoration discards invalid or unreachable routes and derives known elements. Storage failure is visible; current-language plain-text atlas/formula export remains available. Reset requires an explicit confirmation. Separate from document-only late summer and discoveries, and unsaved collaboration drafts.",
+      "motion": "One 460ms gathering and 550ms reveal using cubic-bezier(.16,1,.3,1). No idle loop. Cancel or omit on view/closure, blur/hidden, offscreen result, printing, focus, manual-off or system reduction. Focus and print omit the lab; no-script content explains JavaScript is required.",
+      "truth": "Recipes explicitly distinguish cultural image, simplified making and system relationship; not chemical equations, medical instructions or new research claims."
     }
   },
   "components": [
@@ -1179,6 +1223,14 @@
       "description": "Static discovered five-season English layout with the source caption and night-only complete28-mansion native selector. CSS follows the host palette;this preview has no canvas or discovery runtime.",
       "html": "<div class=\"ds-scene\"><div class=\"ds-scene-identity\"><span class=\"ds-season\">长夏</span><span class=\"ds-english\">LATE SUMMER</span><p>Ripening grain. Warm, mist-laden air.</p></div><div class=\"ds-seasons\" role=\"group\" aria-label=\"Choose a season\"><button type=\"button\" aria-pressed=\"false\">Spring</button><button type=\"button\" aria-pressed=\"false\">Summer</button><button type=\"button\" aria-pressed=\"true\">Late<br>summer</button><button type=\"button\" aria-pressed=\"false\">Autumn</button><button type=\"button\" aria-pressed=\"false\">Winter</button></div><p class=\"ds-discovery\" role=\"status\">You found late summer. Refresh to return to four seasons.</p><div class=\"ds-picker\"><label for=\"ds-mansion\">Find a mansion</label><select id=\"ds-mansion\"><option value=\"\">28 lunar mansions</option><optgroup label=\"Azure Dragon\"><option value=\"0\">角宿</option><option value=\"1\">亢宿</option><option value=\"2\">氐宿</option><option value=\"3\">房宿</option><option value=\"4\">心宿</option><option value=\"5\">尾宿</option><option value=\"6\">箕宿</option></optgroup><optgroup label=\"Vermilion Bird\"><option value=\"7\">井宿</option><option value=\"8\">鬼宿</option><option value=\"9\">柳宿</option><option value=\"10\">星宿</option><option value=\"11\">张宿</option><option value=\"12\">翼宿</option><option value=\"13\">轸宿</option></optgroup><optgroup label=\"White Tiger\"><option value=\"14\">奎宿</option><option value=\"15\">娄宿</option><option value=\"16\">胃宿</option><option value=\"17\">昴宿</option><option value=\"18\">毕宿</option><option value=\"19\">觜宿</option><option value=\"20\">参宿</option></optgroup><optgroup label=\"Black Tortoise\"><option value=\"21\">斗宿</option><option value=\"22\">牛宿</option><option value=\"23\">女宿</option><option value=\"24\">虚宿</option><option value=\"25\">危宿</option><option value=\"26\">室宿</option><option value=\"27\">壁宿</option></optgroup></select></div><details class=\"ds-sky-about\"><summary>About this sky</summary><p>Points represent mansion names;their positions and movement are composed rather than real-time astronomy.</p></details></div>",
       "css": ".ds-scene{width:100%;min-width:0;color:var(--ink,#183b30);font-family:-apple-system,\".SFNSText-Regular\",\"San Francisco\",\"Roboto\",\"Segoe UI\",\"Helvetica Neue\",\"Lucida Grande\",Arial,sans-serif}.ds-scene-identity{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;margin-bottom:20px}.ds-season{font:600 30px/1.15 \"Research Display\",\"Songti SC\",serif;grid-row:span 2}.ds-english{font-size:9px;letter-spacing:.18em;margin:0}.ds-scene-identity p{font-size:12px;line-height:1.7;margin:3px 0 0}.ds-seasons{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;border:1px solid var(--accent,#276b50);padding:4px;border-radius:6px;background:var(--field,#c9dfce);background:color-mix(in srgb,var(--field,#c9dfce)85%,transparent)}.ds-seasons button{position:relative;min-height:44px;border:1px solid transparent;border-radius:4px;background:transparent;color:var(--muted,#496650);padding:10px 1px;font-family:inherit;font-size:11px;line-height:1.25;cursor:pointer}.ds-seasons button[aria-pressed=\"true\"],.ds-seasons button[aria-pressed=\"true\"]:hover{background:var(--accent,#276b50);color:var(--button-ink,#fff)}.ds-seasons button:hover{color:var(--ink,#183b30)}.ds-seasons button:active{transform:scale(.98)}.ds-scene :focus-visible{outline:3px solid var(--accent,#276b50);outline-offset:4px}.ds-discovery{font-size:11px;line-height:1.7;color:var(--muted,#496650);margin:12px 0 0}.ds-picker{display:none;align-items:center;gap:12px;margin-top:14px}:host-context(html[data-theme=\"dark\"]) .ds-picker{display:flex}.ds-picker label{font-size:11px;white-space:nowrap}.ds-picker select{min-width:0;flex:1;width:100%;min-height:44px;border:0;border-bottom:1px solid var(--line,#a5c1ad);background:var(--field,#c9dfce);color:var(--ink,#183b30);font:inherit;font-size:11px;padding:8px}.ds-sky-about{font-size:10px;line-height:1.8;margin-top:12px;color:var(--muted,#496650)}.ds-sky-about summary{cursor:pointer;width:fit-content;padding:7px 0;text-decoration:underline;text-underline-offset:4px}.ds-sky-about p{margin:8px 0 0;max-width:45ch;padding:12px 15px;background:var(--panel,#f7faf5);color:var(--ink,#183b30);border:1px solid var(--line,#a5c1ad)}@media(max-width:600px){.ds-scene-identity{margin-bottom:14px}.ds-scene-identity p{font-size:11px}}@media(prefers-reduced-transparency:reduce){.ds-seasons{background:var(--field,#c9dfce)}}"
+    },
+    {
+      "name": "Wuxing collection element",
+      "kind": "custom",
+      "refersTo": "wuxing-element",
+      "description": "Original SVG identity and readable name on an inherited seasonal collection cell; pressed state selects an ingredient or atlas detail. Preview is a static component, not the game engine.",
+      "html": "<button class=\"ds-wuxing-element\" type=\"button\" aria-pressed=\"true\"><svg viewBox=\"0 0 64 64\" aria-hidden=\"true\"><path d=\"M26 8H38L40 16L46 20L54 18L60 29L54 35L53 42L56 49L45 56L39 50H25L19 56L8 49L11 42L10 35L4 29L10 18L18 20L24 16Z\"/><circle cx=\"32\" cy=\"32\" r=\"10\"/></svg><span>Gear</span></button>",
+      "css": ".ds-wuxing-element{min-width:0;min-height:92px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;background:var(--panel,#f7faf5);color:var(--ink,#183b30);border:1px solid transparent;border-radius:6px;padding:10px 4px;font:inherit;cursor:pointer}.ds-wuxing-element svg{width:36px;height:36px;fill:none;stroke:var(--accent,#276b50);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}.ds-wuxing-element span{font-size:12px;line-height:1.3;text-align:center;overflow-wrap:anywhere;max-width:100%}.ds-wuxing-element[aria-pressed=true]{border-color:var(--accent,#276b50);background:var(--field,#c9dfce)}.ds-wuxing-element:hover:not(:disabled){background:var(--field,#c9dfce)}.ds-wuxing-element:focus-visible{outline:3px solid var(--accent,#276b50);outline-offset:4px}.ds-wuxing-element:disabled{opacity:.55;cursor:default}"
     }
   ],
   "narrative": {
@@ -1190,6 +1242,7 @@
       "An identifiable researcher and one integrated hemisphere on the homepage, with document-only late-summer discovery.",
       "Original mathematical line geometry and native scroll-driven perspective.",
       "Public-source records, truthful cover provenance, and direct reading alternatives.",
+      "An optional two-origin discovery workbench with distinct vector symbols, a readable atlas and recorded formulas.",
       "Local fonts/assets, bilingual controls, keyboard/touch routes and reduced-motion reading."
     ],
     "rules": [

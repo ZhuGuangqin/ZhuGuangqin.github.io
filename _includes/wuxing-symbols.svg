@@ -1,0 +1,102 @@
+<svg class="wuxing-symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="wx-yin" viewBox="0 0 64 64"><path d="M45 10A24 24 0 1 0 45 54A25 25 0 0 1 45 10Z" fill="currentColor" stroke="none"/><circle cx="24" cy="32" r="3" fill="var(--panel)" stroke="none"/></symbol>
+<symbol id="wx-yang" viewBox="0 0 64 64"><circle cx="32" cy="32" r="12"/><path d="M32 6V13M32 51V58M6 32H13M51 32H58M14 14L19 19M45 45L50 50M14 50L19 45M45 19L50 14"/></symbol>
+<symbol id="wx-taiji" viewBox="0 0 64 64"><circle cx="32" cy="32" r="23"/><path d="M32 9A11.5 11.5 0 0 1 32 32A11.5 11.5 0 0 0 32 55A23 23 0 0 1 32 9Z" fill="currentColor" stroke="none"/><circle cx="32" cy="20" r="3" fill="var(--panel)" stroke="none"/><circle cx="32" cy="44" r="3" fill="currentColor" stroke="none"/></symbol>
+<symbol id="wx-fire" viewBox="0 0 64 64"><path d="M33 7C36 22 50 24 50 39A18 18 0 0 1 14 39C14 29 22 25 23 17C25 27 30 29 33 7Z"/><path d="M33 31C36 38 41 41 38 48C34 55 24 50 26 43Z"/></symbol>
+<symbol id="wx-water" viewBox="0 0 64 64"><path d="M32 7C25 20 13 30 13 40A19 19 0 0 0 51 40C51 30 39 20 32 7Z"/><path d="M22 40A10 10 0 0 0 32 50"/></symbol>
+<symbol id="wx-earth" viewBox="0 0 64 64"><path d="M8 36L25 18L37 29L47 20L57 36M8 44H56M8 52H56M23 36H41"/></symbol>
+<symbol id="wx-wood" viewBox="0 0 64 64"><path d="M32 56V10M32 25L18 14M32 34L47 20M32 44L17 32M32 52L44 40M23 56H41"/></symbol>
+<symbol id="wx-metal" viewBox="0 0 64 64"><path d="M13 20L39 11L54 23V47L28 56L13 44ZM13 20L28 32L54 23M28 32V56M39 11V22L28 32"/></symbol>
+<symbol id="wx-steam" viewBox="0 0 64 64"><path d="M18 46C6 32 27 28 18 13M32 51C20 37 41 31 32 12M46 46C34 32 55 28 46 13M12 56H52"/></symbol>
+<symbol id="wx-cloud" viewBox="0 0 64 64"><path d="M17 46A12 12 0 1 1 18 22A17 17 0 0 1 49 26A10 10 0 1 1 48 46Z"/></symbol>
+<symbol id="wx-rain" viewBox="0 0 64 64"><path d="M17 35A9 9 0 1 1 18 17A14 14 0 0 1 45 20A8 8 0 1 1 47 35ZM20 44L16 53M34 44L30 53M48 44L44 53"/></symbol>
+<symbol id="wx-river" viewBox="0 0 64 64"><path d="M15 7C49 19 6 34 31 57M34 7C66 20 25 35 50 57M26 10C56 22 16 35 41 54"/></symbol>
+<symbol id="wx-stone" viewBox="0 0 64 64"><path d="M8 34L19 14L42 10L56 30L49 51L22 55ZM19 14L29 31L8 34M29 31L49 51M29 31L56 30"/></symbol>
+<symbol id="wx-sand" viewBox="0 0 64 64"><path d="M8 52H56L45 37L34 44L22 28ZM23 15L27 19L23 23L19 19ZM43 13L46 16L43 19L40 16ZM34 27L37 30L34 33L31 30Z"/></symbol>
+<symbol id="wx-clay" viewBox="0 0 64 64"><path d="M12 26Q32 7 52 26Q62 37 47 48Q31 61 16 47Q4 36 12 26ZM16 31Q32 19 49 31M16 39Q32 27 48 39M23 47Q33 40 42 44"/></symbol>
+<symbol id="wx-pottery" viewBox="0 0 64 64"><path d="M23 10H41V20C54 29 54 47 43 54H21C10 47 10 29 23 20ZM23 16H41M15 36H49M19 46H45"/></symbol>
+<symbol id="wx-glass" viewBox="0 0 64 64"><path d="M17 12H47L43 54H21ZM19 24H45M26 29L24 44M34 18L41 18"/></symbol>
+<symbol id="wx-seed" viewBox="0 0 64 64"><path d="M15 45C11 22 29 12 49 13C52 36 40 53 25 51C20 51 17 48 15 45ZM19 47L43 20M32 33V21M32 33H43"/></symbol>
+<symbol id="wx-plant" viewBox="0 0 64 64"><path d="M32 56V28M32 38C13 38 9 24 10 15C26 15 32 23 32 38ZM32 29C32 13 43 8 54 8C54 22 47 29 32 29M19 56H45"/></symbol>
+<symbol id="wx-herb" viewBox="0 0 64 64"><path d="M32 44V10M32 24Q14 26 12 12Q29 10 32 24ZM32 35Q51 35 52 22Q37 21 32 35M32 44L20 57M32 44L32 59M32 44L45 55M26 50L19 49M39 50L47 47"/></symbol>
+<symbol id="wx-grain" viewBox="0 0 64 64"><path d="M32 58V11M32 20Q20 19 19 10Q30 9 32 20ZM32 31Q18 30 17 21Q30 20 32 31ZM32 43Q18 42 17 33Q30 32 32 43ZM32 25Q45 24 46 15Q34 14 32 25ZM32 37Q46 36 47 27Q34 26 32 37ZM32 49Q45 48 46 39Q34 38 32 49Z"/></symbol>
+<symbol id="wx-paper" viewBox="0 0 64 64"><path d="M17 8H39L49 18V56H17ZM39 8V18H49M24 29H42M24 37H42M24 45H36"/></symbol>
+<symbol id="wx-ink" viewBox="0 0 64 64"><path d="M35 7C31 16 24 19 24 25A11 11 0 0 0 46 25C46 19 39 15 35 7ZM10 42H54V55H10ZM10 48H54"/><ellipse cx="26" cy="43" rx="10" ry="3"/></symbol>
+<symbol id="wx-book" viewBox="0 0 64 64"><path d="M32 18Q20 9 8 13V49Q21 45 32 54Q43 45 56 49V13Q44 9 32 18ZM32 18V54M15 23L25 26M15 32L25 35M39 26L49 23M39 35L49 32"/></symbol>
+<symbol id="wx-needle" viewBox="0 0 64 64"><path d="M15 55L42 12Q47 5 51 9Q55 12 49 19ZM44 15L48 10M18 50L28 36"/></symbol>
+<symbol id="wx-decoction" viewBox="0 0 64 64"><path d="M13 33H49L45 53H20ZM49 36H53Q61 42 47 45M10 33H52M24 25Q18 20 24 13M38 25Q32 20 38 13M23 53H43"/></symbol>
+<symbol id="wx-moxa" viewBox="0 0 64 64"><path d="M20 30H39V55H20ZM20 38H39M20 47H39M30 25C14 20 30 9 30 7C32 15 44 19 30 25ZM44 54L54 42M47 58L57 46"/></symbol>
+<symbol id="wx-wheel" viewBox="0 0 64 64"><circle cx="32" cy="32" r="23"/><circle cx="32" cy="32" r="5"/><path d="M32 9V27M32 37V55M9 32H27M37 32H55M16 16L28 28M36 36L48 48M16 48L28 36M36 28L48 16"/></symbol>
+<symbol id="wx-gear" viewBox="0 0 64 64"><path d="M26 8H38L40 16L46 20L54 18L60 29L54 35L53 42L56 49L45 56L39 50H25L19 56L8 49L11 42L10 35L4 29L10 18L18 20L24 16Z"/><circle cx="32" cy="32" r="10"/></symbol>
+<symbol id="wx-machine" viewBox="0 0 64 64"><circle cx="22" cy="25" r="13"/><circle cx="43" cy="43" r="11"/><circle cx="22" cy="25" r="4"/><circle cx="43" cy="43" r="3"/><path d="M22 7V12M4 25H9M35 25H40M22 38V43M43 27V32M27 43H32M54 43H59M43 54V59M9 12L13 16M31 34L35 38M35 35L38 38M50 50L54 54"/></symbol>
+<symbol id="wx-engine" viewBox="0 0 64 64"><path d="M8 15H32V35H8ZM14 15V9H26V15M20 35V45H40"/><circle cx="47" cy="44" r="13"/><circle cx="47" cy="44" r="3"/><path d="M6 55H31"/></symbol>
+<symbol id="wx-electricity" viewBox="0 0 64 64"><path d="M36 6L13 36H29L25 58L51 26H35Z"/></symbol>
+<symbol id="wx-sensor" viewBox="0 0 64 64"><circle cx="32" cy="39" r="4"/><path d="M21 28A16 16 0 0 1 43 28M13 20A27 27 0 0 1 51 20M7 12A36 36 0 0 1 57 12M32 43V55M23 55H41"/></symbol>
+<symbol id="wx-signal" viewBox="0 0 64 64"><path d="M5 34H17V16H29V48H41V26H53V34H59"/></symbol>
+<symbol id="wx-network" viewBox="0 0 64 64"><path d="M15 16L32 31L51 13M32 31L13 51M32 31L53 49"/><circle cx="15" cy="16" r="6"/><circle cx="51" cy="13" r="6"/><circle cx="32" cy="31" r="6"/><circle cx="13" cy="51" r="6"/><circle cx="53" cy="49" r="6"/></symbol>
+<symbol id="wx-feedback" viewBox="0 0 64 64"><path d="M49 18A23 23 0 0 0 10 29M49 18V7M49 18H38M15 46A23 23 0 0 0 54 35M15 46V57M15 46H26M22 32H42"/></symbol>
+<symbol id="wx-clock" viewBox="0 0 64 64"><circle cx="32" cy="32" r="24"/><path d="M32 12V17M52 32H47M32 52V47M12 32H17M32 22V32L42 39"/></symbol>
+<symbol id="wx-rhythm" viewBox="0 0 64 64"><path d="M5 34C13 5 19 5 27 34S41 63 49 34S57 5 61 22M7 51H57"/></symbol>
+<symbol id="wx-balance" viewBox="0 0 64 64"><path d="M32 12V54M20 54H44M10 23L53 18M15 23L6 42H24ZM49 19L40 38H58Z"/><circle cx="32" cy="21" r="4"/></symbol>
+<symbol id="wx-system" viewBox="0 0 64 64"><rect x="7" y="7" width="50" height="50" rx="11"/><path d="M21 21L43 21L32 43ZM32 43L21 21"/><circle cx="21" cy="21" r="4"/><circle cx="43" cy="21" r="4"/><circle cx="32" cy="43" r="4"/></symbol>
+<symbol id="wx-air" viewBox="0 0 64 64"><path d="M8 18H39M45 18H55M15 32H56M8 46H33M39 46H48"/></symbol>
+<symbol id="wx-light" viewBox="0 0 64 64"><path d="M8 12L55 32L8 52M8 32H55M45 25L55 32L45 39"/></symbol>
+<symbol id="wx-wind" viewBox="0 0 64 64"><path d="M7 22H41Q53 22 53 12Q53 3 44 7M7 33H50Q62 33 57 43Q52 51 45 45M15 44H29Q40 44 38 54"/></symbol>
+<symbol id="wx-ice" viewBox="0 0 64 64"><path d="M32 6V58M10 19L54 45M10 45L54 19M25 12L32 19L39 12M25 52L32 45L39 52M12 28L22 26L20 16M44 48L42 38L52 36M12 36L22 38L20 48M44 16L42 26L52 28"/></symbol>
+<symbol id="wx-snow" viewBox="0 0 64 64"><path d="M16 31A9 9 0 1 1 18 13A14 14 0 0 1 45 16A8 8 0 1 1 47 31M18 42V56M12 46L24 52M12 52L24 46M44 40V54M38 44L50 50M38 50L50 44"/></symbol>
+<symbol id="wx-rainbow" viewBox="0 0 64 64"><path d="M6 52A26 26 0 0 1 58 52M14 52A18 18 0 0 1 50 52M22 52A10 10 0 0 1 42 52M4 56H25M40 56H60"/></symbol>
+<symbol id="wx-soil" viewBox="0 0 64 64"><path d="M6 30H58M6 43H58M6 55H58M32 30V17Q18 17 18 7Q31 7 32 17Q33 7 46 7Q46 17 32 17M14 36H18M29 49H34M43 36H48"/></symbol>
+<symbol id="wx-root" viewBox="0 0 64 64"><path d="M32 8V30M16 27H48M32 30L20 43L14 57M32 30L44 43L50 57M32 30V57M20 43L8 45M44 43L56 45M32 45L24 53M32 40L40 48"/></symbol>
+<symbol id="wx-flower" viewBox="0 0 64 64"><circle cx="32" cy="25" r="5"/><path d="M27 20C13 5 36 0 36 17C53 5 61 28 42 29C56 43 33 52 29 34C12 47 3 24 22 25M32 38V59M32 51Q44 43 50 46Q47 58 32 55"/></symbol>
+<symbol id="wx-fruit" viewBox="0 0 64 64"><path d="M32 21C9 7 4 43 20 54Q29 60 32 55Q37 60 46 54C62 43 56 7 32 21ZM32 21Q28 10 36 5M35 14Q43 3 52 9Q48 19 35 14"/></symbol>
+<symbol id="wx-forest" viewBox="0 0 64 64"><path d="M17 13L6 37H28ZM17 37V55M44 7L29 40H59ZM44 40V55M6 55H59M27 27L31 19L35 27"/></symbol>
+<symbol id="wx-charcoal" viewBox="0 0 64 64"><path d="M10 40L42 14L56 23L51 38L22 56L10 50ZM10 40L23 45L22 56M23 45L56 23M32 37L39 38M41 28L46 29M15 45L18 48"/></symbol>
+<symbol id="wx-ash" viewBox="0 0 64 64"><path d="M7 53H57L44 40L32 46L23 34ZM22 26Q15 19 22 11M39 28Q32 21 39 13M16 48H22M36 51H42M43 45H48"/></symbol>
+<symbol id="wx-brick" viewBox="0 0 64 64"><path d="M8 25L39 11L57 23V44L25 58L8 46ZM8 25L25 37L57 23M25 37V58M17 22L34 34M26 18L44 28M36 15L52 24"/></symbol>
+<symbol id="wx-cement" viewBox="0 0 64 64"><path d="M20 9H44L50 20L53 56H11L14 20ZM20 9V20H44V9M15 27H49M23 37H41M20 44H44M25 51H39"/></symbol>
+<symbol id="wx-concrete" viewBox="0 0 64 64"><path d="M8 21L37 9L56 21V48L26 59L8 47ZM8 21L26 33L56 21M26 33V59M15 31L19 34M13 40L18 42M33 40L37 38M43 33L48 31M40 49L45 47"/></symbol>
+<symbol id="wx-wall" viewBox="0 0 64 64"><path d="M7 14H57V55H7ZM7 28H57M7 42H57M23 14V28M42 14V28M15 28V42M34 28V42M49 28V42M23 42V55M42 42V55"/></symbol>
+<symbol id="wx-house" viewBox="0 0 64 64"><path d="M5 29L32 8L59 29M12 25V56H52V25M25 56V38H38V56M18 31H22M43 31H47M43 9V17H49V9Z"/></symbol>
+<symbol id="wx-bridge" viewBox="0 0 64 64"><path d="M5 25H59M5 30H59M12 30V46M52 30V46M12 25Q32 1 52 25M20 17V25M32 12V25M44 17V25M6 53Q15 46 24 53T42 53T60 53"/></symbol>
+<symbol id="wx-fiber" viewBox="0 0 64 64"><path d="M9 52C12 22 28 40 31 8M20 55C22 29 40 33 42 9M32 56C36 32 51 41 54 13M12 30L21 34M22 40L32 43M35 28L43 32"/></symbol>
+<symbol id="wx-thread" viewBox="0 0 64 64"><path d="M18 10H46M18 54H46M23 10V54M41 10V54M23 19L41 25M23 27L41 33M23 35L41 41M23 43L41 49M41 33Q59 32 54 49L60 54"/></symbol>
+<symbol id="wx-cloth" viewBox="0 0 64 64"><path d="M12 12H52V52H12ZM22 12V52M32 12V52M42 12V52M12 22H52M12 32H52M12 42H52M8 17H12M8 28H12M8 39H12M17 52V57M28 52V57M39 52V57M50 52V57"/></symbol>
+<symbol id="wx-sail" viewBox="0 0 64 64"><path d="M30 7V56M30 10L8 44H30ZM35 18L55 44H35ZM17 56H46"/></symbol>
+<symbol id="wx-boat" viewBox="0 0 64 64"><path d="M7 42H57L48 54H18ZM30 8V42M30 8L9 36H30ZM35 16L53 36H35M5 59Q15 53 25 59T45 59T61 59"/></symbol>
+<symbol id="wx-magnet" viewBox="0 0 64 64"><path d="M13 10H26V34A6 6 0 0 0 38 34V10H51V34A19 19 0 0 1 13 34ZM13 22H26M38 22H51M18 6V3M46 6V3"/></symbol>
+<symbol id="wx-compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="24"/><path d="M39 18L35 35L18 46L29 29ZM32 8V13M32 51V56M8 32H13M51 32H56"/></symbol>
+<symbol id="wx-motor" viewBox="0 0 64 64"><rect x="13" y="17" width="36" height="31" rx="6"/><path d="M49 28H59V37H49M13 28H6M20 48V55H43V48M23 17V10H39V17"/><circle cx="30" cy="32" r="8"/><path d="M30 24V40M22 32H38"/></symbol>
+<symbol id="wx-generator" viewBox="0 0 64 64"><circle cx="25" cy="32" r="19"/><path d="M44 25H56V39H44M25 6V13M25 51V58M6 57H45M29 20L18 34H27L22 45"/></symbol>
+<symbol id="wx-turbine" viewBox="0 0 64 64"><circle cx="32" cy="32" r="24"/><circle cx="32" cy="32" r="5"/><path d="M32 27Q16 11 32 8M37 32Q53 16 56 32M32 37Q48 53 32 56M27 32Q11 48 8 32"/></symbol>
+<symbol id="wx-pump" viewBox="0 0 64 64"><circle cx="32" cy="34" r="17"/><path d="M15 29H6V41H15M32 17V7H47V18H39M20 49V56H46V49M23 34H41M32 25L41 34L32 43"/></symbol>
+<symbol id="wx-pipe" viewBox="0 0 64 64"><path d="M8 45V24Q8 10 23 10H55V24H27Q22 24 22 29V55H8ZM7 44H23M44 9V25M51 9V25M8 51H22"/></symbol>
+<symbol id="wx-valve" viewBox="0 0 64 64"><path d="M6 32H22L42 49V25L22 49V25L42 42H58M6 32V49H22M42 49H58V32M32 25V12M20 12H44M32 6V18"/></symbol>
+<symbol id="wx-circuit" viewBox="0 0 64 64"><path d="M9 9H55V55H9ZM9 32H21M43 32H55M32 9V21M32 43V55"/><rect x="21" y="21" width="22" height="22" rx="3"/><path d="M27 21V16M37 21V16M27 43V48M37 43V48"/></symbol>
+<symbol id="wx-battery" viewBox="0 0 64 64"><rect x="13" y="14" width="38" height="43" rx="4"/><path d="M23 14V7H41V14M20 28H31M25 23V33M38 28H44M20 45H44"/></symbol>
+<symbol id="wx-resistor" viewBox="0 0 64 64"><path d="M5 32H17L21 20L27 44L33 20L39 44L44 32H59M16 14H48M16 50H48"/></symbol>
+<symbol id="wx-switch" viewBox="0 0 64 64"><path d="M5 42H18M46 42H59M18 42L43 20M10 55H54"/><circle cx="18" cy="42" r="4"/><circle cx="46" cy="42" r="4"/></symbol>
+<symbol id="wx-lamp" viewBox="0 0 64 64"><path d="M23 43C7 29 15 9 32 9S57 29 41 43V52H23ZM23 46H41M27 58H37M32 43V30L24 24M32 30L40 24"/></symbol>
+<symbol id="wx-lens" viewBox="0 0 64 64"><ellipse cx="32" cy="32" rx="10" ry="25"/><path d="M5 17L57 32L5 47M5 32H57M25 9L39 55"/></symbol>
+<symbol id="wx-microscope" viewBox="0 0 64 64"><path d="M31 7L43 13L31 36L19 30ZM21 25L34 31M40 24Q59 42 40 52H18M14 40H37M26 40V49M9 57H54M20 7L26 10"/></symbol>
+<symbol id="wx-prism" viewBox="0 0 64 64"><path d="M19 49L32 12L46 49ZM4 25L27 25M38 28L59 19M40 33L59 33M42 39L59 49"/></symbol>
+<symbol id="wx-solar" viewBox="0 0 64 64"><path d="M14 28H49L57 53H6ZM25 28L22 53M37 28L41 53M10 40H53M31 53V60M22 60H40"/><circle cx="45" cy="12" r="6"/><path d="M45 2V4M55 12H59M37 5L34 2M53 20L56 23"/></symbol>
+<symbol id="wx-screen" viewBox="0 0 64 64"><rect x="6" y="9" width="52" height="37" rx="3"/><path d="M25 46V55H39V46M17 55H47M13 35L22 24L32 30L43 18L51 25"/></symbol>
+<symbol id="wx-computer" viewBox="0 0 64 64"><path d="M13 10H51V40H13ZM13 40L5 54H59L51 40M21 47H43M25 24L30 29L41 18M9 54V58H55V54"/></symbol>
+<symbol id="wx-code" viewBox="0 0 64 64"><path d="M22 17L7 32L22 47M42 17L57 32L42 47M37 9L27 55"/></symbol>
+<symbol id="wx-algorithm" viewBox="0 0 64 64"><path d="M32 7L47 20L32 33L17 20ZM32 33V43M17 20H8V50H21M47 20H56V50H43M21 44H43V57H21ZM28 13H36"/></symbol>
+<symbol id="wx-model" viewBox="0 0 64 64"><path d="M32 7L56 20V45L32 58L8 45V20ZM8 20L32 34L56 20M32 34V58M32 7V34M8 45L32 34L56 45"/></symbol>
+<symbol id="wx-simulation" viewBox="0 0 64 64"><rect x="5" y="9" width="54" height="40" rx="3"/><path d="M12 40L23 19L36 37L51 17M24 49V57H41V49M16 57H48"/><circle cx="23" cy="19" r="3"/><circle cx="36" cy="37" r="3"/></symbol>
+<symbol id="wx-control" viewBox="0 0 64 64"><path d="M14 7V57M32 7V57M50 7V57M8 22H20M26 43H38M44 16H56"/><rect x="8" y="17" width="12" height="10" rx="3"/><rect x="26" y="38" width="12" height="10" rx="3"/><rect x="44" y="11" width="12" height="10" rx="3"/></symbol>
+<symbol id="wx-automation" viewBox="0 0 64 64"><path d="M11 22A24 24 0 0 1 53 20M53 20V9M53 20H42M53 43A24 24 0 0 1 11 45M11 45V56M11 45H22M28 21L40 32L28 43Z"/></symbol>
+<symbol id="wx-robot" viewBox="0 0 64 64"><rect x="13" y="18" width="38" height="33" rx="6"/><path d="M32 18V9M8 29V43M56 29V43M24 51V58M40 51V58M24 42H40"/><circle cx="32" cy="7" r="3"/><circle cx="23" cy="30" r="3"/><circle cx="41" cy="30" r="3"/></symbol>
+<symbol id="wx-data" viewBox="0 0 64 64"><ellipse cx="32" cy="13" rx="22" ry="7"/><path d="M10 13V49C10 59 54 59 54 49V13M10 25C10 35 54 35 54 25M10 37C10 47 54 47 54 37"/></symbol>
+<symbol id="wx-chart" viewBox="0 0 64 64"><path d="M8 8V56H57M18 48V35H25V48M32 48V23H39V48M46 48V13H53V48M14 22L27 15L36 18L53 7"/></symbol>
+<symbol id="wx-library" viewBox="0 0 64 64"><path d="M7 55H58M10 12H20V51H10ZM24 8H34V51H24ZM37 17L46 14L57 49L48 52ZM10 21H20M24 17H34M40 26L49 23"/></symbol>
+<symbol id="wx-calendar" viewBox="0 0 64 64"><rect x="9" y="14" width="46" height="42" rx="3"/><path d="M9 26H55M21 8V20M43 8V20M18 35H24M30 35H36M42 35H48M18 45H24M30 45H36M42 45H48"/></symbol>
+<symbol id="wx-season" viewBox="0 0 64 64"><circle cx="32" cy="32" r="23"/><path d="M32 9V55M9 32H55M21 17V26M17 22H25M39 18L47 25M47 18L39 25M18 41L25 48M18 48L25 41M43 39V50M39 44H48"/></symbol>
+<symbol id="wx-greenhouse" viewBox="0 0 64 64"><path d="M7 29L32 9L57 29V56H7ZM32 9V56M19 20V56M45 20V56M7 36H57M7 46H57M25 56V41H39V56"/></symbol>
+<symbol id="wx-mortar" viewBox="0 0 64 64"><path d="M8 31H54Q51 54 31 54Q12 54 8 31ZM16 22L26 28M30 31L45 8Q48 5 52 8Q55 11 52 15L41 31M19 58H45"/></symbol>
+<symbol id="wx-powder" viewBox="0 0 64 64"><path d="M8 53H56L42 36L32 42L23 32ZM22 15L26 19L22 23L18 19M40 12L44 16L40 20L36 16M45 27H49M16 45H23M33 49H40"/></symbol>
+<symbol id="wx-herbalbook" viewBox="0 0 64 64"><path d="M12 8H49V55H12ZM12 47H49M19 55V60H52M30 39V22Q20 24 20 16Q31 15 30 26Q31 17 42 16Q43 27 30 29M23 40H38"/></symbol>
+<symbol id="wx-sundial" viewBox="0 0 64 64"><ellipse cx="32" cy="42" rx="26" ry="15"/><path d="M32 42V13L48 39M32 42L15 50M8 42H14M50 42H56M32 51V57M14 32L19 35M45 32L49 29"/><circle cx="15" cy="13" r="6"/></symbol>
+</defs></svg>

@@ -1,0 +1,1756 @@
+{
+  "version": 1,
+  "starters": [
+    "yin",
+    "yang"
+  ],
+  "groups": [
+    {
+      "id": "origins",
+      "zh": "阴阳五行",
+      "en": "Origins"
+    },
+    {
+      "id": "nature",
+      "zh": "自然",
+      "en": "Nature"
+    },
+    {
+      "id": "craft",
+      "zh": "器物",
+      "en": "Making"
+    },
+    {
+      "id": "tcm",
+      "zh": "中医",
+      "en": "Chinese medicine"
+    },
+    {
+      "id": "systems",
+      "zh": "系统",
+      "en": "Systems"
+    }
+  ],
+  "elements": [
+    {
+      "id": "yin",
+      "zh": "阴",
+      "en": "Yin",
+      "group": "origins",
+      "description_zh": "收敛、静与凉的意象。故事从这里的一半开始。",
+      "description_en": "An image of quiet, coolness and inward movement. One half of the beginning."
+    },
+    {
+      "id": "yang",
+      "zh": "阳",
+      "en": "Yang",
+      "group": "origins",
+      "description_zh": "舒展、动与暖的意象。与阴相遇，打开新的联系。",
+      "description_en": "An image of warmth, activity and outward movement. Meet its counterpart."
+    },
+    {
+      "id": "taiji",
+      "zh": "太极",
+      "en": "Taiji",
+      "group": "origins",
+      "description_zh": "阴阳相对相含的文化图形，用它作为本游戏展开五行的入口。",
+      "description_en": "A cultural figure of complementary yin and yang; the gateway to this game’s five phases."
+    },
+    {
+      "id": "fire",
+      "zh": "火",
+      "en": "Fire",
+      "group": "origins",
+      "description_zh": "向上的焰形：热，让材料改变状态。",
+      "description_en": "An upward flame: heat makes materials change state."
+    },
+    {
+      "id": "water",
+      "zh": "水",
+      "en": "Water",
+      "group": "origins",
+      "description_zh": "一滴水：流动、汇聚，也参与许多造物过程。",
+      "description_en": "A drop that flows, gathers and joins many making processes."
+    },
+    {
+      "id": "earth",
+      "zh": "土",
+      "en": "Earth",
+      "group": "origins",
+      "description_zh": "层叠的地形：为生长与材料提供落脚处。",
+      "description_en": "Layers of ground: a place for growth and a source of materials."
+    },
+    {
+      "id": "wood",
+      "zh": "木",
+      "en": "Wood",
+      "group": "origins",
+      "description_zh": "分枝的树形：生长的意象，也是一种可塑材料。",
+      "description_en": "A branching form: an image of growth and a workable material."
+    },
+    {
+      "id": "metal",
+      "zh": "金",
+      "en": "Metal",
+      "group": "origins",
+      "description_zh": "切面的金属块：可以成为工具、结构与导体。",
+      "description_en": "A faceted ingot that can become a tool, structure or conductor."
+    },
+    {
+      "id": "steam",
+      "zh": "蒸汽",
+      "en": "Steam",
+      "group": "nature",
+      "description_zh": "三束向上的曲线：水受热后，进入另一种状态。",
+      "description_en": "Three rising curves: water changes state when heated."
+    },
+    {
+      "id": "cloud",
+      "zh": "云",
+      "en": "Cloud",
+      "group": "nature",
+      "description_zh": "聚拢的圆弧：微小水滴或冰晶组成可见的云。",
+      "description_en": "Gathered arcs: tiny droplets or ice crystals make a visible cloud."
+    },
+    {
+      "id": "rain",
+      "zh": "雨",
+      "en": "Rain",
+      "group": "nature",
+      "description_zh": "云下落线：聚集的水滴落向大地。",
+      "description_en": "Falling strokes beneath a cloud: gathered droplets return to the ground."
+    },
+    {
+      "id": "river",
+      "zh": "河流",
+      "en": "River",
+      "group": "nature",
+      "description_zh": "两条蜿蜒的岸线：许多来水汇成一条路径。",
+      "description_en": "Two winding banks: many flows join a shared course."
+    },
+    {
+      "id": "stone",
+      "zh": "石",
+      "en": "Stone",
+      "group": "nature",
+      "description_zh": "不规则的棱面：形态与纹理留下地质过程的痕迹。",
+      "description_en": "An angular form whose shape and texture carry geological histories."
+    },
+    {
+      "id": "sand",
+      "zh": "沙",
+      "en": "Sand",
+      "group": "nature",
+      "description_zh": "一组分散的小颗粒：整体形态来自颗粒的聚集。",
+      "description_en": "Separate grains whose arrangement gives the whole its form."
+    },
+    {
+      "id": "clay",
+      "zh": "黏土",
+      "en": "Clay",
+      "group": "nature",
+      "description_zh": "柔软的层纹：细颗粒与水让材料可以被塑形。",
+      "description_en": "Soft layers: fine particles and water make a material workable."
+    },
+    {
+      "id": "pottery",
+      "zh": "陶器",
+      "en": "Pottery",
+      "group": "craft",
+      "description_zh": "有口有腹的器形：材料经过成形与烧制，获得新用途。",
+      "description_en": "An open vessel: shaping and firing give material a new use."
+    },
+    {
+      "id": "glass",
+      "zh": "玻璃",
+      "en": "Glass",
+      "group": "craft",
+      "description_zh": "透明棱柱：加工改变了材料与光的关系。",
+      "description_en": "A transparent prism: processing changes a material’s relation to light."
+    },
+    {
+      "id": "seed",
+      "zh": "种子",
+      "en": "Seed",
+      "group": "nature",
+      "description_zh": "带有胚芽的椭圆：生长的可能性被收在小小结构中。",
+      "description_en": "An oval with a shoot: a small structure holds the potential for growth."
+    },
+    {
+      "id": "plant",
+      "zh": "植株",
+      "en": "Plant",
+      "group": "nature",
+      "description_zh": "一茎两叶：生长需要材料、能量与环境共同参与。",
+      "description_en": "A stem and two leaves: growth involves materials, energy and environment."
+    },
+    {
+      "id": "herb",
+      "zh": "药草",
+      "en": "Medicinal plant",
+      "group": "tcm",
+      "description_zh": "叶与根：连接植物知识与本草文化，不代表所有植物皆可入药。",
+      "description_en": "Leaf and root connect plant knowledge with materia medica; not every plant is medicinal."
+    },
+    {
+      "id": "grain",
+      "zh": "谷物",
+      "en": "Grain",
+      "group": "nature",
+      "description_zh": "一穗谷粒：从生长走向成熟与收获。",
+      "description_en": "A grain head: growth moves towards maturity and harvest."
+    },
+    {
+      "id": "paper",
+      "zh": "纸",
+      "en": "Paper",
+      "group": "craft",
+      "description_zh": "折角的薄片：纤维重新组织，成为书写的载体。",
+      "description_en": "A folded sheet: reorganised fibres become a surface for writing."
+    },
+    {
+      "id": "ink",
+      "zh": "墨",
+      "en": "Ink",
+      "group": "craft",
+      "description_zh": "墨滴与砚面：材料与工艺共同承载文字。",
+      "description_en": "An ink drop and inkstone: materials and craft carry written language."
+    },
+    {
+      "id": "book",
+      "zh": "书",
+      "en": "Book",
+      "group": "craft",
+      "description_zh": "展开的双页：纸与文字组成可以传递的知识。",
+      "description_en": "Two open pages: paper and writing become shareable knowledge."
+    },
+    {
+      "id": "needle",
+      "zh": "针具",
+      "en": "Needle",
+      "group": "tcm",
+      "description_zh": "细长针形：材料与形制结合，成为中医器具的文化符号。",
+      "description_en": "A fine needle: material and form become a cultural symbol of Chinese medicine."
+    },
+    {
+      "id": "decoction",
+      "zh": "药汤",
+      "en": "Herbal decoction",
+      "group": "tcm",
+      "description_zh": "器皿上升起的水汽：本草与煎煮工艺相遇的意象。",
+      "description_en": "Vapour above a vessel: an image of materia medica meeting preparation craft."
+    },
+    {
+      "id": "moxa",
+      "zh": "艾火",
+      "en": "Moxa",
+      "group": "tcm",
+      "description_zh": "艾卷上的小焰：艾草与火的中医文化意象。",
+      "description_en": "A small flame above a roll: the cultural image of mugwort and fire."
+    },
+    {
+      "id": "wheel",
+      "zh": "轮",
+      "en": "Wheel",
+      "group": "craft",
+      "description_zh": "轮缘与辐条：结构让材料可以承载与转动。",
+      "description_en": "A rim and spokes: structure lets a material carry loads and rotate."
+    },
+    {
+      "id": "gear",
+      "zh": "齿轮",
+      "en": "Gear",
+      "group": "craft",
+      "description_zh": "带齿的轮：边缘形状让它能够与另一个轮发生联系。",
+      "description_en": "A toothed wheel whose edge can engage with another wheel."
+    },
+    {
+      "id": "machine",
+      "zh": "机械",
+      "en": "Mechanism",
+      "group": "systems",
+      "description_zh": "两只啮合的齿轮：联系使部件产生传动功能。",
+      "description_en": "Two meshing gears: their connection produces transmission."
+    },
+    {
+      "id": "engine",
+      "zh": "动力机",
+      "en": "Engine",
+      "group": "systems",
+      "description_zh": "活塞与飞轮：组织起来的部件把能量转为运动。",
+      "description_en": "A piston and flywheel: organised parts turn energy into motion."
+    },
+    {
+      "id": "electricity",
+      "zh": "电",
+      "en": "Electricity",
+      "group": "systems",
+      "description_zh": "折线闪电：为传感、信号与控制打开新的路径。",
+      "description_en": "A lightning stroke opens routes to sensing, signals and control."
+    },
+    {
+      "id": "sensor",
+      "zh": "传感器",
+      "en": "Sensor",
+      "group": "systems",
+      "description_zh": "同心感知弧：把环境变化转为可以处理的信号。",
+      "description_en": "Nested sensing arcs turn environmental change into usable signals."
+    },
+    {
+      "id": "signal",
+      "zh": "信号",
+      "en": "Signal",
+      "group": "systems",
+      "description_zh": "一段脉冲：变化可以被编码与传递。",
+      "description_en": "A pulse: change can be encoded and communicated."
+    },
+    {
+      "id": "network",
+      "zh": "网络",
+      "en": "Network",
+      "group": "systems",
+      "description_zh": "相连的节点：联系的结构影响信息如何流动。",
+      "description_en": "Linked nodes: their arrangement affects how information flows."
+    },
+    {
+      "id": "feedback",
+      "zh": "反馈",
+      "en": "Feedback",
+      "group": "systems",
+      "description_zh": "闭合的回路：输出返回并参与后续过程。",
+      "description_en": "A closed loop: output returns to influence what happens next."
+    },
+    {
+      "id": "clock",
+      "zh": "时钟",
+      "en": "Clock",
+      "group": "systems",
+      "description_zh": "指针与刻度：周期运动成为可读的时间尺度。",
+      "description_en": "Hands and marks: periodic movement becomes a readable measure of time."
+    },
+    {
+      "id": "rhythm",
+      "zh": "节律",
+      "en": "Rhythm",
+      "group": "systems",
+      "description_zh": "重复的波峰：变化在时间中形成可辨认的模式。",
+      "description_en": "Repeated peaks: change forms a recognisable pattern in time."
+    },
+    {
+      "id": "balance",
+      "zh": "动态平衡",
+      "en": "Dynamic balance",
+      "group": "systems",
+      "description_zh": "支点上的双盘：持续调整中保持的相对稳定。",
+      "description_en": "Two pans on a pivot: relative stability maintained through adjustment."
+    },
+    {
+      "id": "system",
+      "zh": "系统",
+      "en": "System",
+      "group": "systems",
+      "description_zh": "有边界、有回路的节点群：部分在联系中形成整体。",
+      "description_en": "A bounded group of connected nodes: parts form a whole through relationships."
+    },
+    {
+      "id": "air",
+      "zh": "空气",
+      "en": "Air",
+      "group": "nature",
+      "description_zh": "无形空气以疏开的三条曲线表示，作为第二批开放的基础介质。",
+      "description_en": "Three open curves represent air, a basic medium added in the expanded atlas."
+    },
+    {
+      "id": "light",
+      "zh": "光",
+      "en": "Light",
+      "group": "nature",
+      "description_zh": "一束光线，连接照明、光学与植物生长的路线。",
+      "description_en": "A beam of light connects illumination, optics and plant growth."
+    },
+    {
+      "id": "wind",
+      "zh": "风",
+      "en": "Wind",
+      "group": "nature",
+      "description_zh": "空气受热不均形成压强差，带来流动；这里省略具体天气条件。",
+      "description_en": "Uneven heating creates pressure differences and moving air; weather conditions are compressed."
+    },
+    {
+      "id": "ice",
+      "zh": "冰",
+      "en": "Ice",
+      "group": "nature",
+      "description_zh": "以阴的凉意代表冷却条件，水在适宜温度下凝固成冰。",
+      "description_en": "The cool image of yin stands for cooling water until it freezes."
+    },
+    {
+      "id": "snow",
+      "zh": "雪",
+      "en": "Snow",
+      "group": "nature",
+      "description_zh": "云中冰晶在适宜条件下生长并降落，形成雪。",
+      "description_en": "Ice crystals grow and fall from clouds under suitable conditions, forming snow."
+    },
+    {
+      "id": "rainbow",
+      "zh": "虹",
+      "en": "Rainbow",
+      "group": "nature",
+      "description_zh": "光在水滴中折射、反射并分散，在适宜几何条件下形成虹。",
+      "description_en": "Light refracts, reflects and disperses in water droplets, making a rainbow at suitable angles."
+    },
+    {
+      "id": "soil",
+      "zh": "腐殖土",
+      "en": "Humus-rich soil",
+      "group": "nature",
+      "description_zh": "植物残体分解后与矿物颗粒相混，增添土壤中的有机质。",
+      "description_en": "Decomposed plant remains mix with mineral particles, adding organic matter to soil."
+    },
+    {
+      "id": "root",
+      "zh": "根",
+      "en": "Root",
+      "group": "nature",
+      "description_zh": "以植物在土中生根为线索，发现吸收与固定的结构。",
+      "description_en": "A plant taking root in soil reveals a structure for uptake and anchoring."
+    },
+    {
+      "id": "flower",
+      "zh": "花",
+      "en": "Flower",
+      "group": "nature",
+      "description_zh": "光周期等条件参与开花调控；本路线选取开花植物。",
+      "description_en": "Photoperiod and other conditions participate in flowering; this route refers to flowering plants."
+    },
+    {
+      "id": "fruit",
+      "zh": "果",
+      "en": "Fruit",
+      "group": "nature",
+      "description_zh": "被子植物开花、授粉后发育成果实，路线省略具体条件。",
+      "description_en": "Flowering plants develop fruit after flowering and pollination; detailed conditions are implicit."
+    },
+    {
+      "id": "forest",
+      "zh": "林",
+      "en": "Forest",
+      "group": "nature",
+      "description_zh": "多株树木形成林的集合意象；森林还包含土壤、生物及环境联系。",
+      "description_en": "Many trees suggest a forest, which also includes soil, organisms and environmental relationships."
+    },
+    {
+      "id": "charcoal",
+      "zh": "木炭",
+      "en": "Charcoal",
+      "group": "craft",
+      "description_zh": "木材在限氧窑中受热形成木炭；陶器在此代表窑烧工艺。",
+      "description_en": "Wood heated in a low-oxygen kiln forms charcoal; pottery stands for kiln craft here."
+    },
+    {
+      "id": "ash",
+      "zh": "草木灰",
+      "en": "Plant ash",
+      "group": "craft",
+      "description_zh": "植物材料燃烧后留下无机灰分，得到草木灰。",
+      "description_en": "Burning plant material leaves inorganic mineral ash."
+    },
+    {
+      "id": "brick",
+      "zh": "砖",
+      "en": "Brick",
+      "group": "craft",
+      "description_zh": "黏土与适宜矿物骨料成形、烧制为砖，配方压缩成形与烧成工序。",
+      "description_en": "Clay with suitable mineral aggregate is shaped and fired into brick; processing is compressed."
+    },
+    {
+      "id": "cement",
+      "zh": "水泥",
+      "en": "Cement",
+      "group": "craft",
+      "description_zh": "以含钙岩石与黏土等原料煅烧、粉磨为线索，省略其他原料和工序。",
+      "description_en": "Calcium-bearing rock and clay are calcined and ground; additional materials and stages are implicit."
+    },
+    {
+      "id": "concrete",
+      "zh": "混凝土",
+      "en": "Concrete",
+      "group": "craft",
+      "description_zh": "水泥与砂、粗骨料、水拌合后硬化；此处用两项概括复合材料。",
+      "description_en": "Cement, sand, coarse aggregate and water harden into concrete; two items stand for the composite process."
+    },
+    {
+      "id": "wall",
+      "zh": "墙",
+      "en": "Wall",
+      "group": "craft",
+      "description_zh": "以砖和泥质砌筑材料组织成墙为线索，结构来自排列与连接。",
+      "description_en": "Bricks with an earthen bonding material suggest a wall built through arrangement and connection."
+    },
+    {
+      "id": "house",
+      "zh": "屋",
+      "en": "House",
+      "group": "craft",
+      "description_zh": "墙体与木构屋顶等构件组织成房屋，省略其他构件。",
+      "description_en": "Walls and wooden roof members are organised into a house; other parts are implicit."
+    },
+    {
+      "id": "bridge",
+      "zh": "桥",
+      "en": "Bridge",
+      "group": "craft",
+      "description_zh": "木构件跨越水道，经支承与连接形成桥的功能。",
+      "description_en": "Wooden members arranged across a waterway gain a bridge’s function through support and connection."
+    },
+    {
+      "id": "fiber",
+      "zh": "纤维",
+      "en": "Fibre",
+      "group": "craft",
+      "description_zh": "植物材料经浸渍、捶打或碾磨提取纤维，石代表加工工具。",
+      "description_en": "Plant material is soaked, beaten or ground to obtain fibres; stone represents the tools."
+    },
+    {
+      "id": "thread",
+      "zh": "线",
+      "en": "Thread",
+      "group": "craft",
+      "description_zh": "纤维经纺轮加捻，组织为连续的纱线。",
+      "description_en": "Fibres twisted with a spinning wheel become continuous thread."
+    },
+    {
+      "id": "cloth",
+      "zh": "布",
+      "en": "Cloth",
+      "group": "craft",
+      "description_zh": "经纬纱线按结构交织，形成可以使用的织物。",
+      "description_en": "Warp and weft threads interlace in an organised structure to make cloth."
+    },
+    {
+      "id": "sail",
+      "zh": "帆",
+      "en": "Sail",
+      "group": "craft",
+      "description_zh": "布被裁制、支撑为帆，借风产生推进作用。",
+      "description_en": "Cloth shaped and supported as a sail catches wind to provide propulsion."
+    },
+    {
+      "id": "boat",
+      "zh": "帆船",
+      "en": "Sailboat",
+      "group": "craft",
+      "description_zh": "木制船体与帆装配，借浮力、风与结构形成航行功能。",
+      "description_en": "A wooden hull and sail combine buoyancy, wind and structure to enable sailing."
+    },
+    {
+      "id": "magnet",
+      "zh": "磁石",
+      "en": "Magnet",
+      "group": "craft",
+      "description_zh": "从含铁矿物中发现具有磁性的天然磁石，不表示所有金属都有磁性。",
+      "description_en": "Iron-bearing minerals include naturally magnetic lodestone; this does not imply all metals are magnetic."
+    },
+    {
+      "id": "compass",
+      "zh": "罗盘",
+      "en": "Compass",
+      "group": "craft",
+      "description_zh": "磁化的针与支承结构结合，可指示磁场方向；这里省略支承。",
+      "description_en": "A magnetised needle on a suitable support indicates magnetic field direction; the support is implicit."
+    },
+    {
+      "id": "motor",
+      "zh": "电动机",
+      "en": "Electric motor",
+      "group": "systems",
+      "description_zh": "磁场、线圈与电流相互作用，按结构组织后产生转动。",
+      "description_en": "Fields, coils and current interact in an organised structure to produce rotation."
+    },
+    {
+      "id": "generator",
+      "zh": "发电机",
+      "en": "Generator",
+      "group": "systems",
+      "description_zh": "动力使导体与磁场产生相对运动，联想到发电装置。",
+      "description_en": "Mechanical power moves a conductor relative to a magnetic field, suggesting a generator."
+    },
+    {
+      "id": "turbine",
+      "zh": "汽轮机",
+      "en": "Steam turbine",
+      "group": "systems",
+      "description_zh": "蒸汽推动叶轮，把流体的能量转为旋转运动。",
+      "description_en": "Steam drives a bladed rotor, turning fluid energy into rotation."
+    },
+    {
+      "id": "pump",
+      "zh": "水泵",
+      "en": "Water pump",
+      "group": "systems",
+      "description_zh": "有动力与合适结构的机构搬运水，形成泵的功能。",
+      "description_en": "A powered mechanism with suitable structure moves water, acquiring a pump’s function."
+    },
+    {
+      "id": "pipe",
+      "zh": "管",
+      "en": "Pipe",
+      "group": "craft",
+      "description_zh": "金属加工与陶制成型提供两类制管工艺，形成流体通道。",
+      "description_en": "Metalworking and ceramic forming offer ways to make pipes that channel fluids."
+    },
+    {
+      "id": "valve",
+      "zh": "阀",
+      "en": "Valve",
+      "group": "systems",
+      "description_zh": "在管道中加入可调机构，控制通道的开度与流量。",
+      "description_en": "An adjustable mechanism in a pipe controls its opening and flow."
+    },
+    {
+      "id": "circuit",
+      "zh": "电路",
+      "en": "Circuit",
+      "group": "systems",
+      "description_zh": "导体与元件按拓扑连接，为信号建立可运行的电路。",
+      "description_en": "Conductors and components arranged in a topology give signals a functioning circuit."
+    },
+    {
+      "id": "battery",
+      "zh": "电池",
+      "en": "Battery",
+      "group": "systems",
+      "description_zh": "两种适宜电极与电解液形成电化学装置；水代表水系电解液。",
+      "description_en": "Suitable electrodes and an electrolyte form an electrochemical device; water stands for an aqueous electrolyte."
+    },
+    {
+      "id": "resistor",
+      "zh": "电阻",
+      "en": "Resistor",
+      "group": "systems",
+      "description_zh": "碳材料在合适结构中可以制成电阻元件，不是任意木炭皆可直接使用。",
+      "description_en": "Carbon materials in suitable structures can form resistors; ordinary charcoal is not a ready-made component."
+    },
+    {
+      "id": "switch",
+      "zh": "开关",
+      "en": "Switch",
+      "group": "systems",
+      "description_zh": "机械结构控制电路的接通与断开，形成开关。",
+      "description_en": "A mechanical structure opens or closes a circuit to form a switch."
+    },
+    {
+      "id": "lamp",
+      "zh": "灯",
+      "en": "Lamp",
+      "group": "systems",
+      "description_zh": "玻璃灯罩与电光源等部件组织为灯，省略具体发光材料。",
+      "description_en": "A glass enclosure and an electric light source are arranged as a lamp; emitting materials are implicit."
+    },
+    {
+      "id": "lens",
+      "zh": "透镜",
+      "en": "Lens",
+      "group": "craft",
+      "description_zh": "玻璃加工成适宜曲面，改变光路，形成透镜。",
+      "description_en": "Glass shaped with suitable curved surfaces redirects light to form a lens."
+    },
+    {
+      "id": "microscope",
+      "zh": "显微镜",
+      "en": "Microscope",
+      "group": "systems",
+      "description_zh": "物镜与目镜等光学部件按距离和光路组织，形成复合显微镜。",
+      "description_en": "Objective and eyepiece lenses arranged along an optical path form a compound microscope."
+    },
+    {
+      "id": "prism",
+      "zh": "棱镜",
+      "en": "Prism",
+      "group": "craft",
+      "description_zh": "将玻璃加工为棱柱，利用色散把光分开；虹提供观察线索。",
+      "description_en": "Glass shaped as a prism disperses light; the rainbow suggests the optical effect."
+    },
+    {
+      "id": "solar",
+      "zh": "太阳能电池",
+      "en": "Solar cell",
+      "group": "systems",
+      "description_zh": "具有光伏效应的半导体与电路组织成太阳能电池，材料条件在此省略。",
+      "description_en": "Photovoltaic semiconductors connected to a circuit form a solar cell; material conditions are implicit."
+    },
+    {
+      "id": "screen",
+      "zh": "显示屏",
+      "en": "Display",
+      "group": "systems",
+      "description_zh": "显示材料、玻璃基板与驱动信号共同构成显示装置。",
+      "description_en": "Display materials, a glass substrate and driving signals form a display."
+    },
+    {
+      "id": "computer",
+      "zh": "计算机",
+      "en": "Computer",
+      "group": "systems",
+      "description_zh": "电路按计算结构组织，执行存储的指令；书在此代表指令记录。",
+      "description_en": "Computationally organised circuits execute stored instructions; the book represents instruction records."
+    },
+    {
+      "id": "code",
+      "zh": "编码",
+      "en": "Code",
+      "group": "systems",
+      "description_zh": "为记录与信号建立对应规则，形成可传递的编码。",
+      "description_en": "A defined mapping between records and signals creates communicable code."
+    },
+    {
+      "id": "algorithm",
+      "zh": "算法",
+      "en": "Algorithm",
+      "group": "systems",
+      "description_zh": "把有序、明确的操作步骤写成可执行的表示，形成算法的游戏意象。",
+      "description_en": "Represent ordered, explicit steps in executable form: the game’s image of an algorithm."
+    },
+    {
+      "id": "model",
+      "zh": "模型",
+      "en": "Model",
+      "group": "systems",
+      "description_zh": "记录系统的结构、变量与关系，建立针对问题的模型。",
+      "description_en": "Record a system’s structure, variables and relationships to build a model for a question."
+    },
+    {
+      "id": "simulation",
+      "zh": "仿真",
+      "en": "Simulation",
+      "group": "systems",
+      "description_zh": "让模型在计算机中按规则运行，观察设定条件下的变化。",
+      "description_en": "Run a model by defined rules on a computer to observe change under specified conditions."
+    },
+    {
+      "id": "control",
+      "zh": "控制",
+      "en": "Control",
+      "group": "systems",
+      "description_zh": "按控制规则处理返回的信息，调整后续输出。",
+      "description_en": "Process returning information according to control rules to adjust subsequent output."
+    },
+    {
+      "id": "automation",
+      "zh": "自动化",
+      "en": "Automation",
+      "group": "systems",
+      "description_zh": "将控制规则与执行机构连接，让任务按设定条件自动运行。",
+      "description_en": "Connect control rules with actuators so a task runs automatically under defined conditions."
+    },
+    {
+      "id": "robot",
+      "zh": "机器人",
+      "en": "Robot",
+      "group": "systems",
+      "description_zh": "感知、控制与执行机构组织在一起，形成机器人的简化结构。",
+      "description_en": "Sensing, control and actuation are organised into a simplified robotic structure."
+    },
+    {
+      "id": "data",
+      "zh": "数据",
+      "en": "Data",
+      "group": "systems",
+      "description_zh": "把信号按规则记录，形成可回看的数据。",
+      "description_en": "Record signals by defined rules to create data that can be revisited."
+    },
+    {
+      "id": "chart",
+      "zh": "图表",
+      "en": "Chart",
+      "group": "systems",
+      "description_zh": "把数据映射为图形，让关系与变化更容易被阅读。",
+      "description_en": "Map data into visual forms so relationships and changes become readable."
+    },
+    {
+      "id": "library",
+      "zh": "书库",
+      "en": "Library",
+      "group": "craft",
+      "description_zh": "书籍经过收集、分类与编目，形成可以检索的书库。",
+      "description_en": "Books collected, classified and catalogued form a searchable library."
+    },
+    {
+      "id": "calendar",
+      "zh": "历",
+      "en": "Calendar",
+      "group": "craft",
+      "description_zh": "记录并组织时间周期，形成便于查阅的历。",
+      "description_en": "Record and organise cycles of time into a calendar."
+    },
+    {
+      "id": "season",
+      "zh": "四时",
+      "en": "Seasons",
+      "group": "nature",
+      "description_zh": "在历法中记录年周期的物候变化，以春夏秋冬表达四时。",
+      "description_en": "Record annual phenological rhythms in a calendar as spring, summer, autumn and winter."
+    },
+    {
+      "id": "greenhouse",
+      "zh": "温室",
+      "en": "Greenhouse",
+      "group": "systems",
+      "description_zh": "透光围护与建筑结构相连，形成可调节栽培环境的温室。",
+      "description_en": "A light-transmitting enclosure and building structure form a greenhouse for managing growing conditions."
+    },
+    {
+      "id": "mortar",
+      "zh": "药臼",
+      "en": "Herbal mortar",
+      "group": "tcm",
+      "description_zh": "凹石与杵配合，材料经过形制加工成为研磨工具。",
+      "description_en": "A hollowed stone and pestle, shaped to work together, become a grinding tool."
+    },
+    {
+      "id": "powder",
+      "zh": "药粉",
+      "en": "Herbal powder",
+      "group": "tcm",
+      "description_zh": "合适药材经过研磨成为粉末，只展示加工形式，不提供用药建议。",
+      "description_en": "Suitable herbal material is ground into powder; this shows a processing form, not prescribing advice."
+    },
+    {
+      "id": "herbalbook",
+      "zh": "本草",
+      "en": "Materia medica",
+      "group": "tcm",
+      "description_zh": "把药用植物的观察与传统记载编排为本草记录。",
+      "description_en": "Arrange observations and traditional records of medicinal plants as materia medica."
+    },
+    {
+      "id": "sundial",
+      "zh": "日晷",
+      "en": "Sundial",
+      "group": "craft",
+      "description_zh": "刻度石盘与晷针利用日影变化指示时间；晷针等构件在此省略。",
+      "description_en": "A marked stone dial and gnomon use changing solar shadows to indicate time; individual parts are implicit."
+    }
+  ],
+  "recipes": [
+    {
+      "id": "yin-yang-taiji",
+      "a": "yin",
+      "b": "yang",
+      "result": "taiji",
+      "kind": "image",
+      "zh": "阴阳相遇，点亮太极图，开放金木水火土五行，以及空气与光两项基础介质。这是游戏开篇的文化意象。",
+      "en": "Meet yin and yang to reveal taiji. Open the five phases plus air and light as basic media: a cultural opening for this game.",
+      "grants": [
+        "metal",
+        "wood",
+        "water",
+        "fire",
+        "earth",
+        "air",
+        "light"
+      ]
+    },
+    {
+      "id": "wood-earth-plant",
+      "a": "wood",
+      "b": "earth",
+      "result": "plant",
+      "kind": "making",
+      "zh": "以木本植物枝条在适宜基质中生根为线索，省略栽培条件。",
+      "en": "Woody cuttings root in a suitable growing medium; cultivation conditions are compressed."
+    },
+    {
+      "id": "earth-fire-metal",
+      "a": "earth",
+      "b": "fire",
+      "result": "metal",
+      "kind": "making",
+      "zh": "以矿石经冶炼成为金属为线索，压缩材料与加工条件。",
+      "en": "A compressed making rule inspired by smelting metals from ores."
+    },
+    {
+      "id": "water-fire-steam",
+      "a": "water",
+      "b": "fire",
+      "result": "steam",
+      "kind": "making",
+      "zh": "加热让水汽化。这里用两个元素概括过程。",
+      "en": "Heating vaporises water; two elements summarise the process."
+    },
+    {
+      "id": "steam-yin-cloud",
+      "a": "steam",
+      "b": "yin",
+      "result": "cloud",
+      "kind": "image",
+      "zh": "用阴的凉意联想到水汽冷凝，以云作为新的意象。",
+      "en": "The cool image of yin suggests condensation and the image of a cloud."
+    },
+    {
+      "id": "cloud-water-rain",
+      "a": "cloud",
+      "b": "water",
+      "result": "rain",
+      "kind": "making",
+      "zh": "云中的水滴增长，形成降水的线索。",
+      "en": "Growing droplets in a cloud suggest precipitation."
+    },
+    {
+      "id": "rain-earth-river",
+      "a": "rain",
+      "b": "earth",
+      "result": "river",
+      "kind": "making",
+      "zh": "降水沿地表汇流，形成共同的河道。",
+      "en": "Rainwater gathers across the ground into a shared river course."
+    },
+    {
+      "id": "earth-earth-stone",
+      "a": "earth",
+      "b": "earth",
+      "result": "stone",
+      "kind": "image",
+      "zh": "将土的凝聚意象进一步放大，发现石。",
+      "en": "Extend earth’s image of consolidation to discover stone."
+    },
+    {
+      "id": "stone-water-sand",
+      "a": "stone",
+      "b": "water",
+      "result": "sand",
+      "kind": "making",
+      "zh": "水参与风化与搬运，岩石逐渐成为细小颗粒。",
+      "en": "Water participates in weathering and transport, producing smaller grains."
+    },
+    {
+      "id": "earth-river-clay",
+      "a": "earth",
+      "b": "river",
+      "result": "clay",
+      "kind": "image",
+      "zh": "从河岸细腻的泥土，联想到可塑的黏土材料。",
+      "en": "Fine riverbank earth suggests workable clay."
+    },
+    {
+      "id": "clay-fire-pottery",
+      "a": "clay",
+      "b": "fire",
+      "result": "pottery",
+      "kind": "making",
+      "zh": "黏土成形后经烧制，得到陶器；配方省略具体工序。",
+      "en": "Shaped clay is fired into pottery; the recipe compresses the stages."
+    },
+    {
+      "id": "sand-fire-glass",
+      "a": "sand",
+      "b": "fire",
+      "result": "glass",
+      "kind": "making",
+      "zh": "含硅原料在高温下熔融并冷却，联想到玻璃；实际配料更复杂。",
+      "en": "High-temperature processing of silica-bearing material suggests glass; real batches are more complex."
+    },
+    {
+      "id": "plant-plant-seed",
+      "a": "plant",
+      "b": "plant",
+      "result": "seed",
+      "kind": "making",
+      "zh": "以开花植物授粉、结籽的过程为线索，省略具体繁殖条件。",
+      "en": "A compressed image of flowering plants pollinating and setting seed."
+    },
+    {
+      "id": "seed-earth-plant",
+      "a": "seed",
+      "b": "earth",
+      "result": "plant",
+      "kind": "making",
+      "zh": "种子在适宜条件下萌发；土代表这里的生长环境。",
+      "en": "A seed germinates under suitable conditions; earth represents its environment here."
+    },
+    {
+      "id": "plant-book-herb",
+      "a": "plant",
+      "b": "book",
+      "result": "herb",
+      "kind": "image",
+      "zh": "通过本草记录识别具有药用传统的植物，打开本草文化分支。",
+      "en": "Use materia medica records to recognise plants with medicinal traditions."
+    },
+    {
+      "id": "seed-water-grain",
+      "a": "seed",
+      "b": "water",
+      "result": "grain",
+      "kind": "making",
+      "zh": "把水分与其他生长条件压缩为一条从种子到收获的路线。",
+      "en": "A compressed route from seed to harvest, with water standing for growing conditions."
+    },
+    {
+      "id": "wood-water-paper",
+      "a": "wood",
+      "b": "water",
+      "result": "paper",
+      "kind": "making",
+      "zh": "木质纤维经过制浆、抄造与干燥，成为纸。",
+      "en": "Wood fibres are pulped, formed and dried into paper."
+    },
+    {
+      "id": "wood-fire-ink",
+      "a": "wood",
+      "b": "fire",
+      "result": "ink",
+      "kind": "making",
+      "zh": "从燃烧产生的烟炱联想到制墨；实际制墨还需要胶与工艺。",
+      "en": "Soot suggests ink-making, which also involves binder and further craft."
+    },
+    {
+      "id": "paper-ink-book",
+      "a": "paper",
+      "b": "ink",
+      "result": "book",
+      "kind": "making",
+      "zh": "纸提供载体，墨记录文字，编排成书后知识可以传递。",
+      "en": "Paper carries inked writing; arranging it into a book makes knowledge shareable."
+    },
+    {
+      "id": "metal-stone-needle",
+      "a": "metal",
+      "b": "stone",
+      "result": "needle",
+      "kind": "making",
+      "zh": "金属经加工获得针的形制；此处概括材料与工艺的关系。",
+      "en": "Working metal gives it a needle’s form; this rule summarises material meeting craft."
+    },
+    {
+      "id": "herb-pottery-decoction",
+      "a": "herb",
+      "b": "pottery",
+      "result": "decoction",
+      "kind": "image",
+      "zh": "以药材与煎药器皿联想到药汤，省略水与加热条件。",
+      "en": "Medicinal plants and a preparation vessel suggest decoction; water and heating are implicit."
+    },
+    {
+      "id": "herb-fire-moxa",
+      "a": "herb",
+      "b": "fire",
+      "result": "moxa",
+      "kind": "image",
+      "zh": "本配方中的药草特指艾草，以艾与火联想到灸的文化意象。",
+      "en": "Here the plant specifically stands for mugwort, paired with fire as a cultural image of moxa."
+    },
+    {
+      "id": "wood-metal-wheel",
+      "a": "wood",
+      "b": "metal",
+      "result": "wheel",
+      "kind": "making",
+      "zh": "木与金属经结构设计，成为可以承载与转动的轮。",
+      "en": "Wood and metal, structurally arranged, become a load-bearing rotating wheel."
+    },
+    {
+      "id": "wheel-metal-gear",
+      "a": "wheel",
+      "b": "metal",
+      "result": "gear",
+      "kind": "making",
+      "zh": "轮缘获得相互配合的齿形，成为可以啮合的部件。",
+      "en": "A wheel gains matching teeth and becomes a component that can mesh."
+    },
+    {
+      "id": "gear-gear-machine",
+      "a": "gear",
+      "b": "gear",
+      "result": "machine",
+      "kind": "system",
+      "zh": "两个齿轮啮合，运动得以传递。新功能来自部件间的联系。",
+      "en": "Two gears mesh and transmit motion. The new function arises from their connection."
+    },
+    {
+      "id": "machine-steam-engine",
+      "a": "machine",
+      "b": "steam",
+      "result": "engine",
+      "kind": "system",
+      "zh": "以蒸汽驱动机构为线索，让能量通过组织起来的部件转为运动。",
+      "en": "Steam driving a mechanism suggests energy becoming motion through organised parts."
+    },
+    {
+      "id": "engine-metal-electricity",
+      "a": "engine",
+      "b": "metal",
+      "result": "electricity",
+      "kind": "system",
+      "zh": "从动力、导体与发电装置的联系联想到电；省略磁场等条件。",
+      "en": "Power, conductors and a generator suggest electricity; fields and other conditions are implicit."
+    },
+    {
+      "id": "metal-electricity-sensor",
+      "a": "metal",
+      "b": "electricity",
+      "result": "sensor",
+      "kind": "system",
+      "zh": "材料与电路按感知任务组织起来，联想到传感器。",
+      "en": "Materials and circuits arranged for a sensing task suggest a sensor."
+    },
+    {
+      "id": "sensor-electricity-signal",
+      "a": "sensor",
+      "b": "electricity",
+      "result": "signal",
+      "kind": "system",
+      "zh": "传感器在供电与转换条件下，将变化表达为信号。",
+      "en": "A powered sensor converts change into a signal."
+    },
+    {
+      "id": "signal-signal-network",
+      "a": "signal",
+      "b": "signal",
+      "result": "network",
+      "kind": "system",
+      "zh": "为信号建立连接与通信结构，发现网络。",
+      "en": "Give signals a structure for connection and communication to discover a network."
+    },
+    {
+      "id": "network-sensor-feedback",
+      "a": "network",
+      "b": "sensor",
+      "result": "feedback",
+      "kind": "system",
+      "zh": "将感知结果接回过程，闭合的信息回路形成反馈。",
+      "en": "Return sensed information to the process; the closed information loop forms feedback."
+    },
+    {
+      "id": "signal-clock-rhythm",
+      "a": "signal",
+      "b": "clock",
+      "result": "rhythm",
+      "kind": "system",
+      "zh": "将信号放到时间尺度中，辨认重复的节律。",
+      "en": "Place a signal on a time scale to recognise repeating rhythm."
+    },
+    {
+      "id": "gear-wheel-clock",
+      "a": "gear",
+      "b": "wheel",
+      "result": "clock",
+      "kind": "system",
+      "zh": "把齿轮、指针轮系与调速结构组织为钟表机构，省略具体零件。",
+      "en": "Arrange gears, hands and a regulating structure as a clock; individual parts are implicit."
+    },
+    {
+      "id": "feedback-rhythm-balance",
+      "a": "feedback",
+      "b": "rhythm",
+      "result": "balance",
+      "kind": "system",
+      "zh": "反馈参与周期变化中的调整，用动态平衡表达相对稳定。",
+      "en": "Feedback adjusts a changing process; dynamic balance represents relative stability."
+    },
+    {
+      "id": "machine-feedback-system",
+      "a": "machine",
+      "b": "feedback",
+      "result": "system",
+      "kind": "system",
+      "zh": "让机构与返回的输出发生联系，形成一个有回路的整体。",
+      "en": "Connect a mechanism with its returning output to form a whole with a loop."
+    },
+    {
+      "id": "water-steam-cloud",
+      "a": "water",
+      "b": "steam",
+      "result": "cloud",
+      "kind": "making",
+      "zh": "水汽与较冷的水环境相遇，联想到冷凝成云的条件。",
+      "en": "Vapour meeting cooler water suggests conditions for condensation."
+    },
+    {
+      "id": "plant-water-grain",
+      "a": "plant",
+      "b": "water",
+      "result": "grain",
+      "kind": "making",
+      "zh": "已经长出的植株在适宜供水等条件下，走向成熟与收获。",
+      "en": "A growing crop, with suitable water and other conditions, moves towards harvest."
+    },
+    {
+      "id": "gear-electricity-engine",
+      "a": "gear",
+      "b": "electricity",
+      "result": "engine",
+      "kind": "system",
+      "zh": "用电驱动组织起来的机构，联想到另一条动力机路线。",
+      "en": "Electric power driving an organised mechanism suggests another route to an engine."
+    },
+    {
+      "id": "sensor-clock-signal",
+      "a": "sensor",
+      "b": "clock",
+      "result": "signal",
+      "kind": "system",
+      "zh": "按时间采样感知结果，使变化成为一串可处理的信号。",
+      "en": "Sampling sensed changes over time gives a sequence of usable signals."
+    },
+    {
+      "id": "air-fire-wind",
+      "a": "air",
+      "b": "fire",
+      "result": "wind",
+      "kind": "making",
+      "zh": "空气受热不均形成压强差，带来流动；这里省略具体天气条件。",
+      "en": "Uneven heating creates pressure differences and moving air; weather conditions are compressed."
+    },
+    {
+      "id": "water-yin-ice",
+      "a": "water",
+      "b": "yin",
+      "result": "ice",
+      "kind": "image",
+      "zh": "以阴的凉意代表冷却条件，水在适宜温度下凝固成冰。",
+      "en": "The cool image of yin stands for cooling water until it freezes."
+    },
+    {
+      "id": "cloud-ice-snow",
+      "a": "cloud",
+      "b": "ice",
+      "result": "snow",
+      "kind": "making",
+      "zh": "云中冰晶在适宜条件下生长并降落，形成雪。",
+      "en": "Ice crystals grow and fall from clouds under suitable conditions, forming snow."
+    },
+    {
+      "id": "rain-light-rainbow",
+      "a": "rain",
+      "b": "light",
+      "result": "rainbow",
+      "kind": "making",
+      "zh": "光在水滴中折射、反射并分散，在适宜几何条件下形成虹。",
+      "en": "Light refracts, reflects and disperses in water droplets, making a rainbow at suitable angles."
+    },
+    {
+      "id": "earth-forest-soil",
+      "a": "earth",
+      "b": "forest",
+      "result": "soil",
+      "kind": "making",
+      "zh": "植物残体分解后与矿物颗粒相混，增添土壤中的有机质。",
+      "en": "Decomposed plant remains mix with mineral particles, adding organic matter to soil."
+    },
+    {
+      "id": "plant-earth-root",
+      "a": "plant",
+      "b": "earth",
+      "result": "root",
+      "kind": "making",
+      "zh": "以植物在土中生根为线索，发现吸收与固定的结构。",
+      "en": "A plant taking root in soil reveals a structure for uptake and anchoring."
+    },
+    {
+      "id": "plant-light-flower",
+      "a": "plant",
+      "b": "light",
+      "result": "flower",
+      "kind": "making",
+      "zh": "光周期等条件参与开花调控；本路线选取开花植物。",
+      "en": "Photoperiod and other conditions participate in flowering; this route refers to flowering plants."
+    },
+    {
+      "id": "flower-plant-fruit",
+      "a": "flower",
+      "b": "plant",
+      "result": "fruit",
+      "kind": "making",
+      "zh": "被子植物开花、授粉后发育成果实，路线省略具体条件。",
+      "en": "Flowering plants develop fruit after flowering and pollination; detailed conditions are implicit."
+    },
+    {
+      "id": "wood-wood-forest",
+      "a": "wood",
+      "b": "wood",
+      "result": "forest",
+      "kind": "image",
+      "zh": "多株树木形成林的集合意象；森林还包含土壤、生物及环境联系。",
+      "en": "Many trees suggest a forest, which also includes soil, organisms and environmental relationships."
+    },
+    {
+      "id": "wood-pottery-charcoal",
+      "a": "wood",
+      "b": "pottery",
+      "result": "charcoal",
+      "kind": "making",
+      "zh": "木材在限氧窑中受热形成木炭；陶器在此代表窑烧工艺。",
+      "en": "Wood heated in a low-oxygen kiln forms charcoal; pottery stands for kiln craft here."
+    },
+    {
+      "id": "plant-fire-ash",
+      "a": "plant",
+      "b": "fire",
+      "result": "ash",
+      "kind": "making",
+      "zh": "植物材料燃烧后留下无机灰分，得到草木灰。",
+      "en": "Burning plant material leaves inorganic mineral ash."
+    },
+    {
+      "id": "clay-stone-brick",
+      "a": "clay",
+      "b": "stone",
+      "result": "brick",
+      "kind": "making",
+      "zh": "黏土与适宜矿物骨料成形、烧制为砖，配方压缩成形与烧成工序。",
+      "en": "Clay with suitable mineral aggregate is shaped and fired into brick; processing is compressed."
+    },
+    {
+      "id": "stone-fire-cement",
+      "a": "stone",
+      "b": "fire",
+      "result": "cement",
+      "kind": "making",
+      "zh": "以含钙岩石与黏土等原料煅烧、粉磨为线索，省略其他原料和工序。",
+      "en": "Calcium-bearing rock and clay are calcined and ground; additional materials and stages are implicit."
+    },
+    {
+      "id": "cement-sand-concrete",
+      "a": "cement",
+      "b": "sand",
+      "result": "concrete",
+      "kind": "making",
+      "zh": "水泥与砂、粗骨料、水拌合后硬化；此处用两项概括复合材料。",
+      "en": "Cement, sand, coarse aggregate and water harden into concrete; two items stand for the composite process."
+    },
+    {
+      "id": "brick-clay-wall",
+      "a": "brick",
+      "b": "clay",
+      "result": "wall",
+      "kind": "making",
+      "zh": "以砖和泥质砌筑材料组织成墙为线索，结构来自排列与连接。",
+      "en": "Bricks with an earthen bonding material suggest a wall built through arrangement and connection."
+    },
+    {
+      "id": "wall-wood-house",
+      "a": "wall",
+      "b": "wood",
+      "result": "house",
+      "kind": "making",
+      "zh": "墙体与木构屋顶等构件组织成房屋，省略其他构件。",
+      "en": "Walls and wooden roof members are organised into a house; other parts are implicit."
+    },
+    {
+      "id": "wood-river-bridge",
+      "a": "wood",
+      "b": "river",
+      "result": "bridge",
+      "kind": "making",
+      "zh": "木构件跨越水道，经支承与连接形成桥的功能。",
+      "en": "Wooden members arranged across a waterway gain a bridge’s function through support and connection."
+    },
+    {
+      "id": "plant-stone-fiber",
+      "a": "plant",
+      "b": "stone",
+      "result": "fiber",
+      "kind": "making",
+      "zh": "植物材料经浸渍、捶打或碾磨提取纤维，石代表加工工具。",
+      "en": "Plant material is soaked, beaten or ground to obtain fibres; stone represents the tools."
+    },
+    {
+      "id": "fiber-wheel-thread",
+      "a": "fiber",
+      "b": "wheel",
+      "result": "thread",
+      "kind": "making",
+      "zh": "纤维经纺轮加捻，组织为连续的纱线。",
+      "en": "Fibres twisted with a spinning wheel become continuous thread."
+    },
+    {
+      "id": "thread-thread-cloth",
+      "a": "thread",
+      "b": "thread",
+      "result": "cloth",
+      "kind": "making",
+      "zh": "经纬纱线按结构交织，形成可以使用的织物。",
+      "en": "Warp and weft threads interlace in an organised structure to make cloth."
+    },
+    {
+      "id": "cloth-wind-sail",
+      "a": "cloth",
+      "b": "wind",
+      "result": "sail",
+      "kind": "making",
+      "zh": "布被裁制、支撑为帆，借风产生推进作用。",
+      "en": "Cloth shaped and supported as a sail catches wind to provide propulsion."
+    },
+    {
+      "id": "wood-sail-boat",
+      "a": "wood",
+      "b": "sail",
+      "result": "boat",
+      "kind": "making",
+      "zh": "木制船体与帆装配，借浮力、风与结构形成航行功能。",
+      "en": "A wooden hull and sail combine buoyancy, wind and structure to enable sailing."
+    },
+    {
+      "id": "metal-earth-magnet",
+      "a": "metal",
+      "b": "earth",
+      "result": "magnet",
+      "kind": "making",
+      "zh": "从含铁矿物中发现具有磁性的天然磁石，不表示所有金属都有磁性。",
+      "en": "Iron-bearing minerals include naturally magnetic lodestone; this does not imply all metals are magnetic."
+    },
+    {
+      "id": "magnet-needle-compass",
+      "a": "magnet",
+      "b": "needle",
+      "result": "compass",
+      "kind": "making",
+      "zh": "磁化的针与支承结构结合，可指示磁场方向；这里省略支承。",
+      "en": "A magnetised needle on a suitable support indicates magnetic field direction; the support is implicit."
+    },
+    {
+      "id": "magnet-electricity-motor",
+      "a": "magnet",
+      "b": "electricity",
+      "result": "motor",
+      "kind": "system",
+      "zh": "磁场、线圈与电流相互作用，按结构组织后产生转动。",
+      "en": "Fields, coils and current interact in an organised structure to produce rotation."
+    },
+    {
+      "id": "magnet-engine-generator",
+      "a": "magnet",
+      "b": "engine",
+      "result": "generator",
+      "kind": "system",
+      "zh": "动力使导体与磁场产生相对运动，联想到发电装置。",
+      "en": "Mechanical power moves a conductor relative to a magnetic field, suggesting a generator."
+    },
+    {
+      "id": "wheel-steam-turbine",
+      "a": "wheel",
+      "b": "steam",
+      "result": "turbine",
+      "kind": "system",
+      "zh": "蒸汽推动叶轮，把流体的能量转为旋转运动。",
+      "en": "Steam drives a bladed rotor, turning fluid energy into rotation."
+    },
+    {
+      "id": "machine-water-pump",
+      "a": "machine",
+      "b": "water",
+      "result": "pump",
+      "kind": "system",
+      "zh": "有动力与合适结构的机构搬运水，形成泵的功能。",
+      "en": "A powered mechanism with suitable structure moves water, acquiring a pump’s function."
+    },
+    {
+      "id": "metal-pottery-pipe",
+      "a": "metal",
+      "b": "pottery",
+      "result": "pipe",
+      "kind": "making",
+      "zh": "金属加工与陶制成型提供两类制管工艺，形成流体通道。",
+      "en": "Metalworking and ceramic forming offer ways to make pipes that channel fluids."
+    },
+    {
+      "id": "pipe-gear-valve",
+      "a": "pipe",
+      "b": "gear",
+      "result": "valve",
+      "kind": "system",
+      "zh": "在管道中加入可调机构，控制通道的开度与流量。",
+      "en": "An adjustable mechanism in a pipe controls its opening and flow."
+    },
+    {
+      "id": "metal-signal-circuit",
+      "a": "metal",
+      "b": "signal",
+      "result": "circuit",
+      "kind": "system",
+      "zh": "导体与元件按拓扑连接，为信号建立可运行的电路。",
+      "en": "Conductors and components arranged in a topology give signals a functioning circuit."
+    },
+    {
+      "id": "metal-water-battery",
+      "a": "metal",
+      "b": "water",
+      "result": "battery",
+      "kind": "system",
+      "zh": "两种适宜电极与电解液形成电化学装置；水代表水系电解液。",
+      "en": "Suitable electrodes and an electrolyte form an electrochemical device; water stands for an aqueous electrolyte."
+    },
+    {
+      "id": "circuit-charcoal-resistor",
+      "a": "circuit",
+      "b": "charcoal",
+      "result": "resistor",
+      "kind": "system",
+      "zh": "碳材料在合适结构中可以制成电阻元件，不是任意木炭皆可直接使用。",
+      "en": "Carbon materials in suitable structures can form resistors; ordinary charcoal is not a ready-made component."
+    },
+    {
+      "id": "circuit-gear-switch",
+      "a": "circuit",
+      "b": "gear",
+      "result": "switch",
+      "kind": "system",
+      "zh": "机械结构控制电路的接通与断开，形成开关。",
+      "en": "A mechanical structure opens or closes a circuit to form a switch."
+    },
+    {
+      "id": "glass-electricity-lamp",
+      "a": "glass",
+      "b": "electricity",
+      "result": "lamp",
+      "kind": "system",
+      "zh": "玻璃灯罩与电光源等部件组织为灯，省略具体发光材料。",
+      "en": "A glass enclosure and an electric light source are arranged as a lamp; emitting materials are implicit."
+    },
+    {
+      "id": "glass-light-lens",
+      "a": "glass",
+      "b": "light",
+      "result": "lens",
+      "kind": "making",
+      "zh": "玻璃加工成适宜曲面，改变光路，形成透镜。",
+      "en": "Glass shaped with suitable curved surfaces redirects light to form a lens."
+    },
+    {
+      "id": "lens-lens-microscope",
+      "a": "lens",
+      "b": "lens",
+      "result": "microscope",
+      "kind": "system",
+      "zh": "物镜与目镜等光学部件按距离和光路组织，形成复合显微镜。",
+      "en": "Objective and eyepiece lenses arranged along an optical path form a compound microscope."
+    },
+    {
+      "id": "glass-rainbow-prism",
+      "a": "glass",
+      "b": "rainbow",
+      "result": "prism",
+      "kind": "making",
+      "zh": "将玻璃加工为棱柱，利用色散把光分开；虹提供观察线索。",
+      "en": "Glass shaped as a prism disperses light; the rainbow suggests the optical effect."
+    },
+    {
+      "id": "light-circuit-solar",
+      "a": "light",
+      "b": "circuit",
+      "result": "solar",
+      "kind": "system",
+      "zh": "具有光伏效应的半导体与电路组织成太阳能电池，材料条件在此省略。",
+      "en": "Photovoltaic semiconductors connected to a circuit form a solar cell; material conditions are implicit."
+    },
+    {
+      "id": "glass-signal-screen",
+      "a": "glass",
+      "b": "signal",
+      "result": "screen",
+      "kind": "system",
+      "zh": "显示材料、玻璃基板与驱动信号共同构成显示装置。",
+      "en": "Display materials, a glass substrate and driving signals form a display."
+    },
+    {
+      "id": "circuit-book-computer",
+      "a": "circuit",
+      "b": "book",
+      "result": "computer",
+      "kind": "system",
+      "zh": "电路按计算结构组织，执行存储的指令；书在此代表指令记录。",
+      "en": "Computationally organised circuits execute stored instructions; the book represents instruction records."
+    },
+    {
+      "id": "book-signal-code",
+      "a": "book",
+      "b": "signal",
+      "result": "code",
+      "kind": "system",
+      "zh": "为记录与信号建立对应规则，形成可传递的编码。",
+      "en": "A defined mapping between records and signals creates communicable code."
+    },
+    {
+      "id": "code-book-algorithm",
+      "a": "code",
+      "b": "book",
+      "result": "algorithm",
+      "kind": "system",
+      "zh": "把有序、明确的操作步骤写成可执行的表示，形成算法的游戏意象。",
+      "en": "Represent ordered, explicit steps in executable form: the game’s image of an algorithm."
+    },
+    {
+      "id": "system-book-model",
+      "a": "system",
+      "b": "book",
+      "result": "model",
+      "kind": "system",
+      "zh": "记录系统的结构、变量与关系，建立针对问题的模型。",
+      "en": "Record a system’s structure, variables and relationships to build a model for a question."
+    },
+    {
+      "id": "model-computer-simulation",
+      "a": "model",
+      "b": "computer",
+      "result": "simulation",
+      "kind": "system",
+      "zh": "让模型在计算机中按规则运行，观察设定条件下的变化。",
+      "en": "Run a model by defined rules on a computer to observe change under specified conditions."
+    },
+    {
+      "id": "feedback-computer-control",
+      "a": "feedback",
+      "b": "computer",
+      "result": "control",
+      "kind": "system",
+      "zh": "按控制规则处理返回的信息，调整后续输出。",
+      "en": "Process returning information according to control rules to adjust subsequent output."
+    },
+    {
+      "id": "control-machine-automation",
+      "a": "control",
+      "b": "machine",
+      "result": "automation",
+      "kind": "system",
+      "zh": "将控制规则与执行机构连接，让任务按设定条件自动运行。",
+      "en": "Connect control rules with actuators so a task runs automatically under defined conditions."
+    },
+    {
+      "id": "automation-sensor-robot",
+      "a": "automation",
+      "b": "sensor",
+      "result": "robot",
+      "kind": "system",
+      "zh": "感知、控制与执行机构组织在一起，形成机器人的简化结构。",
+      "en": "Sensing, control and actuation are organised into a simplified robotic structure."
+    },
+    {
+      "id": "signal-paper-data",
+      "a": "signal",
+      "b": "paper",
+      "result": "data",
+      "kind": "system",
+      "zh": "把信号按规则记录，形成可回看的数据。",
+      "en": "Record signals by defined rules to create data that can be revisited."
+    },
+    {
+      "id": "data-ink-chart",
+      "a": "data",
+      "b": "ink",
+      "result": "chart",
+      "kind": "system",
+      "zh": "把数据映射为图形，让关系与变化更容易被阅读。",
+      "en": "Map data into visual forms so relationships and changes become readable."
+    },
+    {
+      "id": "book-book-library",
+      "a": "book",
+      "b": "book",
+      "result": "library",
+      "kind": "making",
+      "zh": "书籍经过收集、分类与编目，形成可以检索的书库。",
+      "en": "Books collected, classified and catalogued form a searchable library."
+    },
+    {
+      "id": "clock-book-calendar",
+      "a": "clock",
+      "b": "book",
+      "result": "calendar",
+      "kind": "making",
+      "zh": "记录并组织时间周期，形成便于查阅的历。",
+      "en": "Record and organise cycles of time into a calendar."
+    },
+    {
+      "id": "calendar-rhythm-season",
+      "a": "calendar",
+      "b": "rhythm",
+      "result": "season",
+      "kind": "making",
+      "zh": "在历法中记录年周期的物候变化，以春夏秋冬表达四时。",
+      "en": "Record annual phenological rhythms in a calendar as spring, summer, autumn and winter."
+    },
+    {
+      "id": "house-glass-greenhouse",
+      "a": "house",
+      "b": "glass",
+      "result": "greenhouse",
+      "kind": "system",
+      "zh": "透光围护与建筑结构相连，形成可调节栽培环境的温室。",
+      "en": "A light-transmitting enclosure and building structure form a greenhouse for managing growing conditions."
+    },
+    {
+      "id": "stone-stone-mortar",
+      "a": "stone",
+      "b": "stone",
+      "result": "mortar",
+      "kind": "making",
+      "zh": "凹石与杵配合，材料经过形制加工成为研磨工具。",
+      "en": "A hollowed stone and pestle, shaped to work together, become a grinding tool."
+    },
+    {
+      "id": "mortar-herb-powder",
+      "a": "mortar",
+      "b": "herb",
+      "result": "powder",
+      "kind": "making",
+      "zh": "合适药材经过研磨成为粉末，只展示加工形式，不提供用药建议。",
+      "en": "Suitable herbal material is ground into powder; this shows a processing form, not prescribing advice."
+    },
+    {
+      "id": "herb-book-herbalbook",
+      "a": "herb",
+      "b": "book",
+      "result": "herbalbook",
+      "kind": "image",
+      "zh": "把药用植物的观察与传统记载编排为本草记录。",
+      "en": "Arrange observations and traditional records of medicinal plants as materia medica."
+    },
+    {
+      "id": "light-stone-sundial",
+      "a": "light",
+      "b": "stone",
+      "result": "sundial",
+      "kind": "making",
+      "zh": "刻度石盘与晷针利用日影变化指示时间；晷针等构件在此省略。",
+      "en": "A marked stone dial and gnomon use changing solar shadows to indicate time; individual parts are implicit."
+    },
+    {
+      "id": "fiber-water-paper",
+      "a": "fiber",
+      "b": "water",
+      "result": "paper",
+      "kind": "making",
+      "zh": "植物纤维制浆、抄造与干燥，提供另一条造纸路线。",
+      "en": "Plant fibres are pulped, formed and dried: another route to paper."
+    },
+    {
+      "id": "generator-circuit-electricity",
+      "a": "generator",
+      "b": "circuit",
+      "result": "electricity",
+      "kind": "system",
+      "zh": "发电装置与闭合电路连接，将机械能转为可用电能。",
+      "en": "Connect a generator with a circuit to obtain usable electrical energy."
+    },
+    {
+      "id": "motor-wheel-machine",
+      "a": "motor",
+      "b": "wheel",
+      "result": "machine",
+      "kind": "system",
+      "zh": "电动机与传动轮系连接，组成能执行运动的机构。",
+      "en": "Connect a motor with a wheel transmission to form a mechanism that performs motion."
+    },
+    {
+      "id": "computer-data-chart",
+      "a": "computer",
+      "b": "data",
+      "result": "chart",
+      "kind": "system",
+      "zh": "将数据按映射规则在计算机中绘制，发现另一条图表路线。",
+      "en": "Plot data by defined mappings on a computer: another route to a chart."
+    }
+  ]
+}

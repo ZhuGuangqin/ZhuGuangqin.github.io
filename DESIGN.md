@@ -298,6 +298,11 @@ components:
   exhibition-sky-about:
     textColor: "{colors.exhibition-spring-light-muted}"
     typography: "{typography.exhibition-sky-disclosure}"
+  wuxing-element:
+    backgroundColor: "{colors.exhibition-spring-light-panel}"
+    textColor: "{colors.exhibition-spring-light-ink}"
+    rounded: "{rounded.exhibition-control}"
+    padding: "10px 4px"
 ---
 
 # Design System: 祝广钦 / Guangqin Zhu
@@ -317,9 +322,11 @@ The durable relationship is scholarly specificity with an accessible reading rou
 - Original mathematical line geometry and native scroll-driven perspective.
 - Public-source records, truthful cover provenance, and direct reading alternatives.
 - Two optional scholarly discoveries: finite typographic reorganization and title-based publication connections with direct reading.
+- An optional two-origin discovery workbench with distinct vector symbols, a readable atlas and recorded formulas.
 - Local fonts/assets, bilingual controls, keyboard/touch routes and reduced-motion reading.
 
 This is a scan of the finished implementation, not a seed. Source authority: `PRODUCT.md`; the **last** section of `docs/设计验收简报.md`; `_pages/cv.md`; `_layouts/cv-art.html`; `assets/css/cv-art.css`; `assets/js/cv-art.js`; `assets/js/cv-journey.js`; `assets/css/research.css`; `assets/css/season-sky.css`; `assets/js/research.js`; `assets/js/season-sky.js`; related includes and data. Earlier CV iterations and the standalone celestial strip are historical and superseded. No approved visual comp or historical FORM seed exists; neither is invented here. This document introduces no UI changes.
+The Wuxing Lab extension is additionally grounded in `_includes/wuxing-lab.html`, `_includes/wuxing-symbols.svg`, `_data/wuxing_lab.json`, `assets/css/wuxing-lab.css`, `assets/js/wuxing-lab.js` and `assets/js/wuxing-engine.js`; its local direction contract is `.impeccable/briefs/wuxing-lab.md`.
 
 Evidence boundary: the earlier Know Me review and flat academic-coordinate acceptance remain historical, scoped records in `.impeccable/review/finish-packet.md`, `fix-round-1.md`, `fix-round-2.md` and `verdict.md`. They are not a new review of every surface. The latest homepage UI disposition is **ship** in `.impeccable/review/sky-finish-review.md`; the reviewer inspected source and opened all nine supplied captures, while browser/runtime observations are parent-reported in `sky-qa.json`. Current homepage captures are `desktop.png`, `mobile.png`, `user-319.png`, `sky-profile-autumn.png`, `sky-profile-night.png`, `sky-late-summer.png`, `sky-late-summer-mobile.png`, `sky-late-summer-night-en.png` and `sky-late-summer-user-319.png` under `.impeccable/review/`. The documentation pass samples those images and checks source, token references and narrative consistency; it adds no browser measurements or independent whole-site verdict. Physical touch-duration testing and OS-emulated reduction are not claimed. OS print's system dialog was not invoked; the existing footer `/sitemap/` target remains legacy. No deployment is part of this record.
 
@@ -391,6 +398,8 @@ Do not add a mono role or invented scale ratio: neither defines the shipped syst
 
 **Reading fallbacks.** Motion-off/reduced/focus mode removes long scene heights and sticky transforms, opens the full dossier and stacks cinema frames. No-JS uses document content and a static works grid. Printing removes immersive scenes and controls, opens records through the print handlers, and uses black on white. Normal record blocks and direct publication links remain the reading route.
 
+**Wuxing Lab extension.** The optional homepage disclosure shares the 1200px exhibition maximum. Its workbench uses 1.1fr / 1fr with a 36px gap and 40px side insets; the inventory has a rule divider and four columns. At 900px and below, the workbench becomes equal columns with a 22px gap, the inventory three columns and the atlas six. At 650px and below, the bench and inventory stack in natural document flow, side insets become 18px, inventory/atlas use four columns, and formulas become one column. At 360px and below the inventory and atlas use three columns. The desktop atlas uses eight columns and formulas two. Detail selection and returns to the bench use native scrolling with an 85px masthead allowance and an explicit destination focus; they do not open a modal. These collection grids are local interaction surfaces, not a replacement page layout.
+
 **The Native Camera Rule.** Native vertical scrolling advances the spatial scenes. Preserve document scrolling and the direct controls; do not add wheel or touch scroll interception.
 
 ## Elevation & Depth
@@ -439,6 +448,18 @@ The default season chooser has four native buttons and 44px minimum targets. Eit
 
 The sky source throttles at 33ms desktop / 50ms below 600px, caps pixel ratio at 1.75 / 1.5 and crossfades scenes over .65s when motion is allowed. These are source settings, not measured performance claims. Manual-off/system reduction draw a still state; focus, offscreen, hidden-document and print paths stop continuous scheduling. A static SVG remains if canvas cannot initialize. Native document scrolling is preserved.
 
+### Wuxing Lab discovery workbench
+
+A native expandable section below the research index introduces two original yin/yang symbols; Workbench, Atlas and Formulas are ordinary pressed-state view buttons. The finished data contains 100 elements and 101 routes, beginning with yin and yang. Their first combination reveals taiji and grants the five phases, air and light. Five maintained families, bilingual name search, optional hints and direct reuse of a result keep the growing collection operable. Every element has its own inline-sprite SVG identity in a 64-unit view box; current-color linework has round caps/joins and a 2-unit stroke, with explicit fills where the symbol needs them. Symbols are artwork with readable text labels, not icon-font glyphs.
+
+The two circular input buttons are 116px at desktop, 104px on mobile and 92px at the narrow breakpoint. Empty slots have dashed rules; filled slots use accent linework and text. Inventory cells reuse the exhibition control radius and panel; selected cells use the field fill and accent border. A locked atlas item has a dashed outline, a muted symbol and an “Undiscovered” label. Controls use the existing accent focus ring; primary actions use accent/button ink, hover uses ink/panel, and disabled actions fade to .55. Headings retain Research Display and body/controls retain the incumbent sans face. No feature palette, display family or shadow vocabulary is introduced.
+
+Select two items with native buttons or use desktop dragging; the same element can occupy both slots. Atlas selection reveals the named description and discovered routes, focuses the detail heading and scrolls it below the masthead. Atlas use, an origin route, a formula or a hint can load the bench; the destination slot or Combine receives focus. Formulas default to discovered routes, with an explicit reveal option for all recipes; unavailable ingredients keep a formula disabled. Recipe explanations distinguish cultural image, compressed making route and system relationship. The plus sign establishes a game connection; it does not assert chemistry, medical guidance or a research result.
+
+A successful combination gathers two symbols for 460ms and reveals the result for 550ms, both using the incumbent emergence easing. There is no idle loop. View changes, closure, loss of focus/visibility, offscreen result, printing, focus mode, manual motion-off and system reduction cancel or omit this event. Focus mode and print omit the lab while preserving the established academic reading routes; the no-script disclosure retains an enable-JavaScript explanation.
+
+Only discovered recipe identifiers are persisted locally under `wuxing-lab-progress-v1`; restoration accepts supported, reachable routes and derives known elements from them. Storage failure receives a visible message and leaves text export available. The visitor can download the current language’s discovered atlas and formulas as plain text, or explicitly confirm a reset to the two origins. This saved collection is separate from the document-only late-summer and publication discoveries, and from the unsaved collaboration draft. No account or network service is involved.
+
 ### Birth-year, contact and opening signature
 
 The layered 1998 scene includes the explicit born-in-1998 caption. It does not date research activity to birth. Contact uses the accent field, oversized type, a pointer-responsive line field, direct email, copy, GitHub, back-to-opening and replay controls. The original loader signature has skip, bounded timing and CSS failure release; system reduction/manual-off bypass it. Opening drawings must never gate access to facts.
@@ -471,7 +492,7 @@ Not canonized or repaired by this documentation: inherited Font Awesome action g
 
 ## 可玩的研究线索（2026-10-08）
 
-用户随后要求移除双线光场；首页入口、几何脚本、样式、导出和概念地图中的入口均已删除。概念暗门与合作连线继续沿用既有视觉世界。以五行为起点、借鉴组合发现玩法的非加和互动正在讨论，尚未实现；不以占位模块替代已删除的光场。
+用户随后要求移除双线光场；首页入口、几何脚本、样式、导出和概念地图中的入口均已删除。概念暗门与合作连线继续沿用既有视觉世界。后续非加和互动已实现为「造物实验室」：从阴阳出发，沿 100 个元素、101 条原创配方探索自然、器物、中医文化与系统联系；图鉴、公式与本机进度见上文组件记录。它是用户指定玩法的独立局部扩展，原双线光场仍已移除。
 
 搜索框内的概念暗门是既有搜索的局部扩展：完整别名触发，中心概念、三条阅读路径和至多三篇真实公开论文。数据集中维护在 `_data/concept_keys.yml`；沿用公开索引，标题词项匹配，只做阅读组织。地图使用主题线色，线条一次性绘出，减少动效或手动关闭时静止。弹窗保持原生 Escape、焦点归还及全站检索；地图展开时整体可滚动，关闭按钮保持可见。
 
