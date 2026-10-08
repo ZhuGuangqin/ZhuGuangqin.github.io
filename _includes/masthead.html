@@ -3,7 +3,7 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><span class="navicon"></span></button>
+        <button type="button" aria-label="更多导航 / More navigation" aria-expanded="false" aria-controls="overflow-nav"><span class="navicon"></span></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
             <a href="{{ base_path }}/"><span data-i18n="zh">{{ site.title }}</span><span data-i18n="en">{{ site.title_en | default: site.title }}</span></a>
@@ -20,16 +20,19 @@
               </a>
             </li>
           {% endfor %}
+          <li class="masthead__menu-item persist tail research-search-nav">
+            <button type="button" class="nav-tool" data-open-search aria-label="搜索全站 / Search site" title="搜索 / Search · Ctrl / ⌘ K"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span data-i18n="zh">搜索</span><span data-i18n="en">Search</span></button>
+          </li>
           <li id="lang-toggle" class="masthead__menu-item persist tail">
-            <a role="button" title="切换中英文 / Switch language" aria-label="切换中英文">
+            <button type="button" class="nav-tool" title="切换中英文 / Switch language" aria-label="切换中英文 / Switch language">
               <span class="lang-code" data-code="zh">中</span><span class="lang-code" data-code="en">EN</span>
-            </a>
+            </button>
           </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+            <button type="button" class="nav-tool" aria-label="切换深浅主题 / Toggle theme"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true"></i></button>
           </li>
         </ul>
-        <ul class="hidden-links hidden"></ul>
+        <ul id="overflow-nav" class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>

@@ -9,7 +9,5 @@ author_profile: true
 {% include base_path %}
 
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+<p class="folio-intro"><span data-i18n="zh">从研究问题展开，查看我参与的工作。</span><span data-i18n="en">Open a research question to explore my contribution.</span></p>
+{% include research-folio.html items=site.portfolio %}

@@ -1,0 +1,14 @@
+---
+layout: null
+permalink: /assets/search-index.json
+---
+{% assign entries = site.publications | concat: site.talks | concat: site.portfolio | concat: site.teaching %}
+[
+  {"title":"学术主页","title_en":"Academic home","url":{{ '/' | relative_url | jsonify }},"type":"page","text":"祝广钦 Zhu Guangqin 中医基础理论 研究方向 教育背景 联系方式","year":""},
+  {% for link in site.data.navigation.main %}
+  {"title":{{ link.title | jsonify }},"title_en":{{ link.title_en | default: link.title | jsonify }},"url":{{ link.url | relative_url | jsonify }},"type":"page","text":"","year":""},
+  {% endfor %}
+  {% for entry in entries %}
+  {"title":{{ entry.title | strip_html | jsonify }},"title_en":{{ entry.title_en | default: entry.title | strip_html | jsonify }},"url":{{ entry.url | relative_url | jsonify }},"type":{{ entry.collection | jsonify }},"text":{{ entry.content | markdownify | strip_html | normalize_whitespace | jsonify }},"venue":{{ entry.venue | jsonify }},"venue_en":{{ entry.venue_en | jsonify }},"citation":{{ entry.citation | strip_html | jsonify }},"year":{% if entry.date %}{{ entry.date | date: '%Y' | jsonify }}{% else %}""{% endif %}}{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

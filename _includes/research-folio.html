@@ -1,0 +1,8 @@
+<div class="research-folios">
+{% for post in include.items reversed %}
+  <details class="research-folio"{% if forloop.first %} open{% endif %}>
+    <summary><span class="research-folio__title"><span data-i18n="zh">{{ post.title }}</span><span data-i18n="en">{{ post.title_en | default: post.title }}</span></span><span class="research-folio__mark" aria-hidden="true">+</span></summary>
+    <div class="research-folio__body"><p class="research-folio__meta"><span data-i18n="zh">{{ post.type | default: post.venue }}</span><span data-i18n="en">{{ post.type_en | default: post.venue_en | default: post.venue }}</span></p><div>{{ post.content | markdownify }}</div><a href="{{ post.url | relative_url }}"><span data-i18n="zh">查看完整记录</span><span data-i18n="en">View the full record</span><span aria-hidden="true">↗</span></a></div>
+  </details>
+{% endfor %}
+</div>

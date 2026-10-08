@@ -12,6 +12,8 @@
 
 <!-- 本站自定义样式：动效 + 中英切换。放在 main.css 之后以便覆盖 -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/custom.css">
+<link rel="stylesheet" href="{{ base_path }}/assets/css/research.css">
+{% if page.cv_experiment %}<link rel="stylesheet" href="{{ base_path }}/assets/css/cv-art.css">{% endif %}
 
 <!-- 语言状态尽早写入 <html>，避免 ?lang=en 打开时先闪一下中文 -->
 <script>
@@ -22,11 +24,25 @@
       try { saved = localStorage.getItem("site-lang"); } catch (e) {}
       var lang = (m === "en" || m === "zh") ? m : (saved === "en" || saved === "zh" ? saved : "zh");
       document.documentElement.setAttribute("data-lang", lang);
+      try {
+        var theme = localStorage.getItem("theme");
+        if (theme === "dark" || (theme !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)) document.documentElement.setAttribute("data-theme", "dark");
+        var season = localStorage.getItem("site-season");
+        document.documentElement.setAttribute("data-season", /^(spring|summer|autumn|winter)$/.test(season) ? season : "spring");
+        if (localStorage.getItem("site-motion") === "off") document.documentElement.setAttribute("data-motion", "off");
+        if (localStorage.getItem("site-focus") === "on") document.documentElement.setAttribute("data-focus", "on");
+      } catch (e) { /* 不能保存偏好时，仍保留 URL 指定的语言 */ }
     } catch (e) {
       document.documentElement.setAttribute("data-lang", "zh");
     }
   })();
 </script>
+{% if page.cv_experiment %}<script>
+  if (document.documentElement.dataset.motion !== "off" && document.documentElement.dataset.focus !== "on" && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.documentElement.dataset.cvLoading = "pending";
+    setTimeout(function () { document.documentElement.removeAttribute("data-cv-loading"); }, 3500);
+  }
+</script>{% endif %}
 
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>

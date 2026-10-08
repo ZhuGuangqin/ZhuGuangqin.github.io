@@ -1,0 +1,19 @@
+<div class="publication-library-intro"><h2><span data-i18n="zh">把研究，放上书架。</span><span data-i18n="en">Research, on the shelf.</span></h2><p><span data-i18n="zh">取下一本，看看问题是如何展开的。</span><span data-i18n="en">Pick up a volume. Explore the question within.</span></p></div>
+<div class="publication-controls" hidden>
+  <div class="publication-controls__top"><label for="publication-query"><span data-i18n="zh">检索成果</span><span data-i18n="en">Find an output</span></label><span class="publication-result-count" role="status"></span></div>
+  <div class="publication-controls__fields">
+    <input id="publication-query" type="search" aria-label="检索标题、作者或期刊 / Search title, author or journal" autocomplete="off">
+    <label class="sr-only" for="publication-year">年份 / Year</label><select id="publication-year"></select>
+    <label class="publication-pdf"><input id="publication-pdf" type="checkbox"><span data-i18n="zh">有全文 PDF</span><span data-i18n="en">With PDF</span></label>
+    <button type="button" class="publication-reset"><span data-i18n="zh">重置</span><span data-i18n="en">Reset</span></button>
+  </div>
+  <div class="publication-categories" role="group" aria-label="成果类型 / Output type">
+    <button type="button" data-filter-category="all" aria-pressed="true"><span data-i18n="zh">全部</span><span data-i18n="en">All</span><small>{{ site.publications | size }}</small></button>
+    {% for category in site.publication_category %}{% assign count = site.publications | where: 'category', category[0] | size %}{% if count > 0 %}
+    <button type="button" data-filter-category="{{ category[0] }}" aria-pressed="false"><span data-i18n="zh">{{ category[1].title }}</span><span data-i18n="en">{{ category[1].title_en }}</span><small>{{ count }}</small></button>
+    {% endif %}{% endfor %}
+  </div>
+  <div class="publication-view" role="group" aria-label="成果浏览方式 / Publication view"><button type="button" data-library-view="shelf" aria-pressed="true"><i class="fa-solid fa-book" aria-hidden="true"></i><span data-i18n="zh">期刊架</span><span data-i18n="en">Shelf</span></button><button type="button" data-library-view="list" aria-pressed="false"><i class="fa-solid fa-list" aria-hidden="true"></i><span data-i18n="zh">紧凑列表</span><span data-i18n="en">List</span></button></div>
+</div>
+<dialog id="publication-reader" class="publication-reader" aria-label="论文取阅 / Read a publication"><button type="button" class="publication-reader__close" data-close-publication aria-label="合上刊物 / Close publication"><span aria-hidden="true">×</span><span data-i18n="zh">放回书架</span><span data-i18n="en">Back to shelf</span></button><div class="publication-reader__body"></div></dialog>
+<p id="publication-empty" class="publication-empty" hidden><span data-i18n="zh">没有符合条件的成果。试试其他关键词，或重置筛选。</span><span data-i18n="en">No matching outputs. Try another keyword or reset the filters.</span></p>

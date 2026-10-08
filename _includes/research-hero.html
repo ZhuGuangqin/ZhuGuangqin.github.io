@@ -1,0 +1,38 @@
+<section class="research-hero" aria-labelledby="research-heading">
+  <div class="research-hero__inner">
+    <div class="research-hero__copy">
+      <h1 id="research-heading"><span data-i18n="zh">在四时变化中，<br>探寻生命的<span class="research-gradient">秩序。</span></span><span data-i18n="en">Exploring life's order<br>through the <span class="research-gradient">seasons.</span></span></h1>
+      <p class="research-hero__description"><span data-i18n="zh">以系统的眼光理解中医，以研究连接经典与生命科学。</span><span data-i18n="en">A systems perspective on Chinese medicine, connecting classical theory with life sciences.</span></p>
+      <div class="research-topics" aria-label="研究主题 / Research topics">
+        <button type="button" data-search-query="五脏"><span data-i18n="zh">天人相应</span><span data-i18n="en">Seasonality</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+        <button type="button" data-search-query="系统中医学"><span data-i18n="zh">系统中医学</span><span data-i18n="en">Systems TCM</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+        <button type="button" data-search-query="免疫"><span data-i18n="zh">季节与免疫</span><span data-i18n="en">Seasonal immunity</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+      </div>
+      <div class="research-hero__actions">
+        <a class="research-primary" href="{{ '/publications/' | relative_url }}"><span data-i18n="zh">浏览学术成果</span><span data-i18n="en">Explore publications</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <button type="button" class="research-secondary" data-copy-email="{{ site.author.email | escape }}"><i class="fa-regular fa-copy" aria-hidden="true"></i><span data-i18n="zh">复制邮箱</span><span data-i18n="en">Copy email</span></button>
+      </div>
+    </div>
+    <div class="season-lab">
+      <div class="season-orbit" aria-hidden="true">
+        <svg viewBox="0 0 400 340" fill="none">
+          <defs><radialGradient id="orbit-glow"><stop stop-color="currentColor" stop-opacity=".25"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient></defs>
+          <circle cx="200" cy="170" r="148" fill="url(#orbit-glow)"/>
+          <g class="orbit-coordinates" stroke="currentColor" stroke-opacity=".17"><path d="M200 10v320M35 170h330"/><circle cx="200" cy="170" r="145" stroke-dasharray="2 7"/><circle cx="200" cy="170" r="105"/><ellipse cx="200" cy="170" rx="148" ry="57" transform="rotate(-30 200 170)"/><ellipse cx="200" cy="170" rx="148" ry="57" transform="rotate(30 200 170)"/></g>
+          <g class="orbit-tracer" stroke="currentColor"><circle cx="200" cy="170" r="126" stroke-dasharray="65 727" stroke-width="1.5"/><circle cx="200" cy="44" r="4" fill="currentColor" stroke="none"/></g>
+          <g class="orbit-tracer orbit-tracer--inner" stroke="currentColor"><ellipse cx="200" cy="170" rx="76" ry="76" stroke-dasharray="30 447"/><circle cx="200" cy="94" r="2.5" fill="currentColor" stroke="none"/></g>
+          <g fill="currentColor"><circle cx="200" cy="25" r="3"/><circle cx="345" cy="170" r="3"/><circle cx="200" cy="315" r="3"/><circle cx="55" cy="170" r="3"/></g>
+        </svg>
+        <div class="season-orbit__core"><span class="season-orbit__han">春</span><span class="season-orbit__english">SPRING</span><span class="season-orbit__concept"><span data-i18n="zh">天人相应</span><span data-i18n="en">Nature & human</span></span></div>
+      </div>
+      <div class="season-switch" role="group" aria-label="切换四时主题 / Choose a season">
+        <button type="button" data-season-choice="spring" aria-pressed="true"><span data-i18n="zh">春</span><span data-i18n="en">Spring</span></button>
+        <button type="button" data-season-choice="summer" aria-pressed="false"><span data-i18n="zh">夏</span><span data-i18n="en">Summer</span></button>
+        <button type="button" data-season-choice="autumn" aria-pressed="false"><span data-i18n="zh">秋</span><span data-i18n="en">Autumn</span></button>
+        <button type="button" data-season-choice="winter" aria-pressed="false"><span data-i18n="zh">冬</span><span data-i18n="en">Winter</span></button>
+      </div>
+      <p class="season-lab__note"><span data-i18n="zh">四时流转，整页随之换境</span><span data-i18n="en">Four seasons. Four atmospheres.</span></p>
+    </div>
+  </div>
+</section>
+{% include research-atlas.html %}

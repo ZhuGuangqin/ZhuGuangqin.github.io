@@ -8,6 +8,5 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<p class="folio-intro"><span data-i18n="zh">把理论带入课堂，把经验整理成可共享的资源。</span><span data-i18n="en">Bringing theory into the classroom, and experience into shared resources.</span></p>
+{% include research-folio.html items=site.teaching %}

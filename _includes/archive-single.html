@@ -1,3 +1,6 @@
+{% if post.collection == 'publications' %}
+{% include publication-item.html %}
+{% else %}
 {% include base_path %}
 
 {% if post.header.teaser %}
@@ -12,7 +15,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item">
+<div class="{{ include.type | default: "list" }}__item"{% if post.collection == 'publications' %} data-publication data-category="{{ post.category | escape }}" data-year="{{ post.date | date: '%Y' }}" data-has-pdf="{% if post.paperurl %}true{% else %}false{% endif %}"{% endif %}>
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
@@ -85,5 +88,10 @@
       <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
     {% endif %}
 
+    {% if post.collection == 'publications' and post.citation %}
+    <div class="publication-actions"><button type="button" data-copy-citation="{{ post.citation | strip_html | escape }}"><i class="fa-regular fa-copy" aria-hidden="true"></i><span data-i18n="zh">复制引用</span><span data-i18n="en">Copy citation</span></button>{% if post.paperurl %}<span class="publication-available"><span aria-hidden="true">●</span> PDF</span>{% endif %}</div>
+    {% endif %}
   </article>
 </div>
+
+{% endif %}

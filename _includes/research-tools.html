@@ -1,0 +1,19 @@
+<div id="research-tools" data-index-url="{{ '/assets/search-index.json' | relative_url }}">
+  <div class="research-dock" role="group" aria-label="阅读工具 / Reading tools">
+    <button type="button" id="season-menu-toggle" aria-expanded="false" aria-controls="season-menu" aria-label="四季主题 / Seasonal palette"><i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i><span class="current-season-name">春</span></button>
+    <button type="button" data-open-search title="搜索 / Search · Ctrl / ⌘ K" aria-label="搜索 / Search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span data-i18n="zh">搜索</span><span data-i18n="en">Search</span></button>
+    <button type="button" id="outline-toggle" aria-expanded="false" aria-controls="research-outline" hidden><i class="fa-solid fa-list-ul" aria-hidden="true"></i><span data-i18n="zh">目录</span><span data-i18n="en">Contents</span></button>
+    <button type="button" id="focus-toggle" aria-pressed="false"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span data-i18n="zh">专注</span><span data-i18n="en">Focus</span></button>
+    <button type="button" id="motion-toggle" aria-pressed="false"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i><span data-i18n="zh">动效</span><span data-i18n="en">Motion</span></button>
+  </div>
+  <div id="season-menu" class="season-menu" hidden><p><span data-i18n="zh">换一季，换一种心境</span><span data-i18n="en">Choose your atmosphere</span></p><div class="season-switch" role="group" aria-label="整页四季主题 / Site season"><button type="button" data-season-choice="spring" aria-pressed="true"><span data-i18n="zh">春 · 青绿</span><span data-i18n="en">Spring</span></button><button type="button" data-season-choice="summer" aria-pressed="false"><span data-i18n="zh">夏 · 暖朱</span><span data-i18n="en">Summer</span></button><button type="button" data-season-choice="autumn" aria-pressed="false"><span data-i18n="zh">秋 · 赭金</span><span data-i18n="en">Autumn</span></button><button type="button" data-season-choice="winter" aria-pressed="false"><span data-i18n="zh">冬 · 冰蓝</span><span data-i18n="en">Winter</span></button></div><p><span data-i18n="zh">浅色与夜间均有独立配色，自动记住选择。</span><span data-i18n="en">Light and night palettes. Your choice is remembered.</span></p></div>
+  <nav id="research-outline" class="research-outline" aria-label="本页目录 / On this page" hidden><p><span data-i18n="zh">本页目录</span><span data-i18n="en">On this page</span></p><div id="outline-links"></div></nav>
+  <dialog id="research-search" class="research-search" aria-labelledby="search-title">
+    <div class="research-search__header"><h2 id="search-title"><span data-i18n="zh">探索本站</span><span data-i18n="en">Explore this site</span></h2><button type="button" data-close-search aria-label="关闭 / Close"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div>
+    <div class="research-search__input"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="site-search-input" type="search" autocomplete="off" aria-label="搜索论文、会议、项目 / Search publications, talks, projects"><kbd>Esc</kbd></div>
+    <p id="search-status" class="research-search__status" role="status"></p>
+    <div id="site-search-results" class="research-search__results"></div>
+    <div class="research-search__footer"><span><kbd>↑</kbd> <kbd>↓</kbd> <span data-i18n="zh">选择</span><span data-i18n="en">Select</span> <kbd>↵</kbd> <span data-i18n="zh">打开</span><span data-i18n="en">Open</span></span><span>Ctrl / ⌘ K</span></div>
+  </dialog>
+  <div id="research-toast" class="research-toast" role="status" aria-live="polite"></div>
+</div>

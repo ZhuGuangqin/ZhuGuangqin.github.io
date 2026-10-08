@@ -1,0 +1,865 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T04:54:25.683256+00:00",
+  "title": "Design System: 祝广钦 / Guangqin Zhu",
+  "extensions": {
+    "colorMeta": {
+      "cv-dark": {
+        "role": "neutral",
+        "displayName": "Cv Dark",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-paper": {
+        "role": "neutral",
+        "displayName": "Cv Paper",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-acid-spring": {
+        "role": "primary",
+        "displayName": "Cv Acid Spring",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-acid-summer": {
+        "role": "primary",
+        "displayName": "Cv Acid Summer",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-acid-autumn": {
+        "role": "primary",
+        "displayName": "Cv Acid Autumn",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-acid-winter": {
+        "role": "primary",
+        "displayName": "Cv Acid Winter",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-muted-light": {
+        "role": "neutral",
+        "displayName": "Cv Muted Light",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-rule-light": {
+        "role": "neutral",
+        "displayName": "Cv Rule Light",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-line-light": {
+        "role": "neutral",
+        "displayName": "Cv Line Light",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-panel-light": {
+        "role": "neutral",
+        "displayName": "Cv Panel Light",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-accent-ink-light": {
+        "role": "primary",
+        "displayName": "Cv Accent Ink Light",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-muted-dark": {
+        "role": "neutral",
+        "displayName": "Cv Muted Dark",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-rule-dark": {
+        "role": "neutral",
+        "displayName": "Cv Rule Dark",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-line-dark": {
+        "role": "neutral",
+        "displayName": "Cv Line Dark",
+        "source": "assets/css/cv-art.css"
+      },
+      "cv-panel-dark": {
+        "role": "neutral",
+        "displayName": "Cv Panel Dark",
+        "source": "assets/css/cv-art.css"
+      },
+      "exhibition-spring-light-canvas": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Light Canvas",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-light-panel": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Light Panel",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-light-field": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Light Field",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-light-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Light Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-light-muted": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Light Muted",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-light-accent": {
+        "role": "primary",
+        "displayName": "Exhibition Spring Light Accent",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-light-line": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Light Line",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-light-button-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Light Button Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-light-canvas": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Light Canvas",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-light-panel": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Light Panel",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-light-field": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Light Field",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-light-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Light Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-light-muted": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Light Muted",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-light-accent": {
+        "role": "primary",
+        "displayName": "Exhibition Summer Light Accent",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-light-line": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Light Line",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-light-button-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Light Button Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-light-canvas": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Light Canvas",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-light-panel": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Light Panel",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-light-field": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Light Field",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-light-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Light Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-light-muted": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Light Muted",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-light-accent": {
+        "role": "primary",
+        "displayName": "Exhibition Autumn Light Accent",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-light-line": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Light Line",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-light-button-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Light Button Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-light-canvas": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Light Canvas",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-light-panel": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Light Panel",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-light-field": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Light Field",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-light-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Light Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-light-muted": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Light Muted",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-light-accent": {
+        "role": "primary",
+        "displayName": "Exhibition Winter Light Accent",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-light-line": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Light Line",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-light-button-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Light Button Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-dark-canvas": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Dark Canvas",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-dark-panel": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Dark Panel",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-dark-field": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Dark Field",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-dark-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Dark Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-dark-muted": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Dark Muted",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-dark-accent": {
+        "role": "primary",
+        "displayName": "Exhibition Spring Dark Accent",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-dark-line": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Dark Line",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-spring-dark-button-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Spring Dark Button Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-dark-canvas": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Dark Canvas",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-dark-panel": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Dark Panel",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-dark-field": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Dark Field",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-dark-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Dark Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-dark-muted": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Dark Muted",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-dark-accent": {
+        "role": "primary",
+        "displayName": "Exhibition Summer Dark Accent",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-dark-line": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Dark Line",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-summer-dark-button-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Summer Dark Button Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-dark-canvas": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Dark Canvas",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-dark-panel": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Dark Panel",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-dark-field": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Dark Field",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-dark-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Dark Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-dark-muted": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Dark Muted",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-dark-accent": {
+        "role": "primary",
+        "displayName": "Exhibition Autumn Dark Accent",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-dark-line": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Dark Line",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-autumn-dark-button-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Autumn Dark Button Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-dark-canvas": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Dark Canvas",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-dark-panel": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Dark Panel",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-dark-field": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Dark Field",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-dark-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Dark Ink",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-dark-muted": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Dark Muted",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-dark-accent": {
+        "role": "primary",
+        "displayName": "Exhibition Winter Dark Accent",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-dark-line": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Dark Line",
+        "source": "assets/css/research.css"
+      },
+      "exhibition-winter-dark-button-ink": {
+        "role": "neutral",
+        "displayName": "Exhibition Winter Dark Button Ink",
+        "source": "assets/css/research.css"
+      }
+    },
+    "typographyMeta": {
+      "cv-display": {
+        "displayName": "Cv Display",
+        "purpose": "Know Me surface only."
+      },
+      "cv-display-en": {
+        "displayName": "Cv Display En",
+        "purpose": "Know Me surface only."
+      },
+      "cv-headline": {
+        "displayName": "Cv Headline",
+        "purpose": "Know Me surface only."
+      },
+      "cv-film-title": {
+        "displayName": "Cv Film Title",
+        "purpose": "Know Me surface only."
+      },
+      "cv-body": {
+        "displayName": "Cv Body",
+        "purpose": "Know Me surface only."
+      },
+      "cv-label": {
+        "displayName": "Cv Label",
+        "purpose": "Know Me surface only."
+      },
+      "cv-print-label": {
+        "displayName": "Cv Print Label",
+        "purpose": "Know Me surface only."
+      },
+      "cv-reader-title": {
+        "displayName": "Cv Reader Title",
+        "purpose": "Know Me surface only."
+      },
+      "cv-contact-display": {
+        "displayName": "Cv Contact Display",
+        "purpose": "Know Me surface only."
+      },
+      "cv-since-year": {
+        "displayName": "Cv Since Year",
+        "purpose": "Know Me surface only."
+      },
+      "exhibition-display": {
+        "displayName": "Exhibition Display",
+        "purpose": "Academic exhibition surface only."
+      },
+      "exhibition-title": {
+        "displayName": "Exhibition Title",
+        "purpose": "Academic exhibition surface only."
+      },
+      "exhibition-body": {
+        "displayName": "Exhibition Body",
+        "purpose": "Academic exhibition surface only."
+      },
+      "exhibition-primary-label": {
+        "displayName": "Exhibition Primary Label",
+        "purpose": "Academic exhibition surface only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "exhibition-ambient",
+        "value": "0 14px 40px #0002",
+        "purpose": "Reading dock and season menu; source --research-shadow."
+      },
+      {
+        "name": "exhibition-volume-rest",
+        "value": "7px 10px 13px #0002",
+        "purpose": "Journal volume at rest."
+      },
+      {
+        "name": "exhibition-volume-taken",
+        "value": "9px 20px 20px #0003",
+        "purpose": "Journal volume on hover/focus."
+      },
+      {
+        "name": "exhibition-reader",
+        "value": "0 30px 90px #0006",
+        "purpose": "Native publication reader."
+      },
+      {
+        "name": "book-silhouette",
+        "value": "drop-shadow(5px 10px 7px #0003)",
+        "purpose": "Photographed owner book silhouette; CSS filter, not a rectangular shell."
+      }
+    ],
+    "motion": [
+      {
+        "name": "cv-emergence-ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Path drawing, contact icon and dissolve."
+      },
+      {
+        "name": "cv-shutter-ease",
+        "value": "cubic-bezier(.76,0,.24,1)",
+        "purpose": "Section slice and loader exit."
+      },
+      {
+        "name": "cv-slice-duration",
+        "value": ".72s",
+        "purpose": "Twelve slices, each staggered by 9ms; chapter jump at380ms and cleanup at850ms."
+      },
+      {
+        "name": "cv-logo-draw",
+        "value": "1.2s",
+        "purpose": "Original mark path drawing; outer draw1.1s and turn1.4s."
+      },
+      {
+        "name": "cv-loader-exit",
+        "value": ".65s",
+        "purpose": "Bounded clip exit; JS finishing cleanup660ms."
+      },
+      {
+        "name": "cv-loader-safety",
+        "value": "3.3s",
+        "purpose": "CSS failure-release delay, followed by.1s visibility release."
+      },
+      {
+        "name": "cv-dissolve-duration",
+        "value": "640 + i % 5 * 30 ms",
+        "purpose": "Thirty pieces with source cubic-bezier(.16,1,.3,1); overlay cleanup850ms."
+      },
+      {
+        "name": "cv-geometry-frame-interval",
+        "value": "24ms desktop / 33ms below650px",
+        "purpose": "Source update throttle, not a measured performance guarantee."
+      },
+      {
+        "name": "cv-tunnel-frame-interval",
+        "value": "32ms",
+        "purpose": "Source drift update throttle; pauses hidden/offscreen/dialog/drag/reduced."
+      },
+      {
+        "name": "exhibition-palette",
+        "value": "background-color .45s, color .3s, border-color .3s",
+        "purpose": "Whole-page season/theme changes."
+      },
+      {
+        "name": "exhibition-volume",
+        "value": ".4s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Take a volume from the shelf."
+      },
+      {
+        "name": "exhibition-reader-open",
+        "value": ".42s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Native reader entry; removed under reduced motion."
+      },
+      {
+        "name": "cv-block-downward-reveal",
+        "value": "clip-path:inset(0 0 var(--block-mask,0%) 0)",
+        "purpose": "Native-scroll entry; --block-mask = pow(1-arrival,3)*100%; arrival clamps (scrollY+viewport-blocksTop-100-i*20)/min(360,viewport*.42). All panels open at reading stop; focus/static/no-JS remove clipping. Source assets/js/cv-journey.js:56-60 and assets/css/cv-art.css:14,48."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "exhibition-desktop-grid",
+        "value": "min-width:925px"
+      },
+      {
+        "name": "exhibition-shelf-three",
+        "value": "max-width:1000px"
+      },
+      {
+        "name": "cv-compact-blocks",
+        "value": "max-width:900px"
+      },
+      {
+        "name": "stacked-reader-and-cv-mobile",
+        "value": "max-width:700px"
+      },
+      {
+        "name": "cv-mobile-print-clearance",
+        "value": "min-width:351px and max-width:700px and min-height:701px"
+      },
+      {
+        "name": "cv-short-mobile",
+        "value": "max-width:700px and max-height:700px"
+      },
+      {
+        "name": "cv-geometry-compact",
+        "value": "width <650px"
+      },
+      {
+        "name": "exhibition-seven-mansions",
+        "value": "max-width:600px"
+      },
+      {
+        "name": "exhibition-shelf-two",
+        "value": "max-width:500px"
+      },
+      {
+        "name": "exhibition-narrow-toolbar",
+        "value": "max-width:374px"
+      },
+      {
+        "name": "cv-narrow-type",
+        "value": "max-width:350px"
+      }
+    ],
+    "stateMappings": {
+      "exhibition": {
+        "selector": "html[data-season][data-theme]",
+        "tokenPrefix": "exhibition-{season}-{light|dark}-",
+        "roles": [
+          "canvas",
+          "panel",
+          "field",
+          "ink",
+          "muted",
+          "accent",
+          "line",
+          "button-ink"
+        ],
+        "source": "assets/css/research.css:6-13"
+      },
+      "cv": {
+        "selector": ".cv-art-page",
+        "light": {
+          "--cv-bg": "cv-paper",
+          "--cv-fg": "cv-dark",
+          "--cv-muted": "cv-muted-light",
+          "--cv-rule": "cv-rule-light",
+          "--cv-line": "cv-line-light",
+          "--cv-panel": "cv-panel-light",
+          "--cv-accent-ink": "cv-accent-ink-light"
+        },
+        "dark": {
+          "--cv-bg": "cv-dark",
+          "--cv-fg": "cv-paper",
+          "--cv-muted": "cv-muted-dark",
+          "--cv-rule": "cv-rule-dark",
+          "--cv-line": "cv-line-dark",
+          "--cv-panel": "cv-panel-dark",
+          "--cv-accent-ink": "cv-acid-{season}"
+        },
+        "seasonal": "--cv-acid: cv-acid-{season}",
+        "source": "assets/css/cv-art.css:3-5"
+      }
+    },
+    "depth": {
+      "cvPerspectives": {
+        "tunnel": "1000px",
+        "since": "900px"
+      },
+      "cvFaceShadow": "none",
+      "cvDialogBackdrop": "background:#080a08ba;backdrop-filter:blur(10px)",
+      "exhibitionDialogBackdrop": "background:#071510b3;backdrop-filter:blur(5px)",
+      "academicCoordinates": "Flat panels; no rotation, translation or perspective."
+    },
+    "mobileSafeArea": {
+      "source": "assets/css/cv-art.css:27-44",
+      "reservation": "max(82px,calc(env(safe-area-inset-bottom) + 72px))",
+      "stageHeight": "calc(100svh - 104px - var(--cv-dock-safe))",
+      "controlMinimum": "44px"
+    },
+    "provenance": {
+      "generatedTopics": {
+        "count": 14,
+        "source": "docs/cover-generation.json"
+      },
+      "ownerBooks": {
+        "count": 5,
+        "source": "docs/book-cover-sources.json"
+      },
+      "verifiedIssueOriginals": {
+        "count": 2,
+        "source": "_data/publication_covers.json"
+      },
+      "recordCardsWithoutImage": 2,
+      "webJpegs": 21,
+      "acceptedEmbeddedMetadataMissing": 0,
+      "cropAuthority": "_data/publication_covers.json shape_style",
+      "artBoundary": "Mathematical geometry and topic covers are art; cultural stars are not realtime sky or medical evidence."
+    },
+    "evidence": {
+      "mode": "Code-led; no approved comp; no FORM seed.",
+      "sourceInspection": "Documentation read source and accepted records; no new live-browser measurement.",
+      "packet": ".impeccable/review/finish-packet.md",
+      "corrections": [
+        ".impeccable/review/fix-round-1.md",
+        ".impeccable/review/fix-round-2.md"
+      ],
+      "verdict": ".impeccable/review/verdict.md",
+      "finalDisposition": "ship",
+      "verdictScope": "Prior review: original five scored findings and introduced390px Print CV obstruction resolved; no open scored findings. Not whole-surface endorsement.",
+      "limitations": [
+        "OS print dialog not invoked.",
+        "Legacy footer /sitemap/ path persists.",
+        "No deployment performed.",
+        "Synthetic tonal ramps intentionally omitted: source state palettes are authoritative."
+      ],
+      "notCanonized": [
+        "Inherited icon-font action glyphs.",
+        "Legacy platform display inheritance.",
+        "Removed broad Know Me work-face shadow."
+      ],
+      "academicCoordinateCorrection": {
+        "scope": "Flat downward reveal, complete block text, filled nonuniform grid and content-aware normal flow.",
+        "reviewState": "UI accepted as match/adaptation; documentation persistence was the sole remaining fix. Documentation synchronized here; no new independent verdict claimed.",
+        "captures": [
+          "desktop.png",
+          "mobile.png",
+          "coords-desktop-en-light.jpg",
+          "coords-user-319-top.jpg",
+          "coords-user-319-lower.jpg",
+          "coords-short-desktop.jpg",
+          "coords-short-desktop-lower.jpg",
+          "coords-motion-off.jpg"
+        ],
+        "captureDirectory": ".impeccable/review/",
+        "runtimeChangeInThisPass": false
+      }
+    },
+    "academicCoordinates": {
+      "sources": [
+        "assets/css/cv-art.css:14,22-24,48",
+        "assets/js/cv-journey.js:30-35,56-60"
+      ],
+      "desktop": {
+        "columns": "repeat(4,minmax(0,1fr))",
+        "rows": "repeat(3,minmax(138px,auto))",
+        "gap": "1px",
+        "padding": "20px",
+        "systemSpan": "2 columns / 2 rows",
+        "seasonSpan": "2 columns",
+        "bucmSpan": "2 columns"
+      },
+      "compactPadding": "18px at max-width:900px",
+      "mobile": {
+        "query": "max-width:700px",
+        "columns": "repeat(2,minmax(0,1fr))",
+        "rows": "repeat(4,minmax(120px,auto))",
+        "padding": "12px",
+        "systemSpan": "1 column / 2 rows",
+        "seasonColumn": "2",
+        "bucmSpan": "1 column",
+        "englishSystemSize": "clamp(24px,7.2vw,41px)"
+      },
+      "normalFlow": "is-flowing when innerWidth<=700 or blockStage.scrollHeight>viewport-topOffset(); position:relative, top:0, min-height:0, scene height:auto.",
+      "textIntegrity": "flex-shrink:0; overflow-wrap:anywhere; project/honor/book/BUCM descriptions have no hidden or clamped overrides.",
+      "static": "motion-off/no-JS:clip-path:none!important; selected focus-visible block:clip-path:none."
+    }
+  },
+  "components": [
+    {
+      "name": "Know Me print action",
+      "kind": "button",
+      "refersTo": "cv-print",
+      "description": "Square accent action; the live page invokes printing.",
+      "html": "<div class=\"ds-cv\"><button class=\"ds-print\" type=\"button\">Print CV<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></button></div>",
+      "css": ".ds-cv{--cv-dark:#171917;--cv-paper:#f2f1e9;--cv-acid:#deef6b;--cv-bg:#f2f1e9;--cv-fg:#171917;--cv-muted:#4b5146;--cv-rule:#8a907e;--cv-panel:#e6e8dd;--cv-accent-ink:#46500f;font-family:\"CV Grotesk\",\"CV Sans SC\",sans-serif}:host-context(html[data-theme=\"dark\"]) .ds-cv{--cv-bg:#171917;--cv-fg:#f2f1e9;--cv-muted:#b6bcb0;--cv-rule:#62675b;--cv-panel:#252a20;--cv-accent-ink:var(--cv-acid)}:host-context(html[data-season=\"summer\"]) .ds-cv{--cv-acid:#ffc1a1}:host-context(html[data-season=\"autumn\"]) .ds-cv{--cv-acid:#edcf71}:host-context(html[data-season=\"winter\"]) .ds-cv{--cv-acid:#9ed9ed}.ds-cv :focus-visible{outline:2px solid currentColor;outline-offset:6px}.ds-print{display:inline-flex;align-items:center;gap:35px;padding:15px 20px;min-height:44px;color:var(--cv-dark);background:var(--cv-acid);border:0;border-radius:0;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer}.ds-print:hover{background:var(--cv-panel);color:var(--cv-fg)}.ds-print:disabled{opacity:.45;cursor:default}"
+    },
+    {
+      "name": "Know Me reading control",
+      "kind": "button",
+      "refersTo": "cv-control",
+      "description": "Bordered pause/read control; live functionality remains in the page.",
+      "html": "<div class=\"ds-cv\"><button class=\"ds-control\" type=\"button\">Read selected<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></button></div>",
+      "css": ".ds-cv{--cv-dark:#171917;--cv-paper:#f2f1e9;--cv-acid:#deef6b;--cv-bg:#f2f1e9;--cv-fg:#171917;--cv-muted:#4b5146;--cv-rule:#8a907e;--cv-panel:#e6e8dd;--cv-accent-ink:#46500f;font-family:\"CV Grotesk\",\"CV Sans SC\",sans-serif}:host-context(html[data-theme=\"dark\"]) .ds-cv{--cv-bg:#171917;--cv-fg:#f2f1e9;--cv-muted:#b6bcb0;--cv-rule:#62675b;--cv-panel:#252a20;--cv-accent-ink:var(--cv-acid)}:host-context(html[data-season=\"summer\"]) .ds-cv{--cv-acid:#ffc1a1}:host-context(html[data-season=\"autumn\"]) .ds-cv{--cv-acid:#edcf71}:host-context(html[data-season=\"winter\"]) .ds-cv{--cv-acid:#9ed9ed}.ds-cv :focus-visible{outline:2px solid currentColor;outline-offset:6px}.ds-control{display:inline-flex;align-items:center;gap:15px;min-height:44px;padding:10px 14px;border:1px solid var(--cv-rule);border-radius:0;color:var(--cv-fg);background:var(--cv-bg);font-family:inherit;font-size:11px;cursor:pointer}.ds-control:disabled{opacity:.45;cursor:default}"
+    },
+    {
+      "name": "Know Me chapter strip",
+      "kind": "nav",
+      "refersTo": "cv-chapter-nav",
+      "description": "An underlined active chapter on an accent strip.",
+      "html": "<div class=\"ds-cv\"><nav class=\"ds-chapters\" aria-label=\"Know Me chapters\"><a href=\"#identity\" aria-current=\"location\">Identity</a><a href=\"#journey\">Journey</a><a href=\"#work\">Work</a></nav></div>",
+      "css": ".ds-cv{--cv-dark:#171917;--cv-paper:#f2f1e9;--cv-acid:#deef6b;--cv-bg:#f2f1e9;--cv-fg:#171917;--cv-muted:#4b5146;--cv-rule:#8a907e;--cv-panel:#e6e8dd;--cv-accent-ink:#46500f;font-family:\"CV Grotesk\",\"CV Sans SC\",sans-serif}:host-context(html[data-theme=\"dark\"]) .ds-cv{--cv-bg:#171917;--cv-fg:#f2f1e9;--cv-muted:#b6bcb0;--cv-rule:#62675b;--cv-panel:#252a20;--cv-accent-ink:var(--cv-acid)}:host-context(html[data-season=\"summer\"]) .ds-cv{--cv-acid:#ffc1a1}:host-context(html[data-season=\"autumn\"]) .ds-cv{--cv-acid:#edcf71}:host-context(html[data-season=\"winter\"]) .ds-cv{--cv-acid:#9ed9ed}.ds-cv :focus-visible{outline:2px solid currentColor;outline-offset:6px}.ds-chapters{display:flex;justify-content:space-around;gap:18px;padding:18px 6%;background:var(--cv-acid);color:var(--cv-dark);border-block:1px solid #171917}.ds-chapters a{font-size:13px;font-weight:600;color:inherit;text-decoration:none;white-space:nowrap}.ds-chapters a:hover,.ds-chapters a[aria-current]{text-decoration:underline;text-underline-offset:7px}"
+    },
+    {
+      "name": "Know Me academic block",
+      "kind": "card",
+      "refersTo": "cv-block",
+      "description": "Flat framed linked block; native scrolling reveals it downward and content height determines the row.",
+      "html": "<div class=\"ds-cv\"><a class=\"ds-block\" href=\"#work\"><strong>BUCM</strong><span>Beijing University of Chinese Medicine</span><small>PhD studies · Basic Theory of Chinese Medicine</small></a></div>",
+      "css": ".ds-cv{--cv-dark:#171917;--cv-paper:#f2f1e9;--cv-acid:#deef6b;--cv-bg:#f2f1e9;--cv-fg:#171917;--cv-muted:#4b5146;--cv-rule:#8a907e;--cv-panel:#e6e8dd;--cv-accent-ink:#46500f;font-family:\"CV Grotesk\",\"CV Sans SC\",sans-serif}:host-context(html[data-theme=\"dark\"]) .ds-cv{--cv-bg:#171917;--cv-fg:#f2f1e9;--cv-muted:#b6bcb0;--cv-rule:#62675b;--cv-panel:#252a20;--cv-accent-ink:var(--cv-acid)}:host-context(html[data-season=\"summer\"]) .ds-cv{--cv-acid:#ffc1a1}:host-context(html[data-season=\"autumn\"]) .ds-cv{--cv-acid:#edcf71}:host-context(html[data-season=\"winter\"]) .ds-cv{--cv-acid:#9ed9ed}.ds-cv :focus-visible{outline:2px solid currentColor;outline-offset:6px}.ds-block{display:flex;flex-direction:column;justify-content:space-between;gap:8px;min-width:0;padding:20px;background:var(--cv-bg);color:var(--cv-fg);text-decoration:none;border:1px solid var(--cv-rule);clip-path:inset(0 0 var(--block-mask,0%) 0);overflow:hidden}.ds-block>*{position:relative;flex-shrink:0;overflow-wrap:anywhere}.ds-block:focus-visible{clip-path:none}.ds-block:hover{background:var(--cv-acid);color:var(--cv-dark)}.ds-block strong{font-weight:600;font-size:clamp(25px,3.1vw,48px);line-height:1.05;letter-spacing:-.03em}.ds-block span{font-size:14px;line-height:1.4}.ds-block small{font-size:11px;line-height:1.7;max-width:40ch}@media(max-width:900px){.ds-block{padding:18px}}@media(max-width:700px){.ds-block{padding:12px}.ds-block strong{font-size:27px}.ds-block span{font-size:11px}.ds-block small{font-size:9px;line-height:1.5}}@media(max-width:350px){.ds-block strong{font-size:24px}}@media(prefers-reduced-motion:reduce){.ds-block{clip-path:none}}"
+    },
+    {
+      "name": "Exhibition primary action",
+      "kind": "button",
+      "refersTo": "exhibition-primary",
+      "description": "Live-bound seasonal exhibition action.",
+      "html": "<a class=\"ds-exhibition-primary\" href=\"#publications\">Publications<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></a>",
+      "css": ".ds-exhibition-primary{display:inline-flex;align-items:center;gap:24px;padding:13px 18px;border-radius:6px;color:var(--button-ink,#fff);background:var(--accent,#276b50);font-family:-apple-system, \".SFNSText-Regular\", \"San Francisco\", \"Roboto\", \"Segoe UI\", \"Helvetica Neue\", \"Lucida Grande\", Arial, sans-serif;font-size:13px;font-weight:650;white-space:nowrap;text-decoration:none;transition:background .2s,transform .2s}.ds-exhibition-primary:hover{transform:translateY(-2px)}.ds-exhibition-primary:active{transform:scale(.98)}.ds-exhibition-primary:focus-visible{outline:3px solid var(--research-accent,#276b50);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-exhibition-primary{transition:none}}"
+    },
+    {
+      "name": "Exhibition filter field",
+      "kind": "input",
+      "refersTo": "exhibition-filter-field",
+      "description": "Compact searchable publication field on the current canvas.",
+      "html": "<input class=\"ds-exhibition-field\" type=\"search\" aria-label=\"Search publications\" placeholder=\"Search publications\">",
+      "css": ".ds-exhibition-field{min-width:0;width:100%;height:40px;padding:8px 10px;font-size:12px;border:1px solid var(--line,#a5c1ad);border-radius:6px;color:var(--ink,#183b30);background:var(--canvas,#e7f0e7);font-family:-apple-system, \".SFNSText-Regular\", \"San Francisco\", \"Roboto\", \"Segoe UI\", \"Helvetica Neue\", \"Lucida Grande\", Arial, sans-serif;caret-color:var(--research-accent,#276b50)}.ds-exhibition-field::placeholder{color:var(--research-muted,#496650);opacity:1}.ds-exhibition-field:focus-visible{outline:3px solid var(--research-accent,#276b50);outline-offset:4px}"
+    },
+    {
+      "name": "Exhibition expandable folio",
+      "kind": "card",
+      "refersTo": "exhibition-folio",
+      "description": "Native details retain the line-led summary and softly filled text.",
+      "html": "<details class=\"ds-folio\"><summary><span>Research & teaching</span><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 12h16M12 4v16\"/></svg></summary><div class=\"ds-folio-body\">Read the original public research record.</div></details>",
+      "css": ".ds-folio{border-bottom:1px solid var(--line,#a5c1ad);color:var(--ink,#183b30);font-family:-apple-system, \".SFNSText-Regular\", \"San Francisco\", \"Roboto\", \"Segoe UI\", \"Helvetica Neue\", \"Lucida Grande\", Arial, sans-serif}.ds-folio summary{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:25px 0;cursor:pointer;list-style:none}.ds-folio summary::-webkit-details-marker{display:none}.ds-folio summary span{font-size:19px;font-weight:600;line-height:1.7}.ds-folio summary svg{color:var(--accent,#276b50);transition:transform .25s}.ds-folio[open] summary svg{transform:rotate(45deg)}.ds-folio summary:focus-visible{outline:3px solid var(--research-accent,#276b50);outline-offset:4px}.ds-folio-body{margin:0 0 26px;padding:24px 28px;background:var(--panel,#f7faf5);border-radius:6px;font-size:14px;line-height:1.9}@media(prefers-reduced-motion:reduce){.ds-folio summary svg{transition:none}}"
+    },
+    {
+      "name": "Exhibition view option",
+      "kind": "chip",
+      "refersTo": "exhibition-view-option",
+      "description": "Selected shelf/list option; semantically an action button.",
+      "html": "<div class=\"ds-view\"><button type=\"button\" aria-pressed=\"true\">Shelf</button><button type=\"button\" aria-pressed=\"false\">List</button></div>",
+      "css": ".ds-view{display:flex;align-items:center;gap:6px;font-family:-apple-system, \".SFNSText-Regular\", \"San Francisco\", \"Roboto\", \"Segoe UI\", \"Helvetica Neue\", \"Lucida Grande\", Arial, sans-serif}.ds-view button{display:inline-flex;align-items:center;gap:7px;border:1px solid transparent;border-radius:5px;padding:8px 12px;background:transparent;color:var(--muted,#496650);font-size:11px;cursor:pointer}.ds-view button[aria-pressed=\"true\"]{background:var(--field,#c9dfce);color:var(--ink,#183b30);border-color:var(--line,#a5c1ad)}.ds-view button:focus-visible{outline:3px solid var(--research-accent,#276b50);outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "学术展厅 / 连续空间叙事",
+    "overview": "This site has two related surface families. The main academic pages are a quiet seasonal exhibition: paper-toned fields, serif display headings, readable records, and publications that can be taken from a shelf. Know Me at /cv/ is a deliberately independent silver/paper, yellow and black spatial narrative, using original line geometry, large bilingual type, sharp frames and continuous native scrolling. The phrase above records the accepted direction; it is not a newly proposed concept.\n\nThe durable relationship is scholarly specificity with an accessible reading route. Exhibition pages keep their established seasonal atmosphere; Know Me keeps its user-pinned line-space opening, academic blocks, cinematic journey, approaching works, birth-year and contact ending. These are separate surface grammars, not interchangeable templates. PRODUCT.md supplies content and access constraints, while the shipped CSS and scripts supply the values below.",
+    "keyCharacteristics": [
+      "Two surface families with explicit token namespaces.",
+      "Whole-page seasonal palettes on the exhibition; a stable light/dark neutral frame with seasonal accent on Know Me.",
+      "Original mathematical line geometry and native scroll-driven perspective.",
+      "Public-source records, truthful cover provenance, and direct reading alternatives.",
+      "Local fonts/assets, bilingual controls, keyboard/touch routes and reduced-motion reading."
+    ],
+    "rules": [
+      {
+        "name": "Surface Boundary",
+        "body": "Keep the exhibition and Know Me token families separate. A square spatial CV frame is not a replacement for the established exhibition shelf or folio.",
+        "section": "colors"
+      },
+      {
+        "name": "Day Ink / Night Silver",
+        "body": "Know Me switches the entire neutral frame between paper/ink and dark/silver. Seasonal accent changes do not replace the daytime ink token.",
+        "section": "colors"
+      },
+      {
+        "name": "Native Camera",
+        "body": "Native vertical scrolling advances the spatial scenes. Preserve document scrolling and the direct controls; do not add wheel or touch scroll interception.",
+        "section": "layout"
+      },
+      {
+        "name": "Material Depth",
+        "body": "Keep academic coordinates flat with a downward reveal. Projection, overlap, linework and perspective provide depth in the other Know Me scenes. The exhibition shelf may use its existing physical volume shadows; do not restore the removed broad shadow to Know Me cover faces.",
+        "section": "elevation"
+      },
+      {
+        "name": "Readable Edition",
+        "body": "System reduction, manual motion-off and focus mode remove long pinned reading and continuous effects. Keep the original records and explicit actions available.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do use the matching surface namespace and the complete observed mode/season assignments.",
+      "Do keep ink text and lines on the light Know Me canvas, silver on dark, and black text on the seasonal accent blocks.",
+      "Do preserve the original document records, bilingual chooser initialization, explicit previous/next controls, pause/select/read controls and focus return.",
+      "Do retain distinct source labels for verified issue covers, owner-supplied book covers, topic artwork and records without a cover.",
+      "Do keep original book pixels and the metadata-defined silhouette crop; put provenance in both the maintained source records and web-image metadata.",
+      "Do maintain the shared mobile tool reservation and the readable linear/print paths when extending a scene."
+    ],
+    "donts": [
+      "Don't merge the exhibition palettes into the Know Me frame or generalize a page-specific scene into a mandatory global layout.",
+      "Don't interpret mathematical geometry as medical evidence or the cultural star chart as a realtime sky.",
+      "Don't style generic event-type kickers above cinema headings; the current event kind belongs in the detail paragraph. Retain the explicitly requested SINCE literal.",
+      "Don't turn icon-font glyphs or inherited system display faces into a new visual-system rule; extend the local display fonts and inline SVG assets instead.",
+      "Don't hide the direct reading routes behind motion, chase-only covers or the opening mark, or fabricate achievements/publication status.",
+      "Don't treat the narrow final verdict pass as a fresh whole-surface or live performance endorsement."
+    ]
+  }
+}

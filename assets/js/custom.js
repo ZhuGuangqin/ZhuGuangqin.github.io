@@ -7,7 +7,7 @@
   "use strict";
 
   var REDUCED = window.matchMedia &&
-                window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+                (window.matchMedia("(prefers-reduced-motion: reduce)").matches || document.documentElement.dataset.motion === "off");
 
   /* ---------------------------------------------------------------------
      1. 中英切换
@@ -45,6 +45,8 @@
       else url.searchParams.set("lang", lang);
       history.replaceState(null, "", url.toString());
     }
+    document.dispatchEvent(new Event("site:language"));
+    if (typeof window.updateNav === "function") requestAnimationFrame(window.updateNav);
   }
 
   function initLang() {
@@ -79,6 +81,8 @@
     }
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll, { passive: true });
+    document.addEventListener("site:filtered", onScroll);
+    document.addEventListener("site:language", onScroll);
     update();
   }
 
@@ -146,7 +150,8 @@
     document.body.appendChild(btn);
 
     btn.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: REDUCED ? "auto" : "smooth" });
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches || document.documentElement.dataset.motion === "off";
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
     });
 
     var ticking = false;

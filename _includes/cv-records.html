@@ -1,0 +1,5 @@
+<ol class="cv-records">
+{% for post in include.records reversed %}
+<li><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y' }}</time><div><h3><a href="{{ post.url | relative_url }}"><span data-i18n="zh">{{ post.title }}</span><span data-i18n="en">{{ post.title_en | default: post.title }}</span></a></h3>{% if post.citation %}<p>{{ post.citation }}</p>{% else %}<p><span data-i18n="zh">{{ post.type }}{% if post.type %} · {% endif %}{{ post.venue }}</span><span data-i18n="en">{{ post.type_en | default: post.type }}{% if post.type %} · {% endif %}{{ post.venue_en | default: post.venue }}</span>{% if post.location %} · {{ post.location }}{% endif %}</p>{% endif %}</div></li>
+{% endfor %}
+</ol>

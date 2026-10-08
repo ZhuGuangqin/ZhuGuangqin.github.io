@@ -5,16 +5,20 @@ layout: compress
 {% include base_path %}
 
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js" data-lang="zh" data-season="spring"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
   <head>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body{% if page.cv_experiment %} class="cv-art-page"{% endif %}>
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
+    {% unless page.cv_experiment %}{% include celestial-atlas.html %}{% endunless %}
+
+    {% if page.url == '/' %}{% include research-hero.html %}{% endif %}
+    {% include research-tools.html %}
 
     {{ content }}
 

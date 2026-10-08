@@ -21,3 +21,8 @@ package-lock.json
 
 # Ignore files created by MacOS
 .DS_Store
+
+# Local design review captures and machine-specific state
+.impeccable/review/
+.impeccable/config.local.json
+.impeccable/build/

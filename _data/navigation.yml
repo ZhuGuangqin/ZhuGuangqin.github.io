@@ -18,6 +18,6 @@ main:
     title_en: "Projects"
     url: /portfolio/
 
-  - title: "简历"
-    title_en: "CV"
+  - title: "了解我"
+    title_en: "Know Me"
     url: /cv/

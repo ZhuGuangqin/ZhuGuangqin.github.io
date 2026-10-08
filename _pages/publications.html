@@ -11,27 +11,29 @@ author_profile: true
 {% endif %}
 
 {% include base_path %}
+{% include publication-controls.html %}
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
   {% for category in site.publication_category  %}
+    <section class="publication-group" data-publication-group="{{ category[0] }}">
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}
       {% if post.category != category[0] %}
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <h2><span data-i18n="zh">{{ category[1].title }}</span><span data-i18n="en">{{ category[1].title_en | default: category[1].title }}</span></h2><hr />
+        <h2 id="outputs-{{ category[0] }}"><span data-i18n="zh">{{ category[1].title }}</span><span data-i18n="en">{{ category[1].title_en | default: category[1].title }}</span></h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
       {% include archive-single.html %}
     {% endfor %}
+    </section>
   {% endfor %}
 {% else %}
   {% for post in site.publications reversed %}
     {% include archive-single.html %}
   {% endfor %}
 {% endif %}
-
 
 
