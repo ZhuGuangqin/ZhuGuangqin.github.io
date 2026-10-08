@@ -19,6 +19,7 @@
     node.classList.add("is-visible");
     toastTimer = setTimeout(function () { node.classList.remove("is-visible"); }, 2600);
   }
+  document.addEventListener("site:notice", function (event) { toast(t(event.detail.zh, event.detail.en)); });
   async function copy(value) {
     try {
       if (navigator.clipboard && window.isSecureContext) {
@@ -315,6 +316,7 @@
   var reader = document.getElementById("publication-reader");
   if (reader) {
     var picked = null;
+    var readerOpener = null;
     var viewButtons = document.querySelectorAll("[data-library-view]");
     function libraryView(name) {
       root.dataset.libraryView = name === "list" ? "list" : "shelf";
@@ -322,10 +324,11 @@
     }
     libraryView(read("site-library-view"));
     viewButtons.forEach(function (button) { button.addEventListener("click", function () { libraryView(button.dataset.libraryView); save("site-library-view", root.dataset.libraryView); document.dispatchEvent(new Event("site:filtered")); }); });
-    document.querySelectorAll("[data-pick-publication]").forEach(function (button) {
-      button.addEventListener("click", function () {
+    function openPublication(button, origin) {
         if (typeof reader.showModal !== "function") { button.closest("[data-publication]").querySelector(".publication-caption a").click(); return; }
+        if (picked) picked.classList.remove("is-picked");
         picked = button; picked.classList.add("is-picked");
+        readerOpener = origin || button;
         var item = button.closest("[data-publication]");
         var cover = button.querySelector(".publication-volume").cloneNode(true);
         var detail = item.querySelector(".publication-detail").cloneNode(true);
@@ -333,7 +336,14 @@
         reader.setAttribute("aria-labelledby", "publication-reader-title");
         reader.querySelector(".publication-reader__body").replaceChildren(cover, detail);
         reader.showModal(); reader.scrollTop = 0;
-      });
+        document.dispatchEvent(new CustomEvent("site:publication-read", { detail: { id:item.dataset.publicationId } }));
+    }
+    document.addEventListener("site:open-publication", function (event) {
+      var item = Array.from(document.querySelectorAll("[data-publication]")).find(function (node) { return node.dataset.publicationId === event.detail.id; });
+      if (item) openPublication(item.querySelector("[data-pick-publication]"), event.detail.opener);
+    });
+    document.querySelectorAll("[data-pick-publication]").forEach(function (button) {
+      button.addEventListener("click", function () { openPublication(button); });
       button.addEventListener("keydown", function (event) {
         if (["ArrowRight", "ArrowLeft", "Home", "End"].indexOf(event.key) === -1) return;
         event.preventDefault();
@@ -343,7 +353,12 @@
       });
     });
     reader.querySelector("[data-close-publication]").addEventListener("click", function () { reader.close(); });
-    reader.addEventListener("close", function () { if (picked) { picked.classList.remove("is-picked"); picked.focus({ preventScroll: true }); } });
+    reader.addEventListener("close", function () {
+      if (picked) picked.classList.remove("is-picked");
+      var target = readerOpener;
+      if (target && document.contains(target) && target.getClientRects().length) target.focus({ preventScroll: true });
+      else { var fallback = document.querySelector("#relations-disclosure > summary"); if (fallback && fallback.getClientRects().length) fallback.focus({ preventScroll: true }); }
+    });
     reader.addEventListener("click", function (event) { if (event.target !== reader) return; var box = reader.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) reader.close(); });
   }
 

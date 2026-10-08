@@ -1,0 +1,18 @@
+# Connections are title-based reading aids, not citations or inferred mechanisms.
+# New public works join automatically when their titles contain these terms.
+- id: systems
+  zh: 系统中医学
+  en: Systems TCM
+  terms: [系统中医, 中医系统, 有序性原理, 自组织原理, Systems TCM, Systems Theory of Chinese Medicine]
+- id: xing-qi-shen
+  zh: 形、气、神
+  en: Xing, qi and shen
+  terms: [形气神, 元气形神, 形”“气”“神, xing–qi–shen, "xing, qi and shen"]
+- id: seasonality
+  zh: 四时与季节变化
+  en: Seasons and seasonal change
+  terms: [五脏应时, 季节, seasonal]
+- id: needling
+  zh: 针法与系统诊疗
+  en: Needling and systems practice
+  terms: [针法, 浮针, 砭术, needling, stone-needle]

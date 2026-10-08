@@ -1044,6 +1044,36 @@
           "Documentation validation only;no new UI/runtime writes or deployment."
         ]
       }
+    },
+    "scholarlyDiscoveries": {
+      "brief": ".impeccable/briefs/research-discoveries.md",
+      "scope": "Authorized extension of the seasonal exhibition. Experience at hero; Read at publication map. No new palette, dependency or external requests.",
+      "order": {
+        "source": "assets/js/order-play.js",
+        "trigger": "Native word buttons: click, pointer drag, Enter or Space. Default and no-script text stays readable.",
+        "material": "Canvas samples actual rendered glyphs; at most 240 linked points. Finite spring reorganization, up to 4.8 seconds after release. No idle animation.",
+        "reduction": "Static connected figure for 1800ms. Escape, hidden/offscreen, focus mode, blur, resize and print restore the word."
+      },
+      "connections": {
+        "source": "assets/js/publication-relations.js",
+        "rules": "_data/research_connections.yml",
+        "trigger": "Two distinct opened public records sharing explicit title terms. Repeating one record never unlocks.",
+        "composition": "Real paired covers, native details, named shared subject, up to six full-title native cover buttons and measured SVG curves. Three desktop columns; two below650px.",
+        "motion": "750ms finite line draw; reduced/manual-off path is static.",
+        "reader": "Existing native reader, PDF/citation/detail links. Restore focus to map origin on close. A direct map action appears in reader after discovery.",
+        "lifetime": "Current document memory only, reset on refresh. New public titles join matching subjects automatically.",
+        "boundary": "Title-based reading aid, not citation relationships or causal/medical evidence."
+      },
+      "verification": {
+        "tests": "tests/publication-relations.test.cjs",
+        "captures": [
+          "egg-order-desktop.png",
+          "egg-order-mobile.png",
+          "egg-map-desktop-final.png",
+          "egg-map-mobile.png"
+        ],
+        "notes": "docs/设计验收简报.md; parent browser checks only, no new independent whole-site verdict."
+      }
     }
   },
   "components": [

@@ -1,6 +1,6 @@
 {% assign cover = site.data.publication_covers[post.slug] %}
 {% assign title_en = post.title_en | default: post.title %}
-<div class="publication-item list__item" data-publication data-category="{{ post.category | escape }}" data-year="{{ post.date | date: '%Y' }}" data-has-pdf="{% if post.paperurl %}true{% else %}false{% endif %}">
+<div class="publication-item list__item" data-publication data-publication-id="{{ post.slug | escape }}" data-category="{{ post.category | escape }}" data-year="{{ post.date | date: '%Y' }}" data-has-pdf="{% if post.paperurl %}true{% else %}false{% endif %}">
   <button type="button" class="publication-pick" data-pick-publication aria-haspopup="dialog" aria-label="取阅：{{ post.title | escape }} / Read: {{ title_en | escape }}">
     <span class="publication-volume{% if cover.kind == 'original' or cover.kind == 'book-original' %} publication-volume--original{% endif %}{% if cover.dark_art %} publication-volume--dark{% endif %}{% if cover.kind == 'book-original' %} publication-volume--book{% endif %}"{% if cover.shape_style %} style="{{ cover.shape_style }}"{% endif %}>
       {% if cover.image %}<img src="{{ cover.image | relative_url }}" alt="{% if cover.kind == 'book-original' %}{{ post.title | escape }} · 著作原封面{% elsif cover.kind == 'original' %}{{ post.venue | escape }} {{ cover.issue | escape }} 期刊原封面{% else %}{{ post.title | escape }} · 主题创作封面{% endif %}" width="400" height="600" loading="lazy" decoding="async">{% endif %}

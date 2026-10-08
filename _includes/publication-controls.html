@@ -15,5 +15,6 @@
   </div>
   <div class="publication-view" role="group" aria-label="成果浏览方式 / Publication view"><button type="button" data-library-view="shelf" aria-pressed="true"><i class="fa-solid fa-book" aria-hidden="true"></i><span data-i18n="zh">期刊架</span><span data-i18n="en">Shelf</span></button><button type="button" data-library-view="list" aria-pressed="false"><i class="fa-solid fa-list" aria-hidden="true"></i><span data-i18n="zh">紧凑列表</span><span data-i18n="en">List</span></button></div>
 </div>
+{% include publication-relations.html %}
 <dialog id="publication-reader" class="publication-reader" aria-label="论文取阅 / Read a publication"><button type="button" class="publication-reader__close" data-close-publication aria-label="合上刊物 / Close publication"><span aria-hidden="true">×</span><span data-i18n="zh">放回书架</span><span data-i18n="en">Back to shelf</span></button><div class="publication-reader__body"></div></dialog>
 <p id="publication-empty" class="publication-empty" hidden><span data-i18n="zh">没有符合条件的成果。试试其他关键词，或重置筛选。</span><span data-i18n="en">No matching outputs. Try another keyword or reset the filters.</span></p>
