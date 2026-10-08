@@ -76,9 +76,11 @@
 
   /* Seasons belong to the document, so every surface and route stays in sync. */
   var hero = document.querySelector(".research-hero");
-  var seasons = { spring: ["春", "Spring", "东方青龙", "Azure Dragon"], summer: ["夏", "Summer", "南方朱雀", "Vermilion Bird"], autumn: ["秋", "Autumn", "西方白虎", "White Tiger"], winter: ["冬", "Winter", "北方玄武", "Black Tortoise"] };
+  var seasons = { spring: ["春", "Spring", "东方青龙", "Azure Dragon"], summer: ["夏", "Summer", "南方朱雀", "Vermilion Bird"], "late-summer": ["长夏", "Late summer"], autumn: ["秋", "Autumn", "西方白虎", "White Tiger"], winter: ["冬", "Winter", "北方玄武", "Black Tortoise"] };
+  // Deliberately in memory: a reload starts with four seasons, never a persisted unlock.
+  var fiveSeasons = false, seasonProgress = 0, seasonCycle = ["spring", "summer", "autumn", "winter"];
   function season(name) {
-    if (!seasons[name]) name = "spring";
+    if (!seasons[name] || (name === "late-summer" && !fiveSeasons)) name = "spring";
     root.dataset.season = name;
     if (hero) {
       hero.querySelector(".season-orbit__han").textContent = seasons[name][0];
@@ -95,31 +97,68 @@
   var seasonMenuToggle = document.getElementById("season-menu-toggle");
   function closeSeasons() { seasonMenu.hidden = true; seasonMenuToggle.setAttribute("aria-expanded", "false"); }
   seasonMenuToggle.addEventListener("click", function () { var show = seasonMenu.hidden; seasonMenu.hidden = !show; seasonMenuToggle.setAttribute("aria-expanded", String(show)); });
+  function unlockLateSummer() {
+    if (!hero || fiveSeasons) return;
+    fiveSeasons = true;
+    root.dataset.fiveSeasons = "on";
+    document.querySelectorAll('[data-season-choice="late-summer"], [data-season-discovery]').forEach(function (node) { node.hidden = false; });
+    season("late-summer");
+    toast(t("四时之外，你发现了长夏。刷新后重新隐藏。", "Beyond four seasons: late summer. Refresh to hide it again."));
+  }
   document.querySelectorAll("[data-season-choice]").forEach(function (button) {
-    button.addEventListener("click", function () { season(button.dataset.seasonChoice); save("site-season", button.dataset.seasonChoice); if (seasonMenu.contains(button)) { closeSeasons(); seasonMenuToggle.focus(); } });
+    var suppressClick = false;
+    button.addEventListener("click", function () {
+      if (suppressClick) { suppressClick = false; return; }
+      var choice = button.dataset.seasonChoice;
+      if (choice === "late-summer" && !fiveSeasons) return;
+      var completed = false;
+      if (hero && !fiveSeasons) {
+        seasonProgress = choice === seasonCycle[seasonProgress] ? seasonProgress + 1 : choice === "spring" ? 1 : 0;
+        completed = seasonProgress === seasonCycle.length;
+      }
+      if (completed) unlockLateSummer(); else season(choice);
+      // Keep the visitor's normal four-season preference, even while the secret is selected.
+      if (choice !== "late-summer") save("site-season", choice);
+      if (seasonMenu.contains(button)) { closeSeasons(); seasonMenuToggle.focus(); }
+    });
+    if (!hero || button.dataset.seasonChoice !== "summer") return;
+    var holdTimer = null, holding = false, holdWon = false, pointerStart = null;
+    function clearHold() {
+      clearTimeout(holdTimer); holdTimer = null; holding = false;
+      button.classList.remove("is-discovering");
+    }
+    function startHold() {
+      if (fiveSeasons || holding) return;
+      holding = true; holdWon = false; button.classList.add("is-discovering");
+      holdTimer = setTimeout(function () { holdWon = true; suppressClick = true; unlockLateSummer(); clearHold(); }, 1500);
+    }
+    button.addEventListener("pointerdown", function (event) {
+      if (event.button !== 0 || event.isPrimary === false) return;
+      suppressClick = false; holdWon = false;
+      pointerStart = { x:event.clientX, y:event.clientY }; startHold();
+    });
+    button.addEventListener("pointermove", function (event) {
+      if (pointerStart && Math.hypot(event.clientX-pointerStart.x,event.clientY-pointerStart.y)>12) clearHold();
+    });
+    button.addEventListener("pointerup", function () { if (holdWon) suppressClick = true; clearHold(); holdWon = false; pointerStart = null; });
+    ["pointercancel", "pointerleave", "blur"].forEach(function (type) { button.addEventListener(type, function () { clearHold(); holdWon = false; pointerStart = null; }); });
+    button.addEventListener("keydown", function (event) {
+      if (event.key !== " " && event.key !== "Enter") return;
+      if (fiveSeasons && !holdWon && !holding) return;
+      event.preventDefault(); if (!event.repeat) startHold();
+    });
+    button.addEventListener("keyup", function (event) {
+      if (event.key !== " " && event.key !== "Enter") return;
+      if (!holding && !holdWon) return;
+      event.preventDefault(); var won = holdWon; clearHold(); holdWon = false; suppressClick = false;
+      if (!won) button.click();
+    });
+    document.addEventListener("visibilitychange", function () { if (document.hidden) { clearHold(); holdWon = false; } });
   });
   document.addEventListener("click", function (event) { if (!seasonMenu.contains(event.target) && !seasonMenuToggle.contains(event.target)) closeSeasons(); });
   document.addEventListener("keydown", function (event) { if (event.key === "Escape" && !seasonMenu.hidden) { closeSeasons(); seasonMenuToggle.focus(); } });
-  var mansionSelection = null;
-  function syncMansion() {
-    if (!mansionSelection) return;
-    var group = seasons[mansionSelection.dataset.mansionGroup];
-    document.getElementById("mansion-status").textContent = t(group[2] + " · " + mansionSelection.dataset.mansion + "宿", group[3] + " · " + mansionSelection.dataset.mansion);
-  }
-  document.querySelectorAll("[data-mansion]").forEach(function (button) {
-    button.addEventListener("click", function () {
-      document.querySelectorAll("[data-mansion]").forEach(function (node) { node.setAttribute("aria-pressed", String(node === button)); });
-      mansionSelection = button; syncMansion();
-    });
-  });
-  document.addEventListener("site:language", function () { season(root.dataset.season); syncMansion(); });
+  document.addEventListener("site:language", function () { season(root.dataset.season); });
   new MutationObserver(function () { season(root.dataset.season); }).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
-  if (hero) {
-    var heroVisible = true;
-    function pauseOrbits() { hero.querySelectorAll(".orbit-tracer").forEach(function (orbit) { orbit.style.animationPlayState = document.hidden || !heroVisible ? "paused" : "running"; }); }
-    if ("IntersectionObserver" in window) new IntersectionObserver(function (entries) { heroVisible = entries[0].isIntersecting; pauseOrbits(); }).observe(hero);
-    document.addEventListener("visibilitychange", pauseOrbits);
-  }
 
   /* Native, keyboard-accessible site search. The index is fetched on demand. */
   var dialog = document.getElementById("research-search");

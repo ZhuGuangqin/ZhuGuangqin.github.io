@@ -13,6 +13,7 @@
 <!-- 本站自定义样式：动效 + 中英切换。放在 main.css 之后以便覆盖 -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/custom.css">
 <link rel="stylesheet" href="{{ base_path }}/assets/css/research.css">
+{% if page.url == '/' %}<link rel="stylesheet" href="{{ base_path }}/assets/css/season-sky.css">{% endif %}
 {% if page.cv_experiment %}<link rel="stylesheet" href="{{ base_path }}/assets/css/cv-art.css">{% endif %}
 
 <!-- 语言状态尽早写入 <html>，避免 ?lang=en 打开时先闪一下中文 -->

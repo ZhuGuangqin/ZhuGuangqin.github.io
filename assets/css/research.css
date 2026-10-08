@@ -7,10 +7,12 @@
 html[data-season="summer"] { --canvas:#f5e5dd; --panel:#fff6ee; --field:#e8b5a1; --ink:#542a22; --muted:#714237; --accent:#a03f29; --line:#d7a895; --button-ink:#fff; }
 html[data-season="autumn"] { --canvas:#eee4cc; --panel:#fbf4e5; --field:#d4bd84; --ink:#48371b; --muted:#614a22; --accent:#7b5718; --line:#c6ad74; --button-ink:#fff; }
 html[data-season="winter"] { --canvas:#e1edf4; --panel:#f3f9fc; --field:#b5d2e2; --ink:#203c50; --muted:#3c596c; --accent:#2b658a; --line:#9cbece; --button-ink:#fff; }
+html[data-season="late-summer"] { --canvas:#e9e9d8; --panel:#f8f7eb; --field:#c7c9a3; --ink:#3b4026; --muted:#4d5332; --accent:#646c2e; --line:#a9ad7e; --button-ink:#fff; }
 html[data-theme="dark"], html[data-theme="dark"][data-season="spring"] { --canvas:#101f1a; --panel:#182c24; --field:#234b3b; --ink:#e0eee2; --muted:#a6c7b1; --accent:#a1d7b0; --line:#365e48; --button-ink:#10271a; }
 html[data-theme="dark"][data-season="summer"] { --canvas:#281713; --panel:#39211b; --field:#663529; --ink:#f8e8da; --muted:#d9b2a0; --accent:#edaf8b; --line:#764c3c; --button-ink:#351d14; }
 html[data-theme="dark"][data-season="autumn"] { --canvas:#231e12; --panel:#342c1a; --field:#594722; --ink:#f5ecd7; --muted:#cab995; --accent:#e0c17a; --line:#6b5730; --button-ink:#2c220f; }
 html[data-theme="dark"][data-season="winter"] { --canvas:#111e2c; --panel:#1a2d40; --field:#234967; --ink:#e1edf6; --muted:#acc6dc; --accent:#9bcaeb; --line:#375b77; --button-ink:#152f43; }
+html[data-theme="dark"][data-season="late-summer"] { --canvas:#212418; --panel:#2c3120; --field:#424a2b; --ink:#eef0dd; --muted:#bec6a0; --accent:#c5d08e; --line:#5c6741; --button-ink:#242b13; }
 html[data-season] {
  --global-bg-color:var(--canvas); --global-footer-bg-color:var(--field); --global-base-color:var(--accent); --global-link-color:var(--accent); --global-link-color-visited:var(--accent); --global-link-color-hover:var(--ink); --global-text-color:var(--ink); --global-text-color-light:var(--muted); --global-masthead-link-color:var(--ink); --global-masthead-link-color-hover:var(--accent); --global-border-color:var(--line); --global-dark-border-color:var(--line); --global-thead-color:var(--field); --global-fig-caption-color:var(--muted); --research-accent:var(--accent); --research-soft:var(--field); --research-panel:var(--panel); --research-muted:var(--muted); --research-shadow:0 14px 40px #0002;
 }
@@ -117,6 +119,7 @@ body { margin-bottom: 0 !important; }
 .season-orbit__english { margin-top: 3px; font-size: 9px; letter-spacing: .3em; }
 .season-orbit__concept { color: var(--hero-muted); font-size: 10px; margin-top: 14px; letter-spacing: .12em; }
 .season-switch { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; border: 1px solid var(--hero-line); padding: 4px; border-radius: 6px; }
+html[data-five-seasons="on"] .season-switch { grid-template-columns:repeat(5,minmax(0,1fr)); }
 .season-switch button { border: 1px solid transparent; border-radius: 4px; background: transparent; color: var(--hero-muted); padding: 10px 4px; font-size: 12px; cursor: pointer; }
 .season-switch button[aria-pressed="true"] { background: var(--accent); color: var(--button-ink); }
 .season-switch button:hover { color: var(--hero-text); }

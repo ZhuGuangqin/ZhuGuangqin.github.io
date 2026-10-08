@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-08T04:54:25.683256+00:00",
+  "generatedAt": "2026-10-08T10:36:14.589605+00:00",
   "title": "Design System: 祝广钦 / Guangqin Zhu",
   "extensions": {
     "colorMeta": {
@@ -398,6 +398,86 @@
         "role": "neutral",
         "displayName": "Exhibition Winter Dark Button Ink",
         "source": "assets/css/research.css"
+      },
+      "exhibition-late-summer-light-canvas": {
+        "role": "neutral",
+        "displayName": "Late summer light — Sage paper",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"]"
+      },
+      "exhibition-late-summer-light-panel": {
+        "role": "neutral",
+        "displayName": "Late summer light — Pale grain paper",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"]"
+      },
+      "exhibition-late-summer-light-field": {
+        "role": "neutral",
+        "displayName": "Late summer light — Sage earth field",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"]"
+      },
+      "exhibition-late-summer-light-ink": {
+        "role": "neutral",
+        "displayName": "Late summer light — Earth green ink",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"]"
+      },
+      "exhibition-late-summer-light-muted": {
+        "role": "neutral",
+        "displayName": "Late summer light — Moss reading ink",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"]"
+      },
+      "exhibition-late-summer-light-accent": {
+        "role": "primary",
+        "displayName": "Late summer light — Grain olive",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"]"
+      },
+      "exhibition-late-summer-light-line": {
+        "role": "neutral",
+        "displayName": "Late summer light — Sage rule",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"]"
+      },
+      "exhibition-late-summer-light-button-ink": {
+        "role": "neutral",
+        "displayName": "Late summer light — Action ink",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"]"
+      },
+      "exhibition-late-summer-dark-canvas": {
+        "role": "neutral",
+        "displayName": "Late summer dark — Sage paper",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"] with data-theme=\"dark\""
+      },
+      "exhibition-late-summer-dark-panel": {
+        "role": "neutral",
+        "displayName": "Late summer dark — Pale grain paper",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"] with data-theme=\"dark\""
+      },
+      "exhibition-late-summer-dark-field": {
+        "role": "neutral",
+        "displayName": "Late summer dark — Sage earth field",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"] with data-theme=\"dark\""
+      },
+      "exhibition-late-summer-dark-ink": {
+        "role": "neutral",
+        "displayName": "Late summer dark — Earth green ink",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"] with data-theme=\"dark\""
+      },
+      "exhibition-late-summer-dark-muted": {
+        "role": "neutral",
+        "displayName": "Late summer dark — Moss reading ink",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"] with data-theme=\"dark\""
+      },
+      "exhibition-late-summer-dark-accent": {
+        "role": "primary",
+        "displayName": "Late summer dark — Grain olive",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"] with data-theme=\"dark\""
+      },
+      "exhibition-late-summer-dark-line": {
+        "role": "neutral",
+        "displayName": "Late summer dark — Sage rule",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"] with data-theme=\"dark\""
+      },
+      "exhibition-late-summer-dark-button-ink": {
+        "role": "neutral",
+        "displayName": "Late summer dark — Action ink",
+        "source": "assets/css/research.css; html[data-season=\"late-summer\"] with data-theme=\"dark\""
       }
     },
     "typographyMeta": {
@@ -443,7 +523,8 @@
       },
       "exhibition-display": {
         "displayName": "Exhibition Display",
-        "purpose": "Academic exhibition surface only."
+        "purpose": "Current home hero argument; desktop line-height1.4 and tracking-.025em from the final research.css cascade. At600px and below:34px/1.5;at350px and below:30px/1.5. The display preview uses the normative DESIGN.md token.",
+        "source": "assets/css/research.css final .research-hero h1 override; assets/css/season-sky.css sets desktop font-size and mobile font-size/line-height"
       },
       "exhibition-title": {
         "displayName": "Exhibition Title",
@@ -456,6 +537,46 @@
       "exhibition-primary-label": {
         "displayName": "Exhibition Primary Label",
         "purpose": "Academic exhibition surface only."
+      },
+      "exhibition-scholar-name": {
+        "displayName": "Homepage scholar name",
+        "purpose": "Existing researcher name beside the argument; 25px below1100px.",
+        "source": "assets/css/season-sky.css"
+      },
+      "exhibition-scholar-detail": {
+        "displayName": "Homepage scholar detail",
+        "purpose": "PhD field and affiliation; 11px/1.65 below600px.",
+        "source": "assets/css/season-sky.css"
+      },
+      "exhibition-scene-season": {
+        "displayName": "Scene season",
+        "purpose": "Season name beside its English caption and note.",
+        "source": "assets/css/season-sky.css"
+      },
+      "exhibition-scene-season-compact": {
+        "displayName": "Compact scene season",
+        "purpose": "Mobile or discovered five-season state.",
+        "source": "assets/css/season-sky.css"
+      },
+      "exhibition-scene-english": {
+        "displayName": "English scene caption",
+        "purpose": "Compact local scene label; never the reading body.",
+        "source": "assets/css/season-sky.css"
+      },
+      "exhibition-scene-note": {
+        "displayName": "Scene note",
+        "purpose": "Short bilingual phenology or cultural astronomy note.",
+        "source": "assets/css/season-sky.css"
+      },
+      "exhibition-scene-small": {
+        "displayName": "Scene helper",
+        "purpose": "Discovery status and mobile scene note; 11px five-season EN options use their source1.25 line-height.",
+        "source": "assets/css/season-sky.css"
+      },
+      "exhibition-sky-disclosure": {
+        "displayName": "Sky disclosure",
+        "purpose": "Native details explaining composed astronomy.",
+        "source": "assets/css/season-sky.css"
       }
     },
     "shadows": [
@@ -550,6 +671,31 @@
         "name": "cv-block-downward-reveal",
         "value": "clip-path:inset(0 0 var(--block-mask,0%) 0)",
         "purpose": "Native-scroll entry; --block-mask = pow(1-arrival,3)*100%; arrival clamps (scrollY+viewport-blocksTop-100-i*20)/min(360,viewport*.42). All panels open at reading stop; focus/static/no-JS remove clipping. Source assets/js/cv-journey.js:56-60 and assets/css/cv-art.css:14,48."
+      },
+      {
+        "name": "exhibition-sky-rotation",
+        "value": ".018 rad/s day; .038 rad/s night",
+        "purpose": "One centre-diameter projected sphere with a fixed camera tilt; source rates, not performance measurements."
+      },
+      {
+        "name": "exhibition-sky-scene-transition",
+        "value": ".65s",
+        "purpose": "Previous canvas crossfades only when motion is allowed."
+      },
+      {
+        "name": "exhibition-sky-frame-interval",
+        "value": "33ms desktop / 50ms below600px",
+        "purpose": "Source drawing throttle; DPR cap1.75 /1.5; pause when reduced/manual-off/focus/hidden/offscreen/printing."
+      },
+      {
+        "name": "exhibition-sky-mansion-hold",
+        "value": "8 scene seconds",
+        "purpose": "After native selection, bring selected mansion forward and hold rotation."
+      },
+      {
+        "name": "exhibition-discovery-hold",
+        "value": "1500ms; sky-hold1.5s linear",
+        "purpose": "Summer hold independently unlocks late summer; the visual progress cue is removed under reduced/manual-off motion."
       }
     ],
     "breakpoints": [
@@ -582,8 +728,9 @@
         "value": "width <650px"
       },
       {
-        "name": "exhibition-seven-mansions",
-        "value": "max-width:600px"
+        "name": "exhibition-sky-mobile",
+        "value": "max-width:600px",
+        "purpose": "Single-column hero; same complete28-option semantic selector."
       },
       {
         "name": "exhibition-shelf-two",
@@ -595,6 +742,18 @@
       },
       {
         "name": "cv-narrow-type",
+        "value": "max-width:350px"
+      },
+      {
+        "name": "exhibition-hero-identity-row",
+        "value": "max-width:1100px"
+      },
+      {
+        "name": "exhibition-hero-compact",
+        "value": "max-width:900px"
+      },
+      {
+        "name": "exhibition-hero-narrow",
         "value": "max-width:350px"
       }
     ],
@@ -612,7 +771,15 @@
           "line",
           "button-ink"
         ],
-        "source": "assets/css/research.css:6-13"
+        "source": "assets/css/research.css:6-15",
+        "seasons": [
+          "spring",
+          "summer",
+          "autumn",
+          "winter",
+          "late-summer (discovered current homepage only)"
+        ],
+        "persistence": "Only ordinary four-season choice is stored; late summer and unlock remain in current document memory."
       },
       "cv": {
         "selector": ".cv-art-page",
@@ -699,8 +866,6 @@
         "scope": "Flat downward reveal, complete block text, filled nonuniform grid and content-aware normal flow.",
         "reviewState": "UI accepted as match/adaptation; documentation persistence was the sole remaining fix. Documentation synchronized here; no new independent verdict claimed.",
         "captures": [
-          "desktop.png",
-          "mobile.png",
           "coords-desktop-en-light.jpg",
           "coords-user-319-top.jpg",
           "coords-user-319-lower.jpg",
@@ -709,8 +874,10 @@
           "coords-motion-off.jpg"
         ],
         "captureDirectory": ".impeccable/review/",
-        "runtimeChangeInThisPass": false
-      }
+        "runtimeChangeInThisPass": false,
+        "captureNote": "Historical coordinate acceptance; shared desktop.png/mobile.png names were superseded by current homepage captures. No new coordinate review."
+      },
+      "historicalScope": "This evidence object records earlier Know Me review. Latest homepage evidence is extensions.homepageSky.evidence; shared desktop/mobile filenames now show the homepage."
     },
     "academicCoordinates": {
       "sources": [
@@ -740,6 +907,142 @@
       "normalFlow": "is-flowing when innerWidth<=700 or blockStage.scrollHeight>viewport-topOffset(); position:relative, top:0, min-height:0, scene height:auto.",
       "textIntegrity": "flex-shrink:0; overflow-wrap:anywhere; project/honor/book/BUCM descriptions have no hidden or clamped overrides.",
       "static": "motion-off/no-JS:clip-path:none!important; selected focus-visible block:clip-path:none."
+    },
+    "homepageSky": {
+      "sources": [
+        "assets/css/season-sky.css",
+        "assets/js/season-sky.js",
+        "assets/css/research.css",
+        "assets/js/research.js",
+        "_includes/research-hero.html",
+        "_includes/celestial-atlas.html",
+        "_includes/research-tools.html"
+      ],
+      "scope": "Approved code-led extension of existing seasonal academic exhibition; no new world, comp or FORM roll; Know Me preserved.",
+      "hero": {
+        "desktopColumns": "180px minmax(0,1fr)240px",
+        "maxWidth": "1200px",
+        "desktopGap": "36px",
+        "desktopMinHeight": "620px",
+        "desktopInsets": "78px40px48px",
+        "portrait": "108px132px;76px92px below1100px;72px88px below600px",
+        "compact": "Below1100px identity spans full row; copy/control columns1.4fr/minmax(245px,.85fr),gap28px. Below900px1.25fr/minmax(245px,.85fr).",
+        "mobile": "Below600px natural-flow single column,min-height800px,padding32px22px30px,gap28px; below350px side inset18px.319px controls continue below fold.",
+        "identity": "Original portrait and configured bilingual name; PhD student,Basic Theory of Chinese Medicine,BUCM; Chinese also names School of Chinese Medicine; direct/cv/ link."
+      },
+      "projection": {
+        "surface": "One absolutely positioned canvas in hero; no separate celestial strip.",
+        "axis": "Page centre diameter; fixed camera tilt(.921/.389 projection coefficients).",
+        "geometry": "cx=.5w;cy=.88h desktop/.71h mobile;r=min(.48w/.65w,h*1.04).",
+        "visibleMansions": "Only projected front-facing points; count varies with rotation and viewport. Native selector contains all28 in four traditional seven-name groups.",
+        "dayScenes": {
+          "spring": "Willow and fine rain",
+          "summer": "Sun and layered cupped lotus",
+          "autumn": "Notched fan-shaped ginkgo,radiating veins and clouds",
+          "winter": "Ice facets and snow",
+          "late-summer": "Grain ears,dew and humid ribbons"
+        },
+        "night": "Same28 mansion names and four traditional groups in every season; no fifth celestial group.",
+        "fallback": "Static inline SVG when JS/canvas is unavailable; art is aria-hidden with semantic controls and disclosure."
+      },
+      "discovery": {
+        "initial": "Four ordinary seasons;late summer hidden.",
+        "routes": [
+          "Hold Summer1500ms",
+          "Independently click Spring→Summer→Autumn→Winter"
+        ],
+        "effect": "Reveal late summer between Summer and Autumn in hero and homepage reading menu;select it.",
+        "lifetime": "Current document memory only; season,language,theme changes retain; refresh/new document hides and restores latest ordinary stored season.",
+        "storage": "Never write late summer or unlock; ordinary site-season preference retained.",
+        "cancellation": "Pointer drift>12px,pointerleave,pointercancel,blur,document hidden stop hold.",
+        "keyboard": "Enter/Space hold; short release activates ordinary Summer; sequential button activation also works."
+      },
+      "controls": {
+        "seasonButtons": "min-height44px;five-column layout only after unlock;English five-season options11px/1.25,padding-inline1px.",
+        "picker": "Native select,min-height44px,night-only;29 options including prompt,28 mansions,four optgroups.",
+        "disclosure": "Native details;positions and motion are composed cultural art,not realtime astronomy."
+      },
+      "evidence": {
+        "review": ".impeccable/review/sky-finish-review.md",
+        "qa": ".impeccable/review/sky-qa.json",
+        "hashes": ".impeccable/review/sky-source-hashes.json",
+        "disposition": "ship (homepage UI scope only)",
+        "captures": [
+          {
+            "file": "desktop.png",
+            "dimensions": [
+              1280,
+              900
+            ]
+          },
+          {
+            "file": "mobile.png",
+            "dimensions": [
+              390,
+              844
+            ]
+          },
+          {
+            "file": "user-319.png",
+            "dimensions": [
+              319,
+              664
+            ]
+          },
+          {
+            "file": "sky-profile-autumn.png",
+            "dimensions": [
+              1280,
+              900
+            ]
+          },
+          {
+            "file": "sky-profile-night.png",
+            "dimensions": [
+              1280,
+              900
+            ]
+          },
+          {
+            "file": "sky-late-summer.png",
+            "dimensions": [
+              1280,
+              900
+            ]
+          },
+          {
+            "file": "sky-late-summer-mobile.png",
+            "dimensions": [
+              390,
+              844
+            ]
+          },
+          {
+            "file": "sky-late-summer-night-en.png",
+            "dimensions": [
+              1280,
+              900
+            ]
+          },
+          {
+            "file": "sky-late-summer-user-319.png",
+            "dimensions": [
+              319,
+              664
+            ]
+          }
+        ],
+        "reviewMode": "Reviewer source/image inspection; all nine opened and sizes checked. Browser/runtime observations parent-reported. Documenter sampled three current images and checked source/record consistency.",
+        "verification": "Preview/safe production builds,JS syntax/diff,zero horizontal overflow,empty browser warning/error console,actual UI sequence unlock at desktop/mobile/319,language/theme retention,refresh hide,28 selector entries,manual phase33.043 unchanged.",
+        "holdVerification": "Actual research.js prefix in mocked DOM/timers;threshold/release/next-click/cancellation/visibility/keyboard/broken sequence/storage/reset.",
+        "limits": [
+          "Physical touch-duration test not claimed.",
+          "OS-emulated reduced motion not claimed;reduction/hidden/offscreen/focus/print paths source-inspected.",
+          "Detector ran once earlier;caption additions recorded and Liquid RGB zero false-positive not canonized.",
+          "Final targeted11px English five-season spacing received browser QA;no second detector run.",
+          "Documentation validation only;no new UI/runtime writes or deployment."
+        ]
+      }
     }
   },
   "components": [
@@ -806,14 +1109,31 @@
       "description": "Selected shelf/list option; semantically an action button.",
       "html": "<div class=\"ds-view\"><button type=\"button\" aria-pressed=\"true\">Shelf</button><button type=\"button\" aria-pressed=\"false\">List</button></div>",
       "css": ".ds-view{display:flex;align-items:center;gap:6px;font-family:-apple-system, \".SFNSText-Regular\", \"San Francisco\", \"Roboto\", \"Segoe UI\", \"Helvetica Neue\", \"Lucida Grande\", Arial, sans-serif}.ds-view button{display:inline-flex;align-items:center;gap:7px;border:1px solid transparent;border-radius:5px;padding:8px 12px;background:transparent;color:var(--muted,#496650);font-size:11px;cursor:pointer}.ds-view button[aria-pressed=\"true\"]{background:var(--field,#c9dfce);color:var(--ink,#183b30);border-color:var(--line,#a5c1ad)}.ds-view button:focus-visible{outline:3px solid var(--research-accent,#276b50);outline-offset:4px}"
+    },
+    {
+      "name": "Exhibition homepage identity",
+      "kind": "custom",
+      "refersTo": "exhibition-hero-identity",
+      "description": "Original portrait,configured name,PhD field and BUCM affiliation;Meet the researcher links to/cv/. The self-contained preview embeds the existing unedited portrait.",
+      "html": "<div class=\"ds-scholar\"><img class=\"ds-portrait\" src=\"data:image/jpeg;base64,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\" alt=\"祝广钦 / Zhu Guangqin\" width=\"108\" height=\"132\"><div class=\"ds-identity\"><h2>祝广钦</h2><p class=\"ds-role\">中医基础理论 · 博士研究生</p><p class=\"ds-affiliation\">北京中医药大学<br>中医学院</p><a class=\"ds-author-link\" href=\"/cv/\">了解我的学术之路<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a></div></div>",
+      "css": ".ds-scholar{min-width:0;color:var(--ink,#183b30);font-family:-apple-system,\".SFNSText-Regular\",\"San Francisco\",\"Roboto\",\"Segoe UI\",\"Helvetica Neue\",\"Lucida Grande\",Arial,sans-serif}.ds-portrait{display:block;width:108px;height:132px;object-fit:cover;object-position:center;border-radius:2px}.ds-identity h2{margin:18px 0 10px;font:600 28px/1.2 \"Research Display\",\"Songti SC\",serif;letter-spacing:-.025em;text-wrap:balance}.ds-identity p{font-size:12px;line-height:1.75;margin:0}.ds-role{font-weight:600}.ds-affiliation{color:var(--muted,#496650);margin-top:12px!important}.ds-author-link{display:inline-flex;gap:12px;align-items:center;min-height:44px;margin-top:12px;font-size:12px;color:var(--accent,#276b50);text-decoration:underline;text-underline-offset:5px}.ds-author-link:hover{color:var(--ink,#183b30)}.ds-author-link:focus-visible{outline:3px solid var(--accent,#276b50);outline-offset:4px}@media(max-width:1100px){.ds-scholar{display:flex;gap:20px;align-items:center}.ds-portrait{width:76px;height:92px}.ds-identity{display:grid;grid-template-columns:auto 1fr;column-gap:24px;align-items:start}.ds-identity h2{margin:0 0 8px;font-size:25px}.ds-identity h2,.ds-role{grid-column:1}.ds-affiliation{grid-column:2;grid-row:1/3;margin-top:0!important;align-self:center}.ds-author-link{grid-column:1/-1;margin-top:2px;min-height:36px}}@media(max-width:600px){.ds-scholar{gap:16px}.ds-portrait{width:72px;height:88px;flex:none}.ds-identity{display:block}.ds-identity h2{margin-bottom:6px}.ds-identity p{font-size:11px;line-height:1.65}.ds-affiliation{margin-top:3px!important}.ds-author-link{margin-top:3px;font-size:11px}}"
+    },
+    {
+      "name": "Exhibition discovered season controls",
+      "kind": "custom",
+      "refersTo": "exhibition-season-switch",
+      "description": "Static discovered five-season English layout with the source caption and night-only complete28-mansion native selector. CSS follows the host palette;this preview has no canvas or discovery runtime.",
+      "html": "<div class=\"ds-scene\"><div class=\"ds-scene-identity\"><span class=\"ds-season\">长夏</span><span class=\"ds-english\">LATE SUMMER</span><p>Ripening grain. Warm, mist-laden air.</p></div><div class=\"ds-seasons\" role=\"group\" aria-label=\"Choose a season\"><button type=\"button\" aria-pressed=\"false\">Spring</button><button type=\"button\" aria-pressed=\"false\">Summer</button><button type=\"button\" aria-pressed=\"true\">Late<br>summer</button><button type=\"button\" aria-pressed=\"false\">Autumn</button><button type=\"button\" aria-pressed=\"false\">Winter</button></div><p class=\"ds-discovery\" role=\"status\">You found late summer. Refresh to return to four seasons.</p><div class=\"ds-picker\"><label for=\"ds-mansion\">Find a mansion</label><select id=\"ds-mansion\"><option value=\"\">28 lunar mansions</option><optgroup label=\"Azure Dragon\"><option value=\"0\">角宿</option><option value=\"1\">亢宿</option><option value=\"2\">氐宿</option><option value=\"3\">房宿</option><option value=\"4\">心宿</option><option value=\"5\">尾宿</option><option value=\"6\">箕宿</option></optgroup><optgroup label=\"Vermilion Bird\"><option value=\"7\">井宿</option><option value=\"8\">鬼宿</option><option value=\"9\">柳宿</option><option value=\"10\">星宿</option><option value=\"11\">张宿</option><option value=\"12\">翼宿</option><option value=\"13\">轸宿</option></optgroup><optgroup label=\"White Tiger\"><option value=\"14\">奎宿</option><option value=\"15\">娄宿</option><option value=\"16\">胃宿</option><option value=\"17\">昴宿</option><option value=\"18\">毕宿</option><option value=\"19\">觜宿</option><option value=\"20\">参宿</option></optgroup><optgroup label=\"Black Tortoise\"><option value=\"21\">斗宿</option><option value=\"22\">牛宿</option><option value=\"23\">女宿</option><option value=\"24\">虚宿</option><option value=\"25\">危宿</option><option value=\"26\">室宿</option><option value=\"27\">壁宿</option></optgroup></select></div><details class=\"ds-sky-about\"><summary>About this sky</summary><p>Points represent mansion names;their positions and movement are composed rather than real-time astronomy.</p></details></div>",
+      "css": ".ds-scene{width:100%;min-width:0;color:var(--ink,#183b30);font-family:-apple-system,\".SFNSText-Regular\",\"San Francisco\",\"Roboto\",\"Segoe UI\",\"Helvetica Neue\",\"Lucida Grande\",Arial,sans-serif}.ds-scene-identity{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;margin-bottom:20px}.ds-season{font:600 30px/1.15 \"Research Display\",\"Songti SC\",serif;grid-row:span 2}.ds-english{font-size:9px;letter-spacing:.18em;margin:0}.ds-scene-identity p{font-size:12px;line-height:1.7;margin:3px 0 0}.ds-seasons{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;border:1px solid var(--accent,#276b50);padding:4px;border-radius:6px;background:var(--field,#c9dfce);background:color-mix(in srgb,var(--field,#c9dfce)85%,transparent)}.ds-seasons button{position:relative;min-height:44px;border:1px solid transparent;border-radius:4px;background:transparent;color:var(--muted,#496650);padding:10px 1px;font-family:inherit;font-size:11px;line-height:1.25;cursor:pointer}.ds-seasons button[aria-pressed=\"true\"],.ds-seasons button[aria-pressed=\"true\"]:hover{background:var(--accent,#276b50);color:var(--button-ink,#fff)}.ds-seasons button:hover{color:var(--ink,#183b30)}.ds-seasons button:active{transform:scale(.98)}.ds-scene :focus-visible{outline:3px solid var(--accent,#276b50);outline-offset:4px}.ds-discovery{font-size:11px;line-height:1.7;color:var(--muted,#496650);margin:12px 0 0}.ds-picker{display:none;align-items:center;gap:12px;margin-top:14px}:host-context(html[data-theme=\"dark\"]) .ds-picker{display:flex}.ds-picker label{font-size:11px;white-space:nowrap}.ds-picker select{min-width:0;flex:1;width:100%;min-height:44px;border:0;border-bottom:1px solid var(--line,#a5c1ad);background:var(--field,#c9dfce);color:var(--ink,#183b30);font:inherit;font-size:11px;padding:8px}.ds-sky-about{font-size:10px;line-height:1.8;margin-top:12px;color:var(--muted,#496650)}.ds-sky-about summary{cursor:pointer;width:fit-content;padding:7px 0;text-decoration:underline;text-underline-offset:4px}.ds-sky-about p{margin:8px 0 0;max-width:45ch;padding:12px 15px;background:var(--panel,#f7faf5);color:var(--ink,#183b30);border:1px solid var(--line,#a5c1ad)}@media(max-width:600px){.ds-scene-identity{margin-bottom:14px}.ds-scene-identity p{font-size:11px}}@media(prefers-reduced-transparency:reduce){.ds-seasons{background:var(--field,#c9dfce)}}"
     }
   ],
   "narrative": {
     "northStar": "学术展厅 / 连续空间叙事",
-    "overview": "This site has two related surface families. The main academic pages are a quiet seasonal exhibition: paper-toned fields, serif display headings, readable records, and publications that can be taken from a shelf. Know Me at /cv/ is a deliberately independent silver/paper, yellow and black spatial narrative, using original line geometry, large bilingual type, sharp frames and continuous native scrolling. The phrase above records the accepted direction; it is not a newly proposed concept.\n\nThe durable relationship is scholarly specificity with an accessible reading route. Exhibition pages keep their established seasonal atmosphere; Know Me keeps its user-pinned line-space opening, academic blocks, cinematic journey, approaching works, birth-year and contact ending. These are separate surface grammars, not interchangeable templates. PRODUCT.md supplies content and access constraints, while the shipped CSS and scripts supply the values below.",
+    "overview": "This site has two related surface families. The main academic pages are a quiet seasonal exhibition: paper-toned fields, serif display headings, readable records, and publications that can be taken from a shelf. The homepage places the researcher beside the argument within one translucent, projected seasonal sky. Know Me at /cv/ is a deliberately independent silver/paper, yellow and black spatial narrative, using original line geometry, large bilingual type, sharp frames and continuous native scrolling. The phrase above records the accepted direction; it is not a newly proposed concept.\n\nThe durable relationship is scholarly specificity with an accessible reading route. Exhibition pages keep their established seasonal atmosphere; Know Me keeps its user-pinned line-space opening, academic blocks, cinematic journey, approaching works, birth-year and contact ending. These are separate surface grammars, not interchangeable templates. PRODUCT.md supplies content and access constraints, while the shipped CSS and scripts supply the values below.",
     "keyCharacteristics": [
       "Two surface families with explicit token namespaces.",
       "Whole-page seasonal palettes on the exhibition; a stable light/dark neutral frame with seasonal accent on Know Me.",
+      "An identifiable researcher and one integrated hemisphere on the homepage, with document-only late-summer discovery.",
       "Original mathematical line geometry and native scroll-driven perspective.",
       "Public-source records, truthful cover provenance, and direct reading alternatives.",
       "Local fonts/assets, bilingual controls, keyboard/touch routes and reduced-motion reading."
@@ -851,7 +1171,8 @@
       "Do preserve the original document records, bilingual chooser initialization, explicit previous/next controls, pause/select/read controls and focus return.",
       "Do retain distinct source labels for verified issue covers, owner-supplied book covers, topic artwork and records without a cover.",
       "Do keep original book pixels and the metadata-defined silhouette crop; put provenance in both the maintained source records and web-image metadata.",
-      "Do maintain the shared mobile tool reservation and the readable linear/print paths when extending a scene."
+      "Do maintain the shared mobile tool reservation and the readable linear/print paths when extending a scene.",
+      "Do preserve the homepage identity, one projected sky, complete 28-option semantic selector and document-only discovery lifetime."
     ],
     "donts": [
       "Don't merge the exhibition palettes into the Know Me frame or generalize a page-specific scene into a mandatory global layout.",
@@ -859,7 +1180,8 @@
       "Don't style generic event-type kickers above cinema headings; the current event kind belongs in the detail paragraph. Retain the explicitly requested SINCE literal.",
       "Don't turn icon-font glyphs or inherited system display faces into a new visual-system rule; extend the local display fonts and inline SVG assets instead.",
       "Don't hide the direct reading routes behind motion, chase-only covers or the opening mark, or fabricate achievements/publication status.",
-      "Don't treat the narrow final verdict pass as a fresh whole-surface or live performance endorsement."
+      "Don't treat the narrow final verdict pass as a fresh whole-surface or live performance endorsement.",
+      "Don't add a fifth celestial group or persist the late-summer unlock, or describe the rotating front hemisphere as showing all 28 mansions at once."
     ]
   }
 }

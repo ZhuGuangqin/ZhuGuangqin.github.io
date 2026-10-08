@@ -1,5 +1,15 @@
 <section class="research-hero" aria-labelledby="research-heading">
+  {% include celestial-atlas.html %}
   <div class="research-hero__inner">
+    <div class="hero-scholar">
+      <img class="hero-scholar__portrait" src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="{{ site.author.name }} / {{ site.author.name_en }}" width="108" height="132" fetchpriority="high">
+      <div class="hero-scholar__identity">
+        <h2><span data-i18n="zh">{{ site.author.name }}</span><span data-i18n="en">{{ site.author.name_en }}</span></h2>
+        <p class="hero-scholar__role"><span data-i18n="zh">中医基础理论 · 博士研究生</span><span data-i18n="en">PhD student<br>Basic Theory of Chinese Medicine</span></p>
+        <p class="hero-scholar__affiliation"><span data-i18n="zh">北京中医药大学<br>中医学院</span><span data-i18n="en">Beijing University of<br> Chinese Medicine</span></p>
+        <a class="hero-scholar__link" href="{{ '/cv/' | relative_url }}"><span data-i18n="zh">了解我的学术之路</span><span data-i18n="en">Meet the researcher</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
     <div class="research-hero__copy">
       <h1 id="research-heading"><span data-i18n="zh">在四时变化中，<br>探寻生命的<span class="research-gradient">秩序。</span></span><span data-i18n="en">Exploring life's order<br>through the <span class="research-gradient">seasons.</span></span></h1>
       <p class="research-hero__description"><span data-i18n="zh">以系统的眼光理解中医，以研究连接经典与生命科学。</span><span data-i18n="en">A systems perspective on Chinese medicine, connecting classical theory with life sciences.</span></p>
@@ -14,24 +24,17 @@
       </div>
     </div>
     <div class="season-lab">
-      <div class="season-orbit" aria-hidden="true">
-        <svg viewBox="0 0 400 340" fill="none">
-          <defs><radialGradient id="orbit-glow"><stop stop-color="currentColor" stop-opacity=".25"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></radialGradient></defs>
-          <circle cx="200" cy="170" r="148" fill="url(#orbit-glow)"/>
-          <g class="orbit-coordinates" stroke="currentColor" stroke-opacity=".17"><path d="M200 10v320M35 170h330"/><circle cx="200" cy="170" r="145" stroke-dasharray="2 7"/><circle cx="200" cy="170" r="105"/><ellipse cx="200" cy="170" rx="148" ry="57" transform="rotate(-30 200 170)"/><ellipse cx="200" cy="170" rx="148" ry="57" transform="rotate(30 200 170)"/></g>
-          <g class="orbit-tracer" stroke="currentColor"><circle cx="200" cy="170" r="126" stroke-dasharray="65 727" stroke-width="1.5"/><circle cx="200" cy="44" r="4" fill="currentColor" stroke="none"/></g>
-          <g class="orbit-tracer orbit-tracer--inner" stroke="currentColor"><ellipse cx="200" cy="170" rx="76" ry="76" stroke-dasharray="30 447"/><circle cx="200" cy="94" r="2.5" fill="currentColor" stroke="none"/></g>
-          <g fill="currentColor"><circle cx="200" cy="25" r="3"/><circle cx="345" cy="170" r="3"/><circle cx="200" cy="315" r="3"/><circle cx="55" cy="170" r="3"/></g>
-        </svg>
-        <div class="season-orbit__core"><span class="season-orbit__han">春</span><span class="season-orbit__english">SPRING</span><span class="season-orbit__concept"><span data-i18n="zh">天人相应</span><span data-i18n="en">Nature & human</span></span></div>
-      </div>
+      <div class="season-scene__identity"><span class="season-orbit__han">春</span><span class="season-orbit__english">SPRING</span><p data-sky-note><span data-i18n="zh">柳色新生，风雨成丝。</span><span data-i18n="en">Willow shoots. Threads of rain.</span></p></div>
       <div class="season-switch" role="group" aria-label="切换四时主题 / Choose a season">
         <button type="button" data-season-choice="spring" aria-pressed="true"><span data-i18n="zh">春</span><span data-i18n="en">Spring</span></button>
         <button type="button" data-season-choice="summer" aria-pressed="false"><span data-i18n="zh">夏</span><span data-i18n="en">Summer</span></button>
+        <button type="button" data-season-choice="late-summer" aria-pressed="false" hidden><span data-i18n="zh">长夏</span><span data-i18n="en">Late<br>summer</span></button>
         <button type="button" data-season-choice="autumn" aria-pressed="false"><span data-i18n="zh">秋</span><span data-i18n="en">Autumn</span></button>
         <button type="button" data-season-choice="winter" aria-pressed="false"><span data-i18n="zh">冬</span><span data-i18n="en">Winter</span></button>
       </div>
-      <p class="season-lab__note"><span data-i18n="zh">四时流转，整页随之换境</span><span data-i18n="en">Four seasons. Four atmospheres.</span></p>
+      <p class="sky-discovery" data-season-discovery hidden role="status"><span data-i18n="zh">你发现了长夏。刷新后，回到四时。</span><span data-i18n="en">You found late summer. Refresh to return to four seasons.</span></p>
+      <div class="sky-mansion-picker"><label for="sky-mansion-select"><span data-i18n="zh">点亮一宿</span><span data-i18n="en">Find a mansion</span></label><select id="sky-mansion-select"><option value="">二十八宿 / 28 mansions</option>{% assign symbols = 'spring|东方青龙|Azure Dragon|角 亢 氐 房 心 尾 箕,summer|南方朱雀|Vermilion Bird|井 鬼 柳 星 张 翼 轸,autumn|西方白虎|White Tiger|奎 娄 胃 昴 毕 觜 参,winter|北方玄武|Black Tortoise|斗 牛 女 虚 危 室 壁' | split: ',' %}{% for symbol in symbols %}{% assign parts = symbol | split: '|' %}<optgroup label="{{ parts[1] }} / {{ parts[2] }}">{% assign names = parts[3] | split: ' ' %}{% for name in names %}<option value="{{ forloop.parentloop.index0 | times: 7 | plus: forloop.index0 }}">{{ name }}宿</option>{% endfor %}</optgroup>{% endfor %}</select></div>
+      <details class="sky-about"><summary><span data-i18n="zh">关于这片天穹</span><span data-i18n="en">About this sky</span></summary><p><span data-i18n="zh">四时物候与二十八宿的艺术意象。星点代表宿名，位置与轮转经过艺术编排，不表示实时天象。</span><span data-i18n="en">An artistic study of the seasons and the twenty-eight lunar mansions. Points represent mansion names; their positions and movement are composed rather than real-time astronomy.</span></p></details>
     </div>
   </div>
 </section>
