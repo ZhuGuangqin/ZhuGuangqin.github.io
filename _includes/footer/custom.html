@@ -6,6 +6,9 @@
 <!-- 本站自定义脚本：动效 + 中英切换 -->
 <script src="{{ base_path }}/assets/js/custom.js" defer></script>
 <script src="{{ base_path }}/assets/js/research.js" defer></script>
+<script src="{{ base_path }}/assets/js/concept-door.js" defer></script>
+{% if page.url == '/' %}<script src="{{ base_path }}/assets/js/line-field.js" defer></script>{% endif %}
+{% if page.cv_experiment %}<script src="{{ base_path }}/assets/js/collaboration-lines.js" defer></script>{% endif %}
 {% if page.url == '/' %}<script src="{{ base_path }}/assets/js/order-play.js" defer></script>{% endif %}
 {% if page.url == '/publications/' %}<script src="{{ base_path }}/assets/js/publication-relations.js" defer></script>{% endif %}
 {% if page.url == '/' %}<script src="{{ base_path }}/assets/js/season-sky.js" defer></script>{% endif %}

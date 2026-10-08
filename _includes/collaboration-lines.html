@@ -1,0 +1,21 @@
+<details class="collab-lines" data-collab-lines data-email="{{ site.author.email | escape }}">
+  <summary><span data-i18n="zh">把两个研究方向连起来</span><span data-i18n="en">Connect two research threads</span><i class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+  <div class="collab-lines__body">
+    <p class="collab-lines__hint"><span data-i18n="zh">选两个感兴趣的方向，让一次交流从这里开始。也可从一个方向拖向另一个。</span><span data-i18n="en">Choose two interests as a starting point for a conversation. Or drag from one thread to another.</span></p>
+    <div class="collab-lines__board" data-collab-board>
+      <svg aria-hidden="true"><path data-collab-path fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      <button type="button" data-collab-topic="systems" aria-pressed="false"><span data-i18n="zh">系统中医学</span><span data-i18n="en">Systems TCM</span><span class="collab-lines__port" aria-hidden="true"></span></button>
+      <button type="button" data-collab-topic="seasons" aria-pressed="false"><span data-i18n="zh">天人相应与季节</span><span data-i18n="en">Nature & seasonality</span><span class="collab-lines__port" aria-hidden="true"></span></button>
+      <button type="button" data-collab-topic="practice" aria-pressed="false"><span data-i18n="zh">中医理论与临床</span><span data-i18n="en">Theory & practice</span><span class="collab-lines__port" aria-hidden="true"></span></button>
+      <button type="button" data-collab-topic="education" aria-pressed="false"><span data-i18n="zh">中医基础理论教学</span><span data-i18n="en">TCM education</span><span class="collab-lines__port" aria-hidden="true"></span></button>
+    </div>
+    <p class="collab-lines__status" data-collab-status role="status"></p>
+    <div class="collab-lines__actions"><button type="button" data-collab-generate disabled><span data-i18n="zh">生成交流草稿</span><span data-i18n="en">Create a conversation draft</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><button type="button" data-collab-reset><span data-i18n="zh">清空并重新连线</span><span data-i18n="en">Clear & reconnect</span></button></div>
+    <div class="collab-lines__draft" data-collab-draft hidden>
+      <label for="collab-subject"><span data-i18n="zh">邮件主题</span><span data-i18n="en">Subject</span></label><input id="collab-subject" type="text" maxlength="180" autocomplete="off">
+      <label for="collab-message"><span data-i18n="zh">想交流的内容</span><span data-i18n="en">Your message</span></label><textarea id="collab-message" rows="9" maxlength="5000" spellcheck="true"></textarea>
+      <div class="collab-lines__actions"><button type="button" data-collab-copy data-copy-text=""><span data-i18n="zh">复制草稿</span><span data-i18n="en">Copy draft</span><i class="fa-regular fa-copy" aria-hidden="true"></i></button><a data-collab-mail><span data-i18n="zh">在邮件应用中编辑</span><span data-i18n="en">Edit in your mail app</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+      <p class="collab-lines__privacy"><span data-i18n="zh">请将方括号替换为你的想法。草稿只在本页保留，由你编辑与发送；切换语言不会覆盖内容。</span><span data-i18n="en">Replace the brackets with your ideas. Your draft stays on this page, for you to edit and send. Switching language keeps your edits.</span></p>
+    </div>
+  </div>
+</details>

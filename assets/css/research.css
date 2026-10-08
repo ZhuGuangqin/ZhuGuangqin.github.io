@@ -203,6 +203,7 @@ html[data-motion="off"] *, html[data-motion="off"] *::before, html[data-motion="
   scroll-behavior: auto !important;
 }
 html[data-motion="off"] .reveal { opacity: 1 !important; transform: none !important; }
+html[data-motion="off"] { scroll-behavior: auto !important; }
 html[data-motion="off"] .archive__item:hover, html[data-motion="off"] .research-primary:hover { transform: none; }
 html[data-motion="off"] .page__content > h2::before { transform: scaleY(1); }
 @media (prefers-reduced-motion: reduce) {

@@ -1074,6 +1074,37 @@
         ],
         "notes": "docs/设计验收简报.md; parent browser checks only, no new independent whole-site verdict."
       }
+    },
+    "scholarlyPlay": {
+      "brief": ".impeccable/briefs/scholarly-play.md",
+      "scope": "User selected 7 + 8 + 10. Extend the seasonal exhibition and the independent Know Me world without a new palette, font or dependency.",
+      "lineField": {
+        "source": "assets/js/line-field.js",
+        "route": "/#line-lab",
+        "geometry": "64 closed SVG paths. Interaction terms grow as the fields approach. Export uses the same geometry. Artwork, not a physiological model.",
+        "controls": "Native buttons with arrow keys, horizontal touch drag, phase range, explicit play/pause, reset and SVG download.",
+        "lifetime": "Page only; static by default. Animation requires explicit play, an open visible panel, motion permission and an active visible page.",
+        "layout": "Full-width optional details below the atlas, desktop stage max 920px; phone paths crop but controls stay in bounds."
+      },
+      "conceptDoor": {
+        "source": "assets/js/concept-door.js",
+        "rules": "_data/concept_keys.yml",
+        "trigger": "Whole normalized aliases only. Six concepts with three neighbours each.",
+        "evidence": "Up to three real public publications selected from titles in the existing search index. Reading paths, not causal or citation relationships.",
+        "search": "Normal results remain; concept-only matches receive a correct status. Native search dialog, close focus restoration and responsive scrolling retained."
+      },
+      "collaboration": {
+        "source": "assets/js/collaboration-lines.js",
+        "route": "/cv/#cv-contact",
+        "controls": "Four maintained research directions, choose two distinct topics with buttons, keyboard or pointer connection. Editable subject and body, explicit rewrite/reset, copy and visitor-initiated mailto.",
+        "privacy": "Draft stays in the document. No persistence, upload or automatic sending. Language and selection changes preserve edits.",
+        "palette": "Existing Know Me acid and dark contact surface."
+      },
+      "verification": {
+        "tests": "tests/scholarly-play.test.cjs",
+        "notes": "docs/设计验收简报.md",
+        "scope": "Parent implementation and targeted browser checks. No new independent whole-site verdict."
+      }
     }
   },
   "components": [

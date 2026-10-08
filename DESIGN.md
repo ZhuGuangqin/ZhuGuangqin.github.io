@@ -468,3 +468,11 @@ Motion values, breakpoints, shadow vocabulary and representative self-contained 
 - **Don't** add a fifth celestial group or persist the late-summer unlock, or describe the rotating front hemisphere as showing all 28 mansions at once.
 
 Not canonized or repaired by this documentation: inherited Font Awesome action glyphs and any legacy platform display inheritance are existing implementation accommodations, not rules for new display or icon work. The inherited `/sitemap/` footer target is a legacy navigation issue, not a visual token. No new scored finding is inferred; the accepted verdict is limited to its explicitly reviewed fixes.
+
+## 可玩的研究线索（2026-10-08）
+
+用户选择 7 + 8 + 10，按 `.impeccable/briefs/scholarly-play.md` 扩展既有视觉世界。首页研究图谱下的可选线场采用主题 accent / canvas / panel / ink / muted，64 条闭合 SVG 曲线和两个原生按钮；靠近引入局部交互项，相位滑块控制形变，显式播放约 22fps。保存导出同一几何的 800×430 SVG。桌面图场上限 920px，手机裁切装饰曲线但移动控件始终留在画面内。没有默认循环，也没有科研模拟的宣称。
+
+搜索框内的概念暗门是既有搜索的局部扩展：完整别名触发，中心概念、三条阅读路径和至多三篇真实公开论文。数据集中维护在 `_data/concept_keys.yml`；沿用公开索引，标题词项匹配，只做阅读组织。地图使用主题线色，线条一次性绘出，减少动效或手动关闭时静止。弹窗保持原生 Escape、焦点归还及全站检索；地图展开时整体可滚动，关闭按钮保持可见。
+
+Know Me 联系区沿用 acid / dark，在四个研究方向之间绘制连接曲线。支持点选、键盘与拖动，任何两个不同方向均可组合。生成的主题、正文可编辑；改选、语言切换保留草稿，显式重写或清空才更改。草稿不写入浏览器持久存储，不请求外部服务，mailto 只由访客主动打开。直接邮箱入口保留。三项均不进入打印内容。

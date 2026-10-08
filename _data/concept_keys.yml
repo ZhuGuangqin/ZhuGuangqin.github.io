@@ -1,0 +1,48 @@
+- id: nature
+  zh: 天人相应
+  en: Nature & human
+  aliases: [天人相应, tianren, nature and human]
+  description_zh: 从季节变化切入，阅读“五脏应时”与季节性疾病相关研究。
+  description_en: Follow seasonal change into work on the five zang organs and seasonal disease.
+  terms: [五脏应时, 季节, seasonal]
+  neighbours: [organisation, wholeness, order]
+- id: wholeness
+  zh: 元整体
+  en: Meta-wholeness
+  aliases: [元整体, yuanzhengti, meta-wholeness, meta wholeness]
+  description_zh: 从元整体原理出发，走进“气”的内涵与系统中医学的概念研究。
+  description_en: Enter the conceptual work on qi through the meta-wholeness principle of Systems TCM.
+  terms: [元整体, meta-wholeness]
+  neighbours: [form, organisation, nonadditivity]
+- id: organisation
+  zh: 自组织
+  en: Self-organisation
+  aliases: [自组织, self-organisation, self-organization, self organisation, self organization]
+  description_zh: 以自组织为阅读线索，进入“五脏应时”的理论探讨。
+  description_en: Read the theoretical discussion of the five zang organs responding to the seasons through self-organisation.
+  terms: [自组织, self-organisation]
+  neighbours: [nature, order, wholeness]
+- id: form
+  zh: 形气神
+  en: Xing · qi · shen
+  aliases: [形气神, xing qi shen, xing–qi–shen]
+  description_zh: 连接形、气、神的概念辨析，一体化认识与临床应用讨论。
+  description_en: Connect the concepts of xing, qi and shen with discussions of integration and clinical application.
+  terms: [形气神, xing, qi and shen]
+  neighbours: [wholeness, order, nonadditivity]
+- id: order
+  zh: 有序性
+  en: Orderedness
+  aliases: [有序性, orderedness]
+  description_zh: 从“脾主运化”的理论内涵，阅读系统中医学的有序性原理。
+  description_en: Explore orderedness through the theoretical discussion of the spleen governing transportation and transformation.
+  terms: [有序性, orderedness]
+  neighbours: [organisation, form, nature]
+- id: nonadditivity
+  zh: 非加和
+  en: Non-additivity
+  aliases: [非加和, 非加和性, non-additivity, nonadditivity, non additivity]
+  description_zh: 主页研究方向中的一个原理。先从两束线的互动艺术，想象整体与部分的关系。
+  description_en: A principle named in the research interests. Begin with an artwork about two fields and the relationship between parts and a whole.
+  terms: [非加和, non-additivity]
+  neighbours: [wholeness, form, organisation]

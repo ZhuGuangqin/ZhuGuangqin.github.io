@@ -42,8 +42,8 @@
     }
   }
   document.addEventListener("click", function (event) {
-    var button = event.target.closest("[data-copy-email], [data-copy-citation]");
-    if (button) copy(button.dataset.copyEmail || button.dataset.copyCitation);
+    var button = event.target.closest("[data-copy-email], [data-copy-citation], [data-copy-text]");
+    if (button) copy(button.dataset.copyEmail || button.dataset.copyCitation || button.dataset.copyText);
   });
 
   /* Persisted preferences; the OS reduction setting always takes priority. */
@@ -196,7 +196,10 @@
   function renderSearch() {
     selected = -1;
     results.replaceChildren();
+    results.hidden = false;
     input.placeholder = t("搜索标题、作者、期刊或研究关键词…", "Search titles, authors, journals or research topics…");
+    var discovery = { query: input.value, entries: index || [], concept: false };
+    document.dispatchEvent(new CustomEvent("site:search-query", { detail: discovery }));
     if (failed) {
       status.textContent = t("搜索索引未能加载。可以重试，或从导航直接浏览。", "Could not load the search index. Retry or browse via the navigation.");
       var retry = document.createElement("button");
@@ -221,6 +224,10 @@
     var limit = query ? 50 : 10;
     var shown = matches.slice(0, limit);
     status.textContent = !query ? t("快速前往，或输入关键词检索全站", "Quick navigation, or type to search the site") : matches.length ? t("找到 " + matches.length + " 条" + (matches.length > limit ? "，显示前 " + limit + " 条" : ""), matches.length + " results" + (matches.length > limit ? "; showing the first " + limit : "")) : t("未找到匹配内容，试试更短的关键词。", "No matches. Try a shorter keyword.");
+    if (discovery.concept && !matches.length) {
+      status.textContent = t("概念阅读线索已在上方展开。", "Concept reading connections are shown above.");
+      results.hidden = true;
+    }
     shown.forEach(function (match, i) {
       var entry = match.entry;
       var href = localUrl(entry.url);
@@ -272,10 +279,12 @@
   dialog.addEventListener("click", function (event) { if (event.target === dialog) { var box = dialog.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close(); } });
   dialog.addEventListener("close", function () { if (opener && document.contains(opener)) opener.focus({ preventScroll: true }); });
   input.addEventListener("input", function () { clearTimeout(inputTimer); inputTimer = setTimeout(renderSearch, 100); });
+  document.addEventListener("site:search-concept", function (event) { input.value = event.detail.query; renderSearch(); input.focus(); });
   dialog.addEventListener("keydown", function (event) {
     if (event.isComposing) return;
-    if (event.key === "ArrowDown" || event.key === "ArrowUp") { event.preventDefault(); markSelected(selected + (event.key === "ArrowDown" ? 1 : -1), true); }
-    if (event.key === "Enter" && event.target === input) { var first = results.querySelector(".research-search__result"); if (first) { event.preventDefault(); first.click(); } }
+    if (event.key === "Escape") { event.preventDefault(); dialog.close(); return; }
+    if ((event.key === "ArrowDown" || event.key === "ArrowUp") && (event.target === input || event.target.closest(".research-search__result"))) { event.preventDefault(); markSelected(selected + (event.key === "ArrowDown" ? 1 : -1), true); }
+    if (event.key === "Enter" && event.target === input) { clearTimeout(inputTimer); renderSearch(); var first = results.querySelector(".research-search__result"); if (first) { event.preventDefault(); first.click(); } }
   });
   document.addEventListener("keydown", function (event) {
     if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") { event.preventDefault(); if (dialog.open) dialog.close(); else openSearch(); }

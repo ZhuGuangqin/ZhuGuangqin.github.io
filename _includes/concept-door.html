@@ -1,0 +1,7 @@
+<section class="concept-door" data-concept-door data-publications-url="{{ '/publications/' | relative_url }}" hidden aria-label="概念阅读线索 / Concept reading connections">
+  <div class="concept-door__map"><svg viewBox="0 0 600 150" preserveAspectRatio="none" aria-hidden="true"><path d="M300 42C300 82 100 70 100 127M300 42V127M300 42C300 82 500 70 500 127"/><circle cx="300" cy="42" r="5"/></svg><h3 data-concept-title></h3><div data-concept-neighbours></div></div>
+  <p data-concept-description></p><div class="concept-door__works" data-concept-works></div>
+  <a class="concept-door__lab" data-concept-lab href="{{ '/' | relative_url }}#line-lab" hidden><span data-i18n="zh">亲手改变一片非加和光场</span><span data-i18n="en">Make a pattern between two fields</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+  <small><span data-i18n="zh">发现了一个概念暗门。连线是阅读线索，不代表已验证的因果关系。</span><span data-i18n="en">You found a concept door. These are reading connections, not established causal relationships.</span></small>
+</section>
+<script type="application/json" id="concept-key-data">{{ site.data.concept_keys | jsonify }}</script>
