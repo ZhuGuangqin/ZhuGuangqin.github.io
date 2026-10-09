@@ -1,0 +1,106 @@
+{
+  "source": {
+    "file": "造物实验室-200元素审阅稿.xlsx",
+    "sha256": "1a3ce81b627856ab88d3f2584655428f37630ee5a26b3d767bea59103699fca1",
+    "changes": 11
+  },
+  "changes": [
+    {
+      "sheet": "公式",
+      "cell": "D27",
+      "id": "herb-fire-moxa",
+      "old": "药草",
+      "new": "艾草"
+    },
+    {
+      "sheet": "公式",
+      "cell": "H76",
+      "id": "metal-water-battery",
+      "old": "电池",
+      "new": "汞"
+    },
+    {
+      "sheet": "公式",
+      "cell": "H90",
+      "id": "feedback-computer-control",
+      "old": "控制",
+      "new": "机器学习"
+    },
+    {
+      "sheet": "公式",
+      "cell": "D91",
+      "id": "control-machine-automation",
+      "old": "控制",
+      "new": "机器学习"
+    },
+    {
+      "sheet": "公式",
+      "cell": "H110",
+      "id": "stone-kiln-cement",
+      "old": "水泥",
+      "new": "堡垒"
+    },
+    {
+      "sheet": "公式",
+      "cell": "D188",
+      "id": "ecosystem-human-nature-human",
+      "old": "生态系统",
+      "new": "自然"
+    },
+    {
+      "sheet": "公式",
+      "cell": "F195",
+      "id": "prescription-book-shanghan",
+      "old": "书",
+      "new": "辨证"
+    },
+    {
+      "sheet": "公式",
+      "cell": "D197",
+      "id": "human-light-inspection",
+      "old": "人",
+      "new": "医生"
+    },
+    {
+      "sheet": "公式",
+      "cell": "D198",
+      "id": "human-air-listening",
+      "old": "人",
+      "new": "医生"
+    },
+    {
+      "sheet": "公式",
+      "cell": "D199",
+      "id": "human-data-inquiry",
+      "old": "人",
+      "new": "医生"
+    },
+    {
+      "sheet": "公式",
+      "cell": "D200",
+      "id": "human-pulse-palpation",
+      "old": "人",
+      "new": "医生"
+    }
+  ],
+  "resolved": {
+    "fortress": "brick + house",
+    "total": 204,
+    "mercury": "cultural image, not chemical production",
+    "ids": "display-name edits synchronised to actual input/output IDs"
+  },
+  "approvedByAuthor": [
+    "200个元素包含终极元素",
+    "太极 + 系统 → 元整体原理",
+    "生态系统 + 人 → 天生人原理",
+    "太极 + 节律 → 气",
+    "协作 + 涌现 → 非加和原理",
+    "四大经典采用黄帝内经、难经、伤寒杂病论、神农本草经",
+    "四诊采用望诊、闻诊、问诊、脉诊",
+    "精气血津液神取代形气神",
+    "终极彩蛋共四组；先审阅，再制作与上传",
+    "保留所有已审阅元素，总数扩至204",
+    "砖 + 房屋 → 堡垒",
+    "2026-10-09 作者保存修订后授权制作并上传"
+  ]
+}

@@ -6,6 +6,7 @@
   function start(level){return {tick:0,energy:level.energy,life:5,wave:0,phase:'build',plants:[],enemies:[],shots:[],events:[],queue:[],waveTick:0,nextId:1,kills:0,responses:0};}
   function place(state,kind,row,col){if(!Object.hasOwn(units,kind))return false;const spec=units[kind];if(!Number.isInteger(row)||row<0||row>2||!Number.isInteger(col)||col<0||col>4||state.phase==='won'||state.phase==='lost'||state.energy<spec.cost||state.plants.some(p=>p.row===row&&p.col===col))return false;state.energy-=spec.cost;state.plants.push({id:state.nextId++,kind,row,col,hp:spec.hp,maxHp:spec.hp,rank:1,charge:0,cool:0,action:'idle'});return true;}
   function reclaim(state,row,col){if(['won','lost'].includes(state.phase))return false;const index=state.plants.findIndex(p=>p.row===row&&p.col===col);if(index<0)return false;const p=state.plants[index];state.energy=Math.min(400,state.energy+Math.floor((units[p.kind].cost+(p.rank-1)*45)/2));state.plants.splice(index,1);return true;}
+  function arrange(state){const plan=[['lotus',0,1],['lotus',1,1],['lotus',2,1],['sprout',1,0]],cost=plan.reduce((sum,p)=>sum+units[p[0]].cost,0);if(state.phase!=='build'||state.plants.length||state.energy<cost)return false;plan.forEach(p=>place(state,...p));return true;}
   function upgrade(state,row,col){const p=state.plants.find(p=>p.row===row&&p.col===col);if(!p||p.rank>=2||state.energy<45||['won','lost'].includes(state.phase))return false;state.energy-=45;p.rank=2;p.maxHp=Math.round(p.maxHp*1.5);p.hp=p.maxHp;return true;}
   function launch(level,state){if(state.phase!=='build'||state.wave>=level.waves.length)return false;const wave=level.waves[state.wave];state.queue=Array.from({length:wave.count},(_,i)=>({at:2+i*wave.gap,row:(i+state.wave)%3,kind:wave.types[(i+state.wave)%wave.types.length]}));state.wave++;state.waveTick=0;state.phase='wave';state.events=[];return true;}
   function step(level,state){if(state.phase!=='wave')return state;state.tick++;state.waveTick++;state.events=[];if(state.tick%3===0)state.energy=Math.min(400,state.energy+2);
@@ -24,5 +25,5 @@
   }
   function score(state){return state.phase==='won'?(state.life===5?3:state.life>=3?2:1):0;}
   function restore(raw,levels){let value;try{value=typeof raw==='string'?JSON.parse(raw):raw;}catch(e){}const result={version:1,level:levels[0].id,best:{}};if(!value||value.version!==1)return result;if(levels.some(l=>l.id===value.level))result.level=value.level;for(const l of levels)if(Number.isInteger(value.best?.[l.id])&&value.best[l.id]>=1&&value.best[l.id]<=3)result.best[l.id]=value.best[l.id];return result;}
-  return {units,threats,start,place,reclaim,upgrade,launch,step,score,restore};
+  return {units,threats,start,place,reclaim,upgrade,arrange,launch,step,score,restore};
 });

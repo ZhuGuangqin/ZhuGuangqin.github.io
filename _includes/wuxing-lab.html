@@ -8,11 +8,13 @@
     </summary>
     <noscript><p>请开启 JavaScript 使用实验台。/ Enable JavaScript to use the lab.</p></noscript>
     <div class="wuxing-app" data-wuxing-app hidden>
-      <div class="wuxing-toolbar"><div class="wuxing-tabs" role="group" aria-label="实验室视图 / Lab views"><button type="button" data-wx-view="bench" aria-pressed="true"></button><button type="button" data-wx-view="atlas" aria-pressed="false"></button><button type="button" data-wx-view="formulas" aria-pressed="false"></button></div><p data-wx-count></p></div>
+      <div class="wuxing-toolbar"><div class="wuxing-tabs" role="group" aria-label="实验室视图 / Lab views"><button type="button" data-wx-view="bench" aria-pressed="true"></button><button type="button" data-wx-view="atlas" aria-pressed="false"></button><button type="button" data-wx-view="formulas" aria-pressed="false"></button><button type="button" data-wx-view="collection" aria-pressed="false"></button></div><p data-wx-count></p></div>
+      <div class="wuxing-discovery-note" data-wx-discovery-note role="status" aria-live="polite" hidden></div>
       <p class="lab-download"><a href="{{ "/assets/downloads/wuxing/造物实验室-图鉴与公式.xlsx" | relative_url }}" download><span data-i18n="zh">下载完整图鉴与公式（可编辑）</span><span data-i18n="en">Download the complete editable atlas & formulas</span></a></p>
       <section data-wx-panel="bench" aria-label="实验台 / Workbench">
         <div class="wuxing-workspace">
           <div class="wuxing-bench">
+            <div class="wuxing-bench-mark" data-wx-mark hidden></div>
             <p class="wuxing-instruction" data-wx-instruction></p>
             <div class="wuxing-stage">
               <div class="wuxing-inputs"><button type="button" class="wuxing-slot" data-wx-slot="0"></button><span class="wuxing-plus" aria-hidden="true">+</span><button type="button" class="wuxing-slot" data-wx-slot="1"></button></div>
@@ -28,12 +30,29 @@
           <div class="wuxing-inventory"><div class="wuxing-inventory__heading"><h3 data-wx-inventory-title></h3><span data-wx-available></span></div><label for="wuxing-search" class="wuxing-search-label" data-wx-search-label></label><input type="search" id="wuxing-search" data-wx-search autocomplete="off"><div class="wuxing-filters" data-wx-filters role="group" aria-label="元素分类 / Element families"></div><div class="wuxing-elements" data-wx-inventory></div><p class="wuxing-empty" data-wx-empty hidden></p></div>
         </div>
       </section>
-      <section data-wx-panel="atlas" hidden aria-label="元素图鉴 / Element atlas"><div class="wuxing-atlas-detail" data-wx-detail></div><div class="wuxing-atlas" data-wx-atlas></div></section>
+      <section data-wx-panel="atlas" hidden aria-label="元素图鉴 / Element atlas">
+        <details class="wuxing-archive" data-wx-archive-box><summary data-wx-archive-title></summary><div data-wx-archive></div></details>
+        <div class="wuxing-atlas-tools"><label><span data-wx-atlas-family-label></span><select data-wx-atlas-family></select></label><label><span data-wx-atlas-search-label></span><input type="search" data-wx-atlas-search autocomplete="off"></label><label class="wuxing-known-only"><input type="checkbox" data-wx-known-only><span data-wx-known-label></span></label></div>
+        <div class="wuxing-atlas-detail" data-wx-detail></div><div data-wx-atlas></div>
+      </section>
+      <section data-wx-panel="collection" hidden aria-label="收集奖励与关系 / Collection & relationships">
+        <div class="wuxing-collection-heading"><div><h3 data-wx-collection-title></h3><p data-wx-collection-copy></p></div><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#wx-meta-wholeness"/></svg></div>
+        <section class="wuxing-relations"><h3 data-wx-relations-title></h3><p data-wx-relations-copy></p><div data-wx-relations></div></section>
+        <details class="wuxing-principles"><summary data-wx-principles-title></summary><p data-wx-principles-copy></p><div class="wuxing-seals" data-wx-seals></div></details>
+        <section class="wuxing-rewards"><h3 data-wx-rewards-title></h3><p data-wx-rewards-copy></p><div data-wx-rewards></div></section>
+      </section>
       <section data-wx-panel="formulas" hidden aria-label="合成公式 / Formulas"><div class="wuxing-formula-tools"><p data-wx-formula-intro></p><label><input type="checkbox" data-wx-reveal><span data-wx-reveal-label></span></label></div><div class="wuxing-formulas" data-wx-formulas></div></section>
       <div class="wuxing-footer"><p data-wx-save-status></p><div><button type="button" data-wx-export></button><button type="button" data-wx-reset></button></div></div>
       <div class="wuxing-reset" data-wx-reset-box hidden><p data-wx-reset-copy></p><button type="button" data-wx-reset-confirm></button><button type="button" data-wx-reset-cancel></button></div>
       <details class="wuxing-about"><summary><span data-i18n="zh">关于配方与非加和</span><span data-i18n="en">About the recipes & non-additivity</span></summary><p><span data-i18n="zh">阴阳开篇与中医分支采用文化意象；造物配方压缩了材料、工序与环境条件；系统配方侧重部件之间的组织与联系。例如，两个齿轮相互啮合后，整体才具有传动功能。这里的“＋”表示建立联系，配方并非化学方程或医学指导。玩法受 Doodle God 启发，路线、文字与图形为本站独立设计。</span><span data-i18n="en">The opening and Chinese medicine branch use cultural imagery. Making recipes compress materials, processes and environmental conditions. System recipes focus on organisation and relationships: two meshing gears acquire a transmission function together. “+” means making a connection; these are game rules, not chemical equations or medical instructions. Inspired by Doodle God, with original routes, text and symbols.</span></p></details>
     </div>
   </details>
+  <dialog class="wuxing-celebration" data-wx-celebration aria-labelledby="wuxing-celebration-title">
+    <form method="dialog"><button type="submit" data-wx-celebration-close></button></form>
+    <div class="wuxing-celebration-medal" data-wx-celebration-medal aria-hidden="true"></div>
+    <h3 id="wuxing-celebration-title" data-wx-celebration-title></h3>
+    <div data-wx-celebration-copy></div>
+    <button type="button" data-wx-celebration-view></button>
+  </dialog>
   <script type="application/json" id="wuxing-data">{{ site.data.wuxing_lab | jsonify }}</script>
 </section>

@@ -99,4 +99,108 @@
 <symbol id="wx-powder" viewBox="0 0 64 64"><path d="M8 53H56L42 36L32 42L23 32ZM22 15L26 19L22 23L18 19M40 12L44 16L40 20L36 16M45 27H49M16 45H23M33 49H40"/></symbol>
 <symbol id="wx-herbalbook" viewBox="0 0 64 64"><path d="M12 8H49V55H12ZM12 47H49M19 55V60H52M30 39V22Q20 24 20 16Q31 15 30 26Q31 17 42 16Q43 27 30 29M23 40H38"/></symbol>
 <symbol id="wx-sundial" viewBox="0 0 64 64"><ellipse cx="32" cy="42" rx="26" ry="15"/><path d="M32 42V13L48 39M32 42L15 50M8 42H14M50 42H56M32 51V57M14 32L19 35M45 32L49 29"/><circle cx="15" cy="13" r="6"/></symbol>
+<symbol id="wx-magma" viewBox="0 0 64 64"><path d="M8 48Q20 34 32 42T56 40M10 56Q24 44 38 50T56 48M18 28Q12 20 22 12M34 30Q28 20 38 8M48 26Q42 18 52 12"/></symbol>
+<symbol id="wx-moss" viewBox="0 0 64 64"><path d="M8 52H56M14 52V36M14 44L8 38M14 40L20 32M28 52V28M28 38L22 30M28 34L34 24M42 52V34M42 42L36 36M42 38L50 28M54 52V42"/></symbol>
+<symbol id="wx-tools" viewBox="0 0 64 64"><path d="M16 10L34 28M10 16L28 34M12 8L8 12L18 22L22 18ZM42 10L54 22L46 30L34 18ZM38 26L16 54L10 48L32 22"/></symbol>
+<symbol id="wx-flowerpot" viewBox="0 0 64 64"><path d="M12 28H52V34H12ZM16 34L22 56H42L48 34M32 28V12M32 20Q18 20 20 8Q32 8 32 20M32 16Q44 16 46 6Q34 6 32 16"/></symbol>
+<symbol id="wx-liuli" viewBox="0 0 64 64"><path d="M20 8H44L54 24L42 56H22L10 24ZM10 24H54M20 8L26 24L22 56M44 8L38 24L42 56M26 24H38"/></symbol>
+<symbol id="wx-bonsai" viewBox="0 0 64 64"><path d="M8 48H56L50 56H14ZM16 48V30M16 36Q6 32 12 24Q8 14 20 14Q24 6 30 14Q42 16 34 26Q38 34 24 34M36 48L44 30L54 48M16 42L26 32"/></symbol>
+<symbol id="wx-enamel" viewBox="0 0 64 64"><path d="M12 18H52L48 52H16ZM16 24H48M22 40Q32 22 42 40Q32 52 22 40M20 12H44M28 8H36"/></symbol>
+<symbol id="wx-mountain" viewBox="0 0 64 64"><path d="M6 54L28 12L50 54M24 54L44 26L58 54M21 26L28 32L35 26M6 54H58"/></symbol>
+<symbol id="wx-ocean" viewBox="0 0 64 64"><path d="M6 30Q16 16 26 30T46 30T58 30M6 42Q16 30 26 42T46 42T58 42M6 54Q16 42 26 54T46 54T58 54M42 8V18M38 12H46"/></symbol>
+<symbol id="wx-lake" viewBox="0 0 64 64"><path d="M6 28L18 10L30 28M34 28L46 12L58 28M10 42Q32 24 54 42Q32 60 10 42ZM20 42H44"/></symbol>
+<symbol id="wx-springwater" viewBox="0 0 64 64"><path d="M8 50L16 32H26L32 18L42 32H50L56 50M32 22V46M26 40L32 46L38 40M8 56Q20 48 32 56T56 56"/></symbol>
+<symbol id="wx-crystal" viewBox="0 0 64 64"><path d="M22 54V20L32 6L42 20V54ZM22 20H42M32 6V54M10 54V34L16 26L22 34M42 32L50 22L56 32V54"/></symbol>
+<symbol id="wx-salt" viewBox="0 0 64 64"><path d="M12 34L24 28L36 34V48L24 54L12 48ZM12 34L24 40L36 34M24 40V54M38 12L48 8L56 16L46 22ZM46 22V30M20 14V22M16 18H24"/></symbol>
+<symbol id="wx-iron" viewBox="0 0 64 64"><path d="M16 8H48V18H38V46H48V56H16V46H26V18H16ZM18 12H46M30 22V42"/></symbol>
+<symbol id="wx-steel" viewBox="0 0 64 64"><path d="M8 22L24 10H54L38 22ZM8 22V46H38V22M38 46L54 34V10M14 30H30M14 38H30"/></symbol>
+<symbol id="wx-wire" viewBox="0 0 64 64"><path d="M6 16H18C44 16 18 48 44 48H58M6 22H18C38 22 12 54 44 54H58M10 10V28M54 42V60"/></symbol>
+<symbol id="wx-knife" viewBox="0 0 64 64"><path d="M14 8H40Q40 32 22 42H14ZM14 42H24V58H14M18 14V32M18 48V52"/></symbol>
+<symbol id="wx-kiln" viewBox="0 0 64 64"><path d="M10 54V28Q10 8 32 8Q54 8 54 28V54ZM22 54V36Q22 24 32 24Q42 24 42 36V54M18 18H46M10 30H20M44 30H54M28 46Q24 40 32 34Q40 44 34 48"/></symbol>
+<symbol id="wx-brush" viewBox="0 0 64 64"><path d="M40 6L48 10L28 42L20 38ZM20 38Q6 44 8 58Q24 58 28 42M12 54L22 44M38 14L44 18"/></symbol>
+<symbol id="wx-printing" viewBox="0 0 64 64"><path d="M16 6H48V20H16ZM10 20H54V44H46M18 44H10M18 34H46V58H18ZM24 42H40M24 50H40M44 26H48"/></symbol>
+<symbol id="wx-map" viewBox="0 0 64 64"><path d="M6 14L22 8L42 16L58 10V50L42 56L22 48L6 54ZM22 8V48M42 16V56M12 30L18 24L30 38L50 26M46 22L50 26L46 30"/></symbol>
+<symbol id="wx-telescope" viewBox="0 0 64 64"><path d="M8 24L44 8L50 22L14 38ZM44 8L50 6L56 20L50 22M30 32V44M30 44L18 58M30 44L42 58M30 44V58"/></symbol>
+<symbol id="wx-camera" viewBox="0 0 64 64"><path d="M8 20H20L24 12H40L44 20H56V52H8ZM32 27A10 10 0 1 0 32 47A10 10 0 1 0 32 27M14 26H20M44 26H50"/></symbol>
+<symbol id="wx-spectrum" viewBox="0 0 64 64"><path d="M24 16L40 44H8ZM4 30H20M30 26L58 10M34 32L58 28M38 38L58 46"/></symbol>
+<symbol id="wx-opticalfiber" viewBox="0 0 64 64"><path d="M6 14C48 14 14 50 58 50M6 22C40 22 6 58 58 58M12 18H22M42 54H52M18 14L22 18L18 22M48 50L52 54L48 58"/></symbol>
+<symbol id="wx-antenna" viewBox="0 0 64 64"><path d="M32 58V24M24 58H40M24 24L32 16L40 24M18 16Q32 2 46 16M10 10Q32 -4 54 10M28 32H36"/></symbol>
+<symbol id="wx-radio" viewBox="0 0 64 64"><path d="M8 24H56V54H8ZM14 24L40 8M16 34H34M16 42H34M16 48H34M46 36A5 5 0 1 0 46 46A5 5 0 1 0 46 36"/></symbol>
+<symbol id="wx-internet" viewBox="0 0 64 64"><path d="M32 6A26 26 0 1 0 32 58A26 26 0 1 0 32 6M6 32H58M12 18H52M12 46H52M32 6C14 18 14 46 32 58C50 46 50 18 32 6"/></symbol>
+<symbol id="wx-database" viewBox="0 0 64 64"><ellipse cx="32" cy="14" rx="22" ry="8"/><path d="M10 14V50C10 60 54 60 54 50V14M10 30C10 40 54 40 54 30M10 44C10 54 54 54 54 44"/></symbol>
+<symbol id="wx-ai" viewBox="0 0 64 64"><path d="M20 10H44L54 20V44L44 54H20L10 44V20ZM24 24H40V40H24ZM4 24H10M4 40H10M54 24H60M54 40H60M24 4V10M40 4V10M24 54V60M40 54V60M24 32H40"/></symbol>
+<symbol id="wx-digitaltwin" viewBox="0 0 64 64"><path d="M6 20L18 12L30 20V42L18 50L6 42ZM34 20L46 12L58 20V42L46 50L34 42M6 20L18 28L30 20M18 28V50M34 20L46 28L58 20M46 28V50M28 6H40M36 2L40 6L36 10M24 58H36M28 54L24 58L28 62"/></symbol>
+<symbol id="wx-leaf" viewBox="0 0 64 64"><path d="M10 54Q4 14 54 8Q60 48 10 54ZM10 54L46 18M22 42L20 28M32 32L46 34M40 24L40 14"/></symbol>
+<symbol id="wx-photosynthesis" viewBox="0 0 64 64"><path d="M10 52Q10 24 36 24Q40 50 10 52ZM10 52L28 32M46 8A8 8 0 1 0 46 24A8 8 0 1 0 46 8M46 2V4M58 16H62M36 6L38 8M48 32V48M44 44L48 48L52 44"/></symbol>
+<symbol id="wx-oxygen" viewBox="0 0 64 64"><circle cx="22" cy="32" r="14"/><circle cx="46" cy="32" r="10"/><path d="M30 26H38M30 38H38M14 26Q20 20 26 26M42 28Q46 24 50 28"/></symbol>
+<symbol id="wx-carboncycle" viewBox="0 0 64 64"><path d="M10 26A24 24 0 0 1 50 14L56 20M56 8V20H44M54 38A24 24 0 0 1 14 50L8 44M8 56V44H20M36 22H28L22 32L28 42H36"/></symbol>
+<symbol id="wx-microbe" viewBox="0 0 64 64"><path d="M20 12C4 22 14 50 32 50C50 50 56 28 42 16C34 8 26 20 20 12ZM12 20L6 16M14 38L6 42M28 50V58M44 46L52 52M50 28H58M38 14L44 6M24 28H28M34 38H38M34 24H38"/></symbol>
+<symbol id="wx-fermentation" viewBox="0 0 64 64"><path d="M18 12H46M22 12V22Q12 28 12 40V54H52V40Q52 28 42 22V12M12 42H52M22 34A3 3 0 1 0 22 40A3 3 0 1 0 22 34M36 28A3 3 0 1 0 36 34A3 3 0 1 0 36 28M30 4V8"/></symbol>
+<symbol id="wx-compost" viewBox="0 0 64 64"><path d="M8 54L18 36L30 42L40 28L56 54ZM18 36L26 30M30 42L36 38M20 20Q20 6 34 8Q34 22 20 20ZM20 20L30 12M46 16V24M42 20H50"/></symbol>
+<symbol id="wx-ecosystem" viewBox="0 0 64 64"><path d="M32 6A26 26 0 1 0 32 58A26 26 0 1 0 32 6M12 38L20 24L28 38H12M20 38V46M32 18C54 28 24 36 46 48M12 50H26M18 22V14M14 18H22"/></symbol>
+<symbol id="wx-habitat" viewBox="0 0 64 64"><path d="M8 32L32 10L56 32M14 28V54H50V28M26 54V40H38V54M24 28Q24 18 34 20Q34 30 24 28M20 34L30 24"/></symbol>
+<symbol id="wx-biodiversity" viewBox="0 0 64 64"><path d="M32 56V30M32 38L18 24M32 44L46 32M18 24Q4 22 10 10Q24 10 18 24M46 32Q40 18 54 18Q60 30 46 32M32 24Q20 12 32 4Q44 12 32 24M16 56H48"/></symbol>
+<symbol id="wx-human" viewBox="0 0 64 64"><circle cx="32" cy="12" r="7"/><path d="M18 56V36L12 44M46 56V36L52 44M20 32Q32 24 44 32M32 26V46M32 46L24 60M32 46L40 60M24 36L32 42L40 36"/></symbol>
+<symbol id="wx-cell" viewBox="0 0 64 64"><path d="M12 10H50L56 20V48L46 56H14L8 46V20ZM18 18H44L48 26V42L40 48H20L16 40V26M32 26A7 7 0 1 0 32 40A7 7 0 1 0 32 26"/></symbol>
+<symbol id="wx-tissue" viewBox="0 0 64 64"><path d="M8 12H24V28H8ZM24 12H40V28H24ZM40 12H56V28H40ZM8 28H24V44H8ZM24 28H40V44H24ZM40 28H56V44H40M16 20H18M32 20H34M48 20H50M16 36H18M32 36H34M48 36H50M8 52H56"/></symbol>
+<symbol id="wx-organ" viewBox="0 0 64 64"><path d="M32 56C12 46 6 30 16 20C22 14 30 18 32 24C34 14 44 12 50 22C60 38 44 50 32 56ZM32 24L26 34L38 34L32 44M24 12V6M40 12V6"/></symbol>
+<symbol id="wx-organism" viewBox="0 0 64 64"><path d="M32 6C10 6 8 24 14 40C20 58 44 58 50 40C56 24 54 6 32 6ZM32 20V46M20 30L32 36L44 30M20 42L32 46L44 42"/><circle cx="32" cy="14" r="3"/></symbol>
+<symbol id="wx-metabolism" viewBox="0 0 64 64"><path d="M6 20H24L20 16M24 20L20 24M40 44H58L54 40M58 44L54 48M24 10L14 32L24 54H40L50 32L40 10ZM26 32H38M32 24V40"/></symbol>
+<symbol id="wx-circulation" viewBox="0 0 64 64"><path d="M32 6C10 6 10 58 32 58C54 58 54 6 32 6M32 6V18M28 14L32 18L36 14M32 58V46M28 50L32 46L36 50M26 26Q32 18 38 26L32 38Z"/></symbol>
+<symbol id="wx-homeostasis" viewBox="0 0 64 64"><path d="M8 32H18L24 20L30 44L36 26L42 32H56M14 12H50M14 52H50M14 12L20 6M50 52L44 58"/></symbol>
+<symbol id="wx-qi" viewBox="0 0 64 64"><path d="M10 18Q26 4 48 14M8 30Q28 16 52 28M14 42Q32 30 54 40M22 54Q38 44 56 50M42 8L48 14L40 18"/></symbol>
+<symbol id="wx-blood" viewBox="0 0 64 64"><path d="M32 8C24 20 14 30 14 42A18 18 0 0 0 50 42C50 30 40 20 32 8ZM24 42Q24 50 32 50M32 28V40M26 34H38"/></symbol>
+<symbol id="wx-essence" viewBox="0 0 64 64"><path d="M32 56Q8 42 14 18Q40 0 50 20Q58 44 32 56ZM32 56V24M32 36L22 26M32 30L42 20M30 14H34"/></symbol>
+<symbol id="wx-spirit" viewBox="0 0 64 64"><path d="M6 32Q32 6 58 32Q32 58 6 32ZM32 20A12 12 0 1 0 32 44A12 12 0 1 0 32 20M32 26V38M26 32H38M32 4V10M32 54V60"/></symbol>
+<symbol id="wx-meridian" viewBox="0 0 64 64"><path d="M22 6Q46 18 22 32Q2 46 30 58M42 6Q18 18 42 32Q62 46 34 58M22 18H42M22 46H42"/><circle cx="22" cy="18" r="3"/><circle cx="42" cy="46" r="3"/></symbol>
+<symbol id="wx-acupuncture" viewBox="0 0 64 64"><path d="M16 58Q6 36 22 12M38 58Q50 36 38 12M30 8L38 12L22 44M28 6L40 12M22 44L18 52M16 30H28M30 46H42"/></symbol>
+<symbol id="wx-mugwort" viewBox="0 0 64 64"><path d="M32 58V10M32 20L18 12L14 18L24 28M32 32L46 20L52 24L40 40M32 44L16 32L10 38L24 52M32 52L46 40L52 46L38 58"/></symbol>
+<symbol id="wx-prescription" viewBox="0 0 64 64"><path d="M12 8H44L52 16V56H12ZM44 8V18H52M20 26H42M20 34H42M20 42H30M36 42V50M32 46H40"/></symbol>
+<symbol id="wx-diagnosis" viewBox="0 0 64 64"><path d="M8 14H28V50H8ZM36 14H56V50H36M14 22H22M14 30H22M14 38H22M42 22H50M42 30H50M42 38H50M28 32H36M30 28L34 32L30 36"/></symbol>
+<symbol id="wx-pulse" viewBox="0 0 64 64"><path d="M6 36H16L22 18L30 48L38 26L44 36H58M10 54H54M12 10H22M42 10H52"/></symbol>
+<symbol id="wx-yin-yang-balance" viewBox="0 0 64 64"><path d="M8 42H56M16 42L10 54H22ZM48 42L42 54H54ZM32 36V58M24 58H40M32 6A14 14 0 1 0 32 34A14 14 0 1 0 32 6M32 6C14 14 50 26 32 34"/></symbol>
+<symbol id="wx-health" viewBox="0 0 64 64"><path d="M32 56C6 40 8 14 24 14Q30 14 32 22Q36 10 48 16C64 28 46 48 32 56ZM18 32H26L30 24L36 42L40 32H50"/></symbol>
+<symbol id="wx-prevention" viewBox="0 0 64 64"><path d="M32 6L54 16V34Q50 50 32 58Q14 50 10 34V16ZM20 32L28 40L44 24M24 14H40"/></symbol>
+<symbol id="wx-connection" viewBox="0 0 64 64"><circle cx="14" cy="32" r="9"/><circle cx="50" cy="32" r="9"/><path d="M23 28H41M23 36H41M28 20L36 12M28 44L36 52"/></symbol>
+<symbol id="wx-structure" viewBox="0 0 64 64"><path d="M22 6H42V20H22ZM6 42H22V58H6ZM42 42H58V58H42ZM24 42H40V58H24M32 20V30M14 30H50M14 30V42M32 30V42M50 30V42"/></symbol>
+<symbol id="wx-function" viewBox="0 0 64 64"><path d="M10 18H24V46H10ZM40 18H54V46H40M24 32H40M30 26L38 32L30 38M18 10V6M46 54V58"/></symbol>
+<symbol id="wx-emergence" viewBox="0 0 64 64"><circle cx="14" cy="46" r="7"/><circle cx="50" cy="46" r="7"/><path d="M20 40L28 28M44 40L36 28M32 6L36 16L46 20L36 24L32 34L28 24L18 20L28 16ZM24 48H40"/></symbol>
+<symbol id="wx-boundary" viewBox="0 0 64 64"><path d="M10 10H26M38 10H54V54H38M26 54H10V10M4 32H26M20 26L26 32L20 38M38 32H60M54 26L60 32L54 38"/></symbol>
+<symbol id="wx-openness" viewBox="0 0 64 64"><path d="M12 8H52V24M52 40V56H12V40M12 24V8M2 32H26M20 26L26 32L20 38M38 32H62M56 26L62 32L56 38"/></symbol>
+<symbol id="wx-adaptation" viewBox="0 0 64 64"><path d="M8 50L22 36L34 40L56 14M44 14H56V26M8 14H26M8 22H18M8 30H12M24 56H56"/></symbol>
+<symbol id="wx-selforganization" viewBox="0 0 64 64"><circle cx="32" cy="8" r="4"/><circle cx="12" cy="24" r="4"/><circle cx="52" cy="24" r="4"/><circle cx="20" cy="50" r="4"/><circle cx="44" cy="50" r="4"/><path d="M28 10L16 22M36 10L48 22M12 28L18 46M52 28L46 46M24 50H40M16 26L40 48M48 26L24 48"/></symbol>
+<symbol id="wx-cooperation" viewBox="0 0 64 64"><path d="M8 16H24V32H8ZM40 16H56V32H40M24 24H40M18 32V44H46V32M26 44V54H38V44M12 10V6M52 10V6"/></symbol>
+<symbol id="wx-hierarchy" viewBox="0 0 64 64"><path d="M8 8H56V56H8ZM16 18H48V48H16ZM24 28H40V40H24M8 14H56M16 24H48M24 34H40"/></symbol>
+<symbol id="wx-memory" viewBox="0 0 64 64"><path d="M12 10H42L52 20V54H12ZM20 18H36V30H20ZM20 40H44V54M42 10V22H52M26 44V50M34 44V50"/></symbol>
+<symbol id="wx-resilience" viewBox="0 0 64 64"><path d="M10 18H54M10 46H54M20 18L44 26L20 34L44 42L32 46M32 6V14M28 10L32 14L36 10M32 50V58M28 54L32 58L36 54"/></symbol>
+<symbol id="wx-purpose" viewBox="0 0 64 64"><circle cx="30" cy="34" r="22"/><circle cx="30" cy="34" r="12"/><path d="M30 34L56 8M44 8H56V20M26 34H34M30 30V38"/></symbol>
+<symbol id="wx-energy" viewBox="0 0 64 64"><path d="M36 4L12 36H28L24 60L52 26H34ZM6 12L12 18M52 46L58 52"/></symbol>
+<symbol id="wx-flow" viewBox="0 0 64 64"><path d="M6 16H24C42 16 22 48 40 48H58M6 26H22C32 26 12 58 40 58H58M48 42L58 48L48 54M14 10L24 16L14 22"/></symbol>
+<symbol id="wx-environment" viewBox="0 0 64 64"><path d="M32 6A26 26 0 1 0 32 58A26 26 0 1 0 32 6M20 20H44V44H20ZM4 32H14M50 32H60M32 4V14M32 50V60"/></symbol>
+<symbol id="wx-time" viewBox="0 0 64 64"><path d="M18 6H46M18 58H46M22 6V18L42 46V58M42 6V18L22 46V58M22 18H42M22 46H42M28 50H36"/></symbol>
+<symbol id="wx-forecast" viewBox="0 0 64 64"><path d="M8 8V54H58M14 44L24 34L34 38L44 20M44 20L50 14M54 10L58 6M40 14L44 20L50 20"/></symbol>
+<symbol id="wx-nature" viewBox="0 0 64 64"><path d="M6 50L20 26L32 46L42 34L58 50ZM32 8A8 8 0 1 0 32 24A8 8 0 1 0 32 8M6 58Q20 52 32 58T58 58M50 14H58"/></symbol>
+<symbol id="wx-meta-wholeness" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M32 6C4 22 60 42 32 58M6 32C22 4 42 60 58 32"/><circle cx="32" cy="32" r="5"/></symbol>
+<symbol id="wx-non-additivity" viewBox="0 0 64 64"><path d="M10 42L22 22L34 42ZM30 42L42 22L54 42M12 50H52M32 6L36 14L32 22L28 14Z"/><circle cx="32" cy="32" r="26"/></symbol>
+<symbol id="wx-nature-human" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><circle cx="32" cy="22" r="5"/><path d="M22 42L32 30L42 42M32 30V50M10 38L20 28L26 36M38 36L46 28L54 38M26 10H38"/></symbol>
+<symbol id="wx-autonomy-principle" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M18 30A14 14 0 0 1 44 24M44 16V24H36M46 34A14 14 0 0 1 20 40M20 48V40H28M28 28H36V36H28Z"/></symbol>
+<symbol id="wx-order-principle" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M14 22H50M18 32H46M22 42H42M20 18V26M32 28V36M38 38V46"/></symbol>
+<symbol id="wx-organicity-principle" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M32 48V18M32 30Q14 30 16 16Q30 14 32 30M32 38Q48 38 48 24Q34 22 32 38M22 48H42"/></symbol>
+<symbol id="wx-functionality-principle" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M14 20H26V44H14ZM38 20H50V44H38M26 32H38M30 26L36 32L30 38M22 12H42M22 52H42"/></symbol>
+<symbol id="wx-neijing" viewBox="0 0 64 64"><path d="M10 8H50V56H10ZM18 8V56M24 18H44M24 46H44"/><circle cx="34" cy="32" r="9"/><path d="M34 23C22 28 46 36 34 41"/></symbol>
+<symbol id="wx-nanjing" viewBox="0 0 64 64"><path d="M10 8H50V56H10ZM18 8V56M28 22Q28 14 36 16Q46 20 36 28Q32 30 32 36M32 42V44M24 50H44"/></symbol>
+<symbol id="wx-shanghan" viewBox="0 0 64 64"><path d="M10 8H50V56H10ZM18 8V56M24 20H44M24 28H44M24 38H32M38 34V46M32 40H44M24 50H44"/></symbol>
+<symbol id="wx-shennong" viewBox="0 0 64 64"><path d="M10 8H50V56H10ZM18 8V56M34 48V22M34 32Q22 32 24 20Q36 20 34 32M34 40Q46 40 44 28Q32 28 34 40M24 50H44"/></symbol>
+<symbol id="wx-inspection" viewBox="0 0 64 64"><path d="M6 30Q32 6 58 30Q32 54 6 30ZM32 20A10 10 0 1 0 32 40A10 10 0 1 0 32 20M32 26V34M10 54H54"/></symbol>
+<symbol id="wx-listening" viewBox="0 0 64 64"><path d="M18 44Q8 32 18 18Q32 2 44 18Q52 32 38 42Q32 46 32 54M22 38Q18 28 26 22Q34 18 38 28L30 32M50 16L56 10M52 28H60"/></symbol>
+<symbol id="wx-inquiry" viewBox="0 0 64 64"><path d="M8 10H56V42H30L18 54V42H8ZM24 22Q24 16 32 16Q42 18 34 26L30 30M30 34V36"/></symbol>
+<symbol id="wx-palpation" viewBox="0 0 64 64"><path d="M8 48H56M16 44V26Q16 22 20 22H40Q44 22 44 26V44M20 22V12M28 22V8M36 22V12M12 38H20L24 30L30 44L36 34H52"/></symbol>
+<symbol id="wx-four-examinations" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M18 18H28V28H18ZM36 18H46V28H36ZM18 36H28V46H18ZM36 36H46V46H36M28 23H36M23 28V36M41 28V36M28 41H36"/></symbol>
+<symbol id="wx-jin" viewBox="0 0 64 64"><path d="M18 8Q8 24 18 28Q28 24 18 8ZM44 14Q34 30 44 34Q54 30 44 14M8 44Q18 36 28 44T48 44M16 54Q26 46 36 54T56 54"/></symbol>
+<symbol id="wx-ye" viewBox="0 0 64 64"><path d="M32 6Q12 28 16 42Q20 56 32 56Q44 56 48 42Q52 28 32 6ZM18 36Q25 30 32 36T46 36M20 44Q26 38 32 44T44 44M26 50H38"/></symbol>
+<symbol id="wx-six-foundations" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M32 12L49 22V42L32 52L15 42V22ZM32 12V52M15 22L49 42M49 22L15 42"/><circle cx="32" cy="32" r="5"/></symbol>
+<symbol id="wx-mercury" viewBox="0 0 64 64"><path d="M10 40Q18 26 30 34Q38 24 48 34Q60 38 54 48Q34 60 12 50Q6 46 10 40ZM18 42Q24 38 30 42M44 8Q34 22 44 26Q54 22 44 8M16 14Q8 24 16 28Q24 24 16 14"/></symbol>
+<symbol id="wx-machine-learning" viewBox="0 0 64 64"><path d="M10 14H54V46H10ZM22 54H42M32 46V54M18 38L26 30L34 34L46 22M40 22H46V28M18 22H24"/></symbol>
+<symbol id="wx-fortress" viewBox="0 0 64 64"><path d="M8 56V18H16V26H24V18H32V26H40V18H48V26H56V56ZM8 38H56M26 56V46Q32 38 38 46V56M16 44V50M48 44V50M18 8H46"/></symbol>
+<symbol id="wx-doctor" viewBox="0 0 64 64"><circle cx="32" cy="12" r="7"/><path d="M14 58V34Q32 22 50 34V58M24 30L32 42L40 30M22 34V46Q22 52 28 52M42 34V44M38 44A4 4 0 1 0 46 44A4 4 0 1 0 38 44M32 42V58"/></symbol>
 </defs></svg>
