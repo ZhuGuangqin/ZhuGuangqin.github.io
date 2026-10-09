@@ -21,3 +21,7 @@ main:
   - title: "了解我"
     title_en: "Know Me"
     url: /cv/
+
+  - title: "实验室"
+    title_en: "Labs"
+    url: /labs/

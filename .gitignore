@@ -26,3 +26,4 @@ package-lock.json
 .impeccable/review/
 .impeccable/config.local.json
 .impeccable/build/
+outputs/

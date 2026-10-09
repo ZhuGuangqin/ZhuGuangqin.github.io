@@ -206,6 +206,7 @@ exclude:
   - README
   - tmp
   - tests             # 本地交互测试，不发布到网站
+  - outputs           # 本地交付稿，不重复发布
   - tools             # 本地内容编辑器，不发布到网站
   - vendor
 keep_files:

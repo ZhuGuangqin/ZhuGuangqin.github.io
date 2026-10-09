@@ -1,17 +1,18 @@
 <section class="principle-game" id="flow-game" data-principle="flow" aria-labelledby="flow-title">
   <details data-pe-shell>
     <summary class="pe-entry">
-      <div><h2 id="flow-title"><span data-i18n="zh">循流 · 有序性</span><span data-i18n="en">Flow · Orderedness</span></h2><p><span data-i18n="zh">转一转通路，让每个片段找到它的位置。</span><span data-i18n="en">Turn the paths. Give every piece a place in the whole.</span></p></div>
+      <div><h2 id="flow-title"><span data-i18n="zh">有序实验室</span><span data-i18n="en">Order Lab</span></h2><p><span data-i18n="zh">有序性：构件不变，改变它们的组织方式。</span><span data-i18n="en">Orderedness: the pieces stay. Their relationships change.</span></p></div>
       <svg class="pe-entry-mark" viewBox="0 0 72 48" aria-hidden="true"><path d="M6 24H24V8H48V40H66M24 24H48"/><circle cx="6" cy="24" r="3"/><circle cx="66" cy="40" r="3"/></svg>
       <span class="pe-entry-action" data-pe-entry-action></span>
     </summary>
     <noscript><p>开启 JavaScript 即可旋转通路。/ Enable JavaScript to play.</p></noscript>
     <div class="pe-app" data-pe-app hidden>
-      <div class="pe-toolbar"><label><span data-i18n="zh">选择关卡</span><span data-i18n="en">Choose a level</span><select data-pe-level aria-label="循流关卡 / Flow level"></select></label><p data-pe-collection></p></div>
+      <div class="pe-toolbar"><label><span data-i18n="zh">选择关卡</span><span data-i18n="en">Choose a level</span><select data-pe-level aria-label="有序实验室关卡 / Order Lab level"></select></label><p data-pe-collection></p></div>
       <div class="pe-layout">
         <div class="pe-playfield"><div class="pe-flow-board" data-pe-board role="group" aria-label="旋转通路 / Rotate the paths"></div><p class="pe-board-key"><span data-i18n="zh">双环是泉眼；实线已连通，虚线待连接。点击顺时针转动，方向键移动焦点。</span><span data-i18n="en">Double ring: spring. Solid paths connect; dashed ones wait. Click to turn clockwise; arrow keys move focus.</span></p></div>
         <div class="pe-side">
           <h3 data-pe-level-title tabindex="-1"></h3><p data-pe-instruction></p>
+          <div class="pe-modes"><button type="button" data-pe-direction aria-pressed="false"></button><button type="button" data-pe-ports aria-pressed="false"></button></div>
           <div class="pe-readings" data-pe-readings></div>
           <p class="pe-status" role="status" aria-live="polite" aria-atomic="true" data-pe-status></p>
           <div class="pe-actions"><button type="button" class="pe-primary" data-pe-test></button><button type="button" data-pe-hint></button><button type="button" data-pe-retry></button><button type="button" data-pe-undo></button><button type="button" data-pe-next hidden></button></div>
@@ -20,39 +21,6 @@
         </div>
       </div>
       <details class="pe-records"><summary><span data-i18n="zh">关卡记录</span><span data-i18n="en">Level collection</span></summary><div data-pe-records></div><button type="button" class="pe-reset-trigger" data-pe-reset></button><div class="pe-reset-box" data-pe-reset-box hidden><p data-pe-reset-copy></p><div class="pe-actions"><button type="button" data-pe-reset-confirm></button><button type="button" data-pe-reset-cancel></button></div></div></details>
-      <p class="pe-save" data-pe-save></p>
-    </div>
-  </details>
-</section>
-<section class="principle-game" id="garden-game" data-principle="garden" aria-labelledby="garden-title">
-  <details data-pe-shell>
-    <summary class="pe-entry">
-      <div><h2 id="garden-title"><span data-i18n="zh">守衡花园 · 自主性</span><span data-i18n="en">Balance Garden · Autonomy</span></h2><p><span data-i18n="zh">留给花园三条规则，让它自己应对晴雨。</span><span data-i18n="en">Give your garden three rules. Let it face changing weather.</span></p></div>
-      <svg class="pe-entry-mark" viewBox="0 0 72 48" aria-hidden="true"><path d="M17 24A19 19 0 0 1 52 14M52 6V14H44M55 24A19 19 0 0 1 20 34M20 42V34H28"/><circle cx="36" cy="24" r="6"/></svg>
-      <span class="pe-entry-action" data-pe-entry-action></span>
-    </summary>
-    <noscript><p>开启 JavaScript 即可设定规则。/ Enable JavaScript to play.</p></noscript>
-    <div class="pe-app" data-pe-app hidden>
-      <div class="pe-toolbar"><label><span data-i18n="zh">选择天气</span><span data-i18n="en">Choose the weather</span><select data-pe-level aria-label="花园关卡 / Garden level"></select></label><p data-pe-collection></p></div>
-      <div class="pe-layout pe-garden-layout">
-        <div class="pe-playfield">
-          <div class="pe-water-scene"><svg viewBox="0 0 360 290" class="pe-reservoir" role="img" data-pe-reservoir aria-label="花园水量 / Garden water level"><defs><clipPath id="pe-water-clip"><circle cx="180" cy="139" r="99"/></clipPath></defs><g data-pe-petals></g><circle class="pe-water-outline" cx="180" cy="139" r="101"/><g clip-path="url(#pe-water-clip)"><path class="pe-safe-band" d="M65 109H295V169H65Z"/><rect class="pe-water-fill" x="78" y="39" width="204" height="200" data-pe-water-fill/><path class="pe-waterline" d="M80 139H280" data-pe-waterline/></g><path class="pe-water-limit" d="M78 109H282M78 169H282"/><text x="180" y="139" class="pe-water-number" text-anchor="middle" data-pe-water-number></text><text x="180" y="161" class="pe-water-caption" text-anchor="middle" data-pe-water-caption></text><text x="180" y="278" class="pe-weather-caption" text-anchor="middle" data-pe-weather></text></svg></div>
-          <p class="pe-status" role="status" aria-live="polite" aria-atomic="true" data-pe-status></p>
-          <div class="pe-actions"><button type="button" class="pe-primary" data-pe-run></button><button type="button" data-pe-step></button><button type="button" data-pe-retry></button><button type="button" data-pe-next hidden></button></div>
-          <div class="pe-timeline-heading"><span data-pe-beat></span><span data-pe-safe></span></div>
-          <svg class="pe-history" viewBox="0 0 480 150" role="img" data-pe-history aria-label="水量变化与对照 / Water history and comparison"><path class="pe-chart-band" d="M12 51H468V93H12Z"/><path class="pe-chart-mid" d="M12 72H468"/><path class="pe-chart-base" data-pe-base-line/><path class="pe-chart-actual" data-pe-actual-line/></svg>
-          <p class="pe-legend"><span><svg viewBox="0 0 24 6" aria-hidden="true"><path d="M0 3H24"/></svg><span data-i18n="zh">你的花园</span><span data-i18n="en">Your garden</span></span><span><svg viewBox="0 0 24 6" aria-hidden="true"><path d="M0 3H24" stroke-dasharray="3 3"/></svg><span data-i18n="zh">同幅度定时补水</span><span data-i18n="en">Constant watering, same strength</span></span></p>
-          <p class="pe-board-key"><span data-i18n="zh">舒适区 35–65，水盘和曲线均为游戏刻度。每两拍舒适生长，点亮一片花瓣。</span><span data-i18n="en">Comfort range: 35–65 in game units. Every two comfortable beats light one petal.</span></p>
-        </div>
-        <div class="pe-side">
-          <h3 data-pe-level-title tabindex="-1"></h3><p data-pe-instruction></p>
-          <fieldset class="pe-rulebook"><legend><span data-i18n="zh">先定规则，再看它运行</span><span data-i18n="en">Set the rules, then watch</span></legend><label><span data-pe-rule-label="dry"></span><select data-pe-rule="dry"></select></label><label><span data-pe-rule-label="ok"></span><select data-pe-rule="ok"></select></label><label><span data-pe-rule-label="wet"></span><select data-pe-rule="wet"></select></label><label><span data-i18n="zh">每次调节幅度</span><span data-i18n="en">Correction strength</span><select data-pe-strength><option value="3"></option><option value="5"></option><option value="8"></option></select></label></fieldset>
-          <p class="pe-goal" data-pe-goal></p><button type="button" class="pe-preview" data-pe-preview><span data-i18n="zh">回到花园观察</span><span data-i18n="en">See your garden</span></button>
-          <div class="pe-rescue"><p data-pe-rescue-note></p><div class="pe-actions"><button type="button" data-pe-rescue="add"></button><button type="button" data-pe-rescue="drain"></button></div></div>
-          <details class="pe-about"><summary><span data-i18n="zh">为何是自主性？</span><span data-i18n="en">Why autonomy?</span></summary><p><span data-i18n="zh">同样的天气，固定输入与根据自身状态调节，会走出不同的轨迹。反馈并非总比固定输入好：容量、延迟和环境都会改变结果。这里借用自主调节的思想，数值是虚构的蓄水游戏，不代表人的生理机制或调养建议。每轮规则锁定，重试可更改；对照不包含应急操作。</span><span data-i18n="en">Under the same weather, fixed input and state-based regulation can take different paths. Feedback is not always better: capacity, delay and weather matter. This is a fictional reservoir game inspired by self-regulation, not a physiological model or health advice. Rules lock for a run; retry to change them. The comparison excludes rescue actions.</span></p><a href="{{ '/publication/2023-fupin-zhenfa' | relative_url }}"><span data-i18n="zh">阅读：系统中医学中的自主调节</span><span data-i18n="en">Read: self-regulation in Systems TCM</span></a></details>
-        </div>
-      </div>
-      <details class="pe-records"><summary><span data-i18n="zh">花园收藏</span><span data-i18n="en">Garden collection</span></summary><div data-pe-records></div><button type="button" class="pe-reset-trigger" data-pe-reset></button><div class="pe-reset-box" data-pe-reset-box hidden><p data-pe-reset-copy></p><div class="pe-actions"><button type="button" data-pe-reset-confirm></button><button type="button" data-pe-reset-cancel></button></div></div></details>
       <p class="pe-save" data-pe-save></p>
     </div>
   </details>

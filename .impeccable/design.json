@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-08T16:34:28.917952+00:00",
+  "generatedAt": "2026-10-09T01:17:07.990850+00:00",
   "title": "Design System: 祝广钦 / Guangqin Zhu",
   "extensions": {
     "colorMeta": {
@@ -583,7 +583,7 @@
       {
         "name": "exhibition-ambient",
         "value": "0 14px 40px #0002",
-        "purpose": "Reading dock and season menu; source --research-shadow."
+        "purpose": "Reading dock and season menu; source --research-shadow. Mobile Labs reading dock explicitly removes this shadow in normal flow."
       },
       {
         "name": "exhibition-volume-rest",
@@ -706,6 +706,21 @@
         "name": "wuxing-result-reveal",
         "value": "550ms cubic-bezier(.16,1,.3,1)",
         "purpose": "Result SVG appears once; no idle loop. Same cancellation paths as gathering."
+      },
+      {
+        "name": "order-conduit-turn",
+        "value": "180ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Local Order tile rotation; disabled by reduced/manual-off CSS."
+      },
+      {
+        "name": "order-reachability-pulse",
+        "value": "300ms; delay min(BFS distance * 40ms,480ms)",
+        "purpose": "One actual-reachability pulse on test or completion; context cancellation and static suppression."
+      },
+      {
+        "name": "autonomy-simulation-tick",
+        "value": "350ms / 180ms double speed",
+        "purpose": "Explicit finite game clock and matching SVG transition interval; not an idle animation or site-wide motion token."
       }
     ],
     "breakpoints": [
@@ -1134,13 +1149,118 @@
         "assets/js/wuxing-lab.js",
         "assets/js/wuxing-engine.js"
       ],
-      "scope": "Optional homepage Experience / Operate extension; inherits the seasonal exhibition world. 100 elements, 101 recipes; yin and yang open taiji, the five phases, air and light.",
+      "scope": "Creation Lab / Wuxing discovery workbench in the independent /labs/ hub; ordinary extension of the seasonal exhibition. 100 elements and 101 recipes; yin and yang open taiji, the five phases, air and light.",
       "material": "100 original per-element SVG symbols, 64-unit view boxes, 2-unit current-color strokes with round caps and joins, explicit fills where needed. Existing display/body faces and seasonal variables; no new palette or shadows.",
       "layout": "1200px maximum; 1.1fr / 1fr bench with 36px gap and 40px side insets. Inventory 4 columns; atlas 8; formulas 2. At 900px: equal bench columns, 22px gap, inventory 3 and atlas 6. At 650px: stacked flow, 18px side insets, inventory/atlas 4 and formulas 1. At 360px: inventory/atlas 3.",
-      "controls": "Native disclosure and pressed-state view buttons. Bilingual name search, five families, optional hints, same-item pairs, keyboard/button and desktop drag paths. Atlas details and bench returns scroll with an 85px allowance and receive destination focus. Explicit reveal exposes undiscovered formulas; missing ingredients disable loading.",
+      "controls": "Native disclosure and pressed-state view buttons. Bilingual name search, five families, optional hints, same-item pairs, keyboard/button and desktop drag paths. Atlas details and bench returns receive destination focus and scroll with the Labs route's 130px allowance. Explicit reveal exposes undiscovered formulas; missing ingredients disable loading.",
       "state": "Only discovered recipe IDs persist under wuxing-lab-progress-v1. Versioned restoration discards invalid or unreachable routes and derives known elements. Storage failure is visible; current-language plain-text atlas/formula export remains available. Reset requires an explicit confirmation. Separate from document-only late summer and discoveries, and unsaved collaboration drafts.",
-      "motion": "One 460ms gathering and 550ms reveal using cubic-bezier(.16,1,.3,1). No idle loop. Cancel or omit on view/closure, blur/hidden, offscreen result, printing, focus, manual-off or system reduction. Focus and print omit the lab; no-script content explains JavaScript is required.",
-      "truth": "Recipes explicitly distinguish cultural image, simplified making and system relationship; not chemical equations, medical instructions or new research claims."
+      "motion": "One 460ms gathering and 550ms reveal using cubic-bezier(.16,1,.3,1). No idle loop. Cancel or omit on view/closure, blur/hidden, offscreen result, printing, focus, manual-off or system reduction. The Labs override retains Creation and Order in focus mode; all three labs are omitted from print. No-script disclosures explain JavaScript is required.",
+      "truth": "Recipes explicitly distinguish cultural image, simplified making and system relationship; not chemical equations, medical instructions or new research claims.",
+      "hubBrief": ".impeccable/briefs/labs-hub.md",
+      "editorialAtlas": {
+        "directory": "assets/downloads/wuxing/",
+        "workbook": "造物实验室-图鉴与公式.xlsx",
+        "sheets": [
+          "图鉴",
+          "公式",
+          "编修说明"
+        ],
+        "elements": 100,
+        "recipes": 101,
+        "embeddedThumbnails": 100,
+        "companions": [
+          "完整图鉴.html",
+          "图鉴.csv",
+          "公式.csv",
+          "原始数据.json"
+        ],
+        "content": "Stable element/recipe IDs, bilingual names and descriptions/explanations, recipe relationships and extra unlock IDs, editable comment columns, complete symbols.",
+        "availability": "The lab action downloads the workbook. HTML companion links the workbook and both CSVs; raw JSON is a separate direct artifact. Discovered current-language text export remains a separate in-lab action.",
+        "handoff": "Edited files require author review and deliberate synchronization; no live upload, import or automatic publishing path.",
+        "sourceIntegrity": "Exported JSON equals _data/wuxing_lab.json at this documentation pass; maintained source data was not changed.",
+        "visualBoundary": "Standalone editorial document styling is not a new site palette or type role."
+      }
+    },
+    "labsHub": {
+      "brief": ".impeccable/briefs/labs-hub.md",
+      "sources": [
+        "_layouts/labs.html",
+        "_pages/labs.html",
+        "assets/css/labs.css",
+        "assets/js/labs.js",
+        "_includes/research-tools.html",
+        "_layouts/default.html",
+        "_includes/head/custom.html",
+        "_includes/footer/custom.html"
+      ],
+      "scope": "Independent /labs/ route within the existing seasonal exhibition. No replacement world, comp, seed, font, palette, shadow vocabulary or framework.",
+      "navigation": "Top-level bilingual Labs entry; Creation, Order, Autonomy native disclosures with at most one open. Default Creation; recognized hash opens its lab. Summary/index updates current link without starting simulation.",
+      "legacyRoute": "Homepage #wuxing-lab, #flow-game and #garden-game redirect to corresponding /labs/ hashes with location.search preserved; concept-door entries target /labs/.",
+      "layout": {
+        "maxWidth": "1200px",
+        "sidebar": "none",
+        "headingInsets": "40px desktop / 20px at max-width:650px",
+        "indexInsets": "40px desktop / 18px at max-width:650px",
+        "indexTop": "64px desktop / 60px at max-width:650px",
+        "currentLink": "Accent underline, ink text; inactive muted, hover accent.",
+        "sectionBoardArenaScrollMargin": "130px desktop / 125px at max-width:650px",
+        "creationBenchDetailScrollMargin": "130px"
+      },
+      "mobileTools": {
+        "query": "max-width:650px",
+        "readingDock": "Relative normal-flow row before main; width calc(100% - 36px), max-width 450px, margin 18px auto 0, no shadow, controls min-height 44px.",
+        "returnAction": "Relative normal-flow #to-top after content; inset auto, display block, margin 18px 18px 18px auto.",
+        "desktop": "Existing floating dock and return action retained.",
+        "source": "assets/css/labs.css; _layouts/default.html; _includes/research-tools.html"
+      },
+      "focusAndPrint": "Focus mode retains all three labs; entering focus cancels Creation/Order effects and pauses an active Autonomy clock. Print hides interactive labs. Returning or reopening never resumes a paused simulation.",
+      "controls": "Reused exhibition panel/ink/line, gentle control corners, accent pressed selection and native accent focus outlines. Long guides and records are native disclosures.",
+      "evidence": "Source and exported-file-structure documentation scan only; no new live-browser measurements or whole-site verdict. Incumbent review records retain their historical scopes."
+    },
+    "orderLab": {
+      "sources": [
+        "_includes/principle-games.html",
+        "assets/css/principle-games.css",
+        "assets/js/principle-games.js",
+        "assets/js/principles-engine.js",
+        "_data/principle_games.json"
+      ],
+      "scope": "Order Lab on /labs/; 12 connection boards from 3x3 to 6x6, reusing seasonal exhibition materials.",
+      "layout": "Network first in 1.15fr / 1fr columns with 60px gap; max-width 460px board, 2px line gutters, square tile cells within 6px outer frame. At max-width:650px one column with 18px gap and diagnostics below board.",
+      "material": "Current-color SVG conduits; fixed double-ring spring; connected accent solid paths, disconnected dashed paths, optional crossed unmatched ports. Connected/Turns/Open ports readings come from current engine inspection.",
+      "controls": "Clockwise/counterclockwise pressed mode, R reverse turn, arrow-key navigation, undo, one-tile hint toward one known solution, test flow, retry, next board, collection, confirmed reset.",
+      "state": "principles-progress-v1 retains supported board orientations, moves, hints and collection. Confirmed reset clears flow records, preserving legacy garden fields.",
+      "motion": "180ms emergence-eased turn; one 300ms reachability pulse delayed by actual breadth-first distance * 40ms, capped at 480ms. No idle stream; closure/offscreen/hidden/blur/print/preference changes cancel effects; reduction/manual-off removes CSS transitions and suppresses pulses.",
+      "truth": "Actual connectivity and open-port diagnostics; hints do not claim an optimal route. Fictional system analogy, not medical evidence."
+    },
+    "autonomyLab": {
+      "sources": [
+        "_includes/autonomy-lab.html",
+        "assets/css/autonomy-lab.css",
+        "assets/js/autonomy-lab.js",
+        "assets/js/autonomy-engine.js",
+        "_data/autonomy_lab.json"
+      ],
+      "scope": "Original finite lane-defence game on /labs/; 6 levels with 3 to 5 waves. All artwork and mechanics use the exhibition world.",
+      "layout": "HUD, four-guard palette, arena and run controls capped at 900px. Three lanes and six columns; first five columns plantable, last entry-only. Palette remains four across on mobile, controls wrap, guide stacks.",
+      "material": "Original current-color SVG guards and threats, durability strokes, upgrade dot, accent pressed choice, actual state HUD and latest-response sentence. No new color family or idle art.",
+      "guards": {
+        "sprout": "Supplies energy",
+        "lotus": "Attacks targets and stores charge while idle",
+        "vine": "Blocks and regrows when free of nearby pressure",
+        "nexus": "Senses nearby damage or crowds, then repairs or slows"
+      },
+      "disturbances": [
+        "drift: ordinary",
+        "gust: fast",
+        "stone: durable"
+      ],
+      "controls": "Choose/place, arrow navigation, Enter/Space placement, one upgrade per guard, recycle, explicit wave launch/resume, pause, step, 1x/2x, retry, next level, collection and confirmed clear.",
+      "clock": "350ms ordinary / 180ms double-speed explicit simulation timer; SVG movement follows --td-tick. Each cleared wave returns to build phase awaiting the next explicit launch.",
+      "pause": "Closing, offscreen, document visibility change, window blur, beforeprint, and motion/focus/reduction preference changes stop active clock. Returning or reopening never resumes. Reduced/manual-off CSS removes visual transitions while explicit launch/resume/step remains available.",
+      "announcements": "Running status aria-live off; paused changes polite. Response count and latest event derive from engine state.",
+      "state": "autonomy-lab-progress-v1 stores selected level and best collection marks; refresh restarts current round. Confirmed reset affects this lab alone; legacy garden records remain separate.",
+      "truth": "Original fictional plants, threats and values illustrate one aspect of self-regulation; no human-body or treatment simulation."
     }
   },
   "components": [
@@ -1242,7 +1362,8 @@
       "An identifiable researcher and one integrated hemisphere on the homepage, with document-only late-summer discovery.",
       "Original mathematical line geometry and native scroll-driven perspective.",
       "Public-source records, truthful cover provenance, and direct reading alternatives.",
-      "An optional two-origin discovery workbench with distinct vector symbols, a readable atlas and recorded formulas.",
+      "Two optional scholarly discoveries: finite typographic reorganization and title-based publication connections with direct reading.",
+      "An independent Labs hub with optional creation, connection and local-response experiments in the exhibition world.",
       "Local fonts/assets, bilingual controls, keyboard/touch routes and reduced-motion reading."
     ],
     "rules": [
@@ -1257,6 +1378,11 @@
         "section": "colors"
       },
       {
+        "name": "Labs Flow",
+        "body": "Keep the mobile Labs reading dock before the main content and the return action after it in document flow, and keep the playfield and its actions reachable below the sticky local index. Floating tool treatments remain scoped to the routes and widths that use them.",
+        "section": "layout"
+      },
+      {
         "name": "Native Camera",
         "body": "Native vertical scrolling advances the spatial scenes. Preserve document scrolling and the direct controls; do not add wheel or touch scroll interception.",
         "section": "layout"
@@ -1265,6 +1391,16 @@
         "name": "Material Depth",
         "body": "Keep academic coordinates flat with a downward reveal. Projection, overlap, linework and perspective provide depth in the other Know Me scenes. The exhibition shelf may use its existing physical volume shadows; do not restore the removed broad shadow to Know Me cover faces.",
         "section": "elevation"
+      },
+      {
+        "name": "Editable Atlas",
+        "body": "Keep complete editorial data separate from discovered visitor progress, retain stable IDs and source explanations, and treat edited downloads as review material until the maintained site data is deliberately synchronized.",
+        "section": "components"
+      },
+      {
+        "name": "Explicit Clock",
+        "body": "Lab simulations start or continue through explicit controls. Context pauses and cleared waves require deliberate continuation; visual reduction keeps the state readable and the step route usable. These original game values illustrate system relationships and local responses without representing human physiology or treatment.",
+        "section": "components"
       },
       {
         "name": "Readable Edition",
@@ -1279,7 +1415,9 @@
       "Do retain distinct source labels for verified issue covers, owner-supplied book covers, topic artwork and records without a cover.",
       "Do keep original book pixels and the metadata-defined silhouette crop; put provenance in both the maintained source records and web-image metadata.",
       "Do maintain the shared mobile tool reservation and the readable linear/print paths when extending a scene.",
-      "Do preserve the homepage identity, one projected sky, complete 28-option semantic selector and document-only discovery lifetime."
+      "Do preserve the homepage identity, one projected sky, complete 28-option semantic selector and document-only discovery lifetime.",
+      "Do keep Labs in the exhibition namespace, its mobile dock in document flow, and each experiment's state and reset scope explicit.",
+      "Do preserve the complete atlas's stable IDs, bilingual explanations and editable comments separately from the visitor's discovered collection."
     ],
     "donts": [
       "Don't merge the exhibition palettes into the Know Me frame or generalize a page-specific scene into a mandatory global layout.",
@@ -1288,7 +1426,8 @@
       "Don't turn icon-font glyphs or inherited system display faces into a new visual-system rule; extend the local display fonts and inline SVG assets instead.",
       "Don't hide the direct reading routes behind motion, chase-only covers or the opening mark, or fabricate achievements/publication status.",
       "Don't treat the narrow final verdict pass as a fresh whole-surface or live performance endorsement.",
-      "Don't add a fifth celestial group or persist the late-summer unlock, or describe the rotating front hemisphere as showing all 28 mansions at once."
+      "Don't add a fifth celestial group or persist the late-summer unlock, or describe the rotating front hemisphere as showing all 28 mansions at once.",
+      "Don't restart a paused lab on reopening or imply that an edited atlas download automatically changes the published site."
     ]
   }
 }
