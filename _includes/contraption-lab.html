@@ -1,0 +1,26 @@
+<section class="contraption-lab" id="contraption-game" aria-labelledby="contraption-title">
+ <details data-cl-shell>
+  <summary class="cl-entry"><div><h2 id="contraption-title"><span data-i18n="zh">器用实验室</span><span data-i18n="en">Contraption Lab</span></h2><p><span data-i18n="zh">功能性：零件的用处，在关系中发生。</span><span data-i18n="en">Functionality: what a part does depends on its relationships.</span></p></div><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 34H52V47H10ZM22 34V17H39V34M30 17V9M39 23H54"/><circle cx="20" cy="49" r="7"/><circle cx="45" cy="49" r="7"/><circle cx="55" cy="23" r="5"/></svg><span data-cl-entry></span></summary>
+  <noscript><p>开启JavaScript即可拼装。/ Enable JavaScript to build.</p></noscript>
+  <div class="cl-app" data-cl-app hidden>
+   <div class="cl-scenario"><label><span data-i18n="zh">跑道</span><span data-i18n="en">Track</span><select data-cl-level aria-label="器用实验室跑道 / Contraption track"></select></label><span data-cl-best></span></div>
+   <h3 data-cl-title></h3><p class="cl-intro" data-cl-intro></p>
+   <div class="cl-game" data-cl-game>
+    <details class="cl-builder" data-cl-builder open><summary><span data-i18n="zh">装配台</span><span data-i18n="en">Assembly</span><span data-cl-count></span></summary>
+     <div class="cl-workbench"><div class="cl-jig" role="group" aria-label="九个安装位 / Nine mounting positions" data-cl-jig></div><div class="cl-parts" role="group" aria-label="选择零件或工具 / Choose a part or tool" data-cl-parts></div></div>
+     <div class="cl-build-tools"><button type="button" data-cl-sample></button><button type="button" data-cl-clear></button></div><p class="cl-build-note" data-cl-build-note></p>
+    </details>
+    <div class="cl-stage" data-cl-stage>
+     <div class="cl-hud"><span><small data-i18n="zh">行程</small><small data-i18n="en">Journey</small><strong data-cl-distance></strong></span><span><small data-i18n="zh">燃料</small><small data-i18n="en">Fuel</small><strong data-cl-fuel></strong></span><span><small data-i18n="zh">剩余</small><small data-i18n="en">Time left</small><strong data-cl-time></strong></span></div>
+     <div class="cl-run"><button class="cl-primary" type="button" data-cl-play></button><button type="button" data-cl-retry></button><button type="button" data-cl-step></button><button class="cl-primary" type="button" data-cl-next hidden></button></div>
+     <svg class="cl-field" data-cl-field viewBox="0 40 480 280" role="img" aria-label="载具运行场景 / Machine run"><g data-cl-ground></g><g data-cl-wind></g><g data-cl-goal></g><g data-cl-machine></g></svg>
+     <p class="cl-status" role="status" aria-live="polite" aria-atomic="true" data-cl-status></p><div class="cl-result" data-cl-result hidden><h4 data-cl-result-title></h4><p data-cl-result-copy></p></div>
+    </div>
+   </div>
+   <details class="cl-guide"><summary><span data-i18n="zh">怎么玩？</span><span data-i18n="en">How to play</span></summary><p><span data-i18n="zh">载荷固定在中央，再装最多4个零件。先选零件，再点安装位；风扇默认朝右。选「转向」后点风扇，每次转90度；选「拆卸」后点零件即可移除。1–4选零件，R转向，X拆卸，Enter/Space操作安装位。空白装配台可使用试玩拼装。</span><span data-i18n="en">The cargo core stays in the centre; add up to four parts. Choose a part, then tap a mount. Fans point right by default. Choose Rotate and tap a fan to turn it 90 degrees; choose Remove and tap a part to take it off. Keys 1–4 choose parts, R rotates, X removes, Enter/Space activates mounts. Try a sample on an empty jig.</span></p><p><span data-i18n="zh">轮子在下方接地时减少阻力；风扇沿箭头推送，燃料可用9秒；气囊一直上托，偏置会产生倾斜；弹簧接触地面后弹起一次。每个零件都会增加重量。落地过猛、侧翻、跌入裂谷或未及时抵达都可能失败。暂停可逐次推演0.25秒；重装保留设计，再改一个位置试试。试玩记录、数值和力学均为原创简化设定。</span><span data-i18n="en">Wheels reduce drag when mounted beneath the machine. Fans push along their arrows for nine seconds. Balloons lift continuously; offset lift can tip the craft. A spring jumps once on ground contact. Every part adds weight. Hard landings, tipping, gaps or running out of time can end a run. Step advances 0.25 seconds while paused. Rebuild keeps your design so you can change one thing. Values and physics are original simplified game rules.</span></p></details>
+   <details class="cl-guide"><summary><span data-i18n="zh">为何是功能性？</span><span data-i18n="en">Why functionality?</span></summary><p><span data-i18n="zh">同一个风扇在侧面朝右是推进器，换向后可以上托，偏离中心又可能把载具掀翻。零件的功能取决于它的位置、方向、其他零件及眼前的任务。这里只呈现原理的一个可玩侧面。参考Bad Piggies的拼装试跑思路，载具、地形、关卡和界面独立制作。</span><span data-i18n="en">The same fan can propel, lift or tip a machine depending on its direction and leverage. Function comes from position, orientation, other parts and the task at hand. This is one playful view of the principle. Inspired by Bad Piggies, with original machines, terrain, tracks and interface.</span></p></details>
+   <p class="cl-save" data-cl-save></p>
+  </div>
+ </details>
+ <script id="contraption-data" type="application/json">{{ site.data.contraption_lab | jsonify }}</script>
+</section>

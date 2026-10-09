@@ -1,13 +1,13 @@
 <section class="principle-game" id="flow-game" data-principle="flow" aria-labelledby="flow-title">
   <details data-pe-shell>
     <summary class="pe-entry">
-      <div><h2 id="flow-title"><span data-i18n="zh">有序实验室</span><span data-i18n="en">Order Lab</span></h2><p><span data-i18n="zh">有序性：构件不变，改变它们的组织方式。</span><span data-i18n="en">Orderedness: the pieces stay. Their relationships change.</span></p></div>
+      <div><h2 id="flow-title"><span data-i18n="zh">循流实验室</span><span data-i18n="en">Flow Lab</span></h2><p><span data-i18n="zh">有机性：构件完好，通与不通取决于联系。</span><span data-i18n="en">Organicity: intact parts, changing connections.</span></p></div>
       <svg class="pe-entry-mark" viewBox="0 0 72 48" aria-hidden="true"><path d="M6 24H24V8H48V40H66M24 24H48"/><circle cx="6" cy="24" r="3"/><circle cx="66" cy="40" r="3"/></svg>
       <span class="pe-entry-action" data-pe-entry-action></span>
     </summary>
     <noscript><p>开启 JavaScript 即可旋转通路。/ Enable JavaScript to play.</p></noscript>
     <div class="pe-app" data-pe-app hidden>
-      <div class="pe-toolbar"><label><span data-i18n="zh">选择关卡</span><span data-i18n="en">Choose a level</span><select data-pe-level aria-label="有序实验室关卡 / Order Lab level"></select></label><p data-pe-collection></p></div>
+      <div class="pe-toolbar"><label><span data-i18n="zh">选择关卡</span><span data-i18n="en">Choose a level</span><select data-pe-level aria-label="循流实验室关卡 / Flow Lab level"></select></label><p data-pe-collection></p></div>
       <div class="pe-layout">
         <div class="pe-playfield"><div class="pe-flow-board" data-pe-board role="group" aria-label="旋转通路 / Rotate the paths"></div><p class="pe-board-key"><span data-i18n="zh">双环是泉眼；实线已连通，虚线待连接。点击顺时针转动，方向键移动焦点。</span><span data-i18n="en">Double ring: spring. Solid paths connect; dashed ones wait. Click to turn clockwise; arrow keys move focus.</span></p></div>
         <div class="pe-side">
@@ -17,7 +17,7 @@
           <p class="pe-status" role="status" aria-live="polite" aria-atomic="true" data-pe-status></p>
           <div class="pe-actions"><button type="button" class="pe-primary" data-pe-test></button><button type="button" data-pe-hint></button><button type="button" data-pe-retry></button><button type="button" data-pe-undo></button><button type="button" data-pe-next hidden></button></div>
           <p class="pe-note" data-pe-hint-note></p>
-          <details class="pe-about"><summary><span data-i18n="zh">为何是有序性？</span><span data-i18n="en">Why orderedness?</span></summary><p><span data-i18n="zh">构件并没有增加，改变的是方向和连接。局部转对，不等于整体接通。这个游戏只借用“组织关系”的一个侧面，不把连通等同于熵，也不模拟经络或人体。</span><span data-i18n="en">The pieces stay the same; their orientation and connections change. A correct local turn need not complete the whole. This explores one aspect of organisation, without equating connectivity with entropy or modelling the body.</span></p><a href="{{ '/publication/2023-pi-zhu-yunhua' | relative_url }}"><span data-i18n="zh">阅读：有序性与“脾主运化”</span><span data-i18n="en">Read: orderedness and transportation & transformation</span></a></details>
+          <details class="pe-about"><summary><span data-i18n="zh">为何是有机性？</span><span data-i18n="en">Why organicity?</span></summary><p><span data-i18n="zh">每个构件都是完整的，失效来自接口的关系。旋转只改变朝向，不增删或替换构件；一处调整会改变整张网的通路。局部接通不等于整体协调，需要把每个节点放回联系中判断。这是有机性的局部游戏类比，不模拟经络、病因或治疗。</span><span data-i18n="en">Every piece is intact. Failure lies in its connections. Rotation changes relationships without adding or replacing parts, and one turn can affect the whole network. A local connection need not complete the whole. This is a playful analogy for organicity, not a model of the body or treatment.</span></p></details>
         </div>
       </div>
       <details class="pe-records"><summary><span data-i18n="zh">关卡记录</span><span data-i18n="en">Level collection</span></summary><div data-pe-records></div><button type="button" class="pe-reset-trigger" data-pe-reset></button><div class="pe-reset-box" data-pe-reset-box hidden><p data-pe-reset-copy></p><div class="pe-actions"><button type="button" data-pe-reset-confirm></button><button type="button" data-pe-reset-cancel></button></div></div></details>

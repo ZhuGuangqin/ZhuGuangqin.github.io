@@ -50,7 +50,31 @@
   zh: 自主性
   en: Autonomy
   aliases: [自主性, 自主调节, autonomy, self-regulation, self regulation]
-  description_zh: 从自主调节的思想进入“自主实验室”，也可阅读浮针疗法文章中的系统原理讨论。
-  description_en: Explore self-regulation in Autonomy Lab, or read the systems discussion in the Fu's acupuncture article.
+  description_zh: 阅读浮针疗法文章中有关自主调节的系统原理讨论。
+  description_en: Read the systems discussion of self-regulation in the Fu's acupuncture article.
   terms: [浮针]
   neighbours: [order, organisation, form]
+- id: organicity
+  zh: 有机性
+  en: Organicity
+  aliases: [有机性, organicity]
+  description_zh: 在循流实验室中旋转完整构件，观察局部接口如何改变整体通路。
+  description_en: Rotate intact pieces in Flow Lab and see how local connections change the whole network.
+  terms: [有机性, organicity]
+  neighbours: [wholeness, order, nonadditivity]
+- id: parent
+  zh: 天生人
+  en: Nature-born human
+  aliases: [天生人, 天生人原理, nature-born human, nature born human]
+  description_zh: 从外部条件与内部适应进入联动实验室，也可沿季节变化阅读本站研究。
+  description_en: Explore adaptation to surrounding conditions in Network Lab, alongside this site's seasonal research.
+  terms: [季节, 五脏应时, seasonal]
+  neighbours: [nature, wholeness, organicity]
+- id: functionality
+  zh: 功能性
+  en: Functionality
+  aliases: [功能性, functionality]
+  description_zh: 在器用实验室中改变零件的位置与方向，观察功能怎样随关系与任务改变。
+  description_en: Change the position and direction of parts in Contraption Lab to explore function in context.
+  terms: [功能性, functionality]
+  neighbours: [wholeness, organicity, nonadditivity]

@@ -1,0 +1,187 @@
+{
+  "stations": [
+    {
+      "id": "A",
+      "x": 90,
+      "y": 100,
+      "shape": "circle"
+    },
+    {
+      "id": "B",
+      "x": 320,
+      "y": 75,
+      "shape": "triangle"
+    },
+    {
+      "id": "C",
+      "x": 545,
+      "y": 115,
+      "shape": "square"
+    },
+    {
+      "id": "D",
+      "x": 320,
+      "y": 255,
+      "shape": "circle"
+    },
+    {
+      "id": "E",
+      "x": 105,
+      "y": 405,
+      "shape": "square"
+    },
+    {
+      "id": "F",
+      "x": 535,
+      "y": 405,
+      "shape": "triangle"
+    }
+  ],
+  "levels": [
+    {
+      "id": "network-1",
+      "zh": "初次发车",
+      "en": "First departure",
+      "description_zh": "接住18次出行。先画两站之间的线，或试试示例路网。",
+      "description_en": "Complete 18 journeys. Connect two stations, or try the sample network.",
+      "duration": 60,
+      "goal": 18,
+      "interval": 1.8,
+      "demand": [
+        [
+          "A",
+          "square"
+        ],
+        [
+          "B",
+          "square"
+        ],
+        [
+          "E",
+          "triangle"
+        ],
+        [
+          "F",
+          "circle"
+        ],
+        [
+          "C",
+          "circle"
+        ],
+        [
+          "A",
+          "triangle"
+        ]
+      ]
+    },
+    {
+      "id": "network-2",
+      "zh": "城市生长",
+      "en": "Growing city",
+      "description_zh": "F站在18秒出现，D站22秒停运。两座跨河通道有限：城市变化，你来调整路网。",
+      "description_en": "F appears at 18s; D closes at 22s. Two river crossings are available. Adapt your network as the city changes.",
+      "duration": 75,
+      "goal": 26,
+      "interval": 1.6,
+      "faultAt": 22,
+      "faultDuration": 14,
+      "demand": [
+        [
+          "A",
+          "square"
+        ],
+        [
+          "B",
+          "square"
+        ],
+        [
+          "F",
+          "square"
+        ],
+        [
+          "E",
+          "triangle"
+        ],
+        [
+          "C",
+          "circle"
+        ],
+        [
+          "A",
+          "triangle"
+        ]
+      ],
+      "growth": [
+        {
+          "station": "F",
+          "at": 18
+        }
+      ],
+      "river": 330,
+      "bridges": 2
+    },
+    {
+      "id": "network-3",
+      "zh": "潮汐负载",
+      "en": "Rush hour",
+      "description_zh": "E、F站在20秒与38秒出现，高峰在25至55秒。保留跨河通道与备用车，顺应城市节律。",
+      "description_en": "E and F appear at 20s and 38s; rush hour runs from 25s to 55s. Reserve crossings and your spare train for changing demand.",
+      "duration": 90,
+      "goal": 43,
+      "interval": 1.5,
+      "peak": {
+        "start": 25,
+        "end": 55,
+        "interval": 0.85
+      },
+      "faultAt": 48,
+      "faultDuration": 12,
+      "demand": [
+        [
+          "A",
+          "square"
+        ],
+        [
+          "A",
+          "triangle"
+        ],
+        [
+          "E",
+          "triangle"
+        ],
+        [
+          "A",
+          "square"
+        ],
+        [
+          "F",
+          "square"
+        ],
+        [
+          "B",
+          "square"
+        ],
+        [
+          "C",
+          "circle"
+        ],
+        [
+          "E",
+          "circle"
+        ]
+      ],
+      "growth": [
+        {
+          "station": "E",
+          "at": 20
+        },
+        {
+          "station": "F",
+          "at": 38
+        }
+      ],
+      "river": 330,
+      "bridges": 2
+    }
+  ]
+}

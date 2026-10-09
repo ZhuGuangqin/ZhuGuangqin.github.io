@@ -11,53 +11,25 @@ var $vlinks = $('#site-nav .visible-links');
 var $vlinks_persist_tail = $vlinks.children("*.persist.tail");
 var $hlinks = $('#site-nav .hidden-links');
 
-var breaks = [];
-
 function updateNav() {
-
-  var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
-
-  // The visible list is overflowing the nav
-  if ($vlinks.width() > availableSpace) {
-
-    while ($vlinks.width() > availableSpace && $vlinks.children("*:not(.persist)").length > 0) {
-      // Record the width of the list
-      breaks.push($vlinks.width());
-
-      // Move item to the hidden list
-      $vlinks.children("*:not(.persist)").last().prependTo($hlinks);
-
-      availableSpace = $btn.hasClass("hidden") ? $nav.width() : $nav.width() - $btn.width() - 30;
-
-      // Show the dropdown btn
-      $btn.removeClass("hidden");
-    }
-
-    // The visible list is not overflowing
-  } else {
-
-    // There is space for another item in the nav
-    while (breaks.length > 0 && availableSpace > breaks[breaks.length - 1]) {
-      // Move the item to the visible list
-      if ($vlinks_persist_tail.children().length > 0) {
-        $hlinks.children().first().insertBefore($vlinks_persist_tail.first());
-      } else {
-        $hlinks.children().first().appendTo($vlinks);
-      }
-      breaks.pop();
-    }
-
-    // Hide the dropdown btn if hidden list is empty
-    if (breaks.length < 1) {
-      $btn.addClass('hidden');
-      $btn.removeClass('close');
-      $btn.attr('aria-expanded', 'false');
-      $hlinks.addClass('hidden');
-    }
+  // Measure the current locale and font widths, not breakpoints cached in a
+  // different layout. Restore entries in order before deciding what fits.
+  var tail = $vlinks_persist_tail.first();
+  if (tail.length) $hlinks.children().insertBefore(tail);
+  else $hlinks.children().appendTo($vlinks);
+  $btn.addClass('hidden');
+  var availableSpace = $nav.width();
+  while ($vlinks.width() > availableSpace && $vlinks.children(':not(.persist)').length) {
+    $btn.removeClass('hidden');
+    availableSpace = $nav.width() - $btn.outerWidth(true) - 30;
+    $vlinks.children(':not(.persist)').last().prependTo($hlinks);
   }
-
-  // Keep counter updated
-  $btn.attr("count", breaks.length);
+  var hiddenCount = $hlinks.children().length;
+  if (!hiddenCount) {
+    $btn.addClass('hidden').removeClass('close').attr('aria-expanded', 'false');
+    $hlinks.addClass('hidden');
+  }
+  $btn.attr('count', hiddenCount);
 
   // update masthead height and the body/sidebar top padding
   var mastheadHeight = $('.masthead').height();
@@ -69,6 +41,10 @@ function updateNav() {
   }
 
 }
+
+// The bundle is loaded as a module; locale switching calls this explicit API.
+window.updateNav = updateNav;
+if (document.fonts) document.fonts.ready.then(updateNav);
 
 // Window listeners
 
