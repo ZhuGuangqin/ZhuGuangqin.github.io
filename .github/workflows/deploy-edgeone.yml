@@ -1,0 +1,51 @@
+name: Build & Deploy to EdgeOne
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: edgeone-production
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      JEKYLL_ENV: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --safe --trace
+      - name: Verify generated site
+        run: python3 scripts/verify-site-output.py _site
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Deploy production to EdgeOne China account
+        env:
+          EDGEONE_API_TOKEN: ${{ secrets.EDGEONE_API_TOKEN }}
+          EDGEONE_PAGES_API_REGION: china
+        run: |
+          if [ -z "$EDGEONE_API_TOKEN" ]; then
+            echo "::error::Missing repository secret EDGEONE_API_TOKEN; no deployment performed."
+            exit 1
+          fi
+          npx --yes edgeone@1.6.41 makers deploy ./_site \
+            --name zhuguangqin-homepage \
+            --token "$EDGEONE_API_TOKEN" \
+            --env production \
+            --area overseas \
+            --skip-ai-gateway-sync
