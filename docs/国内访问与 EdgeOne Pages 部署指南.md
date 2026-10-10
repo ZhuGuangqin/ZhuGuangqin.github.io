@@ -1,254 +1,62 @@
-# 让主页在国内也能打开：域名 + EdgeOne Pages 部署指南
+# 自定义域名与 EdgeOne 发布说明
 
-主入口（国内直连）：<https://zhuguangqin.com>
-备用入口（国外，GitHub Pages）：<https://zhuguangqin.github.io>
-仓库地址：<https://github.com/ZhuGuangqin/ZhuGuangqin.github.io>
+主域名：<https://zhuguangqin.com>  
+备用入口：<https://zhuguangqin.github.io>  
+源码仓库：<https://github.com/ZhuGuangqin/ZhuGuangqin.github.io>
 
----
+## 方案与边界
 
-## 一、为什么国内必须开 VPN
+GitHub Pages 在不同运营商、地区和时段的可达性可能不同。本次没有进行足够的网络测量，不能把访问失败确定为某一种 DNS、IP 或 TLS 干扰，也不能承诺换域名即可解决。
 
-不是站点内容的问题，是 `*.github.io` 这个域名在境内本身就不可达，被三层机制叠着掐：
+本方案把生成后的网页另行部署到 EdgeOne，使用独立域名作为主入口。域名已经实名认证，但尚未取得 ICP 备案号，因此使用「全球可用区（不含中国大陆）」。它不使用中国大陆节点，国内访问仍受跨境网络质量影响，不能保证所有线路或固定延迟。
 
-| 层面 | 表现 |
-| --- | --- |
-| DNS 污染 | 查询 `zhuguangqin.github.io` 常返回伪造 IP 或超时 |
-| IP 段干扰 | GitHub Pages 走 Fastly，A 记录 `185.199.108.153 / .109.153 / .110.153 / .111.153` 被丢包、被 RST |
-| SNI 阻断 | HTTPS 握手时域名是**明文**，命中关键字过滤就重置连接 |
+[EdgeOne 官方说明](https://edgeone.cloud.tencent.com/pages/document/175191784523485184)指出，该区域可绑定未备案的自定义域名；平台提供的默认项目域名在中国大陆访问存在限制。包含中国大陆的加速区域仍需要备案。
 
-第三层是关键：**所以改 hosts 文件通常没用**，很多人 IP 写对了照样打不开。
+## 发布结构
 
-> ⚠️ **买域名再 CNAME 回 GitHub Pages 是不能解决问题的**：封的是 IP 段 + SNI 关键字，
-> 解析出来还是那几个被干扰的 IP。必须把静态文件放到国内可访问的平台/节点上。
-
-**最终采用的结构**（两端都留，互不影响）：
-
-```
-本地或 GitHub 网页改内容
-        │  git push
-        ▼
-GitHub 仓库（main）
-        ├─► GitHub 原生 Jekyll 构建 ──► zhuguangqin.github.io   （国外访问、Google 收录）
-        └─► GitHub Actions 构建 ─────► EdgeOne Pages ──► zhuguangqin.com（国内直连，无需备案）
+```text
+GitHub main
+  ├─ GitHub Pages 原有构建 → zhuguangqin.github.io
+  └─ GitHub Actions：Ruby / Jekyll 构建并检查 → EdgeOne → zhuguangqin.com
 ```
 
-已经写好的 workflow：`.github/workflows/deploy-edgeone.yml`（全文见本页末尾附录）
+正式 EdgeOne 项目：`zhuguangqin-homepage`，直接上传类型，项目 ID `makers-bol4h3llzhaj`。
 
-- 只在 `main` 推送时触发，也会**手动触发**（Actions 页面 → Run workflow）
-- **不接管** GitHub Pages，它挂了也不影响 github.io 的更新
-- 没配 `EDGEONE_API_TOKEN` 时自动跳过部署步骤，不会让仓库报红
+此前的 `zhuguangqin-academic` 是 Git 导入项目。其默认环境没有 Bundler，日志出现 `bundle: command not found`；不配置构建时发布的只是源码。官方 CLI 要求已有项目为直接上传类型，因此正式发布改用新项目。
 
----
+页面资源与站内导航使用同源相对路径；canonical、sitemap、分享卡片使用 `https://zhuguangqin.com`。主入口故障时，GitHub Pages 的 CSS、脚本、图片与下载不会因此依赖主域名。
 
-## 二、你需要手动做的一次性配置
+## 自动部署
 
-下面 7 步是网页操作，做完之后日常更新内容**不用再管**，照旧 `git push` 就行。
+实际配置以 [deploy-edgeone.yml](../.github/workflows/deploy-edgeone.yml) 为准，不在文档复制第二份易过期的脚本。
 
-### 第 1 步：买一个域名 ✅ 已完成
+- `main` 推送和手动运行触发部署；同组新任务取消过期任务。
+- Ruby 3.2、已提交的 `Gemfile.lock` 和 Bundler 缓存用于构建。
+- 使用 `bundle exec jekyll build --safe --trace`，接近 GitHub Pages 的构建方式。
+- `scripts/verify-site-output.py` 检查首页、论文、Know Me、实验室及试玩页的资源文件与 canonical，并检查文件数量和单文件大小。
+- 固定 CLI `edgeone@1.6.41`，使用 `makers deploy`，通过 `EDGEONE_PAGES_API_REGION=china` 指向腾讯云中国站账号；`--area overseas` 选择不含中国大陆的区域。
+- `--skip-ai-gateway-sync` 跳过与本站无关的 AI Gateway 配置。
+- GitHub 仓库 Secret 名称为 `EDGEONE_API_TOKEN`。缺少凭据会明确失败，不会用绿色状态掩盖未部署。
+- Token 只能保存在 Secret 中，不能提交到仓库或写入日志。账号 Token 的权限以创建时控制台显示为准。
 
-已购入 **`zhuguangqin.com`**，注册商是阿里云（DNS 服务器 `dns25/26.hichina.com`），当前没有任何解析记录。
+## 域名与 HTTPS
 
-> ⚠️ 国内注册商注册的域名必须完成**实名认证**，否则会被 `serverHold`（解析全部失效）。
-> 到阿里云域名控制台确认一下实名状态：<https://dc.console.aliyun.com/>
+在阿里云云解析管理 `zhuguangqin.com`。EdgeOne 域名归属验证使用 `edgeonereclaim` TXT 记录。自定义域名的 CNAME 必须使用该正式项目控制台给出的实际目标，不能把默认预览域名直接当作 CNAME。
 
-### 第 2 步：登录 EdgeOne Pages 控制台
+如添加 `www`，必须先在 EdgeOne 单独绑定，再按控制台给出的目标解析；需要统一网址时可配置跳转。DNS 解析与 HTTPS 证书是两个独立步骤，均须检查生效状态。
 
-<https://console.cloud.tencent.com/edgeone/makers>
+## 日常更新与验收
 
-用微信/QQ 注册腾讯云账号即可。免费版官方称长期可用（额度以控制台显示为准）。
+照常修改文件并推送 `main`，在仓库 Actions 中检查构建和部署都成功。检查：
 
-### 第 3 步：新建项目（**这一步最关键，别跳过**）
+1. 主域名 HTTPS 正常，无证书警告。
+2. 首页、论文、Know Me、实验室均能加载样式与脚本。
+3. 论文 PDF 可以打开，实验室可以启动。
+4. GitHub Pages 备用入口仍能独立加载资源。
+5. 用关闭 VPN 的手机流量和家庭网络分别访问。控制台部署成功不等于已经验证各地网络可达性。
 
-点「新建项目」，**项目名填 `zhuguangqin-academic`**，然后选加速区域：
+如果 Actions 提示 Token 过期，更新仓库 Secret 后重新运行。如果本机 Git 凭据不允许修改 workflow，可在 GitHub 网页编辑同一个文件，不必扩大本机凭据权限。
 
-| 加速区域 | 要不要备案 | 选它吗 |
-| --- | --- | --- |
-| 中国大陆可用区 | **要**备案 | 暂时不选 |
-| 全球可用区（含中国大陆） | **要**备案 | 暂时不选 |
-| **全球可用区（不含中国大陆）** | **不要**备案 | ✅ **选这个** |
+## 回退
 
-> ⚠️ 选「不含中国大陆」时，EdgeOne 送给你的**默认项目域名在大陆访问会返回 401**——
-> 这是平台的内容合规限制，所以**必须绑自己的域名**（第 6 步）才能在国内打开。
-> 依据：<https://edgeone.cloud.tencent.com/pages/document/175191784523485184>
-
-### 第 4 步：生成 API Token
-
-控制台 → Pages → **设置（Settings）→ API Token → 创建 Token**（直达链接 <https://console.cloud.tencent.com/edgeone/pages?tab=settings>）。
-
-> ⚠️ Token 是**账户级权限**，只在创建时显示一次，请立刻复制保存。
-> 它只能放进 GitHub 的 Secret，**绝不能写进仓库文件、不能发给任何人**。
-
-### 第 5 步：把 Token 存进 GitHub 仓库
-
-1. 打开 <https://github.com/ZhuGuangqin/ZhuGuangqin.github.io/settings/secrets/actions>
-2. 点 **New repository secret**
-3. Name 填 `EDGEONE_API_TOKEN`（必须一字不差），Secret 粘贴上一步的 Token
-4. 点 **Add secret**
-
-配好之后，往 `main` 推一次代码，去仓库 **Actions** 标签页看 `Build & Deploy to EdgeOne Pages` 是否变绿。
-
-### 第 6 步：绑定域名（zhuguangqin.com）
-
-EdgeOne Pages 项目 → **域名管理 → 添加自定义域名**：
-
-1. 先添加 `zhuguangqin.com`（主域名）
-2. 再添加 `www.zhuguangqin.com`（可选，建议做 301 跳转到主域名）
-3. 添加后控制台会给你一个 **CNAME 目标地址**（形如 `xxx.edgeone.cool`），复制它
-
-拿着这个地址去阿里云加解析（<https://dns.console.aliyun.com/> → 找到 `zhuguangqin.com` → **解析设置** → **添加记录**）：
-
-| 记录类型 | 主机记录 | 记录值 | 说明 |
-| --- | --- | --- | --- |
-| CNAME | `@` | EdgeOne 给的 CNAME 地址 | `@` 就代表 `zhuguangqin.com` 本身 |
-| CNAME | `www` | EdgeOne 给的 CNAME 地址 | 代表 `www.zhuguangqin.com` |
-
-保存后等几分钟，回到 EdgeOne 看证书是否签发完成。
-
-> 💡 阿里云云解析允许在 `@`（根域名）上直接加 CNAME，不需要额外配置。
-> 💡 「不含中国大陆」的加速区域添加自定义域名**不需要工信部备案**，证书由 EdgeOne 自动签发（几分钟到半小时）。
-
-### 第 7 步：改站点地址 ✅ 已完成
-
-以下三处的地址已经全部改成 `https://zhuguangqin.com`：
-
-| 文件 | 位置 | 现在的内容 |
-| --- | --- | --- |
-| `_config.yml` | 第 17 行 | `url : "https://zhuguangqin.com"` |
-| `_data/authors.yml` | 第 7 行 | `uri : "https://zhuguangqin.com"` |
-| `README.md` | 第 6–7 行 | 主入口 / 备用地址说明 |
-
-**为什么必须改**：`url` 决定站点生成的 canonical 链接、sitemap 和分享卡片地址。
-不改的话，搜索引擎会认为"正式版本"是打不开的 github.io，百度收录会失败，微信/微博里分享出去的卡片也会指向打不开的地址。
-
-> ⚠️ **顺序提醒**：这一改生效后，github.io 上生成的 canonical/sitemap 已经指向 zhuguangqin.com。
-> 在域名接上（第 6 步完成）之前，搜索引擎看到的"正式地址"暂时打不开。
-> 所以第 2–6 步请尽快做完，最好当天完成。
-
----
-
-## 三、改完之后怎么验证
-
-| 要验证的 | 怎么做 | 期望结果 |
-| --- | --- | --- |
-| Actions 是否成功 | 仓库 Actions 标签页 | 所有步骤打勾，最后一步显示部署成功 |
-| 国外入口没被搞坏 | 访问 <https://zhuguangqin.github.io> | 照旧能打开 |
-| **国内入口** | **关掉 VPN**，手机用 4G/5G 流量访问 <https://zhuguangqin.com> | 能打开，首页动效正常 |
-| 多线路可用性 | <https://www.boce.com/> 或 <https://www.itdog.cn/> 输入 `zhuguangqin.com` 拨测 | 全国大部分省份绿色，平均响应 1 秒内 |
-| PDF 能下载 | 打开「论文」页，点任意一篇的 PDF | 能下载（15 个 PDF 在 `files/`，会一起部署过去） |
-| 证书 | 浏览器地址栏看小锁 | 有效证书，无警告 |
-| canonical 正确 | 打开 <https://zhuguangqin.com/sitemap.xml> | 里面全是 `https://zhuguangqin.com/...` |
-
-> 💡 拨测工具本身偶尔抽风，多测两个再下结论；个别地区（如泉州）历来特殊，一两个红点可以忽略。
-
-**让国内搜得到**：域名上线后，去 [百度搜索资源平台](https://ziyuan.baidu.com/) 添加站点、验证归属、提交 sitemap（`https://zhuguangqin.com/sitemap.xml`）。这一步对学术主页被国内同行搜到很有用，`github.io` 在百度那边收录极差。
-
----
-
-## 四、常见坑
-
-| 现象 | 原因 / 处理 |
-| --- | --- |
-| 默认项目域名国内返回 **401** | 这是「不含中国大陆」加速区域的正常限制，绑了自定义域名就好了 |
-| 自定义域名打不开、提示证书错误 | 证书还在签发，等 10–30 分钟；仍不行就在域名管理里点重新签发 |
-| 部署报 `auth error` / token 无效 | Token 复制不全或已过期，去控制台重新生成再更新 Secret |
-| Actions 里部署步骤显示"跳过部署" | `EDGEONE_API_TOKEN` 这个 Secret 名字拼错了，或没保存成功 |
-| 构建报 `_site/index.html 缺失` | Jekyll 构建失败，往上翻日志看 `--trace` 的报错行 |
-| 页面样式丢失 | 检查 `_config.yml` 的 `baseurl` 是否仍为 `""`（域名在根目录时必须是空） |
-| 想同时用 GitHub Pages 的自定义域名 | **别做**。DNS 已经指向 EdgeOne，再在 GitHub Pages 里填同一个自定义域名会导致证书签发失败 |
-| `git push` 被拒：`refusing to allow an OAuth App to create or update workflow` | 本机 Git 凭据缺少 `workflow` scope。改在 GitHub 网页端创建/修改 workflow 文件（见附录），或换一个带 `workflow` scope 的 classic token |
-| 域名被 `serverHold`、解析全失效 | 国内注册商要求实名认证，去阿里云域名控制台补做 |
-
----
-
-## 五、想更快怎么办（可选，以后再说）
-
-1. **备案后升级到国内节点**（最稳最快）：个人可以备案，免费，约 1–20 个工作日，需要域名在国内注册商实名 + 一台境内云资源。备案通过后把项目的加速区域切到「全球可用区（含中国大陆）」，国内延迟能降到 50 ms 左右。
-2. **给论文 PDF 加 DOI**：把 `files/` 里的 PDF 传到 [Zenodo](https://zenodo.org/) 或 [Figshare](https://figshare.com/)，拿到 DOI 后替换论文页的下载链接。既多一条国内可访问的通道，也让每篇文章有一个可被正式引用的版本。
-3. **加速 CI**：现在每次构建都要现场装 gem（约 1–3 分钟）。哪天嫌慢，可以在 workflow 里加 `actions/cache` 缓存 `vendor/bundle`。
-
----
-
-## 六、出问题怎么退回去
-
-整个改动是可逆的，任何一步都能单独撤销：
-
-- **只停掉国内入口**：删除 `.github/workflows/deploy-edgeone.yml`（或在 Actions 页面点 Disable workflow），GitHub Pages 完全不受影响。
-- **换回原状**：把 `_config.yml` 的 `url` 改回 `https://zhuguangqin.github.io`，DNS 记录删掉即可。
-- **EdgeOne 侧**：控制台删除项目，不影响 GitHub 仓库和 github.io。
-
----
-
-## 附录：workflow 文件全文
-
-本机 Git 凭据缺少 `workflow` scope，`.github/workflows/deploy-edgeone.yml` 无法用 `git push` 上传，
-需要在 GitHub 网页端手动创建一次（30 秒，只需做一次）：
-
-1. 打开 <https://github.com/ZhuGuangqin/ZhuGuangqin.github.io/new/main/.github/workflows>
-2. 文件名框填 `deploy-edgeone.yml`
-3. 把下面整段（从 `name:` 到文件末尾）复制粘贴进去
-4. 底部点 **Commit changes**
-
-```yaml
-name: Build & Deploy to EdgeOne Pages
-
-on:
-  push:
-    branches: [main]
-  workflow_dispatch: # 支持在 Actions 页面手动点一次运行
-
-concurrency:
-  group: edgeone-pages-${{ github.ref }}
-  cancel-in-progress: true
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      # Ruby 版本与仓库 Dockerfile 保持一致（ruby:3.2）
-      - name: Setup Ruby 3.2
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.2"
-          bundler-cache: false
-
-      # Gemfile.lock 被 .gitignore 忽略、没有进仓库，所以这里现场解析依赖。
-      # github-pages gem 自己会锁定 jekyll 等插件的版本，结果仍然可复现。
-      - name: Install gems
-        run: bundle install --jobs 4
-
-      # 特意不加 --safe：本仓库 _config.yml 的 whitelist 里没有 jemoji，
-      # 加 --safe 会让表情插件失效，渲染结果就与 github.io 上的不一致了。
-      - name: Build site with Jekyll
-        run: bundle exec jekyll build --trace
-        env:
-          JEKYLL_ENV: production
-
-      - name: Check build output
-        run: |
-          test -f _site/index.html || { echo "::error::_site/index.html 缺失，构建可能失败"; exit 1; }
-          echo "_site：$(find _site -type f | wc -l) 个文件，$(du -sh _site | cut -f1)"
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-
-      # 项目名必须与 EdgeOne Pages 控制台里建好的项目一致
-      - name: Deploy to EdgeOne Pages
-        env:
-          EDGEONE_API_TOKEN: ${{ secrets.EDGEONE_API_TOKEN }}
-          EDGEONE_PROJECT_NAME: zhuguangqin-academic
-        run: |
-          if [ -z "$EDGEONE_API_TOKEN" ]; then
-            echo "::notice title=跳过部署::未配置 EDGEONE_API_TOKEN，本次不部署到 EdgeOne Pages。"
-            exit 0
-          fi
-          npx --yes edgeone@latest pages deploy ./_site \
-            -n "$EDGEONE_PROJECT_NAME" \
-            -t "$EDGEONE_API_TOKEN" \
-            -e production
-```
+暂停 EdgeOne workflow 可停止该平台更新，不影响 GitHub Pages。DNS 回退应指向已经验证可用的托管入口。无需删除项目或源码。若正式主域名更换，再同步调整 `_config.yml` 中的 `url` 和作者链接。

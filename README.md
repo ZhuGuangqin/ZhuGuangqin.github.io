@@ -3,8 +3,8 @@
 基于 [Academic Pages](https://github.com/academicpages/academicpages.github.io) 模板（Jekyll + GitHub Pages）制作，
 已填入本人的教育背景、论文、著作、学术会议、教学与科研项目。
 
-站点地址：<https://zhuguangqin.com>（国内直连，主入口）
-备用地址：<https://zhuguangqin.github.io>（国外访问，GitHub Pages 仍在同步发布）
+站点地址：<https://zhuguangqin.com>（主入口，EdgeOne）
+备用地址：<https://zhuguangqin.github.io>（备用入口，GitHub Pages）
 
 ---
 
