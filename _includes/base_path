@@ -1,5 +1,7 @@
-{% if site.url %}
-  {% assign base_path = site.url | append: site.baseurl %}
-{% else %}
-  {% assign base_path = site.github.url %}
-{% endif %}
+{%- comment -%}
+Assets and internal navigation stay on the visitor's current host, including
+GitHub Pages, EdgeOne and local previews. SEO and sharing use the canonical host.
+{%- endcomment -%}
+{%- assign base_path = site.baseurl | default: '' -%}
+{%- assign canonical_origin = site.url | default: site.github.url -%}
+{%- assign absolute_base_path = canonical_origin | append: base_path -%}
