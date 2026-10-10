@@ -14,8 +14,8 @@ title_en                 : "Zhu Guangqin · Academic Site"
 title_separator          : "-"
 name                     : &name "祝广钦"
 description              : &description "北京中医药大学中医学院中医基础理论博士研究生，研究方向为中医天人相应与五脏应时、系统中医学。"
-url                      : "https://zhuguangqin.github.io"
-                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+url                      : "https://zhuguangqin.com"
+                                                           # 主域名（国内直连，走 EdgeOne Pages）；GitHub Pages 仍在 zhuguangqin.github.io 同步发布
 baseurl                  : ""
 repository               : "ZhuGuangqin/ZhuGuangqin.github.io"
 
