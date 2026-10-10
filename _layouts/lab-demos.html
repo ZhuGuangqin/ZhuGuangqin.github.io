@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<main class="labs-page demo-page" id="main">
+  <header class="labs-heading">
+    <h1><span data-i18n="zh">先玩，再选。</span><span data-i18n="en">Play first. Then choose.</span></h1>
+    <p><span data-i18n="zh">三个候选实验室，各留一个最小而完整的玩法。试玩不影响正式实验室的收藏。</span><span data-i18n="en">Three playable candidates. Try the mechanism; your existing lab collections stay independent.</span></p>
+    <a class="demo-back" href="{{ '/labs/' | relative_url }}"><span data-i18n="zh">返回五个正式实验室</span><span data-i18n="en">Back to the five labs</span></a>
+  </header>
+  <nav class="labs-index demo-index" aria-label="选择候选实验室 / Choose a prototype">
+    <a href="#life-demo"><span data-i18n="zh">生息实验室</span><span data-i18n="en">Life Lab</span></a>
+    <a href="#agency-demo"><span data-i18n="zh">灵机实验室</span><span data-i18n="en">Agency Lab</span></a>
+    <a href="#perspective-demo"><span data-i18n="zh">观象实验室</span><span data-i18n="en">Perspective Lab</span></a>
+  </nav>
+  {{ content }}
+  <p class="labs-footnote"><span data-i18n="zh">候选 demo · 本页不保存成绩。原创简化模型，供比较玩法；最终原理表达待选定后细化。</span><span data-i18n="en">Candidate demos · No results are saved. Original simplified models for comparing interactions; principle framing remains provisional.</span></p>
+</main>

@@ -1,4 +1,4 @@
-<div id="research-tools"{% if page.labs %} class="lab-reading-tools"{% endif %} data-index-url="{{ '/assets/search-index.json' | relative_url }}">
+<div id="research-tools"{% if page.labs or page.lab_demos %} class="lab-reading-tools"{% endif %} data-index-url="{{ '/assets/search-index.json' | relative_url }}">
   <div class="research-dock" role="group" aria-label="阅读工具 / Reading tools">
     <button type="button" id="season-menu-toggle" aria-expanded="false" aria-controls="season-menu" aria-label="四季主题 / Seasonal palette"><i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i><span class="current-season-name">春</span></button>
     <button type="button" data-open-search title="搜索 / Search · Ctrl / ⌘ K" aria-label="搜索 / Search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span data-i18n="zh">搜索</span><span data-i18n="en">Search</span></button>

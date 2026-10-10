@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<main class="labs-page arcade-page" id="main">
+  <header class="arcade-heading"><div><h1><span data-i18n="zh">再来一局。</span><span data-i18n="en">One more try.</span></h1><p><span data-i18n="zh">随机局面，递进挑战。每次出发，试一种新解法。</span><span data-i18n="en">New conditions. Rising stakes. Find a different way through.</span></p></div><a href="{{ '/labs/' | relative_url }}"><span data-i18n="zh">返回实验室</span><span data-i18n="en">Back to Labs</span></a></header>
+  <nav class="labs-index arcade-index" aria-label="选择试玩 / Choose a demo">
+    <a href="#uptake-demo"><span data-i18n="zh">吞纳实验室</span><span data-i18n="en">Uptake Lab</span></a>
+    <a href="#survivor-demo"><span data-i18n="zh">自生实验室</span><span data-i18n="en">Selfborn Lab</span></a>
+    <a href="#duet-demo"><span data-i18n="zh">合璧实验室</span><span data-i18n="en">Union Lab</span></a>
+  </nav>
+  {{ content }}
+  <footer class="arcade-footer"><p><span data-i18n="zh">原创候选试玩 · 吞纳、自生对应自主性，合璧对应元整体。本页最佳按玩法、流派、难度和练习模式分开记录，刷新清空。数值与场景为游戏设定。</span><span data-i18n="en">Original candidate demos · Uptake and Selfborn explore autonomy; Union explores meta-wholeness. Page bests are separate for each mode, build, difficulty and practice setting, and reset on reload. Fictional values and scenes.</span></p><a href="{{ '/labs/demos/round-one/' | relative_url }}"><span data-i18n="zh">首轮原型归档</span><span data-i18n="en">First-round archive</span></a></footer>
+</main>

@@ -19,6 +19,7 @@
 {% if page.url == '/' %}<link rel="stylesheet" href="{{ base_path }}/assets/css/season-sky.css">{% endif %}
 {% if page.labs %}<link rel="stylesheet" href="{{ base_path }}/assets/css/wuxing-lab.css"><link rel="stylesheet" href="{{ base_path }}/assets/css/principle-games.css"><link rel="stylesheet" href="{{ base_path }}/assets/css/autonomy-lab.css"><link rel="stylesheet" href="{{ base_path }}/assets/css/network-lab.css"><link rel="stylesheet" href="{{ base_path }}/assets/css/contraption-lab.css"><link rel="stylesheet" href="{{ base_path }}/assets/css/labs.css">{% endif %}
 {% if page.cv_experiment %}<link rel="stylesheet" href="{{ base_path }}/assets/css/cv-art.css">{% endif %}
+{% if page.lab_demos %}<link rel="stylesheet" href="{{ base_path }}/assets/css/labs.css">{% if page.arcade_demos %}<link rel="stylesheet" href="{{ base_path }}/assets/css/arcade-labs.css">{% else %}<link rel="stylesheet" href="{{ base_path }}/assets/css/lab-demos.css">{% endif %}{% endif %}
 
 <!-- 语言状态尽早写入 <html>，避免 ?lang=en 打开时先闪一下中文 -->
 <script>
