@@ -1,4 +1,4 @@
-.arcade-page { max-width: 1040px; }
+
 .arcade-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin: 8px 0 32px; }
 .arcade-heading h1 { margin: 0 0 10px; font-family: "Research Display", "Songti SC", serif; font-size: clamp(2.5rem, 5vw, 4.4rem); font-weight: 500; letter-spacing: -.025em; line-height: 1.1; }
 .arcade-heading p { color: var(--muted); margin: 0; }
@@ -6,7 +6,7 @@
 .arcade-index { margin-bottom: 28px; }
 .arcade-index a[aria-current="true"] { background: var(--accent); color: var(--button-ink); border-color: var(--accent); }
 .arcade-game { scroll-margin-top: 130px; }
-.arcade-game[hidden], .arcade-page [hidden] { display: none !important; }
+.arcade-game[hidden], .arcade-game [hidden] { display: none !important; }
 .arcade-game-heading { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin: 0 0 16px; }
 .arcade-game-heading h2 { flex-shrink: 0; margin: 0; font-family: "Research Display", "Songti SC", serif; font-weight: 500; font-size: clamp(1.9rem, 3vw, 2.6rem); line-height: 1.2; }
 .arcade-game-heading p { max-width: 45ch; margin: 0; line-height: 1.5; color: var(--muted); }
@@ -21,20 +21,20 @@
 .arcade-hud { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 0 0 10px; min-height: 24px; font-variant-numeric: tabular-nums; font-size: .88rem; color: var(--ink); }
 .arcade-hud span { white-space: nowrap; }
 .arcade-hud b { font-size: 1.1em; font-weight: 650; }
-.arcade-stage { position: relative; max-width: 800px; margin: 0 auto; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; isolation: isolate; }
+.arcade-stage { position: relative; max-width: 760px; margin: 0 auto; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; isolation: isolate; }
 .arcade-stage canvas { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; touch-action: none; cursor: crosshair; outline-offset: -4px; }
 .arcade-cover { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 20px; background: color-mix(in srgb, var(--panel) 75%, transparent); pointer-events: none; }
 .arcade-cover > div { text-align: center; max-width: 460px; width: 100%; }
 .arcade-cover h3 { font-family: "Research Display", "Songti SC", serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 500; margin: 0 0 8px; line-height: 1.2; text-wrap: balance; }
 .arcade-cover p { margin: 0 0 20px; line-height: 1.5; }
 .arcade-cover button { pointer-events: auto; }
-.arcade-page button { min-height: 44px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); padding: 10px 18px; border-radius: 8px; font: inherit; line-height: 1.25; cursor: pointer; transition: background-color 120ms ease-out, border-color 120ms ease-out; }
-.arcade-page button:hover { border-color: var(--accent); background: var(--field); }
-.arcade-page button:disabled { cursor: default; opacity: .55; }
-.arcade-page [data-play], .arcade-page [data-toggle] { background: var(--accent); border-color: var(--accent); color: var(--button-ink); }
-.arcade-page :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.arcade-page input { accent-color: var(--accent); }
-.arcade-page ::selection { color: var(--button-ink); background: var(--accent); }
+.arcade-game button { min-height: 44px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); padding: 10px 18px; border-radius: 8px; font: inherit; line-height: 1.25; cursor: pointer; transition: background-color 120ms ease-out, border-color 120ms ease-out; }
+.arcade-game button:hover { border-color: var(--accent); background: var(--field); color: var(--ink); }
+.arcade-game button:disabled { cursor: default; opacity: .55; }
+.arcade-game [data-play], .arcade-game [data-toggle] { background: var(--accent); border-color: var(--accent); color: var(--button-ink); }
+.arcade-game :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.arcade-game input { accent-color: var(--accent); }
+.arcade-game ::selection { color: var(--button-ink); background: var(--accent); }
 .arcade-actions { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 16px 0 0; }
 .arcade-actions label { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 6px; font-size: .9rem; cursor: pointer; }
 .arcade-steer { display: flex; justify-content: center; gap: 10px; margin-top: 10px; }
@@ -83,10 +83,10 @@
   .arcade-upgrades button strong { font-size: .78rem; }
   .arcade-upgrades button small { line-height: 1.4; overflow-wrap: anywhere; }
 }
-@media (prefers-reduced-motion: reduce) { .arcade-page button { transition: none; } }
-html[data-motion="off"] .arcade-page button { transition: none; }
+@media (prefers-reduced-motion: reduce) { .arcade-game button { transition: none; } }
+html[data-motion="off"] .arcade-game button { transition: none; }
 @media print { .arcade-stage, .arcade-actions, .arcade-steer { display: none; } }
-.arcade-build { max-width: 800px; margin: 10px auto 0; color: var(--muted); font-size: .85rem; line-height: 1.6; }
+.arcade-build { max-width: 760px; margin: 10px auto 0; color: var(--muted); font-size: .85rem; line-height: 1.6; }
 .arcade-upgrades { overflow-y: auto; scrollbar-color: var(--line) var(--panel); }
 .arcade-upgrades [data-reroll] { align-self: start; margin-top: 14px; flex-shrink: 0; }
 .arcade-result { width: min(560px, calc(100vw - 28px)); max-height: calc(100dvh - 48px); padding: 0; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 18px 60px rgb(0 0 0 / .22); scrollbar-color: var(--line) var(--panel); }
@@ -119,3 +119,35 @@ html[data-motion="off"] .arcade-page button { transition: none; }
   .arcade-result-actions { flex-direction: column; }
   .arcade-result-actions button { width: 100%; flex: initial; }
 }
+
+.arcade-game { border-bottom: 1px solid var(--line); }
+.arcade-shell > summary { display: flex; align-items: center; gap: 20px; list-style: none; padding: 30px 40px; min-height: 88px; cursor: pointer; }
+.arcade-shell > summary::-webkit-details-marker { display: none; }
+.arcade-summary-name { margin: 0; border: 0; font: 600 clamp(22px, 3vw, 30px)/1.4 "Research Display", "Songti SC", serif; }
+.arcade-summary-principle { color: var(--muted); font-size: .82rem; }
+.arcade-summary-action { margin-inline-start: auto; font-size: 24px; }
+.arcade-shell[open] > summary .arcade-summary-action { transform: rotate(45deg); }
+.arcade-body { padding: 0 40px 36px; }
+.arcade-game-heading h2 { display: none; }
+.arcade-game-heading .arcade-principle { display: none; }
+.arcade-game-heading > [data-goal] { max-width: 75ch; color: var(--ink); }
+.arcade-game[data-game="pinball"] .arcade-steer { max-width: 760px; margin: 10px auto 0; }
+.arcade-game[data-game="pinball"] .arcade-steer button { width: 50%; min-height: 52px; }
+.arcade-game[data-game="pinball"] canvas { cursor: default; }
+.arcade-game[data-phase="chapter"] .arcade-stage { min-height: 350px; }
+.labs-index { overflow-x: auto; white-space: nowrap; scrollbar-width: thin; scrollbar-color: var(--line) var(--canvas); }
+.labs-index a { flex-shrink: 0; padding-inline: 16px; }
+@media (max-width: 650px) {
+  .arcade-shell > summary { padding: 24px 18px; gap: 8px 14px; flex-wrap: wrap; }
+  .arcade-summary-principle { order: 3; width: 100%; font-size: .78rem; }
+  .arcade-summary-action { position: absolute; right: 20px; }
+  .arcade-body { padding: 0 18px 28px; }
+  .arcade-game-heading > [data-goal] { font-size: .88rem; }
+  .arcade-upgrades button small { font-size: .78rem; }
+  .arcade-game[data-phase="chapter"] .arcade-stage { min-height: 380px; }
+  .arcade-result { width: calc(100vw - 28px); }
+}
+@media print { .arcade-game { display: none; } }
+.arcade-game-heading { display: block; }
+.arcade-game-heading > div { display: none; }
+.arcade-settings input[type="range"] { width: 120px; min-height: 44px; cursor: pointer; }

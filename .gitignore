@@ -26,3 +26,13 @@ package-lock.json
 .impeccable/config.local.json
 .impeccable/build/
 outputs/
+
+# Private authoring and review notes remain local.
+/docs/
+/.impeccable/
+/PRODUCT.md
+/DESIGN.md
+/AGENTS.md
+/assets/downloads/wuxing/*.xlsx
+/assets/downloads/wuxing/*.csv
+/assets/downloads/wuxing/原始数据.json
