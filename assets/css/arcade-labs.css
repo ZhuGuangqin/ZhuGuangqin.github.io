@@ -151,3 +151,18 @@ html[data-motion="off"] .arcade-game button { transition: none; }
 .arcade-game-heading { display: block; }
 .arcade-game-heading > div { display: none; }
 .arcade-settings input[type="range"] { width: 120px; min-height: 44px; cursor: pointer; }
+
+/* Choices replace the arena, with room for every option at any viewport. */
+.arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) .arcade-upgrades { position: relative; inset: auto; min-height: 380px; justify-content: center; overflow: visible; }
+.arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) .arcade-upgrades button { min-width: 0; overflow-wrap: anywhere; }
+.arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) .arcade-upgrades [data-reroll] { min-height: 44px; }
+.arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) .arcade-feedback { display: none; }
+.arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) .arcade-actions [data-ability], .arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) .arcade-actions [data-secondary], .arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) .arcade-actions [data-special] { display: none; }
+@media (max-width: 650px) {
+  .arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) .arcade-upgrades { min-height: 0; }
+  .arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) [data-upgrade-list] { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) [data-upgrade-list] button { display: grid; grid-template-columns: 34px minmax(0, 1fr); min-height: 88px; padding: 14px; gap: 4px 12px; }
+  .arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) [data-upgrade-list] svg { grid-row: 1 / 3; align-self: center; }
+  .arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) [data-upgrade-list] strong { font-size: 1rem; }
+  .arcade-game:is([data-phase="draft"], [data-phase="upgrade"], [data-phase="reward"], [data-phase="chapter"]) [data-upgrade-list] small { font-size: .85rem; }
+}

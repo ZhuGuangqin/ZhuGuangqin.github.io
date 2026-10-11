@@ -6,4 +6,4 @@ permalink: /labs/demos/
 author_profile: false
 ---
 <main id="main" class="labs-page"><h1>实验室 / Laboratories</h1><p>试玩已并入正式实验室。 / The games now live in Laboratories.</p><a href="{{ '/labs/' | relative_url }}">进入实验室 / Open Labs</a></main>
-<script>(function(){var old=location.hash.slice(1),ids={'uptake-demo':'uptake-game','survivor-demo':'survivor-game','duet-demo':'pinball-game'};location.replace({{ '/labs/' | relative_url | jsonify }}+location.search+'#'+(ids[old]||'uptake-game'));})();</script>
+<script>(function(){var old=location.hash.slice(1),ids={'uptake-demo':'survivor-game','survivor-demo':'survivor-game','duet-demo':'pinball-game'};location.replace({{ '/labs/' | relative_url | jsonify }}+location.search+'#'+(ids[old]||'survivor-game'));})();</script>
