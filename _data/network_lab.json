@@ -182,6 +182,481 @@
       ],
       "river": 330,
       "bridges": 2
+    },
+    {
+      "id": "network-4",
+      "zh": "东岸晨高峰",
+      "en": "East-bank morning",
+      "description_zh": "东岸先拥挤。把备用列车放在最忙的线上，别让换乘站独自承压。",
+      "description_en": "The east bank crowds first. Send spare capacity where demand starts.",
+      "duration": 80,
+      "goal": 28,
+      "interval": 1.8,
+      "demand": [
+        [
+          "C",
+          "circle"
+        ],
+        [
+          "F",
+          "circle"
+        ],
+        [
+          "C",
+          "triangle"
+        ],
+        [
+          "B",
+          "square"
+        ],
+        [
+          "A",
+          "square"
+        ],
+        [
+          "E",
+          "circle"
+        ]
+      ],
+      "peak": {
+        "start": 16,
+        "end": 38,
+        "interval": 1.1
+      }
+    },
+    {
+      "id": "network-5",
+      "zh": "北城新站",
+      "en": "Northern expansion",
+      "description_zh": "B站在第18秒开放，F站随后出现。预留接入新站的位置。",
+      "description_en": "B opens at 18s; F follows. Leave room to extend your lines.",
+      "duration": 85,
+      "goal": 30,
+      "interval": 1.65,
+      "demand": [
+        [
+          "A",
+          "square"
+        ],
+        [
+          "B",
+          "square"
+        ],
+        [
+          "E",
+          "triangle"
+        ],
+        [
+          "F",
+          "circle"
+        ],
+        [
+          "C",
+          "circle"
+        ],
+        [
+          "A",
+          "triangle"
+        ]
+      ],
+      "growth": [
+        {
+          "station": "B",
+          "at": 18
+        },
+        {
+          "station": "F",
+          "at": 32
+        }
+      ]
+    },
+    {
+      "id": "network-6",
+      "zh": "一桥两岸",
+      "en": "One bridge",
+      "description_zh": "全网只能跨河一次。让一条主线承担过河任务，其余线路在岸内换乘。",
+      "description_en": "Only one river crossing is available. Feed it with local transfer lines.",
+      "duration": 85,
+      "goal": 30,
+      "interval": 1.7,
+      "demand": [
+        [
+          "A",
+          "square"
+        ],
+        [
+          "B",
+          "square"
+        ],
+        [
+          "E",
+          "triangle"
+        ],
+        [
+          "F",
+          "circle"
+        ],
+        [
+          "C",
+          "circle"
+        ],
+        [
+          "A",
+          "triangle"
+        ]
+      ],
+      "river": 330,
+      "bridges": 1,
+      "sampleRoutes": [
+        [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        [
+          "D",
+          "E",
+          "F"
+        ],
+        [
+          "B",
+          "D"
+        ]
+      ]
+    },
+    {
+      "id": "network-7",
+      "zh": "三角换乘",
+      "en": "Triangle transfer",
+      "description_zh": "B站短暂停运。别只盯着中央枢纽，也给支线留条退路。",
+      "description_en": "B closes briefly. Protect the branches as well as the central hub.",
+      "duration": 90,
+      "goal": 34,
+      "interval": 1.6,
+      "demand": [
+        [
+          "E",
+          "triangle"
+        ],
+        [
+          "F",
+          "circle"
+        ],
+        [
+          "C",
+          "circle"
+        ],
+        [
+          "A",
+          "triangle"
+        ],
+        [
+          "A",
+          "square"
+        ],
+        [
+          "B",
+          "square"
+        ]
+      ],
+      "faultAt": 32,
+      "faultDuration": 12,
+      "faultStation": "B"
+    },
+    {
+      "id": "network-8",
+      "zh": "晚高峰换向",
+      "en": "Evening reversal",
+      "description_zh": "第40秒，出行方向改变。根据候车队列重新分配列车。",
+      "description_en": "Journeys change direction at 40s. Reassign capacity as queues shift.",
+      "duration": 95,
+      "goal": 38,
+      "interval": 1.6,
+      "demand": [
+        [
+          "A",
+          "square"
+        ],
+        [
+          "B",
+          "square"
+        ],
+        [
+          "E",
+          "triangle"
+        ],
+        [
+          "F",
+          "circle"
+        ],
+        [
+          "C",
+          "circle"
+        ],
+        [
+          "A",
+          "triangle"
+        ]
+      ],
+      "demandPhases": [
+        {
+          "at": 40,
+          "demand": [
+            [
+              "E",
+              "triangle"
+            ],
+            [
+              "F",
+              "circle"
+            ],
+            [
+              "D",
+              "square"
+            ],
+            [
+              "B",
+              "circle"
+            ]
+          ]
+        }
+      ],
+      "peak": {
+        "start": 40,
+        "end": 67,
+        "interval": 1.1
+      }
+    },
+    {
+      "id": "network-9",
+      "zh": "两次检修",
+      "en": "Two closures",
+      "description_zh": "D站与C站先后检修。两次抢修可以立即恢复服务，也可以用绕行应对。",
+      "description_en": "D and C close in turn. Use two repairs or build temporary bypasses.",
+      "duration": 95,
+      "goal": 38,
+      "interval": 1.55,
+      "demand": [
+        [
+          "A",
+          "square"
+        ],
+        [
+          "B",
+          "square"
+        ],
+        [
+          "E",
+          "triangle"
+        ],
+        [
+          "F",
+          "circle"
+        ],
+        [
+          "C",
+          "circle"
+        ],
+        [
+          "A",
+          "triangle"
+        ]
+      ],
+      "repairs": 2,
+      "faults": [
+        {
+          "at": 24,
+          "station": "D",
+          "duration": 12
+        },
+        {
+          "at": 57,
+          "station": "C",
+          "duration": 14
+        }
+      ]
+    },
+    {
+      "id": "network-10",
+      "zh": "沿河生长",
+      "en": "Growing riverbanks",
+      "description_zh": "南岸两站逐步开放，高峰紧随其后。先打好跨河骨架，再延长支线。",
+      "description_en": "Southern stops open before rush hour. Prepare crossings before extending branches.",
+      "duration": 100,
+      "goal": 42,
+      "interval": 1.55,
+      "demand": [
+        [
+          "A",
+          "square"
+        ],
+        [
+          "B",
+          "square"
+        ],
+        [
+          "E",
+          "triangle"
+        ],
+        [
+          "F",
+          "circle"
+        ],
+        [
+          "C",
+          "circle"
+        ],
+        [
+          "A",
+          "triangle"
+        ]
+      ],
+      "growth": [
+        {
+          "station": "E",
+          "at": 24
+        },
+        {
+          "station": "F",
+          "at": 42
+        }
+      ],
+      "river": 330,
+      "bridges": 2,
+      "peak": {
+        "start": 46,
+        "end": 72,
+        "interval": 0.95
+      }
+    },
+    {
+      "id": "network-11",
+      "zh": "错峰城市",
+      "en": "A city in shifts",
+      "description_zh": "三段客流依次从不同片区出发。路线不必一直相同，乘客也会继续等车。",
+      "description_en": "Three districts take turns generating demand. Adjust routes as the city shifts.",
+      "duration": 105,
+      "goal": 43,
+      "interval": 1.5,
+      "demand": [
+        [
+          "A",
+          "square"
+        ],
+        [
+          "B",
+          "square"
+        ],
+        [
+          "E",
+          "triangle"
+        ],
+        [
+          "F",
+          "circle"
+        ],
+        [
+          "C",
+          "circle"
+        ],
+        [
+          "A",
+          "triangle"
+        ]
+      ],
+      "demandPhases": [
+        {
+          "at": 30,
+          "demand": [
+            [
+              "C",
+              "circle"
+            ],
+            [
+              "F",
+              "circle"
+            ],
+            [
+              "C",
+              "triangle"
+            ]
+          ]
+        },
+        {
+          "at": 65,
+          "demand": [
+            [
+              "E",
+              "triangle"
+            ],
+            [
+              "A",
+              "square"
+            ],
+            [
+              "D",
+              "square"
+            ]
+          ]
+        }
+      ],
+      "peak": {
+        "start": 65,
+        "end": 87,
+        "interval": 1.05
+      }
+    },
+    {
+      "id": "network-12",
+      "zh": "与城共行",
+      "en": "Keep pace",
+      "description_zh": "新站、高峰与枢纽检修交错出现。观察候车人数，随时调整自己的路网。",
+      "description_en": "New stops, peaks and maintenance overlap. Keep adapting to visible queues.",
+      "duration": 110,
+      "goal": 47,
+      "interval": 1.5,
+      "demand": [
+        [
+          "A",
+          "square"
+        ],
+        [
+          "B",
+          "square"
+        ],
+        [
+          "E",
+          "triangle"
+        ],
+        [
+          "F",
+          "circle"
+        ],
+        [
+          "C",
+          "circle"
+        ],
+        [
+          "A",
+          "triangle"
+        ]
+      ],
+      "growth": [
+        {
+          "station": "F",
+          "at": 22
+        }
+      ],
+      "river": 330,
+      "bridges": 2,
+      "faultAt": 53,
+      "faultDuration": 12,
+      "peak": {
+        "start": 35,
+        "end": 73,
+        "interval": 1
+      }
     }
   ]
 }

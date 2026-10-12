@@ -1,11 +1,552 @@
 {
   "version": 1,
   "levels": [
-    {"id":"autonomy-1","zh":"初生防线","en":"First defence","description_zh":"先在三路各放一株莲卫，再用芽源供给能量。","description_en":"Start with a Lotus on each lane, then grow your energy with a Sprout.","energy":240,"waves":[{"count":6,"gap":8,"types":["drift"]},{"count":9,"gap":7,"types":["drift","gust"]},{"count":12,"gap":6,"types":["drift","drift","stone"]}]},
-    {"id":"autonomy-2","zh":"风的方向","en":"Windward","description_zh":"疾风移动更快。藤障争取时间，莲卫负责清除。","description_en":"Gusts move quickly. Vines buy time for your Lotus guards.","energy":240,"waves":[{"count":9,"gap":6,"types":["gust","drift"]},{"count":12,"gap":5,"types":["gust","gust","drift"]},{"count":15,"gap":4,"types":["gust","drift","stone"]}]},
-    {"id":"autonomy-3","zh":"蓄势而发","en":"Stored response","description_zh":"重砾更耐打。莲卫空闲时蓄能，升级可增强回应。","description_en":"Stones endure. Lotus guards store charge while idle; upgrades strengthen their response.","energy":260,"waves":[{"count":9,"gap":7,"types":["stone","drift"]},{"count":12,"gap":6,"types":["stone","gust"]},{"count":15,"gap":5,"types":["stone","drift","stone"]}]},
-    {"id":"autonomy-4","zh":"彼此照应","en":"Mutual support","description_zh":"枢纽会照料邻路受损的守卫。让防线不只依赖攻击。","description_en":"A Nexus supports damaged guards on neighbouring lanes. Defence needs more than attacks.","energy":260,"waves":[{"count":12,"gap":5,"types":["drift","gust"]},{"count":15,"gap":4,"types":["stone","gust","drift"]},{"count":18,"gap":4,"types":["stone","gust"]},{"count":18,"gap":3,"types":["stone","stone","gust"]}]},
-    {"id":"autonomy-5","zh":"密集来潮","en":"Pressure front","description_zh":"密集扰动会触发枢纽减速。先建设，再选择开波时机。","description_en":"Dense disturbances trigger a Nexus slowdown. Build before you launch the next wave.","energy":280,"waves":[{"count":12,"gap":5,"types":["gust","drift"]},{"count":18,"gap":4,"types":["stone","gust"]},{"count":21,"gap":3,"types":["gust","stone","drift"]},{"count":24,"gap":3,"types":["stone","gust"]}]},
-    {"id":"autonomy-6","zh":"自成秩序","en":"A living defence","description_zh":"综合运用供能、蓄能、阻挡与照料。每一波之间都能重新布阵。","description_en":"Combine supply, stored charge, barriers and support. Reorganise between waves.","energy":300,"waves":[{"count":15,"gap":5,"types":["drift","gust"]},{"count":18,"gap":4,"types":["stone","gust"]},{"count":24,"gap":3,"types":["stone","drift","gust"]},{"count":27,"gap":3,"types":["stone","gust"]},{"count":30,"gap":2,"types":["stone","stone","gust"]}]}
+    {
+      "id": "autonomy-1",
+      "zh": "初生防线",
+      "en": "First defence",
+      "description_zh": "先在三路各放一株莲卫，再用芽源供给能量。",
+      "description_en": "Start with a Lotus on each lane, then grow your energy with a Sprout.",
+      "energy": 240,
+      "waves": [
+        {
+          "count": 6,
+          "gap": 8,
+          "types": [
+            "drift"
+          ]
+        },
+        {
+          "count": 9,
+          "gap": 7,
+          "types": [
+            "drift",
+            "gust"
+          ]
+        },
+        {
+          "count": 12,
+          "gap": 6,
+          "types": [
+            "drift",
+            "drift",
+            "stone"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autonomy-2",
+      "zh": "风的方向",
+      "en": "Windward",
+      "description_zh": "疾风移动更快。藤障争取时间，莲卫负责清除。",
+      "description_en": "Gusts move quickly. Vines buy time for your Lotus guards.",
+      "energy": 240,
+      "waves": [
+        {
+          "count": 9,
+          "gap": 6,
+          "types": [
+            "gust",
+            "drift"
+          ]
+        },
+        {
+          "count": 12,
+          "gap": 5,
+          "types": [
+            "gust",
+            "gust",
+            "drift"
+          ]
+        },
+        {
+          "count": 15,
+          "gap": 4,
+          "types": [
+            "gust",
+            "drift",
+            "stone"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autonomy-3",
+      "zh": "蓄势而发",
+      "en": "Stored response",
+      "description_zh": "重砾更耐打。莲卫空闲时蓄能，升级可增强回应。",
+      "description_en": "Stones endure. Lotus guards store charge while idle; upgrades strengthen their response.",
+      "energy": 260,
+      "waves": [
+        {
+          "count": 9,
+          "gap": 7,
+          "types": [
+            "stone",
+            "drift"
+          ]
+        },
+        {
+          "count": 12,
+          "gap": 6,
+          "types": [
+            "stone",
+            "gust"
+          ]
+        },
+        {
+          "count": 15,
+          "gap": 5,
+          "types": [
+            "stone",
+            "drift",
+            "stone"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autonomy-4",
+      "zh": "彼此照应",
+      "en": "Mutual support",
+      "description_zh": "枢纽会照料邻路受损的守卫。让防线不只依赖攻击。",
+      "description_en": "A Nexus supports damaged guards on neighbouring lanes. Defence needs more than attacks.",
+      "energy": 260,
+      "waves": [
+        {
+          "count": 12,
+          "gap": 5,
+          "types": [
+            "drift",
+            "gust"
+          ]
+        },
+        {
+          "count": 15,
+          "gap": 4,
+          "types": [
+            "stone",
+            "gust",
+            "drift"
+          ]
+        },
+        {
+          "count": 18,
+          "gap": 4,
+          "types": [
+            "stone",
+            "gust"
+          ]
+        },
+        {
+          "count": 18,
+          "gap": 3,
+          "types": [
+            "stone",
+            "stone",
+            "gust"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autonomy-5",
+      "zh": "密集来潮",
+      "en": "Pressure front",
+      "description_zh": "密集扰动会触发枢纽减速。先建设，再选择开波时机。",
+      "description_en": "Dense disturbances trigger a Nexus slowdown. Build before you launch the next wave.",
+      "energy": 280,
+      "waves": [
+        {
+          "count": 12,
+          "gap": 5,
+          "types": [
+            "gust",
+            "drift"
+          ]
+        },
+        {
+          "count": 18,
+          "gap": 4,
+          "types": [
+            "stone",
+            "gust"
+          ]
+        },
+        {
+          "count": 21,
+          "gap": 3,
+          "types": [
+            "gust",
+            "stone",
+            "drift"
+          ]
+        },
+        {
+          "count": 24,
+          "gap": 3,
+          "types": [
+            "stone",
+            "gust"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autonomy-6",
+      "zh": "自成秩序",
+      "en": "A living defence",
+      "description_zh": "综合运用供能、蓄能、阻挡与照料。每一波之间都能重新布阵。",
+      "description_en": "Combine supply, stored charge, barriers and support. Reorganise between waves.",
+      "energy": 300,
+      "waves": [
+        {
+          "count": 15,
+          "gap": 5,
+          "types": [
+            "drift",
+            "gust"
+          ]
+        },
+        {
+          "count": 18,
+          "gap": 4,
+          "types": [
+            "stone",
+            "gust"
+          ]
+        },
+        {
+          "count": 24,
+          "gap": 3,
+          "types": [
+            "stone",
+            "drift",
+            "gust"
+          ]
+        },
+        {
+          "count": 27,
+          "gap": 3,
+          "types": [
+            "stone",
+            "gust"
+          ]
+        },
+        {
+          "count": 30,
+          "gap": 2,
+          "types": [
+            "stone",
+            "stone",
+            "gust"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autonomy-7",
+      "zh": "偏路来风",
+      "en": "Uneven winds",
+      "description_zh": "疾风集中在上下两路，中路重砾缓慢推进。留意最先出现的缺口。",
+      "description_en": "Fast gusts favour the outer lanes while stones press the centre.",
+      "energy": 280,
+      "waves": [
+        {
+          "count": 15,
+          "gap": 4,
+          "types": [
+            "gust",
+            "stone",
+            "gust"
+          ],
+          "lanes": [
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "count": 21,
+          "gap": 3,
+          "types": [
+            "gust",
+            "stone",
+            "drift"
+          ],
+          "lanes": [
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "count": 24,
+          "gap": 3,
+          "types": [
+            "stone",
+            "gust",
+            "gust"
+          ],
+          "lanes": [
+            1,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autonomy-8",
+      "zh": "双潮之间",
+      "en": "Between tides",
+      "description_zh": "两段密集来潮之间留有喘息时间，用来补种芽源、修复前排。",
+      "description_en": "Two dense bursts leave a short break to rebuild and restore supply.",
+      "energy": 280,
+      "waves": [
+        {
+          "count": 18,
+          "gap": 3,
+          "types": [
+            "gust",
+            "drift"
+          ]
+        },
+        {
+          "count": 18,
+          "gap": 6,
+          "types": [
+            "stone",
+            "drift"
+          ]
+        },
+        {
+          "count": 27,
+          "gap": 2,
+          "types": [
+            "gust",
+            "gust",
+            "stone"
+          ]
+        },
+        {
+          "count": 18,
+          "gap": 6,
+          "types": [
+            "stone"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autonomy-9",
+      "zh": "重砾长路",
+      "en": "Heavy passage",
+      "description_zh": "重砾会在前排停留很久。用藤障承接，再用枢纽照料邻路。",
+      "description_en": "Stones linger at the front. Vines hold them while a Nexus supports adjacent lanes.",
+      "energy": 300,
+      "waves": [
+        {
+          "count": 15,
+          "gap": 5,
+          "types": [
+            "stone",
+            "stone",
+            "drift"
+          ]
+        },
+        {
+          "count": 21,
+          "gap": 4,
+          "types": [
+            "stone",
+            "gust"
+          ]
+        },
+        {
+          "count": 24,
+          "gap": 3,
+          "types": [
+            "stone",
+            "stone",
+            "gust"
+          ]
+        },
+        {
+          "count": 27,
+          "gap": 3,
+          "types": [
+            "stone",
+            "gust",
+            "stone"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autonomy-10",
+      "zh": "疾风回转",
+      "en": "Shifting fronts",
+      "description_zh": "来潮会依次偏向不同路，避免把所有能量都花在一边。",
+      "description_en": "Pressure shifts between lanes. Keep resources available for the next front.",
+      "energy": 300,
+      "waves": [
+        {
+          "count": 18,
+          "gap": 3,
+          "types": [
+            "gust"
+          ],
+          "lanes": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "count": 21,
+          "gap": 3,
+          "types": [
+            "gust",
+            "stone"
+          ],
+          "lanes": [
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "count": 24,
+          "gap": 3,
+          "types": [
+            "gust",
+            "stone",
+            "gust"
+          ],
+          "lanes": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "count": 27,
+          "gap": 2,
+          "types": [
+            "gust",
+            "drift",
+            "stone"
+          ],
+          "lanes": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autonomy-11",
+      "zh": "薄储备",
+      "en": "Lean reserves",
+      "description_zh": "开局能量只够基本防线。先稳住供能，再安排升级。",
+      "description_en": "Start with just enough for a basic formation. Establish supply before upgrading.",
+      "energy": 240,
+      "waves": [
+        {
+          "count": 12,
+          "gap": 6,
+          "types": [
+            "drift"
+          ]
+        },
+        {
+          "count": 18,
+          "gap": 4,
+          "types": [
+            "gust",
+            "stone"
+          ]
+        },
+        {
+          "count": 24,
+          "gap": 3,
+          "types": [
+            "stone",
+            "gust"
+          ]
+        },
+        {
+          "count": 27,
+          "gap": 2,
+          "types": [
+            "gust",
+            "stone",
+            "stone"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "autonomy-12",
+      "zh": "长守有时",
+      "en": "Sustained rhythm",
+      "description_zh": "六段来潮轮换速度与压力。保留供能、前排与照料，直到最后。",
+      "description_en": "Six periods alternate speed and pressure. Sustain supply, barriers and support to the end.",
+      "energy": 300,
+      "waves": [
+        {
+          "count": 15,
+          "gap": 5,
+          "types": [
+            "drift",
+            "gust"
+          ]
+        },
+        {
+          "count": 21,
+          "gap": 3,
+          "types": [
+            "gust",
+            "stone"
+          ]
+        },
+        {
+          "count": 24,
+          "gap": 4,
+          "types": [
+            "stone"
+          ]
+        },
+        {
+          "count": 27,
+          "gap": 2,
+          "types": [
+            "gust",
+            "gust",
+            "drift"
+          ]
+        },
+        {
+          "count": 27,
+          "gap": 3,
+          "types": [
+            "stone",
+            "gust"
+          ]
+        },
+        {
+          "count": 30,
+          "gap": 2,
+          "types": [
+            "stone",
+            "gust",
+            "stone"
+          ]
+        }
+      ]
+    }
   ]
 }

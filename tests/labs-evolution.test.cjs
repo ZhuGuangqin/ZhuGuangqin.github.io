@@ -34,7 +34,7 @@ test('automatic rescue charges are spent once; return pegs work only after that 
  const s=expedition();equip(s,'recall');E.pinballLaunch(s);s.ballSave=0;s.balls.forEach(b=>b.y=500);E.pinballStep(s);assert.equal(s.rescues,0);assert.equal(s.lives,4);s.balls.forEach(b=>b.y=500);E.pinballStep(s);assert.equal(s.lives,3);
  const p=expedition();equip(p,'echo');p.bumpers[0].hp=0;const node=p.bumpers[0];p.phase='active';p.launchReady=false;p.balls=[{id:1,x:node.x,y:node.y,z:0,vx:0,vy:100,vz:0,r:9,lock:0}];E.pinballStep(p);assert(p.balls[0].vy<0);assert(p.score>0);
 });
-test('all five floors have a legal physical route, with drafts and limited skill actions',()=>{
+test('all twelve floors have a legal physical route, with drafts and limited skill actions',()=>{
  for(const difficulty of ['explore','challenge','extreme']){
   const s=E.pinballStart(7,difficulty,'expedition'),priority=['force','longarm','chain','ember','heavy','split','blast','recall','feather','bloom','echo','rewind'];let lastNudge=0;
   for(let i=0;i<18000&&!['won','lost'].includes(s.phase);i++){
@@ -44,7 +44,7 @@ test('all five floors have a legal physical route, with drafts and limited skill
    if(s.time-lastNudge>5&&s.comboClock===0){E.pinballNudge(s);lastNudge=s.time;}
    E.pinballStep(s,{left:b&&b.x<335&&b.y>325,right:b&&b.x>305&&b.y>325});
   }
-  assert.equal(s.phase,'won',difficulty);assert.equal(s.tablesCleared,5);assert(s.build.length>=5);assert(s.destroyed>=20);assert(s.balls.length<=3);
+  assert.equal(s.phase,'won',difficulty);assert.equal(s.tablesCleared,12);assert(s.build.length>=12);assert(s.destroyed>=48);assert(s.balls.length<=3);
  }
 });
 test('merged habitat food feeds mass and growth; power food has actual effects and camera scales are reachable',()=>{
@@ -60,7 +60,7 @@ test('fragment survives loss of the main body, and otherwise timed respawns keep
  const d=habitat();d.upgrades.needle=3;d.level=5;d.player.mass=600;d.enemies=[rival(d,2000,10000)];E.survivorStep(d);assert.equal(d.phase,'respawn');assert.equal(d.deaths,1);const at=d.time;tick(d,E.survivorStep,3.1);assert(d.time>at+3);assert.equal(d.phase,'active');assert.equal(d.upgrades.needle,3);assert.equal(d.level,5);assert(d.player.mass>=420);assert(d.invincible>2);
  const end=habitat();end.phase='respawn';end.respawnAt=end.limit+48;end.time=end.limit+44.9;tick(end,E.survivorStep,.2);assert.equal(end.phase,'lost');
 });
-test('four habitats inherit mass, body upgrades, scores and all prior discoveries in one game',()=>{
+test('twelve habitats inherit mass, body upgrades, scores and all prior discoveries in one game',()=>{
  const s=habitat();s.player.mass=1700;s.peak=1700;s.upgrades.leaf=2;s.level=8;s.score=900;s.finalBoss=true;s.finalCleared=true;s.time=s.limit;E.survivorStep(s);assert.equal(s.phase,'chapter');const mass=s.player.mass,score=s.score;E.survivorContinue(s,'reserve');assert.equal(s.player.mass,mass);assert.equal(s.score,score);assert.equal(s.upgrades.leaf,2);assert.equal(s.level,8);assert.equal(s.foods.length,180);assert.equal(s.world.h,1800);
 });
 test('world movement passes the old viewport edge and remains inside the large habitat',()=>{

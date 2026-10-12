@@ -1,1 +1,399 @@
-{"levels":[{"id":"slope","zh":"小坡出发","en":"First roll","description_zh":"让载具越过终点。轮子接地，风扇朝右，先让它动起来。","description_en":"Reach the finish. Put wheels underneath and point a fan right to get moving.","duration":16,"goal":650},{"id":"gap","zh":"越过裂谷","en":"Mind the gap","description_zh":"坡道后有一道裂谷。减轻落势，或借一次弹跳，把载具送到对岸。","description_en":"A gap follows the ramp. Soften the fall or use a spring to reach the far side.","duration":20,"goal":1020},{"id":"wind","zh":"逆风穿行","en":"Against the wind","description_zh":"途中迎风。增加推进，也要让受力平衡，别把自己掀翻。","description_en":"A headwind lies ahead. Add thrust, balance its leverage and keep the machine upright.","duration":20,"goal":790}],"parts":[{"id":"wheel","zh":"轮子","en":"Wheel","hint_zh":"接地时减少阻力","hint_en":"Less drag on ground"},{"id":"fan","zh":"风扇","en":"Fan","hint_zh":"换朝向，换推力；燃料9秒","hint_en":"Aim thrust; 9s fuel"},{"id":"balloon","zh":"气囊","en":"Balloon","hint_zh":"上托，偏置也会倾斜","hint_en":"Lift; offset can tip"},{"id":"spring","zh":"弹簧","en":"Spring","hint_zh":"触地弹起一次","hint_en":"One ground-contact jump"}]}
+{
+  "levels": [
+    {
+      "id": "slope",
+      "zh": "小坡出发",
+      "en": "First roll",
+      "description_zh": "让载具越过终点。轮子接地，风扇朝右，先让它动起来。",
+      "description_en": "Reach the finish. Put wheels underneath and point a fan right to get moving.",
+      "duration": 16,
+      "goal": 650
+    },
+    {
+      "id": "gap",
+      "zh": "越过裂谷",
+      "en": "Mind the gap",
+      "description_zh": "坡道后有一道裂谷。减轻落势，或借一次弹跳，把载具送到对岸。",
+      "description_en": "A gap follows the ramp. Soften the fall or use a spring to reach the far side.",
+      "duration": 20,
+      "goal": 1020
+    },
+    {
+      "id": "wind",
+      "zh": "逆风穿行",
+      "en": "Against the wind",
+      "description_zh": "途中迎风。增加推进，也要让受力平衡，别把自己掀翻。",
+      "description_en": "A headwind lies ahead. Add thrust, balance its leverage and keep the machine upright.",
+      "duration": 20,
+      "goal": 790
+    },
+    {
+      "id": "course-4",
+      "zh": "小丘起伏",
+      "en": "Rolling hills",
+      "description_zh": "双轮能顺着缓坡走稳，风扇放低一点更容易保持平衡。",
+      "description_en": "Low-mounted thrust and two wheels help on rolling terrain.",
+      "goal": 850,
+      "duration": 20,
+      "sample": [
+        {
+          "slot": 6,
+          "kind": "wheel",
+          "dir": 0
+        },
+        {
+          "slot": 8,
+          "kind": "wheel",
+          "dir": 0
+        },
+        {
+          "slot": 3,
+          "kind": "fan",
+          "dir": 0
+        },
+        {
+          "slot": 5,
+          "kind": "fan",
+          "dir": 0
+        }
+      ],
+      "terrain": "rolling",
+      "height": 10,
+      "amplitude": 8,
+      "wavelength": 115,
+      "fuel": 10
+    },
+    {
+      "id": "course-5",
+      "zh": "短谷轻渡",
+      "en": "Short crossing",
+      "description_zh": "谷口比之前短，但对岸更高。试试气球抬升与水平推进。",
+      "description_en": "A shorter gap ends at a higher bank. Combine lift and forward thrust.",
+      "goal": 900,
+      "duration": 20,
+      "sample": [
+        {
+          "slot": 0,
+          "kind": "balloon",
+          "dir": 0
+        },
+        {
+          "slot": 2,
+          "kind": "balloon",
+          "dir": 0
+        },
+        {
+          "slot": 5,
+          "kind": "fan",
+          "dir": 0
+        },
+        {
+          "slot": 7,
+          "kind": "wheel",
+          "dir": 0
+        }
+      ],
+      "terrain": "gap",
+      "gapStart": 290,
+      "gapEnd": 700,
+      "bank": 25,
+      "fuel": 10
+    },
+    {
+      "id": "course-6",
+      "zh": "迎风缓行",
+      "en": "Headwind",
+      "description_zh": "迎风区更长。对称推进能避免小车一边加速一边翻转。",
+      "description_en": "A longer headwind rewards balanced thrust.",
+      "goal": 900,
+      "duration": 22,
+      "sample": [
+        {
+          "slot": 6,
+          "kind": "wheel",
+          "dir": 0
+        },
+        {
+          "slot": 8,
+          "kind": "wheel",
+          "dir": 0
+        },
+        {
+          "slot": 3,
+          "kind": "fan",
+          "dir": 0
+        },
+        {
+          "slot": 5,
+          "kind": "fan",
+          "dir": 0
+        }
+      ],
+      "terrain": "rolling",
+      "amplitude": 8,
+      "wavelength": 190,
+      "height": 12,
+      "wind": -110,
+      "windStart": 250,
+      "windEnd": 720,
+      "fuel": 11
+    },
+    {
+      "id": "course-7",
+      "zh": "长坡滑行",
+      "en": "Long descent",
+      "description_zh": "长下坡提供起步速度。少一个零件，能否也走到终点？",
+      "description_en": "Use the descent for momentum. Can fewer parts still reach the finish?",
+      "goal": 1000,
+      "duration": 22,
+      "sample": [
+        {
+          "slot": 6,
+          "kind": "wheel",
+          "dir": 0
+        },
+        {
+          "slot": 8,
+          "kind": "wheel",
+          "dir": 0
+        },
+        {
+          "slot": 3,
+          "kind": "fan",
+          "dir": 0
+        },
+        {
+          "slot": 5,
+          "kind": "fan",
+          "dir": 0
+        }
+      ],
+      "terrain": "slope",
+      "height": 90,
+      "slopeLength": 600,
+      "fuel": 10
+    },
+    {
+      "id": "course-8",
+      "zh": "高岸之间",
+      "en": "Raised banks",
+      "description_zh": "在高岸间保持高度，过早落地会撞上谷壁。",
+      "description_en": "Hold your height between raised banks; an early landing hits the far wall.",
+      "goal": 1080,
+      "duration": 22,
+      "sample": [
+        {
+          "slot": 0,
+          "kind": "balloon",
+          "dir": 0
+        },
+        {
+          "slot": 2,
+          "kind": "balloon",
+          "dir": 0
+        },
+        {
+          "slot": 5,
+          "kind": "fan",
+          "dir": 0
+        },
+        {
+          "slot": 7,
+          "kind": "wheel",
+          "dir": 0
+        }
+      ],
+      "terrain": "gap",
+      "gapStart": 280,
+      "gapEnd": 890,
+      "bank": 30,
+      "fuel": 11
+    },
+    {
+      "id": "course-9",
+      "zh": "阵风走廊",
+      "en": "Gust corridor",
+      "description_zh": "风会周期性增强减弱。为加速和恢复平衡都留一点余量。",
+      "description_en": "Wind waxes and wanes. Leave room to accelerate and regain balance.",
+      "goal": 1000,
+      "duration": 24,
+      "sample": [
+        {
+          "slot": 6,
+          "kind": "wheel",
+          "dir": 0
+        },
+        {
+          "slot": 8,
+          "kind": "wheel",
+          "dir": 0
+        },
+        {
+          "slot": 3,
+          "kind": "fan",
+          "dir": 0
+        },
+        {
+          "slot": 5,
+          "kind": "fan",
+          "dir": 0
+        }
+      ],
+      "terrain": "rolling",
+      "height": 12,
+      "amplitude": 10,
+      "wavelength": 150,
+      "wind": -90,
+      "gust": 50,
+      "windStart": 250,
+      "windEnd": 820,
+      "fuel": 12
+    },
+    {
+      "id": "course-10",
+      "zh": "低浪远行",
+      "en": "Long rollers",
+      "description_zh": "连续缓坡让轮子反复起落，稳定比猛推更有用。",
+      "description_en": "Repeated gentle slopes reward stable contact over brute thrust.",
+      "goal": 1100,
+      "duration": 25,
+      "sample": [
+        {
+          "slot": 6,
+          "kind": "wheel",
+          "dir": 0
+        },
+        {
+          "slot": 8,
+          "kind": "wheel",
+          "dir": 0
+        },
+        {
+          "slot": 3,
+          "kind": "fan",
+          "dir": 0
+        },
+        {
+          "slot": 5,
+          "kind": "fan",
+          "dir": 0
+        }
+      ],
+      "terrain": "rolling",
+      "height": 13,
+      "amplitude": 9,
+      "wavelength": 100,
+      "fuel": 12
+    },
+    {
+      "id": "course-11",
+      "zh": "逆风过谷",
+      "en": "Wind over water",
+      "description_zh": "谷地上空有轻微逆风。让升力与推力相互配合。",
+      "description_en": "A light headwind crosses the gap. Balance lift and thrust.",
+      "goal": 1050,
+      "duration": 24,
+      "sample": [
+        {
+          "slot": 0,
+          "kind": "balloon",
+          "dir": 0
+        },
+        {
+          "slot": 2,
+          "kind": "balloon",
+          "dir": 0
+        },
+        {
+          "slot": 5,
+          "kind": "fan",
+          "dir": 0
+        },
+        {
+          "slot": 7,
+          "kind": "wheel",
+          "dir": 0
+        }
+      ],
+      "terrain": "gap",
+      "gapStart": 300,
+      "gapEnd": 830,
+      "bank": 18,
+      "wind": -20,
+      "windStart": 300,
+      "windEnd": 800,
+      "fuel": 12
+    },
+    {
+      "id": "course-12",
+      "zh": "最后一程",
+      "en": "The long way home",
+      "description_zh": "长坡接低丘，中段有阵风。把一路试出的装配经验用在这里。",
+      "description_en": "A descent leads into hills and gusts. Put the whole build to work.",
+      "goal": 1250,
+      "duration": 26,
+      "sample": [
+        {
+          "slot": 6,
+          "kind": "wheel",
+          "dir": 0
+        },
+        {
+          "slot": 8,
+          "kind": "wheel",
+          "dir": 0
+        },
+        {
+          "slot": 3,
+          "kind": "fan",
+          "dir": 0
+        },
+        {
+          "slot": 5,
+          "kind": "fan",
+          "dir": 0
+        }
+      ],
+      "terrain": "mixed",
+      "height": 65,
+      "slopeLength": 360,
+      "amplitude": 7,
+      "wavelength": 155,
+      "wind": -70,
+      "gust": 40,
+      "windStart": 450,
+      "windEnd": 900,
+      "fuel": 13
+    }
+  ],
+  "parts": [
+    {
+      "id": "wheel",
+      "zh": "轮子",
+      "en": "Wheel",
+      "hint_zh": "接地时减少阻力",
+      "hint_en": "Less drag on ground"
+    },
+    {
+      "id": "fan",
+      "zh": "风扇",
+      "en": "Fan",
+      "hint_zh": "换朝向，换推力；燃料9秒",
+      "hint_en": "Aim thrust; 9s fuel"
+    },
+    {
+      "id": "balloon",
+      "zh": "气囊",
+      "en": "Balloon",
+      "hint_zh": "上托，偏置也会倾斜",
+      "hint_en": "Lift; offset can tip"
+    },
+    {
+      "id": "spring",
+      "zh": "弹簧",
+      "en": "Spring",
+      "hint_zh": "触地弹起一次",
+      "hint_en": "One ground-contact jump"
+    }
+  ]
+}

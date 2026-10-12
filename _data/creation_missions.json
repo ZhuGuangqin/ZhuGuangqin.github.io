@@ -1,0 +1,162 @@
+[
+  {
+    "id": "research-1",
+    "zh": "阴阳初会",
+    "en": "First meeting",
+    "targets": [
+      "taiji"
+    ],
+    "description": "先发现太极，让五行在实验台上展开。",
+    "description_en": "Discover Taiji to open the five phases."
+  },
+  {
+    "id": "research-2",
+    "zh": "云雨成流",
+    "en": "From clouds to rivers",
+    "targets": [
+      "steam",
+      "cloud",
+      "rain",
+      "river"
+    ],
+    "description": "沿着水的变化，收集蒸汽、云、雨与河流。",
+    "description_en": "Follow water through steam, clouds, rain and rivers."
+  },
+  {
+    "id": "research-3",
+    "zh": "种子成林",
+    "en": "Seed to forest",
+    "targets": [
+      "seed",
+      "root",
+      "plant",
+      "forest"
+    ],
+    "description": "从一粒种子开始，寻找根、植株与林。",
+    "description_en": "Begin with a seed and discover roots, plants and forests."
+  },
+  {
+    "id": "research-4",
+    "zh": "泥火造器",
+    "en": "Clay and fire",
+    "targets": [
+      "clay",
+      "pottery",
+      "glass",
+      "brick"
+    ],
+    "description": "试着把材料变成陶器、玻璃与砖。",
+    "description_en": "Make pottery, glass and bricks from raw materials."
+  },
+  {
+    "id": "research-5",
+    "zh": "写下发现",
+    "en": "Record a discovery",
+    "targets": [
+      "paper",
+      "ink",
+      "book",
+      "printing"
+    ],
+    "description": "收集纸、墨、书与印刷，留下你的造物记录。",
+    "description_en": "Collect paper, ink, books and printing."
+  },
+  {
+    "id": "research-6",
+    "zh": "让机械动起来",
+    "en": "Set things in motion",
+    "targets": [
+      "wheel",
+      "gear",
+      "machine",
+      "engine"
+    ],
+    "description": "找到轮、齿轮、机械与动力机之间的联系。",
+    "description_en": "Connect wheels, gears, machines and engines."
+  },
+  {
+    "id": "research-7",
+    "zh": "电与信息",
+    "en": "Power and information",
+    "targets": [
+      "electricity",
+      "circuit",
+      "sensor",
+      "computer"
+    ],
+    "description": "从电路走到传感器和计算机。",
+    "description_en": "Build a path from electricity to sensors and computers."
+  },
+  {
+    "id": "research-8",
+    "zh": "生命的循环",
+    "en": "Cycles of life",
+    "targets": [
+      "cell",
+      "metabolism",
+      "circulation",
+      "homeostasis"
+    ],
+    "description": "发现细胞、代谢、循环与内稳态。",
+    "description_en": "Discover cells, metabolism, circulation and homeostasis."
+  },
+  {
+    "id": "research-9",
+    "zh": "四诊合参",
+    "en": "Four examinations",
+    "targets": [
+      "inspection",
+      "listening",
+      "inquiry",
+      "palpation",
+      "four-examinations"
+    ],
+    "description": "集齐望、闻、问、脉诊，再发现四诊合参。",
+    "description_en": "Collect the four examinations and bring them together."
+  },
+  {
+    "id": "research-10",
+    "zh": "经典书架",
+    "en": "The classics shelf",
+    "targets": [
+      "neijing",
+      "nanjing",
+      "shanghan",
+      "shennong"
+    ],
+    "description": "找到四大经典，让收藏中出现这一组纪念。",
+    "description_en": "Discover all four classics and complete their collection."
+  },
+  {
+    "id": "research-11",
+    "zh": "精气血津液神",
+    "en": "Foundations of life",
+    "targets": [
+      "essence",
+      "qi",
+      "blood",
+      "jin",
+      "ye",
+      "spirit",
+      "six-foundations"
+    ],
+    "description": "把六个生命概念联系起来，完成终极收藏。",
+    "description_en": "Connect the six foundational concepts and complete their collection."
+  },
+  {
+    "id": "research-12",
+    "zh": "系统的七个视角",
+    "en": "Seven systems perspectives",
+    "targets": [
+      "meta-wholeness",
+      "non-additivity",
+      "nature-human",
+      "autonomy-principle",
+      "order-principle",
+      "organicity-principle",
+      "functionality-principle"
+    ],
+    "description": "集齐七大原理，回看它们各自的合成来路。",
+    "description_en": "Collect the seven principles and revisit their synthesis routes."
+  }
+]

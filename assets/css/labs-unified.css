@@ -1,0 +1,41 @@
+/* Shared laboratory shell; each instrument keeps its own useful controls. */
+.labs-page :is(.wuxing,.principle-game,.autonomy-lab,.network-lab,.contraption-lab,.arcade-game){border:1px solid var(--line);border-radius:12px;margin:18px 0;background:var(--panel);overflow:clip;box-shadow:none;}
+.labs-page details>.lab-entry{display:grid;grid-template-columns:64px minmax(0,1fr) 24px;gap:22px;align-items:center;padding:26px 30px;min-height:132px;list-style:none;color:var(--ink);background:var(--panel);cursor:pointer;border:0;border-radius:0;position:relative;}
+.labs-page details>.lab-entry::-webkit-details-marker{display:none;}
+.labs-page details>.lab-entry:hover{background:var(--field);}
+.labs-page details>.lab-entry:focus-visible{outline:3px solid var(--accent);outline-offset:-4px;}
+.labs-page .lab-entry .lab-entry__logo{width:64px;height:64px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transform:none;}
+.labs-page .lab-entry .lab-entry__text{min-width:0;}
+.labs-page .lab-entry h2{font:600 clamp(1.3rem,2.4vw,1.65rem)/1.35 "Research Display","Songti SC",serif;letter-spacing:0;margin:0 0 9px;color:var(--ink);}
+.labs-page .lab-entry p{font:400 .91rem/1.65 system-ui,sans-serif;color:var(--muted);margin:0;max-width:70ch;}
+.labs-page .lab-entry p strong{font-weight:600;color:var(--ink);}
+.labs-page .lab-entry__action{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}
+.labs-page .lab-entry .lab-entry__chevron{width:24px;height:24px;fill:none;stroke:var(--muted);stroke-width:1.7;transition:transform .2s;}
+.labs-page details[open]>.lab-entry{border-bottom:1px solid var(--line);}
+.labs-page details[open]>.lab-entry .lab-entry__chevron{transform:rotate(180deg);}
+.labs-page :is(.wuxing-app,.pe-app,.td-app,.nl-app,.cl-app,.arcade-body){padding:26px 30px;}
+.labs-page :is(.pe-toolbar,.td-toolbar,.nl-scenario,.cl-scenario,.wuxing-toolbar,.arcade-settings){padding:0 0 20px;margin:0 0 20px;border-bottom:1px solid var(--line);gap:12px;align-items:center;}
+.labs-page :is(button,select,input){font-family:system-ui,sans-serif;}
+.labs-page :is(.pe-toolbar,.td-toolbar,.nl-scenario,.cl-scenario) select{max-width:100%;min-height:44px;background:var(--canvas);border:1px solid var(--line);border-radius:6px;padding:8px 30px 8px 10px;color:var(--ink);}
+.labs-page :is(.nl-intro,.cl-intro,.arcade-game-heading p){line-height:1.7;color:var(--muted);}
+.labs-page :is(.nl-hud,.cl-hud,.arcade-hud,.td-hud){font-variant-numeric:tabular-nums;}
+.labs-page .lab-missions{border-top:1px solid var(--line);margin-top:24px;padding-top:20px;}
+.labs-page .lab-missions>summary{min-height:44px;cursor:pointer;font-weight:600;}
+.labs-page .lab-mission-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px;}
+.labs-page .lab-mission{border:0;border-top:1px solid var(--line);border-radius:0;padding:16px 0;min-width:0;background:transparent;}
+.labs-page .lab-mission h4{font:600 1rem/1.5 system-ui,sans-serif;margin:6px 0;color:var(--ink);}
+.labs-page .lab-mission p{font-size:.88rem;line-height:1.6;margin:8px 0 14px;color:var(--muted);}
+.labs-page .lab-mission small{color:var(--muted);font-variant-numeric:tabular-nums;}
+.labs-page .lab-mission button{min-height:44px;padding:8px 12px;}
+.labs-page .lab-mission[data-complete=true]{border-color:var(--accent);}
+.labs-page .lab-mission-progress{color:var(--accent);font-size:.88rem;margin:0 0 12px;}
+@media(max-width:760px){.labs-page .lab-mission-list{grid-template-columns:repeat(2,minmax(0,1fr));}.labs-page details>.lab-entry{grid-template-columns:52px minmax(0,1fr) 20px;padding:22px 20px;gap:16px;}.labs-page .lab-entry .lab-entry__logo{width:52px;height:52px;}.labs-page :is(.wuxing-app,.pe-app,.td-app,.nl-app,.cl-app,.arcade-body){padding:20px;}}
+@media(max-width:460px){.labs-page details>.lab-entry{grid-template-columns:40px minmax(0,1fr) 18px;padding:20px 14px;gap:12px;min-height:128px;}.labs-page .lab-entry .lab-entry__logo{width:40px;height:40px;}.labs-page .lab-entry h2{font-size:1.18rem;margin-bottom:7px;}.labs-page .lab-entry p{font-size:.82rem;line-height:1.65;}.labs-page :is(.wuxing-app,.pe-app,.td-app,.nl-app,.cl-app,.arcade-body){padding:18px 12px;}.labs-page .lab-mission-list{grid-template-columns:1fr;}.labs-page .lab-entry .lab-entry__chevron{width:18px;}}
+@media(prefers-reduced-motion:reduce){.labs-page .lab-entry__chevron{transition:none;}}
+html[data-motion=off] .labs-page .lab-entry__chevron{transition:none;}
+.labs-page .arcade-campaign{margin:0 0 22px;padding:0 0 12px;border-top:0;border-bottom:1px solid var(--line);}
+.labs-page .lab-campaign-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 30px;padding-left:24px;margin:12px 0;font-size:.86rem;line-height:1.6;color:var(--muted);}
+.labs-page .lab-campaign-list li{padding:5px 0 5px 3px;}
+.labs-page .lab-campaign-list [data-current=true]{color:var(--ink);font-weight:600;}
+.labs-page .lab-campaign-list [data-complete=true]{color:var(--accent);}
+@media(max-width:650px){.labs-page .lab-campaign-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 22px;}}

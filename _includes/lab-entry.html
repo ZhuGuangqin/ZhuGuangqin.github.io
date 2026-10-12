@@ -1,0 +1,5 @@
+{% assign lab = site.data.laboratories[include.key] %}
+<svg class="lab-entry__logo" viewBox="0 0 64 64" aria-hidden="true"><path d="{{ lab.path }}"/></svg>
+<div class="lab-entry__text"><h2 id="{{ lab.title_id }}"><span data-i18n="zh">{{ lab.zh }}</span><span data-i18n="en">{{ lab.en }}</span></h2><p><span data-i18n="zh"><strong>{{ lab.principle }}</strong> · {{ lab.description }}</span><span data-i18n="en"><strong>{{ lab.principle_en }}</strong> · {{ lab.description_en }}</span></p></div>
+{% if lab.hook != empty %}<span class="lab-entry__action" {{ lab.hook }}></span>{% endif %}
+<svg class="lab-entry__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9L12 15L18 9"/></svg>

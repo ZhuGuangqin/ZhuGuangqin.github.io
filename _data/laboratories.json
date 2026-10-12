@@ -1,0 +1,79 @@
+{
+  "creation": {
+    "title_id": "wuxing-title",
+    "zh": "造物实验室",
+    "en": "Creation Lab",
+    "principle": "非加和原理",
+    "principle_en": "Non-additivity",
+    "description": "从阴阳出发，合成元素，收集每一次新发现。",
+    "description_en": "Combine elements from yin and yang, and collect each new discovery.",
+    "path": "M32 8A24 24 0 1 0 32 56A24 24 0 1 0 32 8M32 8C16 8 16 32 32 32S48 56 32 56M32 18V22M32 42V46",
+    "hook": ""
+  },
+  "flow": {
+    "title_id": "flow-title",
+    "zh": "循流实验室",
+    "en": "Flow Lab",
+    "principle": "有机性原理",
+    "principle_en": "Organicity",
+    "description": "转动管道，让每一条支路重新连通。",
+    "description_en": "Rotate the pipes to reconnect every branch.",
+    "path": "M8 32H24V12H44V52H56M24 32H44",
+    "hook": "data-pe-entry-action"
+  },
+  "rhythm": {
+    "title_id": "autonomy-title",
+    "zh": "阵律实验室",
+    "en": "Rhythm Lab",
+    "principle": "有序性原理",
+    "principle_en": "Orderedness",
+    "description": "种植、供能、调整阵型，守住不断变化的防线。",
+    "description_en": "Plant, supply energy and adapt your formation to hold the lanes.",
+    "path": "M10 50H54M18 50V34M32 50V23M46 50V34M10 34H26M38 34H54M24 23C15 16 22 8 32 16C42 8 49 16 40 23Z",
+    "hook": "data-td-entry"
+  },
+  "network": {
+    "title_id": "network-title",
+    "zh": "联动实验室",
+    "en": "Network Lab",
+    "principle": "天生人原理",
+    "principle_en": "Human–environment relationship",
+    "description": "城市不断生长，调整路网，接住每一次出行。",
+    "description_en": "Adapt your routes as a growing city creates new journeys.",
+    "path": "M12 14L32 32L52 14M12 50L32 32L52 50M8 10H16V18H8ZM48 10H56V18H48ZM8 46H16V54H8ZM48 46H56V54H48ZM25 25H39V39H25Z",
+    "hook": "data-nl-entry"
+  },
+  "contraption": {
+    "title_id": "contraption-title",
+    "zh": "器用实验室",
+    "en": "Contraption Lab",
+    "principle": "功能性原理",
+    "principle_en": "Functionality",
+    "description": "把零件装到合适的位置，让小车越过不同地形。",
+    "description_en": "Place each part where it works best and cross changing terrain.",
+    "path": "M10 34H52V46H10ZM22 34V18H39V34M30 18V9M39 24H54M13 47A7 7 0 1 0 27 47A7 7 0 1 0 13 47M38 47A7 7 0 1 0 52 47A7 7 0 1 0 38 47",
+    "hook": "data-cl-entry"
+  },
+  "survivor": {
+    "title_id": "survivor-title",
+    "zh": "自生实验室",
+    "en": "Selfborn Lab",
+    "principle": "自主性原理",
+    "principle_en": "Autonomy",
+    "description": "取养、成长、继承本领，在更广阔的生境中存活。",
+    "description_en": "Feed, grow and carry your abilities into a wider habitat.",
+    "path": "M32 12A20 20 0 1 0 32 52A20 20 0 1 0 32 12M32 22A10 10 0 1 0 32 42A10 10 0 1 0 32 22M32 4V8M32 56V60M4 32H8M56 32H60",
+    "hook": ""
+  },
+  "pinball": {
+    "title_id": "pinball-title",
+    "zh": "回响实验室",
+    "en": "Echo Lab",
+    "principle": "元整体原理",
+    "principle_en": "Meta-wholeness",
+    "description": "击破机关，叠加刻印，让整张球台回应你的选择。",
+    "description_en": "Break targets and stack imprints that change the whole table.",
+    "path": "M18 56L10 14L20 6H44L54 14L46 56M18 48L28 42M46 48L36 42M26 23A6 6 0 1 0 38 23A6 6 0 1 0 26 23M30 34L34 38",
+    "hook": ""
+  }
+}
